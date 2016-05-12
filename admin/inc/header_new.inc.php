@@ -348,9 +348,9 @@ $varFileName = basename($_SERVER['PHP_SELF']);
                     <!--                    <li>&nbsp;</li>-->
                     <li><a href="logistic_portal_manage_uil.php" <?php echo in_array($varFileName, array('logistic_portal_manage_uil.php')) ? 'class="current"' : ''; ?>>Logistic Portal</a></li>
                     <li><a href="ship_price_manage_uil1.php" <?php echo in_array($varFileName, array('ship_price_manage_uil1.php')) ? 'class="current"' : ''; ?>>Logistic Services Application</a></li>
-                    <li><a href="zone_manage_uil.php" <?php echo in_array($varFileName, array('zone_manage_uil.php','zone_listing_uil.php')) ? 'class="current"' : ''; ?>>Zone Manager</a></li>
+                    <?php /*<li><a href="zone_manage_uil.php" <?php echo in_array($varFileName, array('zone_manage_uil.php','zone_listing_uil.php')) ? 'class="current"' : ''; ?>>Zone Manager</a></li>
                     <li><a href="zone_price_manage_uil.php" <?php echo in_array($varFileName, array('zone_price_manage_uil.php','zone_price_edit_uil.php','listing_zone_price.php','zone_price_add_uil.php')) ? 'class="current"' : ''; ?>>Shipping Price</a></li>
-
+                     */ ?>
                 </ul>
             </li>
 
