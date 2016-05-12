@@ -1,0 +1,61 @@
+<?php
+
+function sendRequest($api_url, $token, $json_request) {
+    // Submit curl request
+    
+    $ch = curl_init($api_url);
+    curl_setopt($ch, CURLOPT_USERPWD, $token . ':');
+    curl_setopt($ch, CURLOPT_POSTFIELDS, 'json_data=' . $json_request);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+    curl_setopt($ch, CURLOPT_TIMEOUT, 120);
+    curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
+    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+    curl_setopt($ch, CURLOPT_USERAGENT, "Telamela API tester 1.0");
+    $curl_result = curl_exec($ch);
+
+    //echo '<br>';print_r($curl_result);exit;
+
+    if (curl_errno($ch)) {
+        //echo 'Curl error: ' . curl_error($ch);
+        echo 'Could not connect to the Telamela server. Please try again.';
+        exit;
+    }
+    curl_close($ch);
+    return $curl_result;
+}
+
+define("LOCAL_MODE", 1);
+if (LOCAL_MODE) {      //localhost
+    //$api_url = 'http://localhost/telamela/api/json/1.0/index.php';
+     $api_url = 'http://dothejob.in/telamela/api/json/1.0/index.php';
+    //$api_token = '0BE5C32FF9C2C99670A1C013911506CF';
+    $api_token = 'E567F8D2A42ADC1F1D3FE75A20319B58';
+} else {       //LIVE
+    $api_url = 'http://www.telamela.com.au/api/json/2.0/index.php'; //xml/1.2/';
+    //$api_url = 'https://www.invoicera.com/app/api/json/1.0/';       //xml/1.2/';
+    // $api_token = '414505D72D7864E2725E1B85859FC28E';
+    $api_token = '9366AF68C47CAD3245F699AA70960EE8'; //BHAVESH        
+}
+
+//$arrRequest = array('method'=>'getCategoryByID','search'=>array('id'=>'3')); 
+//$arrRequest = array('method'=>'getProduct'); 
+
+//$request = json_encode($arrRequest);
+ //$request = file_get_contents('json/request/cartDetails.json');
+$request = json_encode($_REQUEST);
+ //$request = file_get_contents('json/request/get_products.json');
+ //print_r($request);
+ //die();
+
+if ($request != '') {
+    $response = sendRequest($api_url, $api_token, $request);
+    print_r($response);
+    $response = json_decode($response, true);
+   /* echo '<pre>';
+    print_r($response);
+    die;*/
+} else {
+    echo 'Please check ' . __FILE__;
+    die;
+}
+?>

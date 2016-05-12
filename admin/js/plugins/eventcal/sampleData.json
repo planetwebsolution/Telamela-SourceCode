@@ -1,0 +1,20 @@
+{
+  "cols": [
+        {"id":"","label":"Month","pattern":"","type":"string"},
+        {"id":"","label":"KPI","pattern":"","type":"number"}
+      ],
+  "rows": [
+        {"c":[{"v":"Jan","f":null},{"v":3,"f":null}]},
+        {"c":[{"v":"Feb","f":null},{"v":15,"f":null}]},
+        {"c":[{"v":"Mar","f":null},{"v":6,"f":null}]},
+        {"c":[{"v":"Apr","f":null},{"v":17,"f":null}]},
+        {"c":[{"v":"May","f":null},{"v":28,"f":null}]},
+        {"c":[{"v":"Jun","f":null},{"v":10,"f":null}]},
+        {"c":[{"v":"July","f":null},{"v":25,"f":null}]},
+        {"c":[{"v":"Aug","f":null},{"v":30,"f":null}]},
+        {"c":[{"v":"Sep","f":null},{"v":35,"f":null}]},
+        {"c":[{"v":"Oct","f":null},{"v":32,"f":null}]},
+        {"c":[{"v":"Nov","f":null},{"v":22,"f":null}]},
+        {"c":[{"v":"Dec","f":null},{"v":28,"f":null}]}
+      ]
+}

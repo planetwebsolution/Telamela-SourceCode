@@ -1,0 +1,1 @@
+$(document).ready(function(){$(".my-dropdown").sSelect();$("#shStep4").hide();$(".setting").click(function(){$(this).parents().find(".dropBlock").slideToggle();$(this).toggleClass("active");return false})});

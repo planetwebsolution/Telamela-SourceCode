@@ -1,0 +1,98 @@
+  
+body{margin:0px;padding:0px;font-family:Arial;}
+a img,:link img,:visited img { border: none; }
+table { border-collapse: collapse; border-spacing: 0; }
+:focus { outline: none; }
+*{margin:0;padding:0;}
+p, blockquote, dd, dt{margin:0 0 8px 0;line-height:1.5em;}
+fieldset {padding:0px;padding-left:7px;padding-right:7px;padding-bottom:7px;}
+fieldset legend{margin-left:15px;padding-left:3px;padding-right:3px;color:#333;}
+dl dd{margin:0px;}
+dl dt{}
+
+.clearfix:after{clear:both;content:".";display:block;font-size:0;height:0;line-height:0;visibility:hidden;}
+.clearfix{display:block;zoom:1}
+
+
+.left_product_gradient .left_products_sec .product_img .jcarousel-clip ul{display:block;}
+.left_product_gradient .left_products_sec .product_img .jcarousel-clip ul li{float:left;margin-right:2px;list-style:none;}
+.left_product_gradient .left_products_sec .product_img .jcarousel-clip ul li a{display:block;border:1px solid #CCC;}
+.left_product_gradient .left_products_sec .product_img .jcarousel-clip ul li a.zoomThumbActive{
+    border:1px solid #CCC;
+}
+
+.jqzoom{
+
+    text-decoration:none;
+    float:left;
+}
+.product_img .new {
+    left:11px !important;
+    position: absolute;
+    top: 0px !important;
+    z-index: 9999;
+}
+.example {
+    border: 1px solid #CCC;
+    background: #f2f2f2;
+    padding: 10px;
+}
+ul {
+    list-style-image:url(list-style.gif);
+}
+pre {
+    font-family: "Lucida Console", "Courier New", Verdana;
+    border: 1px solid #CCC;
+    background: #f2f2f2;
+    padding: 10px;
+}
+code {
+    font-family: "Lucida Console", "Courier New", Verdana;
+    margin: 0;
+    padding: 0;
+}
+
+#gallery {
+}
+#descriptions {
+    position: relative;
+    height: 50px;
+    background: #EEE;
+    margin-top: 10px;
+    width: 640px;
+    padding: 10px;
+    overflow: hidden;
+}
+#descriptions .ad-image-description {
+    position: absolute;
+}
+#descriptions .ad-image-description .ad-description-title {
+    display: block;
+}
+
+.recommend_color .right_m{ padding:5px}   
+.recommend_color  .left_m{ padding:5px}
+.rating {margin:25px 20px 5px;width:369px}
+.rating_dispaly{float:left;width:91px;}
+.input4 {
+    padding: 3px 0 3px 2px;
+    width: 400px;
+}
+
+.review_sec1 input[type="button"], .quick_color input[type="button"]{width:108px; height:40px; background:url("../images/submit_bg2.jpg") repeat-x 0 0 #F88E06; border: none; cursor: pointer; font: 16px/18px 'OpenSansBold',arial; color:#ffffff; margin:11px 0 0 0px; float: left; border: 1px solid #B69B68; 
+}
+
+.quick_color input[type="submit"]{
+    background: url("../images/submit_bg2.jpg") repeat-x scroll 0 0 #F88E06;
+    border: medium none;
+    color: #FFFFFF;
+    cursor: pointer;
+    float: left;
+    font: 16px/18px 'OpenSansBold',arial;
+    height: 40px;
+    margin: 11px 0 0 36px;
+    width: 108px;
+}
+.top_wholesale .contain_2 a.wholesaler_nme{color:#423D3D}
+.top_wholesale .contain_2{width:auto;text-align:justify;}
+.top_html_editor .contain_2{width:auto !important;text-align:justify;}

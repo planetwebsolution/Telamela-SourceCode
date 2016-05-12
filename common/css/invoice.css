@@ -1,0 +1,221 @@
+/*---------------------------------common------------------------------------*/
+body{margin:0 15px 0 15px; padding:0; font-family:Arial, Helvetica, sans-serif; font-size:12px;}
+img{border:none}
+
+.lang_select {border:1px solid #CCCCCC; float:left; font-family:Arial,Helvetica,sans-serif; font-size:12px; font-weight:normal; margin:0; width:130px; }
+/*---------------------------------header--------------------------------------*/
+.header{width:100%; margin-left:auto; margin-right:auto;  height:146px; color:#FFCC00;}
+.header_left{width:30%; float:left; height:30px; text-align:right; font-size:11px; color:#56778b; padding-top:40px;}
+.header_left a{font-size:11px; color:#333; text-decoration:underline; float:none}
+.header_left span{float:none; padding:0 10px 0 10px}
+.header_left a:hover{font-size:11px; color:#FFFFFF; text-decoration:underline; background-color:#2d2d2d}
+.logo{width:40%; float:left; height:98px; font-size:30px; font-weight:bold; padding-top:10px;}
+
+.top_links{float:right; width:auto; margin:10px; color:#666666; line-height:18px;}
+.top_links a{color:#032a7a; font-weight:bold; float:left; margin:0px; text-decoration:underline; margin-left:10px;}
+.top_links a img{vertical-align:middle;}
+.top_links a:hover{text-decoration:none;}
+.top_links span{color:#666666; float:left; margin:7px 5px 7px 3px;}
+a.red_link{color:#032a7a;}
+a.red_link:hover{text-decoration:none;}
+
+/*----------------------------------body container-------------------------------*/
+.body_container{margin-left:auto; margin-right:auto; width:100%; margin-top:10px;}
+.container_left{float:left; width:100%;}
+.container_left_title{float:left; width:98%; padding-left:2%; background:url(../images/sub_menu_bottombg.jpg) bottom repeat-x;}
+.container_left_content{float:left; width:96.8%; padding-top:10px; padding-bottom:10px; padding-left:2%; padding-right:1%; background-color:#ffffff; border:1px #a9b1c6 solid; border-top:none;}
+.container_left_content.multiple_prod_container{float:left; width:96.8%; padding-top:10px; padding-bottom:10px; padding-left:2%; padding-right:1%; background-color:#ffffff; border:1px #a9b1c6 solid; border-top:none; overflow:hidden;}
+.container_left_half{ float:left; width:49%;}
+.container_right{float:left; width:27%; padding-left:1%; padding-bottom:20px;}
+.seprator{float:left; width:100%; background:none;}
+
+.left_content{width:100%; border:1px solid #c3c4c6; padding:0px; border-top:none; border-bottom:none; border-right:none; }
+.radio{border:none; width:auto;}
+.left_content img{margin:0 2px 0 2px;}
+.left_content a{color:#032a7a; text-decoration:underline;}
+.left_content .holder2 a, .left_content .holder a{color:#032a7a; text-decoration:underline;padding-left:5px;}
+.left_content a:hover{text-decoration:none;}
+.border_none{border:none;}
+.border_bottom_none{border-right:none;}
+.left_content .heading a{ color:#000;}
+.left_content .heading td{color:#3d3c3c;}
+.dashboard_title{width:100%; color:#000; font-size:13px; font-weight:bold; background-color:#FA990E; padding:5px 4px 5px 5px; margin:5px 0 10px 0; border-bottom:1px #7986a9 solid;}
+
+.dashboard_half_title{width:50%; color:#000; font-size:13px; font-weight:bold; background-color:#FA990E; padding:5px 4px 5px 5px; margin:5px 0 10px 0; border-bottom:1px #7986a9 solid;}
+
+.dashboard_title span{font-size:12px; font-weight:normal;}
+.dashboard_title_small{width:49%; color:#fff; font-size:13px; font-weight:bold; background-color:#d1850e; padding:5px 4px 5px 5px; margin:5px 0 10px 0;}
+.content_title{float:left; padding:0; font-size:13px; font-family:Tahoma; font-weight:bold; width:100%; color:#000;}
+.right_panel{width:100%; background-color:#ffffe5; border:1px #e8e8b9 solid; padding:5px; font-size:12px;}
+
+/*-------------------------help------------------------*/
+.help{float:left; width:99%; background-color:#f1f2d5; padding:1%; font-weight:bold}
+.help_content{float:left; width:99%; background-color:#fff; padding:1%;}
+
+
+span a{color:#FF6633; text-decoration:underline; padding:0 4px;}
+span a:hover{text-decoration:none;}
+
+.heading td{background-color:#dadada; text-align:left; color:#000; padding:4px 0 4px 6px; font-size:12px; font-weight:bold; border-bottom:1px solid #fff}
+.heading th{background-color:#dadada; text-align:center; color:#333333; padding:4px 0 4px 6px; font-size:12px; font-weight:bold; border-bottom:1px solid #fff}
+
+.heading_none td{background-color:#ffc66c; text-align:left; color:#333333; padding:4px 6px 4px 6px; font-size:12px; font-weight:bold;}
+.heading_none a{color:#000000; text-decoration:underline;}
+.heading_none a:hover{color:#000000; text-decoration:none;}
+
+
+.content td {text-align:left;  color:#333; border-right:1px solid #c3c4c6; border-bottom:1px solid #c3c4c6; padding:4px 4px 4px 6px; font-size:12px; }
+
+.content .heading{font-size: 14px; font-weight: bold; background-color:#E9E9E8;}
+.content .heading1{font-size: 14px; font-weight: bold; background-color:#E9E9E8; text-align: center;}
+.color_red{color:#FF0000;}
+.color_green{color:#009900;}
+.content .border_right_none{border-right:none;}
+.content_bg1 td{text-align:left; width:auto; color:#000000; padding:4px 0 4px 6px; font-size:12px; background-color:#fffce5;}
+.content_bg td{text-align:left; width:auto; color:#000000; padding:4px 0 4px 6px; font-size:12px;}
+
+
+
+/*----------------------------------menu------------------------------------*/
+#menu{width:100%; height:30px;  float:left; padding-top:8px; font-family:arial;}
+#menu ul{margin:0 0 0 0; padding:0;}
+#menu li{ float:left; color:#393a3b; font-size:11px; list-style:none; text-transform:capitalize; margin-right:1px;}
+#menu li a{background:#032a7a; color:#fff; font-size:10px; text-decoration:none; margin:0;  padding:5px 4px;  display:block;height:20px; float:left; border:1px solid #032a7a; border-bottom:0; font-weight:bold;}
+#menu li a:hover{background:url(../images/button_over.jpg) top right repeat-x; height:20px; color:#032a7a; font-weight:bold;}
+#menu .current{text-decoration:none; background:url(../images/button_over.jpg) top right repeat-x; height:20px; color:#032a7a; margin:0;  padding:5px 10px 5px 10px; display:block; margin-right:1px; border:1px solid #5a747d; border-bottom:none; font-weight:bold;}
+
+/*----------------------------------submenu------------------------------------*/
+#submenu{width:100%; float:left; padding-top:8px; font-family:Tahoma;}
+#submenu ul{margin:0; padding:0;}
+#submenu li{float:left; color:#393a3b; font-size:11px; list-style:none; text-transform:capitalize; margin-right:1px; border-left:1px solid #a9b1c6; border-right:1px solid #a9b1c6;border-top:1px solid #a9b1c6;}
+#submenu li a{background:url(../images/button_over_new.jpg) top right repeat-x; color:#032a7a; text-decoration:none; margin:0;  padding:5px 10px 5px 10px; display:block; float:left; font-weight:bold;}
+#submenu li a:hover{background:url(../images/button_over_white.jpg) top right repeat-x; color:#032a7a; text-decoration:none; margin:0;  padding:5px 10px 5px 10px; display:block; float:left; font-weight:bold;}
+#submenu li a.current{background:url(../images/button_over_white.jpg) top right repeat-x; color:#032a7a; text-decoration:none; margin:0;  padding:5px 10px 5px 10px; display:block; float:left; font-weight:bold;}
+
+/*----------------------------------menu between parent and sub menu------------------------------*/
+#middlemenu{width:100%; float:left; padding-top:8px; font-family:Tahoma;}
+#middlemenu ul{margin:0 0 0 0; padding:0;}
+#middlemenu li{float:left; color:#393a3b; font-size:11px; list-style:none; text-transform:capitalize; margin-right:1px;}
+#middlemenu li a{background:url(../images/button_over.jpg) top right repeat-x; color:#032a7a; text-decoration:none; margin:0;  padding:5px 10px 5px 10px; display:block; float:left; border:1px solid #a9b1c6; font-weight:bold;}
+#middlemenu li a:hover{color:#a9b1c6;}
+#middlemenu .current{text-decoration:none; background:#fff; color:#a9b1c6; margin:0;  padding:5px 10px 5px 10px; display:block; margin-right:1px; border:1px solid #a9b1c6; }
+
+
+/*--------------------------------form---------------------------------------*/
+form{width:100%; margin:0px; padding:0px; font-weight:normal; font-family:Arial, Helvetica, sans-serif; font-size:12px;}
+form.multiple_prod_add{width:86.6%; margin:0px; padding:0px; font-weight:normal; font-family:Arial, Helvetica, sans-serif; font-size:12px; overflow-x:scroll;}
+form.multiple_prod_add td{vertical-align:top;}
+form.multiple_prod_add .input1, form.multiple_prod_add .input2{margin:2.5px 0px}
+.button{background:#CC0000; color:#fff; font-size:12px; font-weight:bold; width:auto; padding:4px; border:none; margin-right:10px; cursor:pointer}
+.button:hover{background:#575044;}
+
+.button1{background:#ccc; color:#fff; font-size:12px; font-weight:bold; width:auto; padding:4px; border:none; margin-right:10px; cursor:pointer}
+.button1:hover{background:#B8C1E1;}
+
+form fieldset{padding:20px; border:none; margin:0;}
+form input{margin:0; font-family:Arial, Helvetica, sans-serif; font-size:12px;}
+form select{width:130px; margin:0; font-weight:normal; font-family:Arial, Helvetica, sans-serif; font-size:12px; float:left; border:#CCCCCC 1px solid;}
+form textarea{width:130px; margin:0; font-weight:normal; font-family:Arial, Helvetica, sans-serif; font-size:12px; float:left; border:#CCCCCC 1px solid;}
+form label{width:180px; float:left; text-align:right; margin:10px 0 0 30px; font-weight:bold; padding:0; display:block}
+form .auto{width:auto; border:none; float:left;}
+form .ckbox{width:auto; border:none; float:left; margin:0; padding:0}
+br{clear:both}
+small{width:auto; margin:10px 0 0 30px; float:left; font-size:12px;}
+
+.nomargin{margin:10px 0 0 10px;}
+#login_logo{margin-top:0px ; position:relative; width:100%; text-align:left}
+#login_logo_main{margin-top:47px; position:relative; text-align: center;}
+#login{margin:0 auto 0 auto; position:relative; width:500px; text-align:center}
+#login strong{display:block; font-size:18px; color:#666; padding:20px}
+#login form{font-weight:normal;width:465px; font-family:Arial, Helvetica, sans-serif; font-size:12px; background-color:#b5bdda; float:left; border:1px solid #6e7f85; padding:10px; margin:0px;}
+#login form fieldset{ width:432px; margin:0px; border: 1px solid #6e7f85; float:left; padding:15px; background-color:#e4e7f4;}
+#login form legend{font-weight:bold; font-size:14px; color:#666666; margin:0px;}
+#login form input{width:170px; font-family:Arial, Helvetica, sans-serif; font-size:12px; border:1px #CCCCCC solid; margin:10px 0 0 10px; float:left;}
+#login form select{width:202px; font-weight:normal; font-family:Arial, Helvetica, sans-serif; font-size:12px; border:1px #CCCCCC solid; float:left; margin:10px 0 0 0;}
+#login form label{width:150px; float:left; text-align:right;  font-weight:bold; padding:0; display:block;margin:10px 0 0 0;}
+#login form .auto{width:auto; border:none; float:left;}
+#login form .ckbox{width:auto; border:none; float:left; margin:0; padding:0}
+#login br{clear:both}
+#login small{width:250px; font-size:12px; text-align:left; float:left; margin:10px 0 1px 10px;}
+#login img{float:left; margin:10px 0 1px 10px;}
+#login label a{color:#000000; text-decoration:underline; text-align:left; font-weight:normal;}
+#login label a:hover{color:#778a90; text-decoration:none;}
+#login .auto_button{ width:auto; }
+#login .nomargin{}
+
+.container_right form{width:100%; margin:0; padding:0; font-weight:normal; font-family:Arial, Helvetica, sans-serif; font-size:12px;}
+.container_right form fieldset{padding:10px; border:1px solid #6f3e2d; margin:0;}
+.container_right form input{width:50%; margin:10px 0 0 10px;  font-family:Arial, Helvetica, sans-serif; font-size:12px; border:1px #CCCCCC solid; float:left}
+.container_right form select{width:51%; margin:10px 0 0 10px; font-weight:normal; font-family:Arial, Helvetica, sans-serif; font-size:12px; border:1px #CCCCCC solid; float:left}
+.container_right form .select{width:24%; margin:10px 0 0 10px; font-weight:normal; font-family:Arial, Helvetica, sans-serif; font-size:12px; border:1px #CCCCCC solid; float:left}
+.container_right form label{width:35%; float:left; text-align:right; margin:10px 0 0 10px; font-weight:bold; padding:0; display:block}
+.container_right form .auto{width:auto; border:none; float:left;}
+.container_right br{clear:both}
+.container_right form legend{font-weight:bold; padding:0 10px 0 10px;}
+.container_right small{width:auto; margin:10px 0 0 10px; float:left; font-size:12px;}
+.container_right .auto_button{ width:auto}
+.container_right .nomargin{margin:10px 0 0 10px;}
+
+/* error, success and msg table css start here */
+.error{background-image:url(../../admin/images/error.gif); background-position:top left;background-repeat:no-repeat; padding:8px 0 10px 35px; font-weight:normal;  line-height:18px;float:left;font-weight:bold; font-size:12px; color:#FF0000;}
+
+.success{background-image:url(../../admin/images/sucess.gif); background-position:top left; background-repeat:no-repeat; padding:10px 0 10px 40px; font-weight:normal; line-height:18px; font-weight:bold; font-size:13px; color:#366036;}
+
+/* this table contains all error and success messages*/
+.table_msg{padding:8px 0 8px 0;border:#c3c4c6 3px solid; background-color:#f5f6f9;}
+/* error, success and msg table css end here */
+
+.visible_none{
+display:none;
+}
+
+/* a new error class written for small error messages. Like the ones introduced by AJAX. Normal class is too big for that.*/
+.error_small{background-image:url(../../admin/images/error_small.gif); background-position:top left;background-repeat:no-repeat; padding:0 0 0 20px; font-weight:normal;  line-height:18px;float:left;font-weight:bold; font-size:11px; color:#FF0000;}
+
+.error_form{ border:2px solid; border-color:#BC100E #FE9999 #FE9999 #BC100E;}
+
+input{font-size:13px; border:1px #CCCCCC solid;}
+
+/*----------------------------------footer----------------------------------*/
+#footer{ float:left; width:100%; padding:10px 0 20px 0; font-size:11px;}
+.bottom_shadow{background-image:url(../../admin/images/bg_body_bottom.jpg); background-repeat:repeat-x; background-position:top; float:left; width:100%;}
+.bottom_curve{background-image:url(../../admin/images/bg_body_bottom_curve.jpg); background-position:right top; background-repeat:no-repeat; width:99%; padding-left:1%; height:8px;}
+
+a.logout{background:url(../images/logout.png) left bottom no-repeat; padding-left:25px; padding-bottom:3px; padding-top:2px;}
+a.preview{background:url(../images/preview_ico.jpg) left bottom no-repeat; padding-left:20px; padding-bottom:0px; padding-top:2px;}
+a.setting{background:url(../images/setting.png) left bottom no-repeat; padding-left:20px; padding-bottom:0px; padding-top:2px;}
+.last_login{background:url(../images/worldclock.png) left bottom no-repeat; padding-left:25px; padding-bottom:2px; padding-top:2px;}
+
+
+.content .shipping_package{padding: 0;}
+.content .shipping_package td{text-align: center; padding: 0; border-right: 0;}
+.content .shipping_package .shippin_l{border-bottom: 0;}
+.content .shipping_package .shippin_w{border-bottom: 0;}
+.content .shipping_package .shippin_h{border: 0;}
+
+.excelbotton{background:#CC0000; color:#fff; font-size:12px; font-weight:bold; width:auto; padding:4px; border:none; margin-right:10px; cursor:pointer}
+.adv-box{text-align:center}
+.excelbotton:hover{background:#575044;}
+.stars{float:left; width:13px; height:13px; margin-left:4px; background:url(../images/star_review.gif) no-repeat}
+
+#listed_send_approve{padding: 12px; height: 105px; width: 370px;}
+#colorBox_table{width: 370px;}
+
+#listed_reject_approve{padding: 5px 0 0 10px; height: 30px; width: 370px;}
+#listed_send_publish{padding: 12px; height: 105px; width: 370px;}
+#listed_published{padding: 12px; height: 105px; width: 370px;}
+#listed_send_review{padding: 12px; height: 105px; width: 370px;}
+#listed_delete{padding: 12px; height: 105px; width: 370px;}
+
+.table_header_border{
+  border:1px solid #d2d2d2;
+  }
+.admin_left_text{
+  text-align:left;
+  width:50%;
+  font-weight:bold;
+} 
+.admin_left_input{
+    text-align:left;
+    width:50%;
+}

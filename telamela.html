@@ -1,0 +1,166 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+            <title>Telamela</title>
+            <style type="text/css">
+                a { color: #006567;}
+                a:hover { color: #F93;}
+
+                /*Add_Edit Product*/
+                .add_edit_pakage{ float: left;padding: 19px;width: 956px; background: #fff;}
+                .add_edit_pakage label{ width: 160px; float: left;color: #3f3e3e;font: 13px/18px 'OpenSansRegular',arial; margin:10px 20px 0 0}
+                .add_edit_pakage label strong{ float: right; font-weight: normal}
+                .add_edit_pakage label.margin_none{ margin-top:0 } 
+                .add_edit_pakage input[type='text']{ width: 416px; height: 30px; border: 1px solid #929291; padding: 5px;color: #3f3e3e;font: 13px/28px 'OpenSansRegular',arial; float: left; }
+                .add_edit_pakage input[type='password']{ width: 416px; height: 28px; border: 1px solid #929291; padding: 5px;color: #3f3e3e;float: left;line-height: 28px}
+                .add_edit_pakage .create_cancle_btn{margin-top: 5px!important}
+                .order_details{ font-family: 'OpenSansRegular',arial;  }
+                .order_details table{ margin-top:20px; float:left}
+                .order_details table tr th{ background:#fa990e; border-right:1px solid #e6cfa3; font-size:14px; color:#fff; font-weight:normal; padding:12px 0 }
+                .order_details table tr .last{ padding-right:16px;}
+                .order_details table tr.even{ background:#ffe7b9;}
+                .order_details table tr td{ padding:15px 0; border-right:1px solid #e6cfa3; border-top:1px solid #e6cfa3; }
+                .order_details table tr td{border-bottom:1px solid #e6cfa3; }
+                .order_details table tr td.border_left{border-left:1px solid #e6cfa3;}
+
+                .order_details table{ margin-top:20px; float:left}
+                .order_details table tr th{ background:#fa990e; border-right:1px solid #e6cfa3; font-size:14px; color:#fff; font-weight:normal; padding:12px 0 }
+                .order_details table tr .last{ padding-right:16px;}
+                .order_details table tr.even{ background:#ffe7b9;}
+                .order_details table tr td{ padding:15px 0; border-right:1px solid #e6cfa3; border-top:0px solid #e6cfa3; width: 146px; }
+                .order_details table tr td.bottom{border-bottom:1px solid #e6cfa3; }
+                .order_details table tr td.border_left{border-left:1px solid #e6cfa3; width: 185px;}
+
+
+                .boxes1 ul{border:1px solid #cecece; height:99px; padding:12px 0 0 20px; float:left; width:441px;}
+                .boxes1 ul li{ font: 13px/24px 'OpenSansRegular',arial; }
+                .boxes1 ul li span{ width:83px; font-weight:bold; float:left; letter-spacing: -0.4px; word-spacing: -0.4px;}
+                .boxes1 ul li p{ line-height:18px;  margin-top: 10px;}
+                .boxes1 .heading{float:left; padding:13px 21px 13px 51px; width:391px;}
+                .boxes1 .shipping_handling ul li span{ width:121px; font-weight:bold; float:left}
+                .boxes1 ul{border:1px solid #cecece; padding:12px 0 0 20px; float:left; width:441px;}
+                .boxes1 ul li{ font: 13px/24px 'OpenSansRegular',arial; width:100%; overflow: hidden }
+                .boxes1 ul li span{ width: 97px;; font-weight:bold; float:left; letter-spacing: -0.4px; word-spacing: -0.4px;}
+                .boxes1 ul li  strong {float: right; *margin:-25px 0 0 0}
+                .boxes1 ul li a {font: 13px/15px 'OpenSansRegular',arial; color:#3f3e3e; margin:6px 0 0 8px; float: left}
+                .boxes1 ul li a {*margin:4px 0 0 8px}
+                .boxes1 ul li a:hover {text-decoration: underline}
+                .boxes1 ul li small { color: #3F3E3E; float: left;font: 13px/19px 'OpenSansRegular',arial;padding: 4px 0 0 8px; width: 153px; }
+                .boxes1 ul li p{ line-height:18px;  margin-top: 10px;}
+                .boxes1 .heading{float:left; padding:13px 21px 13px 51px; width:391px;}
+                .boxes1 .shipping_handling ul li span{ width:121px; font-weight:bold; float:left}
+                .account_information, .shipping_handling, .billing_information, .shipping_information  { width:463px; float:left }
+                .account_information .heading{ background:url(../images/account_icon.png) no-repeat left top #e43137; }
+                .account_information h3{ font: 17px/18px 'OpenSansRegular',arial;  color:#fff; float:left; font-weight:bold }
+                .account_information ul{}
+
+                .shipping_handling{ margin-left:28px; }
+                .shipping_handling .heading{ background:url(../images/shipping_icon.png) no-repeat left top #6eb620;}
+                .shipping_handling h3{ font: 17px/18px 'OpenSansRegular',arial;  color:#fff; float:left; font-weight:bold }
+
+                .boxes2{ margin-top:19px; float:left}
+                .boxes2 ul{border:1px solid #cecece; height:174px; padding:12px 0 0 20px; float:left; width:441px;}
+                .boxes2 ul li{ font: 13px/24px 'OpenSansRegular',arial; }
+                .boxes2 ul li span{ width:148px; font-weight:bold; float:left; letter-spacing: -0.4px; word-spacing: -0.4px;}
+                .boxes2 ul li p{ line-height:18px;  margin-top: 10px;}
+                .boxes2 .heading{float:left; padding:13px 21px 13px 51px; width:391px;}
+
+                .boxes2{ margin-top:19px; float:left; }
+                .boxes2 ul{border:1px solid #cecece;  padding:12px 0 0 20px; float:left; width:441px;}
+                .boxes2 ul li{ font: 13px/24px 'OpenSansRegular',arial; width:81%; float: left }
+                .boxes2 ul li span{ width:162px; font-weight:bold; float:left; letter-spacing: -0.4px; word-spacing: -0.4px;}
+                .boxes2 ul li strong { *margin:-25px 0 0 0; float: right}
+                .boxes2 ul li small {width:175px; float: left; padding:0 0 0 16px}
+                .boxes2 ul li p{ line-height:18px;  margin-top: 10px;}
+                .boxes2 .heading{float:left; padding:13px 21px 13px 51px; width:391px;}
+                .billing_information .heading{ background:url(../images/billing_icon.png) no-repeat left top #006feb; }
+                .billing_information h3{ font: 17px/18px 'OpenSansRegular',arial;  color:#fff; float:left; font-weight:bold }
+                .billing_information ul{}
+                .shipping_information{ margin-left:28px; }
+                .shipping_information .heading{ background:url(../images/shipping_infor_icon.png) no-repeat left top #362223; }
+                .shipping_information h3{ font: 17px/18px 'OpenSansRegular',arial;  color:#fff; float:left; font-weight:bold }
+                .comment_box{ width:491px; float:left; background:#fff3e0; border:1px solid #cac7c8; padding:19px 20px 19px 20px;}
+.comment_box label{  margin: 0 0 15px; font-size:16px; font-weight:bold; color:#000}
+.comment_box textarea{ border:1px solid #dcdcdc; width:429px; padding:6px 10px; font-size:13px; height:106px; overflow:auto}
+.total_amount{ float:right; width:320px; text-align:right; margin:0 21px 0 0;}
+.total_amount ul{ width:100%; height: auto;  }
+.total_amount ul li{ margin-bottom:15px; font-size:12px; color:#3f3e3e ; float: left; width:100%}
+.total_amount ul li small {font: 12px/14px 'OpenSansRegular',arial; color:#3f3e3e; width:auto; float: left}
+.total_amount ul li span{ width:90px; float:right; font-size:14px; margin-right: 3px; font-family:'OpenSansRegular',arial}
+.total_amount ul li.grand{border-top:1px dashed #000; padding-top:15px; margin-top:10px; width:100%; float:right; font-size:18px; font-weight:bold; color:#000}
+.total_amount ul li.grand strong {width: 130px; float: left;}
+.total_amount ul li.grand span{ font-size:22px; color:#e07400; margin-right: 3px; width:auto; padding:0!important}
+.total_amount ul li.pay_button a{ background:url(../images/pay_button.png) no-repeat; color:#fff; font-size:16px; font-weight:bold; padding:0 22px 0 50px; margin-top:5px; float:right;height:41px;line-height:41px;}
+
+            </style>
+    </head>
+    <body style="font-family:Verdana, Arial, Helvetica, sans-serif;font-size:10pt;background:#FFF;padding:0px;margin:0px;padding-bottom:40px;color:#000">
+        <table style="padding-left:15px;" width="700" border="0" cellpadding="0" cellspacing="0">
+            <tbody><tr><td><img src="telamela_files/logo.png"></td></tr><tr><td><hr></td></tr><tr><td>Order Confirmation</td></tr></tbody></table>
+        <div style="margin-top:15px; width:725px">
+            <div style="margin-top: 15px; width: 725px;">
+                <table width="100%" border="0" cellpadding="5" cellspacing="0">
+                    <tbody>
+                        <tr><td width="25">&nbsp;</td><td width="600"><strong>Hi Suraj Kumar  Maurya ,</strong></td></tr>                
+                        <tr><td width="25"></td><td width="98%"><table width="100%" border="0" cellpadding="5" cellspacing="0"><tbody><tr><td>Here is the summary of your order. You can also find your order details in <a href="http://localhost/telamela/my_orders.php" style="color:#ff0000"><b>My Orders</b></a> when you log into your Telamela account.</td></tr></tbody></table><div class="body_inner_bg"> 
+                                    <div class="add_edit_pakage order_details">
+                                        <div class="boxes1">            
+                                            <div class="account_information">
+                                                <div class="heading">
+                                                    <h3>Account Information</h3>
+                                                </div>
+                                                <ul>
+                                                    <li><span>Your Name <strong>:</strong></span> <small>Suraj Kumar  Maurya</small></li>
+                                                    <li><span>Your Email <strong>:</strong> </span><a href="mailto:suraj.maurya@mail.vinove.com">suraj.maurya@mail.vinove.com</a></li>
+                                                    <li><span>Mobile <strong>:</strong> </span><small>0123456987</small></li>
+                                                </ul>
+                                            </div>
+                                            <div class="shipping_handling">&nbsp;</div>
+                                            <div class="boxes2">
+                                                <div class="billing_information"><div class="heading"> <h3>Billing Information</h3></div>
+                                                    <ul>
+                                                        <li><span>Recipient First Name <strong>:</strong></span> <small>Suraj Kumar</small></li>
+                                                        <li><span>Recipient Last Name<strong>:</strong></span>  <small>Maurya</small></li>
+                                                        <li><span>Organization Name<strong>:</strong></span>  <small>vinove</small></li>
+                                                        <li><span>Address Line 1<strong>:</strong> </span>  <small>sector 26 peeragarhi</small></li>
+                                                        <li><span>Address Line 2<strong>:</strong></span>  <small></small></li>
+                                                        <li><span>Country<strong>:</strong></span>  <small>Albania</small></li>
+                                                        <li><span>Post Code or Zip Code <strong>:</strong></span>  <small>110041</small></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="shipping_information"><div class="heading"><h3>Shipping Information</h3></div>
+                                                    <ul>
+                                                        <li><span>Recipient First Name <strong>:</strong></span> <small>  Suraj Kumar</small></li>
+                                                        <li><span>Recipient Last Name<strong>:</strong></span>  <small>  Maurya</small></li>
+                                                        <li><span>Organization Name<strong>:</strong></span>  <small> vinove</small></li>
+                                                        <li><span>Address Line 1<strong>:</strong> </span>  <small>  sector 26 peeragarhi</small></li>
+                                                        <li><span>Address Line 2<strong>:</strong></span>  <small>  </small></li>
+                                                        <li><span>Country<strong>:</strong></span>  <small>  India</small></li>
+                                                        <li><span>Post Code or Zip Code <strong>:</strong></span>  <small>  110041</small></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <table width="952" border="0" cellpadding="0" cellspacing="0">
+                                                <tbody><tr>
+                                                        <th align="center">Sub Order ID</th>
+                                                        <th align="center">Items Ordered</th>                                        
+                                                        <th align="center">Item Image</th>
+                                                        <th align="center">Price</th>
+                                                        <th align="center">Qty.</th>
+                                                        <th align="center">Shipping</th>
+                                                        <th align="center">Discount</th>
+                                                        <th class="last" align="center">Total</th>
+                                                    </tr>
+                                                    <tr class="even">
+                                                        <td align="center">366-5</td>                        
+                                                        <td align="center"><b>Laptop101</b><br>Laptop101 (Size # M ,DESIGN CODE # style2 ,model # 80gb ,Style # style2 ,a1112 # test ,Attr image # Green )<br></td>
+                                                                    <td align="center"><img src="telamela_files/20140213_043746_1110622167.jpg" alt="Laptop101" style="float:none;"></td>
+                                                                    <td align="center">$ 663.80</td>
+                                                                    <td align="center">1</td>
+                                                                    <td align="center">$ 3.00</td>
+                                                                    <td align="center">$ 0.00</td>
+                                                                    <td class="last" align="center">$ 666.80</td>
+                                                                    </tr></tbody></table>
+                                                                    <div class="last_box"><div class="comment_box"><label style="width: 200px;">Comments History</label><div style="background-color: #ffffff; margin-top:30px; padding: 5px; font: 12px/14px;min-height: 50px;">&nbsp;</div></div><div class="total_amount"><ul><li><small>Sub Total</small> <span>$ 663.80</span></li><li><small>Shipping Charge</small> <span>$ 3.00</span></li><li><small>Gift Card(OCBLS7I)</small> <span>$ -666.80</span></li><li class="grand"><strong>Grand Total</strong><span>$ 0.00</span></li></ul></div></div></div></div></div></td></tr>
+                                                                    <tr><td width="25"><br></td><td width="98%">Regards,<br>Telamela</td></tr>
+                                                                    </tbody></table></div></div></body></html>

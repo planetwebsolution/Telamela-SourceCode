@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/telamela/!svn/ver/2615/system/branches/development/src/site/api/json/1.0
+END
+api_processor_ctrl.php
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/telamela/!svn/ver/2617/system/branches/development/src/site/api/json/1.0/api_processor_ctrl.php
+END
+class_api_processor_bll.php
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/telamela/!svn/ver/2615/system/branches/development/src/site/api/json/1.0/class_api_processor_bll.php
+END
+index.php
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/telamela/!svn/ver/2615/system/branches/development/src/site/api/json/1.0/index.php
+END

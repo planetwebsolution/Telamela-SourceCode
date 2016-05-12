@@ -1,0 +1,1475 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link rel="shortcut icon" href="teshtml/images/favicon.png">
+        <title>Telamela</title>
+        <!--Core CSS -->
+        <link href="teshtml/css/bootstrap.css" rel="stylesheet">
+        <link href="teshtml/css/owl.carousel.css" rel="stylesheet">
+        <link href="teshtml/css/owl.theme.css" rel="stylesheet">
+        <link rel="stylesheet" href="teshtml/css/font-awesome.min.css" />
+        <link href="teshtml/css/style.css" rel="stylesheet">
+        <link href="teshtml/css/stylish-select.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="teshtml/css/jquery.fancybox.css"/>
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+        <link href="teshtml/css/style-responsive.css" rel="stylesheet"/>
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+            <![endif]-->
+        <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script src="teshtml/js/owl.carousel.js"></script>
+        <script src="teshtml/js/jquery.stylish-select.js"></script>
+        <script src="teshtml/js/custom-form-elements.js"></script>
+        <script type="text/javascript" src="teshtml/js/jquery.fancybox.js"></script>
+        <script>
+            $(document).ready(function() {
+                var owl = $("#owl-demo1");
+                owl.owlCarousel({
+                    pagination: false,
+                    /*autoPlay : 3000,*/
+                    itemsCustom: [
+                        [767, 1],
+                        [1000, 3],
+                        [1600, 3]
+                    ],
+                });
+                $(".next").click(function() {
+                    owl.trigger('owl.next');
+                });
+                $(".prev").click(function() {
+                    owl.trigger('owl.prev');
+                });
+                var owl1 = $("#owl-demo2");
+                owl1.owlCarousel({
+                    pagination: false,
+                    /*autoPlay : 3000,*/
+                    itemsCustom: [
+                        [767, 1],
+                        [1000, 3],
+                        [1600, 3]
+                    ],
+                });
+                $(".next2").click(function() {
+                    owl1.trigger('owl.next');
+                });
+                $(".prev2").click(function() {
+                    owl1.trigger('owl.prev');
+                });
+
+                var owl3 = $("#owl-demo3");
+                owl3.owlCarousel({
+                    pagination: false,
+                    /*autoPlay : 3000,*/
+                    /*autoPlay : 3000,*/
+                    itemsCustom: [
+                        [767, 1],
+                        [1000, 4],
+                        [1600, 4]
+                    ],
+                });
+                $(".next3").click(function() {
+                    owl3.trigger('owl.next');
+                });
+                $(".prev3").click(function() {
+                    owl3.trigger('owl.prev');
+                });
+
+                var owl7 = $("#owl-demo7");
+                owl7.owlCarousel({
+                    pagination: false,
+                    /*autoPlay : 3000,*/
+                    itemsCustom: [
+                        [767, 1],
+                        [1000, 4],
+                        [1600, 4]
+                    ],
+                });
+                $(".next7").click(function() {
+                    owl7.trigger('owl.next');
+                });
+                $(".prev7").click(function() {
+                    owl7.trigger('owl.prev');
+                });
+
+                var owl4 = $("#owl-demo4");
+                owl4.owlCarousel({
+                    items: 3,
+                    pagination: false,
+                    /*autoPlay : 3000,*/
+                    itemsCustom: [
+                        [767, 1],
+                        [1000, 3],
+                        [1600, 3]
+                    ],
+                });
+                $(".next4").click(function() {
+                    owl4.trigger('owl.next');
+                });
+                $(".prev4").click(function() {
+                    owl4.trigger('owl.prev');
+                });
+
+
+
+                var owl6 = $("#owl-demo6");
+                owl6.owlCarousel({
+                    slideSpeed: 300,
+                    paginationSpeed: 400,
+                    pagination: false,
+                    singleItem: true,
+                    /*autoPlay : 3000,*/
+
+                });
+                $(".next6").click(function() {
+                    owl6.trigger('owl.next');
+                });
+                $(".prev6").click(function() {
+                    owl6.trigger('owl.prev');
+                });
+
+
+                var homeSlider = $("#homeSlider");
+                homeSlider.owlCarousel({
+                    navigation: true, // Show next and prev buttons
+                    slideSpeed: 300,
+                    paginationSpeed: 400,
+                    pagination: false,
+                    singleItem: true,
+                    autoPlay: 3000,
+                });
+
+                $('#my-dropdown').sSelect();
+                $('.fancybox').fancybox();
+            });
+
+
+
+        </script>
+
+
+    </head>
+    <body>
+        <div class="wholeHeader">
+            <div class="topHeader">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="currency_box">
+                                Currency
+                            </div>
+                        </div>
+                        <div class="col-md-9">
+                            <div class="myCart">
+                                <a class="cart">
+                                    <span class="myCartText">My Cart</span>
+                                    <span class="myCartValue">
+                                        <strong>0</strong> Item </span>
+                                </a>
+                            </div>
+                            <div class="loginNav">
+                                <ul class="headerUl">
+                                    <li><a class="fancybox" href="#map1">Login</a></li>
+                                    <li><a href="#">Sign Up</a></li>
+                                    <li class="dropLi"><a href="#">My Telamela</a>
+                                        <ul class="dropUl">
+                                            <li><a href="#">My Rewards</a></li>
+                                            <li><a href="#">Awards</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="midHeader">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="logoContainer">
+                                <a href="http://localhost/telamela/" title="Telamela" class="logo"><img border="0" alt="logo" src="teshtml/images/logo.png"></a>
+                            </div>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="searchBlock">
+                                <div class="categories">
+                                    <select id="my-dropdown" name="my-dropdown">
+                                        <option value="1">A cappella</option>
+                                        <option value="test">Acid Jazz</option>
+                                        <option value="3">Big Band</option>
+                                        <option value="4">Big Beat</option>
+                                        <option value="5">Cakewalk</option>
+                                        <option value="6">Calenda</option>
+                                        <option value="7">Dark ambient</option>
+                                        <option value="8">Dark cabaret</option>
+                                        <option value="9">Chalk &amp; Cheese</option>
+                                    </select>
+
+                                </div>
+                                <div class="inputcontain">
+                                    <input type="text" class="mainSearch"/>
+                                    <div class="trickSubmit">
+                                        <input type="submit" value="submit">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="navHeader">
+                <div class="container">
+                    <div class="megaMenu">
+                        <ul class="menu">
+                            <li>
+                                <a href="#">Men</a>
+                                <div class="dropdowns_outer">
+                                    <div class="dropdowns_inner">
+                                        <div class="section_1">
+                                            <h4 class="h4_menu"><a href="#">Makeup</a></h4>
+                                            <ul class="innerList">
+                                                <li><a href="#">Concealer</a></li>
+                                                <li><a href="#">Face Powder</a></li>
+                                                <li><a href="#">Foundation</a></li>
+                                                <li><a href="#">Makeup Bags &amp; Cases</a></li>
+                                            </ul>
+                                            <h4 class="h4_menu"><a href="#">Makeup</a></h4>
+                                            <ul class="innerList">
+                                                <li><a href="#">Concealer</a></li>
+                                                <li><a href="#">Face Powder</a></li>
+                                                <li><a href="#">Foundation</a></li>
+                                                <li><a href="#">Makeup Bags &amp; Cases</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="section_1">
+                                            <h4 class="h4_menu"><a href="#">Makeup</a></h4>
+                                            <ul class="innerList">
+                                                <li><a href="#">Concealer</a></li>
+                                                <li><a href="#">Face Powder</a></li>
+                                                <li><a href="#">Foundation</a></li>
+                                                <li><a href="#">Makeup Bags &amp; Cases</a></li>
+                                            </ul>
+                                            <h4 class="h4_menu"><a href="#">Makeup</a></h4>
+                                            <ul class="innerList">
+                                                <li><a href="#">Concealer</a></li>
+                                                <li><a href="#">Face Powder</a></li>
+                                                <li><a href="#">Foundation</a></li>
+                                                <li><a href="#">Makeup Bags &amp; Cases</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="section_1">
+                                            <h4 class="h4_menu"><a href="#">Makeup</a></h4>
+                                            <ul class="innerList">
+                                                <li><a href="#">Concealer</a></li>
+                                                <li><a href="#">Face Powder</a></li>
+                                                <li><a href="#">Foundation</a></li>
+                                                <li><a href="#">Makeup Bags &amp; Cases</a></li>
+                                            </ul>
+                                            <h4 class="h4_menu"><a href="#">Makeup</a></h4>
+                                            <ul class="innerList">
+                                                <li><a href="#">Concealer</a></li>
+                                                <li><a href="#">Face Powder</a></li>
+                                                <li><a href="#">Foundation</a></li>
+                                                <li><a href="#">Makeup Bags &amp; Cases</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="section_1">
+                                            <h4 class="h4_menu"><a href="#">Makeup</a></h4>
+                                            <ul class="innerList">
+                                                <li><a href="#">Concealer</a></li>
+                                                <li><a href="#">Face Powder</a></li>
+                                                <li><a href="#">Foundation</a></li>
+                                                <li><a href="#">Makeup Bags &amp; Cases</a></li>
+                                            </ul>
+                                            <h4 class="h4_menu"><a href="#">Makeup</a></h4>
+                                            <ul class="innerList">
+                                                <li><a href="#">Concealer</a></li>
+                                                <li><a href="#">Face Powder</a></li>
+                                                <li><a href="#">Foundation</a></li>
+                                                <li><a href="#">Makeup Bags &amp; Cases</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="section_1 sectionImages">
+                                            <div class="img_sec">
+                                                <div class="adimg">
+                                                    <a target="_blank" href="http://www.telamela.com.au/category/Casual-Shirts/5"><img title="Men Apparal" alt="Men Apparal" src="http://www.telamela.com.au/teshtml/uploaded_files//images/ads/243x117/20150325_025259_79140900.png"></a>
+                                                </div>
+                                                <div class="adimg">
+                                                    <a target="_blank" href="http://www.telamela.com.au/landing/Men/2"><img title="MEN SALE" alt="MEN SALE" src="http://www.telamela.com.au/teshtml/uploaded_files//images/ads/243x117/20150304_021826_740565736.jpg"></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li><a href="#">Women</a></li>
+                            <li><a href="#">Kids</a></li>
+                            <li><a href="#">Baby</a></li>
+                            <li><a href="#">Electronics</a></li>
+                            <li><a href="#">Sports</a></li>
+                            <li><a href="#">Toys</a></li>
+                            <li><a href="#">Home & Travel</a></li>
+                            <li><a href="#">Health & Fitness</a></li>
+                            <li class="lastLi"><a href="#">More</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="dashboardBox">
+                <div class="container">
+                    <!--this section is for Wholesaler dasboard when admin is logged in.-->
+                </div>
+            </div>
+        </div>
+
+        <div class="contentArea">
+            <div class="container">
+                <div class="bannerBlock">
+                    <div class="sliderBlock">
+                        <div id="homeSlider" class="owl-demo1 owl-carousel">
+                            <div class="item  ">
+                                <img alt="" src="http://localhost/telamela/common/uploaded_files/images/banner/600x400/default.jpg" class="banner">
+                            </div>
+                            <div class="item  ">
+                                <img alt="" src="http://localhost/telamela/common/uploaded_files/images/banner/600x400/default.jpg" class="banner">
+                            </div>
+                            <div class="item  ">
+                                <img alt="" src="http://localhost/telamela/common/uploaded_files/images/banner/600x400/default.jpg" class="banner">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="todayOffer">
+                        <h3 class="txtStl"><span>Today's</span> Offer</h3>
+                        <div class="offerImgDiv">
+                            <div class="offerImg">
+                                <a class="" href="http://www.telamela.com.au/product/Men-s--Leather/7883"><img alt=" Men's Leather" src="http://www.telamela.com.au/common/uploaded_files/images/products/116x101/1438549832.jpeg"></a>
+                            </div>
+                        </div>
+                        <h4 class="offerProName"><a class="" href="#"> Men's Leather</a></h4>
+                        <div class="price_new">
+                            <small>US$ 537.60</small><strong>US$ 20.00</strong>
+                        </div>
+                        <p class="grabP">
+                            <a class="" href="http://localhost/telamela/product//6752">
+                                GRAB NOW while stock lasts! </a>
+                        </p>
+                        <span class="offPrice">
+                            <div id="offPriceText">
+                                <span>96%</span> Off
+                            </div>
+                        </span>
+                    </div>
+                </div>
+                <div class="featuredBlock">
+                    <div class="leftSliders">
+                        <div class="horizontalTab">
+                            <div class="headingStyle">
+                                <div class="heading_main">
+                                    Best Seller
+                                    <div class="border_bar">
+                                    </div>
+                                </div>
+                                <ul class="resp-tabs-list">
+                                    <li class="resp-tab-item resp-tab-active" aria-controls="tab_item-0" role="tab">ALL PRODUCTS</li>
+                                    <li>MEN'S</li>
+                                    <li>WOMEN'S</li>
+                                </ul>
+                                <div class="customNavigation">
+                                    <a class="prev"><img alt="" src="teshtml/images/arrow_slider-left.png"></a>
+                                    <a class="next"><img alt="" src="teshtml/images/arrow_slider-right.png"></a>
+                                </div>
+                            </div>
+                            <div class="resp-tabs-container">
+                                <div id="owl-demo1" class="owl-demo1 owl-carousel">
+                                    <div class="item">
+                                        <div class="view view-first">
+                                            <div class="image_new">
+                                                <img alt="BATA boots" src="http://localhost/telamela/common/uploaded_files/images/products/208x185/default.jpg">
+                                                <div class="new_heading">
+                                                    BATA boots
+                                                </div>
+                                                <div class="discount_new">
+                                                    7%<span>OFF</span>
+                                                </div>
+                                                <div class="price_new">
+                                                    <small>US$ 24.63</small><strong> US$ 22.86</strong>
+                                                </div>
+                                                <!--<div class="unactive"> </div>-->
+                                            </div>
+                                            <div class="mask">
+                                                <h2><a href="#">BATA boots</a></h2>
+                                                <p class="productPointer">
+                                                </p>
+                                                <div class="mask_box">
+                                                    <a title="Quick view" class="infoButton"   href="#">Quick view</a>
+                                                    <a  class="info fancybox" href="#map">Save</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="view view-first">
+                                            <div class="image_new">
+                                                <img alt="BATA boots" src="http://localhost/telamela/common/uploaded_files/images/products/208x185/default.jpg">
+                                                <div class="new_heading">
+                                                    BATA boots
+                                                </div>
+                                                <div class="discount_new">
+                                                    7%<span>OFF</span>
+                                                </div>
+                                                <div class="price_new">
+                                                    <small>US$ 24.63</small><strong> US$ 22.86</strong>
+                                                </div>
+                                                <!--<div class="unactive"> </div>-->
+                                            </div>
+                                            <div class="mask">
+                                                <h2><a href="#">BATA boots</a></h2>
+                                                <p class="productPointer">
+                                                </p>
+                                                <div class="mask_box">
+                                                    <a title="Quick view" class="infoButton"   href="#">Quick view</a>
+                                                    <a   class="info jscallLoginBoxReview" href="#loginBoxReview">Save</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="view view-first">
+                                            <div class="image_new">
+                                                <img alt="BATA boots" src="http://localhost/telamela/common/uploaded_files/images/products/208x185/default.jpg">
+                                                <div class="new_heading">
+                                                    BATA boots
+                                                </div>
+                                                <div class="discount_new">
+                                                    7%<span>OFF</span>
+                                                </div>
+                                                <div class="price_new">
+                                                    <small>US$ 24.63</small><strong> US$ 22.86</strong>
+                                                </div>
+                                                <!--<div class="unactive"> </div>-->
+                                            </div>
+                                            <div class="mask">
+                                                <h2><a href="#">BATA boots</a></h2>
+                                                <p class="productPointer">
+                                                </p>
+                                                <div class="mask_box">
+                                                    <a title="Quick view" class="infoButton"   href="#">Quick view</a>
+                                                    <a   class="info jscallLoginBoxReview" href="#loginBoxReview">Save</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="view view-first">
+                                            <div class="image_new">
+                                                <img alt="BATA boots" src="http://localhost/telamela/common/uploaded_files/images/products/208x185/default.jpg">
+                                                <div class="new_heading">
+                                                    BATA boots
+                                                </div>
+                                                <div class="discount_new">
+                                                    7%<span>OFF</span>
+                                                </div>
+                                                <div class="price_new">
+                                                    <small>US$ 24.63</small><strong> US$ 22.86</strong>
+                                                </div>
+                                                <!--<div class="unactive"> </div>-->
+                                            </div>
+                                            <div class="mask">
+                                                <h2><a href="#">BATA boots</a></h2>
+                                                <p class="productPointer">
+                                                </p>
+                                                <div class="mask_box">
+                                                    <a title="Quick view" class="infoButton"   href="#">Quick view</a>
+                                                    <a   class="info jscallLoginBoxReview" href="#loginBoxReview">Save</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="horizontalTab">
+                            <div class="headingStyle">
+                                <div class="heading_main">
+                                    Best Seller
+                                    <div class="border_bar">
+                                    </div>
+                                </div>
+                                <ul class="resp-tabs-list">
+                                    <li class="resp-tab-item resp-tab-active" aria-controls="tab_item-0" role="tab">ALL PRODUCTS</li>
+                                    <li>MEN'S</li>
+                                    <li>WOMEN'S</li>
+                                </ul>
+                                <div class="customNavigation">
+                                    <a class="prev2"><img alt="" src="teshtml/images/arrow_slider-left.png"></a><a class="next2"><img alt="" src="teshtml/images/arrow_slider-right.png"></a>
+                                </div>
+                            </div>
+                            <div class="resp-tabs-container">
+                                <div id="owl-demo2" class="owl-demo1 owl-carousel">
+                                    <div class="item">
+                                        <div class="view view-first">
+                                            <div class="image_new">
+                                                <img alt="BATA boots" src="http://localhost/telamela/common/uploaded_files/images/products/208x185/default.jpg">
+                                                <div class="new_heading">
+                                                    BATA boots
+                                                </div>
+                                                <div class="discount_new">
+                                                    7%<span>OFF</span>
+                                                </div>
+                                                <div class="price_new">
+                                                    <small>US$ 24.63</small><strong> US$ 22.86</strong>
+                                                </div>
+                                                <!--<div class="unactive"> </div>-->
+                                            </div>
+                                            <div class="mask">
+                                                <h2><a href="#">BATA boots</a></h2>
+                                                <p class="productPointer">
+                                                </p>
+                                                <div class="mask_box">
+                                                    <a title="Quick view" class="infoButton"   href="#">Quick view</a>
+                                                    <a   class="info jscallLoginBoxReview" href="#loginBoxReview">Save</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="view view-first">
+                                            <div class="image_new">
+                                                <img alt="BATA boots" src="http://localhost/telamela/common/uploaded_files/images/products/208x185/default.jpg">
+                                                <div class="new_heading">
+                                                    BATA boots
+                                                </div>
+                                                <div class="discount_new">
+                                                    7%<span>OFF</span>
+                                                </div>
+                                                <div class="price_new">
+                                                    <small>US$ 24.63</small><strong> US$ 22.86</strong>
+                                                </div>
+                                                <!--<div class="unactive"> </div>-->
+                                            </div>
+                                            <div class="mask">
+                                                <h2><a href="#">BATA boots</a></h2>
+                                                <p class="productPointer">
+                                                </p>
+                                                <div class="mask_box">
+                                                    <a title="Quick view" class="infoButton"   href="#">Quick view</a>
+                                                    <a   class="info jscallLoginBoxReview" href="#loginBoxReview">Save</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="view view-first">
+                                            <div class="image_new">
+                                                <img alt="BATA boots" src="http://localhost/telamela/common/uploaded_files/images/products/208x185/default.jpg">
+                                                <div class="new_heading">
+                                                    BATA boots
+                                                </div>
+                                                <div class="discount_new">
+                                                    7%<span>OFF</span>
+                                                </div>
+                                                <div class="price_new">
+                                                    <small>US$ 24.63</small><strong> US$ 22.86</strong>
+                                                </div>
+                                                <!--<div class="unactive"> </div>-->
+                                            </div>
+                                            <div class="mask">
+                                                <h2><a href="#">BATA boots</a></h2>
+                                                <p class="productPointer">
+                                                </p>
+                                                <div class="mask_box">
+                                                    <a title="Quick view" class="infoButton"   href="#">Quick view</a>
+                                                    <a   class="info jscallLoginBoxReview" href="#loginBoxReview">Save</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="view view-first">
+                                            <div class="image_new">
+                                                <img alt="BATA boots" src="http://localhost/telamela/common/uploaded_files/images/products/208x185/default.jpg">
+                                                <div class="new_heading">
+                                                    BATA boots
+                                                </div>
+                                                <div class="discount_new">
+                                                    7%<span>OFF</span>
+                                                </div>
+                                                <div class="price_new">
+                                                    <small>US$ 24.63</small><strong> US$ 22.86</strong>
+                                                </div>
+                                                <!--<div class="unactive"> </div>-->
+                                            </div>
+                                            <div class="mask">
+                                                <h2><a href="#">BATA boots</a></h2>
+                                                <p class="productPointer">
+                                                </p>
+                                                <div class="mask_box">
+                                                    <a title="Quick view" class="infoButton"   href="#">Quick view</a>
+                                                    <a   class="info jscallLoginBoxReview" href="#loginBoxReview">Save</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="homeRight">
+                        <div class="banners_new">
+                            <a target="_blank" href="#">
+                                <img title="High Heels" alt="High Heels" src="http://www.telamela.com.au/common/uploaded_files/images/ads/276x160/20150209_125539_1014130345.png" class="lazy">
+                            </a>
+                        </div>
+                        <div class="banners_new">
+                            <a target="_blank" href="#">
+                                <img title="High Heels" alt="High Heels" src="http://www.telamela.com.au/common/uploaded_files/images/ads/276x160/20150209_125539_1014130345.png" class="lazy">
+                            </a>
+                        </div>
+                        <div class="banners_new">
+                            <a target="_blank" href="#">
+                                <img title="High Heels" alt="High Heels" src="http://www.telamela.com.au/common/uploaded_files/images/ads/276x160/20150209_125539_1014130345.png" class="lazy">
+                            </a>
+                        </div>
+                        <div class="banners_new">
+                            <a target="_blank" href="#">
+                                <img title="High Heels" alt="High Heels" src="http://www.telamela.com.au/common/uploaded_files/images/ads/276x160/20150209_125539_1014130345.png" class="lazy">
+                            </a>
+                        </div>
+                        <div class="banners_new">
+                            <a target="_blank" href="#">
+                                <img title="High Heels" alt="High Heels" src="http://www.telamela.com.au/common/uploaded_files/images/ads/276x160/20150209_125539_1014130345.png" class="lazy">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="fullwslider">
+                    <div class="horizontalTab">
+                        <div class="headingStyle">
+                            <div class="heading_main">
+                                Best Seller
+                                <div class="border_bar">
+                                </div>
+                            </div>
+                            <ul class="resp-tabs-list">
+                                <li class="resp-tab-item resp-tab-active" aria-controls="tab_item-0" role="tab">ALL PRODUCTS</li>
+                                <li>MEN'S</li>
+                                <li>WOMEN'S</li>
+                            </ul>
+
+                        </div>
+                        <a class="prev3"><img alt="" src="teshtml/images/arrow_slider-left.png"></a>
+                        <a class="next3"><img alt="" src="teshtml/images/arrow_slider-right.png"></a>
+
+                        <div class="resp-tabs-container">
+                            <div id="owl-demo3" class="owl-demo1 owl-carousel">
+                                <div class="item">
+                                    <div class="view view-first">
+                                        <div class="image_new">
+                                            <img alt="BATA boots" src="http://localhost/telamela/common/uploaded_files/images/products/208x185/default.jpg">
+                                            <div class="new_heading">
+                                                BATA boots
+                                            </div>
+                                            <div class="discount_new">
+                                                7%<span>OFF</span>
+                                            </div>
+                                            <div class="price_new">
+                                                <small>US$ 24.63</small><strong> US$ 22.86</strong>
+                                            </div>
+                                            <!--<div class="unactive"> </div>-->
+                                        </div>
+                                        <div class="mask">
+                                            <h2><a href="#">BATA boots</a></h2>
+                                            <p class="productPointer">
+                                            </p>
+                                            <div class="mask_box">
+                                                <a title="Quick view" class="infoButton"   href="#">Quick view</a>
+                                                <a   class="info jscallLoginBoxReview" href="#loginBoxReview">Save</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="view view-first">
+                                        <div class="image_new">
+                                            <img alt="BATA boots" src="http://localhost/telamela/common/uploaded_files/images/products/208x185/default.jpg">
+                                            <div class="new_heading">
+                                                BATA boots
+                                            </div>
+                                            <div class="discount_new">
+                                                7%<span>OFF</span>
+                                            </div>
+                                            <div class="price_new">
+                                                <small>US$ 24.63</small><strong> US$ 22.86</strong>
+                                            </div>
+                                            <!--<div class="unactive"> </div>-->
+                                        </div>
+                                        <div class="mask">
+                                            <h2><a href="#">BATA boots</a></h2>
+                                            <p class="productPointer">
+                                            </p>
+                                            <div class="mask_box">
+                                                <a title="Quick view" class="infoButton"   href="#">Quick view</a>
+                                                <a   class="info jscallLoginBoxReview" href="#loginBoxReview">Save</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="view view-first">
+                                        <div class="image_new">
+                                            <img alt="BATA boots" src="http://localhost/telamela/common/uploaded_files/images/products/208x185/default.jpg">
+                                            <div class="new_heading">
+                                                BATA boots
+                                            </div>
+                                            <div class="discount_new">
+                                                7%<span>OFF</span>
+                                            </div>
+                                            <div class="price_new">
+                                                <small>US$ 24.63</small><strong> US$ 22.86</strong>
+                                            </div>
+                                            <!--<div class="unactive"> </div>-->
+                                        </div>
+                                        <div class="mask">
+                                            <h2><a href="#">BATA boots</a></h2>
+                                            <p class="productPointer">
+                                            </p>
+                                            <div class="mask_box">
+                                                <a title="Quick view" class="infoButton"   href="#">Quick view</a>
+                                                <a   class="info jscallLoginBoxReview" href="#loginBoxReview">Save</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="view view-first">
+                                        <div class="image_new">
+                                            <img alt="BATA boots" src="http://localhost/telamela/common/uploaded_files/images/products/208x185/default.jpg">
+                                            <div class="new_heading">
+                                                BATA boots
+                                            </div>
+                                            <div class="discount_new">
+                                                7%<span>OFF</span>
+                                            </div>
+                                            <div class="price_new">
+                                                <small>US$ 24.63</small><strong> US$ 22.86</strong>
+                                            </div>
+                                            <!--<div class="unactive"> </div>-->
+                                        </div>
+                                        <div class="mask">
+                                            <h2><a href="#">BATA boots</a></h2>
+                                            <p class="productPointer">
+                                            </p>
+                                            <div class="mask_box">
+                                                <a title="Quick view" class="infoButton"   href="#">Quick view</a>
+                                                <a   class="info jscallLoginBoxReview" href="#loginBoxReview">Save</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="view view-first">
+                                        <div class="image_new">
+                                            <img alt="BATA boots" src="http://localhost/telamela/common/uploaded_files/images/products/208x185/default.jpg">
+                                            <div class="new_heading">
+                                                BATA boots
+                                            </div>
+                                            <div class="discount_new">
+                                                7%<span>OFF</span>
+                                            </div>
+                                            <div class="price_new">
+                                                <small>US$ 24.63</small><strong> US$ 22.86</strong>
+                                            </div>
+                                            <!--<div class="unactive"> </div>-->
+                                        </div>
+                                        <div class="mask">
+                                            <h2><a href="#">BATA boots</a></h2>
+                                            <p class="productPointer">
+                                            </p>
+                                            <div class="mask_box">
+                                                <a title="Quick view" class="infoButton"   href="#">Quick view</a>
+                                                <a   class="info jscallLoginBoxReview" href="#loginBoxReview">Save</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="view view-first">
+                                        <div class="image_new">
+                                            <img alt="BATA boots" src="http://localhost/telamela/common/uploaded_files/images/products/208x185/default.jpg">
+                                            <div class="new_heading">
+                                                BATA boots
+                                            </div>
+                                            <div class="discount_new">
+                                                7%<span>OFF</span>
+                                            </div>
+                                            <div class="price_new">
+                                                <small>US$ 24.63</small><strong> US$ 22.86</strong>
+                                            </div>
+                                            <!--<div class="unactive"> </div>-->
+                                        </div>
+                                        <div class="mask">
+                                            <h2><a href="#">BATA boots</a></h2>
+                                            <p class="productPointer">
+                                            </p>
+                                            <div class="mask_box">
+                                                <a title="Quick view" class="infoButton"   href="#">Quick view</a>
+                                                <a   class="info jscallLoginBoxReview" href="#loginBoxReview">Save</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="view view-first">
+                                        <div class="image_new">
+                                            <img alt="BATA boots" src="http://localhost/telamela/common/uploaded_files/images/products/208x185/default.jpg">
+                                            <div class="new_heading">
+                                                BATA boots
+                                            </div>
+                                            <div class="discount_new">
+                                                7%<span>OFF</span>
+                                            </div>
+                                            <div class="price_new">
+                                                <small>US$ 24.63</small><strong> US$ 22.86</strong>
+                                            </div>
+                                            <!--<div class="unactive"> </div>-->
+                                        </div>
+                                        <div class="mask">
+                                            <h2><a href="#">BATA boots</a></h2>
+                                            <p class="productPointer">
+                                            </p>
+                                            <div class="mask_box">
+                                                <a title="Quick view" class="infoButton"   href="#">Quick view</a>
+                                                <a   class="info jscallLoginBoxReview" href="#loginBoxReview">Save</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="featuredBlock bottomFeaturedblock">
+                    <div class="leftSliders">
+                        <div class="horizontalTab">
+                            <div class="headingStyle">
+                                <div class="heading_main">
+                                    Best Seller
+                                    <div class="border_bar">
+                                    </div>
+                                </div>
+                                <ul class="resp-tabs-list">
+                                    <li class="resp-tab-item resp-tab-active" aria-controls="tab_item-0" role="tab">ALL PRODUCTS</li>
+                                    <li>MEN'S</li>
+                                    <li>WOMEN'S</li>
+                                </ul>
+                                <div class="customNavigation">
+                                    <a class="prev4"><img alt="" src="teshtml/images/arrow_slider-left.png"></a><a class="next4"><img alt="" src="teshtml/images/arrow_slider-right.png"></a>
+                                </div>
+                            </div>
+                            <div class="resp-tabs-container">
+                                <div id="owl-demo4" class="owl-demo1 owl-carousel">
+                                    <div class="item">
+                                        <div class="view view-first">
+                                            <div class="image_new">
+                                                <img alt="BATA boots" src="http://localhost/telamela/common/uploaded_files/images/products/208x185/default.jpg">
+                                                <div class="new_heading">
+                                                    BATA boots
+                                                </div>
+                                                <div class="discount_new">
+                                                    7%<span>OFF</span>
+                                                </div>
+                                                <div class="price_new">
+                                                    <small>US$ 24.63</small><strong> US$ 22.86</strong>
+                                                </div>
+                                                <!--<div class="unactive"> </div>-->
+                                            </div>
+                                            <div class="mask">
+                                                <h2><a href="#">BATA boots</a></h2>
+                                                <p class="productPointer">
+                                                </p>
+                                                <div class="mask_box">
+                                                    <a title="Quick view" class="infoButton"   href="#">Quick view</a>
+                                                    <a   class="info jscallLoginBoxReview" href="#loginBoxReview">Save</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="view view-first">
+                                            <div class="image_new">
+                                                <img alt="BATA boots" src="http://localhost/telamela/common/uploaded_files/images/products/208x185/default.jpg">
+                                                <div class="new_heading">
+                                                    BATA boots
+                                                </div>
+                                                <div class="discount_new">
+                                                    7%<span>OFF</span>
+                                                </div>
+                                                <div class="price_new">
+                                                    <small>US$ 24.63</small><strong> US$ 22.86</strong>
+                                                </div>
+                                                <!--<div class="unactive"> </div>-->
+                                            </div>
+                                            <div class="mask">
+                                                <h2><a href="#">BATA boots</a></h2>
+                                                <p class="productPointer">
+                                                </p>
+                                                <div class="mask_box">
+                                                    <a title="Quick view" class="infoButton"   href="#">Quick view</a>
+                                                    <a   class="info jscallLoginBoxReview" href="#loginBoxReview">Save</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="view view-first">
+                                            <div class="image_new">
+                                                <img alt="BATA boots" src="http://localhost/telamela/common/uploaded_files/images/products/208x185/default.jpg">
+                                                <div class="new_heading">
+                                                    BATA boots
+                                                </div>
+                                                <div class="discount_new">
+                                                    7%<span>OFF</span>
+                                                </div>
+                                                <div class="price_new">
+                                                    <small>US$ 24.63</small><strong> US$ 22.86</strong>
+                                                </div>
+                                                <!--<div class="unactive"> </div>-->
+                                            </div>
+                                            <div class="mask">
+                                                <h2><a href="#">BATA boots</a></h2>
+                                                <p class="productPointer">
+                                                </p>
+                                                <div class="mask_box">
+                                                    <a title="Quick view" class="infoButton"   href="#">Quick view</a>
+                                                    <a   class="info jscallLoginBoxReview" href="#loginBoxReview">Save</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="view view-first">
+                                            <div class="image_new">
+                                                <img alt="BATA boots" src="http://localhost/telamela/common/uploaded_files/images/products/208x185/default.jpg">
+                                                <div class="new_heading">
+                                                    BATA boots
+                                                </div>
+                                                <div class="discount_new">
+                                                    7%<span>OFF</span>
+                                                </div>
+                                                <div class="price_new">
+                                                    <small>US$ 24.63</small><strong> US$ 22.86</strong>
+                                                </div>
+                                                <!--<div class="unactive"> </div>-->
+                                            </div>
+                                            <div class="mask">
+                                                <h2><a href="#">BATA boots</a></h2>
+                                                <p class="productPointer">
+                                                </p>
+                                                <div class="mask_box">
+                                                    <a title="Quick view" class="infoButton"   href="#">Quick view</a>
+                                                    <a   class="info jscallLoginBoxReview" href="#loginBoxReview">Save</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="homeRight">
+                        <div class="varifiedBox">
+                            <h3 class="veri_heading">Verified Suppliers</h3>
+                            <p class="vari_p">Trade with Confidence across the globe.</p>
+
+                            <a class="veri-btn prev6 veri_left">
+                                <img alt="" src="http://www.telamela.com.au/common/images/arrow_ver.jpg">
+                            </a>
+                            <a class="veri-btn next6 veri_right">
+                                <img alt="" src="http://www.telamela.com.au/common/images/arrow_ver_right.jpg">
+                            </a>
+
+                            <div id="owl-demo6" class="owl-demo1 owl-carousel">
+                                <div class="item">
+                                    <h3 class="heading_new1">
+                                        <a href="#" class="verified-supplier">Infocom</a>
+                                    </h3>
+                                    <div class="veri_img">
+                                        <div class="veri_imgInner">
+                                            <a href="#"><img style="" alt="Cricket Pad" class="lazy"
+                                                             src="http://www.telamela.com.au/common/uploaded_files/images/wholesaler_logo/8ce48b88b673ffda40a2bc128cff38bd.png" />
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <p class="verified_txt">Infocom is a  delhi based company.
+                                        It has more then 200 outlates all over the india..Infocom is kno ..</p>
+                                    <p class="connect"> Recents Connects  : 11954125639</p>
+                                </div>
+                                <div class="item">
+                                    <h3 class="heading_new1">
+                                        <a href="#" class="verified-supplier">Infocom</a>
+                                    </h3>
+                                    <div class="veri_img">
+                                        <div class="veri_imgInner">
+                                            <a href="#"><img style="" alt="Cricket Pad" class="lazy"
+                                                             src="http://www.telamela.com.au/common/uploaded_files/images/wholesaler_logo/8ce48b88b673ffda40a2bc128cff38bd.png" />
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <p class="verified_txt">Infocom is a  delhi based company.
+                                        It has more then 200 outlates all over the india..Infocom is kno ..</p>
+                                    <p class="connect"> Recents Connects  : 11954125639</p>
+                                </div>
+                                <div class="item">
+                                    <h3 class="heading_new1">
+                                        <a href="#" class="verified-supplier">Infocom</a>
+                                    </h3>
+                                    <div class="veri_img">
+                                        <div class="veri_imgInner">
+                                            <a href="#"><img style="" alt="Cricket Pad" class="lazy"
+                                                             src="http://www.telamela.com.au/common/uploaded_files/images/wholesaler_logo/8ce48b88b673ffda40a2bc128cff38bd.png" />
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <p class="verified_txt">Infocom is a  delhi based company.
+                                        It has more then 200 outlates all over the india..Infocom is kno ..</p>
+                                    <p class="connect"> Recents Connects  : 11954125639</p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="fullwslider">
+                    <div class="horizontalTab">
+                        <div class="headingStyle">
+                            <div class="heading_main">
+                                Best Seller
+                                <div class="border_bar">
+                                </div>
+                            </div>
+                            <ul class="resp-tabs-list">
+                                <li class="resp-tab-item resp-tab-active" aria-controls="tab_item-0" role="tab">ALL PRODUCTS</li>
+                                <li>MEN'S</li>
+                                <li>WOMEN'S</li>
+                            </ul>
+
+                            <a class="prev7"><img alt="" src="teshtml/images/arrow_slider-left.png"></a>
+                            <a class="next7"><img alt="" src="teshtml/images/arrow_slider-right.png"></a>
+
+                        </div>
+                        <div class="resp-tabs-container">
+                            <div id="owl-demo7" class="owl-demo1 owl-carousel">
+                                <div class="item">
+                                    <div class="view view-first">
+                                        <div class="image_new">
+                                            <img alt="BATA boots" src="http://localhost/telamela/common/uploaded_files/images/products/208x185/default.jpg">
+                                            <div class="new_heading">
+                                                BATA boots
+                                            </div>
+                                            <div class="discount_new">
+                                                7%<span>OFF</span>
+                                            </div>
+                                            <div class="price_new">
+                                                <small>US$ 24.63</small><strong> US$ 22.86</strong>
+                                            </div>
+                                            <!--<div class="unactive"> </div>-->
+                                        </div>
+                                        <div class="mask">
+                                            <h2><a href="#">BATA boots</a></h2>
+                                            <p class="productPointer">
+                                            </p>
+                                            <div class="mask_box">
+                                                <a title="Quick view" class="infoButton"   href="#">Quick view</a>
+                                                <a   class="info jscallLoginBoxReview" href="#loginBoxReview">Save</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="view view-first">
+                                        <div class="image_new">
+                                            <img alt="BATA boots" src="http://localhost/telamela/common/uploaded_files/images/products/208x185/default.jpg">
+                                            <div class="new_heading">
+                                                BATA boots
+                                            </div>
+                                            <div class="discount_new">
+                                                7%<span>OFF</span>
+                                            </div>
+                                            <div class="price_new">
+                                                <small>US$ 24.63</small><strong> US$ 22.86</strong>
+                                            </div>
+                                            <!--<div class="unactive"> </div>-->
+                                        </div>
+                                        <div class="mask">
+                                            <h2><a href="#">BATA boots</a></h2>
+                                            <p class="productPointer">
+                                            </p>
+                                            <div class="mask_box">
+                                                <a title="Quick view" class="infoButton"   href="#">Quick view</a>
+                                                <a   class="info jscallLoginBoxReview" href="#loginBoxReview">Save</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="view view-first">
+                                        <div class="image_new">
+                                            <img alt="BATA boots" src="http://localhost/telamela/common/uploaded_files/images/products/208x185/default.jpg">
+                                            <div class="new_heading">
+                                                BATA boots
+                                            </div>
+                                            <div class="discount_new">
+                                                7%<span>OFF</span>
+                                            </div>
+                                            <div class="price_new">
+                                                <small>US$ 24.63</small><strong> US$ 22.86</strong>
+                                            </div>
+                                            <!--<div class="unactive"> </div>-->
+                                        </div>
+                                        <div class="mask">
+                                            <h2><a href="#">BATA boots</a></h2>
+                                            <p class="productPointer">
+                                            </p>
+                                            <div class="mask_box">
+                                                <a title="Quick view" class="infoButton"   href="#">Quick view</a>
+                                                <a   class="info jscallLoginBoxReview" href="#loginBoxReview">Save</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="view view-first">
+                                        <div class="image_new">
+                                            <img alt="BATA boots" src="http://localhost/telamela/common/uploaded_files/images/products/208x185/default.jpg">
+                                            <div class="new_heading">
+                                                BATA boots
+                                            </div>
+                                            <div class="discount_new">
+                                                7%<span>OFF</span>
+                                            </div>
+                                            <div class="price_new">
+                                                <small>US$ 24.63</small><strong> US$ 22.86</strong>
+                                            </div>
+                                            <!--<div class="unactive"> </div>-->
+                                        </div>
+                                        <div class="mask">
+                                            <h2><a href="#">BATA boots</a></h2>
+                                            <p class="productPointer">
+                                            </p>
+                                            <div class="mask_box">
+                                                <a title="Quick view" class="infoButton"   href="#">Quick view</a>
+                                                <a   class="info jscallLoginBoxReview" href="#loginBoxReview">Save</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="view view-first">
+                                        <div class="image_new">
+                                            <img alt="BATA boots" src="http://localhost/telamela/common/uploaded_files/images/products/208x185/default.jpg">
+                                            <div class="new_heading">
+                                                BATA boots
+                                            </div>
+                                            <div class="discount_new">
+                                                7%<span>OFF</span>
+                                            </div>
+                                            <div class="price_new">
+                                                <small>US$ 24.63</small><strong> US$ 22.86</strong>
+                                            </div>
+                                            <!--<div class="unactive"> </div>-->
+                                        </div>
+                                        <div class="mask">
+                                            <h2><a href="#">BATA boots</a></h2>
+                                            <p class="productPointer">
+                                            </p>
+                                            <div class="mask_box">
+                                                <a title="Quick view" class="infoButton"   href="#">Quick view</a>
+                                                <a   class="info jscallLoginBoxReview" href="#loginBoxReview">Save</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="view view-first">
+                                        <div class="image_new">
+                                            <img alt="BATA boots" src="http://localhost/telamela/common/uploaded_files/images/products/208x185/default.jpg">
+                                            <div class="new_heading">
+                                                BATA boots
+                                            </div>
+                                            <div class="discount_new">
+                                                7%<span>OFF</span>
+                                            </div>
+                                            <div class="price_new">
+                                                <small>US$ 24.63</small><strong> US$ 22.86</strong>
+                                            </div>
+                                            <!--<div class="unactive"> </div>-->
+                                        </div>
+                                        <div class="mask">
+                                            <h2><a href="#">BATA boots</a></h2>
+                                            <p class="productPointer">
+                                            </p>
+                                            <div class="mask_box">
+                                                <a title="Quick view" class="infoButton"   href="#">Quick view</a>
+                                                <a   class="info jscallLoginBoxReview" href="#loginBoxReview">Save</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="view view-first">
+                                        <div class="image_new">
+                                            <img alt="BATA boots" src="http://localhost/telamela/common/uploaded_files/images/products/208x185/default.jpg">
+                                            <div class="new_heading">
+                                                BATA boots
+                                            </div>
+                                            <div class="discount_new">
+                                                7%<span>OFF</span>
+                                            </div>
+                                            <div class="price_new">
+                                                <small>US$ 24.63</small><strong> US$ 22.86</strong>
+                                            </div>
+                                            <!--<div class="unactive"> </div>-->
+                                        </div>
+                                        <div class="mask">
+                                            <h2><a href="#">BATA boots</a></h2>
+                                            <p class="productPointer">
+                                            </p>
+                                            <div class="mask_box">
+                                                <a title="Quick view" class="infoButton"   href="#">Quick view</a>
+                                                <a   class="info jscallLoginBoxReview" href="#loginBoxReview">Save</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>	
+        <div class="footer">
+            <div class="container">
+                <div class="footerTop">
+                    <div class="sec_1">
+                        <h5>About Market</h5>
+                        <ul>
+                            <li> <i class="fa fa-angle-right"></i> <a href="#"> Terms </a> </li>
+                            <li> <i class="fa fa-angle-right"></i> <a href="#"> About Us </a> </li>
+                            <li> <i class="fa fa-angle-right"></i> <a href="#"> Privacy Policy </a> </li>
+                            <li> <i class="fa fa-angle-right"></i> <a href="#"> My Home </a> </li>
+                            <li> <i class="fa fa-angle-right"></i> <a href="#"> Tips </a> </li>
+                        </ul>
+                    </div>
+                    <div class="sec_1">
+                        <h5>Customer Service</h5>
+                        <ul>
+                            <li><i class="fa fa-angle-right"></i><a href="#"> Track Order </a> </li>
+                            <li><i class="fa fa-angle-right"></i><a href="#"> Compensation First </a> </li>
+                            <li><i class="fa fa-angle-right"></i><a href="#"> Return Policy </a> </li>
+                            <li><i class="fa fa-angle-right"></i><a href="#"> Gift Card </a> </li>
+                            <li><i class="fa fa-angle-right"></i><a href="#"> My Account </a> </li>
+                            <li><i class="fa fa-angle-right"></i><a href="#"> Shipping Policy </a> </li>
+                            <li><i class="fa fa-angle-right"></i><a href="#">Contact Us</a></li>
+                            <li><i class="fa fa-angle-right"></i><a href="#">Rewards</a></li>
+                        </ul>
+                    </div>
+                    <div class="sec_1">
+                        <h5>Payment &amp; Shipping</h5>
+                        <ul>
+                            <li><i class="fa fa-angle-right"></i><a href="#"> Locations We Ship To </a> </li>
+                            <li><i class="fa fa-angle-right"></i><a href="#"> Estimated Delivery Time </a> </li>
+                            <li><i class="fa fa-angle-right"></i><a href="#"> Payment Methods </a> </li>
+                            <li><i class="fa fa-angle-right"></i><a href="#"> Shipping Guide </a> </li>
+                        </ul>
+                    </div>
+                    <div class="sec_2">
+                        <h5>Contact Us</h5>
+                        <div class="footerLogo">
+                            <a href="#">
+                                <img alt="" src="http://localhost/telamela/common/images/footer-logo.png">
+                            </a>
+                        </div>
+                        <p>P.O. Box 3395, Road Town, Demo, Country Loream Ipsum, VG1110</p>
+
+                        <ul class="conDetailsUl">
+                            <li><i class="fa fa-phone color"></i>(284) 443 3236</li>
+                            <li><i class="fa fa-envelope color"></i><a href="mailto:telamela@gmail.com">telamela@gmail.com</a></li>
+                        </ul>
+
+                    </div>
+                    <div class="sec_2">
+                        <h5>Special Offers </h5>
+                        <p class="special_txt">Sign Up To Access Our Special Offers</p>
+
+                        <h5>Connect With Us </h5>
+                        <ul class="social_icon">
+                            <li><a href="http://www.youtube.com/channel/UCkyQ17NpO1m9NIq_K3YvcbQ?guided_help_flow=3" target="_blank"><img border="0" alt="" src="http://localhost/telamela/common/images/email.jpg"></a></li>
+                            <li><a href="https://www.facebook.com/pages/Telamela-PTY-LTD/562683003816287" target="_blank"><img border="0" alt="" src="http://localhost/telamela/common/images/fb.jpg"></a></li>
+                            <li><a href="https://twitter.com/TelamelaGlobal" target="_blank"><img border="0" alt="" src="http://localhost/telamela/common/images/tt.jpg"></a></li>
+                            <li><a href="https://plus.google.com/b/106629883910578985751/106629883910578985751/about?hl=enRSS" target="_blank"><img border="0" alt="" src="http://localhost/telamela/common/images/link.jpg"></a></li>
+                            <li><img alt="" src="teshtml/images/google_play.jpg" class="footer_google_play"></li>
+                        </ul>
+
+                    </div>
+                </div>
+                <div class="footer_middle">
+                    <h5>100% Secure and Trusted Payment</h5>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at molestie ligula. Integer nisi mi, congue sed nisi a, consectetur aliquet justo. </p>
+                    <div class="centerImg"> <img alt="" src="http://localhost/telamela/common/images/footer_visa.jpg"></div>
+                    <p class="copy">&copy; 2015 telamela.com. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+
+        <div  id="map" class="loginBox customerLogin" style="display:none;">
+            <div class="heading_all">
+                <h3>Sign In (Customer)</h3>
+                <span class="headingSpan"><a href="#">New user? Sign up</a></span>
+            </div>
+            <div class="loginInnerLarge">
+                <ul class="loginUl">
+                    <li>
+                        <label>Email Id :</label>
+                        <div class="loginField">
+                            <input type="text" placeholder="Email Id" />
+                        </div>
+                    </li>
+
+                    <li>
+                        <label>Password :</label>
+                        <div class="loginField">
+                            <input type="password" placeholder="Email Id" />
+                        </div>
+                    </li>
+
+                    <li>
+                        <label class="emptylabel"></label>
+                        <div class="loginField">
+                            <div class="rememberMe">
+                                <input class="styled" type="checkbox" value="yes" name="remember_me">
+                                <small>Remember me</small>
+                            </div>
+                            <div class="forgotPassword">
+                                <a class="jscallForgetPasswordBox " onclick="return jscallLoginBox('jscallForgetPasswordBox', '1');" href="#forgetPassword">Forgot your password?</a>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+
+                        <div class="social_login_icons" id="idps" style="display: block;">
+                            <span class="orSignIn"><strong>OR</strong> Sign In with </span>
+                            <img title="google" src="http://localhost/telamela/teshtml/images/socialicons/google.png" idp="google" class="idpico">
+                            <img title="facebook" src="http://localhost/telamela/teshtml/images/socialicons/facebook.png" idp="facebook" class="idpico">
+                            <img title="linkedin" src="http://localhost/telamela/teshtml/images/socialicons/linkedin.png" idp="linkedin" class="idpico">
+                        </div>
+
+                        <div class="login_signup"> <input type="button" class="orangeButton" value="Sign In" name="frmHidenAdd" onclick="loginAction()"></div>
+
+                    </li>
+
+
+                </ul>
+
+            </div>
+        </div>	
+
+        <div  id="map1" class="loginBox" style="display:none;">
+            <div class="login_SignUp">
+                <div class="heading_all">
+                    <h3>Sign In</h3>
+                    <span class="headingSpan"><a href="#">Sign up</a></span>
+                    <div class="border_all"></div>
+                </div>
+                <div class="loginSwitch">
+                    <div class="switchButton">
+                        <input type="radio" checked="checked" class="styled" p="" u="" value="customer" name="frmUserTypeLn">
+                        <small>Customer</small>
+                    </div>
+                    <div class="switchButton">
+                        <input type="radio" checked="checked" class="styled" p="" u="" value="wholesaler" name="frmUserTypeLn">
+                        <small>Wholesaler</small>
+                    </div>
+                </div>
+
+                <div class="loginInnerLarge">
+                    <ul class="loginUl">
+                        <li>
+                            <label>Email Id :</label>
+                            <div class="loginField">
+                                <input type="text" placeholder="Email Id" />
+                            </div>
+                        </li>
+
+                        <li>
+                            <label>Password :</label>
+                            <div class="loginField">
+                                <input type="password" placeholder="Email Id" />
+                            </div>
+                        </li>
+
+                        <li>
+                            <label class="emptylabel"></label>
+                            <div class="loginField">
+                                <div class="rememberMe">
+                                    <input class="styled" type="checkbox" value="yes" name="remember_me">
+                                    <small>Remember me</small>
+                                </div>
+                                <div class="forgotPassword">
+                                    <a class="jscallForgetPasswordBox " onclick="return jscallLoginBox('jscallForgetPasswordBox', '1');" href="#forgetPassword">Forgot your password?</a>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li>
+
+                            <div class="social_login_icons" id="idps" style="display: block;">
+                                <span class="orSignIn"><strong>OR</strong> Sign In with </span>
+                                <img title="google" src="http://localhost/telamela/common/images/socialicons/google.png" idp="google" class="idpico">
+                                <img title="facebook" src="http://localhost/telamela/common/images/socialicons/facebook.png" idp="facebook" class="idpico">
+                                <img title="linkedin" src="http://localhost/telamela/common/images/socialicons/linkedin.png" idp="linkedin" class="idpico">
+                            </div>
+
+                            <div class="login_signup"> <input type="button" class="orangeButton" value="Sign In" name="frmHidenAdd" onclick="loginAction()"></div>
+
+                        </li>
+
+
+                    </ul>
+
+                </div>
+            </div>
+            <div class="SignUp_popUp">
+                <div class="heading_all">
+                    <h3>New User? Sign Up</h3>
+                    <span class="headingSpan"><a href="#">Sign in</a></span>
+                    <div class="border_all"></div>
+                </div>
+                <p class="choosText">
+                    Choose one of the following:
+                </p>
+
+                <div class="UserButtons">
+                    <input type="button"  class="toCustomerSignup" value="Customer" />
+                    <input type="button"  class="towholesalerSignup" value="Wholesaler"  />
+
+                </div>
+                <div class="signup_instruction">* Click on the Wholesaler button, if you want to fill the application form for Wholesaler account.</div>
+            </div>
+
+
+        </div>
+
+    </body>
+</html>

@@ -1,0 +1,279 @@
+body {
+	font-family: 'Open Sans', arial, sans-serif, Helvetica, monospace;
+	background: #f1f1f1;
+}
+img {
+	max-width: 100%;
+}
+* {
+	margin: 0;
+	padding: 0;
+}
+.clear {
+	float: none;
+	width: 100%;
+	display: block;
+	height: 1px;
+	clear: both;
+}
+a img {
+	border: none;
+}
+
+.outer_container {
+	width: 784px;
+	margin: 0 auto;
+	background: #fff;
+}
+.header {
+	min-height: 124px;
+	width: 100%;
+	float: left;
+	padding-top: 23px;
+	background: url("../images/headerbg.png") repeat;
+}
+.logo {
+	width: 466px;
+	float: left;
+}
+.h_fright {
+	float: right;
+	width: 294px;
+	padding-right: 24px;
+}
+.logo a.logoimg {
+	max-width: 359px;
+	max-height: 108px;
+	margin-left: 24px;
+	display: block;
+	float: left;
+	margin-bottom: 16px;
+}
+ul.social {
+	float: right;
+	margin-bottom: 24px;
+}
+ul.social li {
+	float: left;
+	display: inline-block;
+	margin-left: 15px;
+}
+ul.social li a {
+	display: block;
+}
+.search_box {
+	width: 100%;
+	float: left;
+	height: 36px;
+	border: 1px solid #ccc;
+}
+.search_box input[type="text"] {
+	height: 36px;
+	width: 250px;
+	border-width: 0;
+	text-indent: 10px;
+	color: #ccc;
+	float: left;
+	background: transparent;
+	color: #1b1b1b;
+	font-size: 14px;
+	line-height: 36px;
+}
+.searchbutton {
+	background: url(../images/button.jpg) no-repeat;
+	width: 42px;
+	height: 36px;
+	border-width: 0;
+	cursor: pointer;
+	float: right;
+	border-left: 1px solid #cccccc;
+}
+.nav {
+	background: #f2495d;
+	float: left;
+	width: 100%;
+}
+.nav ul {
+	list-style: none;
+	height: 59px;
+}
+.nav ul li {
+	float: left;
+}
+.nav ul li a {
+	color: #ffffff;
+	line-height: 59px;
+	text-decoration: none;
+	font-size: 16px;
+	font-weight: 700;
+	padding: 0 21px;
+	display: block;
+}
+.nav ul li a:hover {
+	background: #fff;
+	color: #000;
+}
+.slide_section {
+	width: 100%;
+	float: left;
+}
+.padd_content {
+	width: 94%;
+	padding: 24px 3%;
+	float: left;
+    min-height:964px !important;
+}
+.offers {
+	width: 100%;
+	float: left;
+	min-height: 172px;
+	margin-bottom: 30px;
+}
+.offer_sec {
+	width: 329px;
+	padding: 13px;
+	float: right;
+	background: #323232;
+}
+.offer_sec:first-child {
+	float: left
+}
+.offer_img {
+	width: 100%;
+	float: left;
+}
+a.more {
+	width: 100%;
+	float: left;
+	display: block;
+	color: #fff;
+	font-size: 16px;
+	line-height: 20px;
+	padding: 15px 0 5px;
+	text-decoration: none;
+	font-weight: 400;
+}
+h3.heading {
+	color: #1b1b1b;
+	font-size: 24px;
+	line-height: 30px;
+	width: 100%;
+	float: left;
+	padding-bottom: 10px;
+	margin-bottom: 11px;
+}
+.product_box {
+	width: 100%;
+	float: left;
+}
+.product {
+	width: 175px;
+	float: left;
+	min-height: 300px;
+	background-color: #f0f0f0;
+	margin-right: 11px;
+	margin-bottom: 19px;
+}
+.mrz {
+	margin-right: 0;
+}
+.myimg {
+	width: 96%;
+	background-color: #f0f0f0;
+	height: 159px;
+	margin: 4px auto;
+	text-align: center;
+}
+
+.myimg img {
+	max-height: 100%;
+	float:none;
+}
+.myimg > a{
+	display:block;
+}
+.img_details {
+	float: left;
+	width: 100%;
+}
+.img_details .pname {
+	font-size: 16px;
+	font-weight: 700;
+	color: #000;
+	text-transform: uppercase;
+	text-align: center;
+	width: 100%;
+	float: left;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	line-height: 22px;
+}
+.img_details .pname a{
+color:inherit;
+text-decoration: none;	
+	}
+.img_details .pname a:hover{
+	text-decoration: underline;
+	
+}	
+p.price {
+	font-size: 18px;
+	font-weight: 800;
+	color: #f2495d;
+	text-transform: uppercase;
+	text-align: center;
+	width: 100%;
+	float: left;
+	margin-bottom: 15px;
+	line-height: 22px;:
+}
+.fullwidth{
+	width: 100%;
+	float: left;
+	text-align:center;
+	
+}
+.addtocart {
+	
+	background-color: #f2495d;
+	text-align: center;
+	border:1px solid #f0f0f0;
+	text-transform: uppercase;
+	line-height:26px;
+	font-size:12px;
+	font-weight: 500;
+	padding:0 15px;
+	color:#fff;
+	text-decoration:none;
+	display: inline-block;
+	
+	}
+.footer{
+	width:96%;
+	padding:20px 2%;
+	float:left;
+	background: #323232;
+	color:#ffffff;
+	font-size:12px;
+	line-height:22px;
+	font-weight:500;
+}	
+.copyright{
+	width:49%;
+	float:left;
+	margin-top:10px;
+	
+	
+}
+.address{
+	width:49%;
+	float:right;
+	text-align: right
+}
+
+	#owl-demo .item img {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+.menu{display:none;}

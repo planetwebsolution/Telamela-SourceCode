@@ -1,0 +1,330 @@
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Open Sans Light'), local('OpenSans-Light'), url(https://themes.googleusercontent.com/static/fonts/opensans/v6/DXI1ORHCpsQm3Vp6mXoaTXhCUOGz7vYGh680lGh-uXM.woff) format('woff');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans'), local('OpenSans'), url(https://themes.googleusercontent.com/static/fonts/opensans/v6/cJZKeOuBrn4kERxqtaUH3T8E0i7KZn-EPnyo3HZu7kw.woff) format('woff');
+}
+@media print
+{    
+    .no-print, .no-print *
+    {
+        display: none !important;
+    }
+}
+
+
+div, p, b, span, img, body, ul, li, h1, h2, h3, h4, h5, h6
+{
+    margin:0;
+    padding:0;
+}
+
+body, b, p, input, textarea
+{
+    font-family:'open sans', arial;
+    font-size:15px;
+}
+li, ul
+{
+    list-style:none;
+    float:left;
+}
+input, textarea
+{
+    border:none;
+}
+.main-div
+{
+    margin: 0 auto;
+    overflow: auto;
+    padding-left: 11px;
+    width:917px;
+}
+
+.print_button{
+    text-align:right; 
+    margin:30px 40px -25px 0;  
+    font-weight: bold;
+}
+.print_button span{  cursor: pointer;}
+
+
+.top-band-div {
+    clear: both;
+    margin: 0 auto;
+    position: relative;
+    width: 980px;
+}
+.rgt-main-div
+{
+    float:left;
+    height:auto;
+    width:810px;
+    margin:0px auto;
+    padding:40px 33px 40px 35px;
+    overflow:auto;
+    background:#fff;
+    -moz-box-shadow: 0 0 5px 0 #666;
+    -webkit-box-shadow: 0 0 5px 0 #666;
+    box-shadow: 0 0 5px 0 #368EE0;
+    margin: 30px auto;
+}
+.lft-main-div
+{
+    float: left;
+    overflow: auto;
+    width:30px;
+}
+.lft-main-div img
+{
+    width:24px;
+    height:24px;
+    vertical-align:middle;
+}
+
+.column td
+{
+    padding:4px 8px;
+    vertical-align:top;
+    /*border-top:solid 1px #ddd;
+    border-left:solid 1px #ddd;*/
+}
+.hd td
+{
+    background-color:#368EE0;
+    border-bottom:solid 1px #ddd;
+    text-align: center;
+}
+.hd td b
+{   
+    height:18px;    
+    color:#fff;
+}
+.bill td
+{
+    padding:2px;
+    text-align: left;
+}
+.bill .span
+{
+    width:170px;    
+    color: #9D9C9A;
+}
+.bill .lft-txt{
+    width:150px;
+    color:#000;
+    text-align: left;
+}
+.amo-r input
+{
+    text-align:right;
+    width:100px;
+}
+.amount
+{
+    text-align:right;
+    width:100px;
+}
+.sav-amo td
+{
+    padding:10px;
+    border-top:solid 2px #ddd;
+}
+.tot, .tot input
+{
+    background:#e3e3e3;
+    border:solid 1px #e3e3e3;
+}
+.tot ts
+{
+    border-top:solid 1px #c7c7c7;
+    border-bottom:solid 1px #c7c7c7;
+}
+.tot input:focus
+{
+    border:dotted 1px #444;
+}
+input, textarea
+{
+    border:dotted 1px #fff;
+}
+.tot td{
+    padding:10px;
+    border-top:solid 0px #c7c7c7;
+    text-align:center;
+}
+td.bdr-non
+{
+    border:none;
+}
+.invoice-rht{background:url(../images/lp/web-designer.png) no-repeat;background-position:0 -132px;height:40px;width:261px}
+.term
+{
+    width:95%;
+    height:30px;
+}
+.note
+{
+    width:90%;
+    height:30px;
+    margin-top:2px;
+}
+.terms
+{
+    margin-top:20px;
+    text-align:left;
+    font-weight:bold;
+    font-size:14px;
+}
+.bld
+{
+    font-weight:bold;
+    margin:2px 0;
+    font-size:14px;
+}
+.txt-rgt
+{
+    text-align:right;
+}
+.adr
+{
+    font-size: 14px;
+    width: 98%;
+    color: #9D9C9A;
+}
+.adr-lft
+{
+    width:55%;
+    text-align:left;
+}
+.adr-rgt
+{
+    padding:0px 0 0 20px;
+    text-align:right;
+    width:42%;
+}
+
+.due
+{
+    margin:30px 0;width:50%
+}
+.due textarea
+{
+    width:100%;
+    height:20px;
+    margin-top:20px;
+}
+
+.phone, .mob, .web
+{
+    width:70px;
+    color:#000;
+    font-weight:bold;
+}
+.item-r input
+{
+    width:120px;
+}
+.desc-r
+{
+    width:394px;
+    height:19px;
+}
+.qty-r input
+{
+    width:100px;
+    text-align:right;
+}
+hr {color: #E3E3E3;}
+.rat-r input
+{
+    width:110px;
+    text-align:right;
+}
+.amo-r
+{
+    text-align:center;
+}
+.amo-r span
+{
+    float:right;
+}
+.rat-r, .qty-r, .desc-r, .item-r
+{
+    /*border-bottom:solid 1px #ddd;*/
+}
+.lft-txt input
+{
+    text-align:left;
+}
+.c-name
+{
+    font-size:20px;
+    font-weight:bold;
+    width:380px;
+    color:#666;
+    margin-left:20px;
+    text-align:right;
+    margin:0 auto;
+    color:#38342c;
+    margin-right:27px;
+}
+.sub-tot
+{
+    border:none;
+    text-align: center;
+    font-weight: 400;
+}
+
+.total
+{
+    border:none;
+    text-align: center;
+    font-weight: bold;
+}
+
+input:focus, textarea:focus
+{
+    background:#fdf4db;
+    border:dotted 1px #444;
+}
+input[READONLY]:focus
+{
+    background:none;
+    border:dotted 1px #FFF;
+}
+ul{
+    margin-top: 20px;
+    width: 100%;
+}
+.bill-to
+{
+    color: #00000;
+    margin-bottom:10px;
+}
+.row-item td
+{
+    border-bottom:solid 1px #e3e3e3;
+    padding-bottom:10px;
+    text-align: center;
+}
+
+.f20
+{
+    font-size:15px;
+}
+
+.tc {
+    text-align:right;
+}
+.lineItemDIV {
+    clear:both;
+    margin-top:30px;
+    float:left;
+}

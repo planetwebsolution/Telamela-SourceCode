@@ -1,0 +1,16 @@
+<?php
+//print_r($_REQUEST);
+
+require_once '../../../common/config/config.inc.php';
+require_once API_PATH . 'api_processor_ctrl.php';
+
+$objPage = new apiProcessorCtrl();
+
+$arrRes = $objPage->pageLoad();
+//pre($_REQUEST);
+//pre($arrRes);
+$json = json_encode($arrRes);
+
+echo $json;
+die;
+?>

@@ -1,0 +1,43 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<title>jQuery Datepicker</title>
+<link type="text/css" href="jquery.datepick.css" rel="stylesheet">
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script type="text/javascript" src="jquery.datepick.js"></script>
+<script type="text/javascript">
+$(function() {
+	//$('#popupDatepicker').datepick();
+	//$('#inlineDatepicker').datepick({onSelect: showDate});
+	
+	$('#popupDatepicker1').datepick({dateFormat: 'dd-mm-yyyy',showTrigger: '<img src="calendar.gif" alt="Popup" class="trigger">',minDate: new Date()});
+	//$('#popupDatepicker2').datepick({dateFormat: 'dd-mm-yyyy',onSelect:a(),showTrigger: '<img src="calendar.gif" alt="Popup" class="trigger">',minDate: new Date()});
+	$('#popupDatepicker2').datepick({ 
+	onSelect: function(dates) {
+	alert('hi');
+	$('#popupDatepicker2').val('');
+	return false;
+        
+    } 
+});
+	//$('#popupDatepicker2').click(function(){alert();});
+	
+});
+
+function a(){
+	var da = $('#popupDatepicker1').val();
+	alert(da);
+	$('#popupDatepicker2').val('');
+	
+}
+
+
+</script>
+</head>
+<body>
+<h1>jQuery Datepicker</h1>
+<p>A popup datepicker <input type="text" id="popupDatepicker1" class=""></p>
+<p>A popup datepicker <input type="text" id="popupDatepicker2" class=""></p>
+</body>
+</html>

@@ -1,0 +1,38 @@
+.webwidget_vertical_menu ul{
+    padding: 0px;
+    margin: 0px;
+    font: 12px/14px 'OpenSansRegular',arial; color:#000000
+    height: 402px;	
+}
+.webwidget_vertical_menu li{
+    background-color:#ff0000;
+}
+.webwidget_vertical_menu ul li{
+    list-style: none;
+    position: relative;
+}
+.webwidget_vertical_menu ul li a{
+    padding-left: 15px;
+    text-decoration: none;
+}
+.webwidget_vertical_menu ul li ul{
+    display: none;
+    position: absolute;
+    z-index: 999999;
+}
+.webwidget_vertical_menu ul li ul li{
+    margin: 0px;
+    border:none;
+}
+.webwidget_vertical_menu ul li ul li ul{
+
+}
+.webwidget_vertical_menu_down_drop{
+	background-position: right center;
+	background-repeat:no-repeat !important;
+}
+.webwidget_vertical_menu ul li li{
+    font-weight: normal;
+}
+.menu_background_color { #fff;}
+

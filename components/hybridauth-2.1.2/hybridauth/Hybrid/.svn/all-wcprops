@@ -1,0 +1,95 @@
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/telamela/!svn/ver/2386/system/branches/development/src/site/components/hybridauth-2.1.2/hybridauth/Hybrid
+END
+User_Contact.php
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/telamela/!svn/ver/2386/system/branches/development/src/site/components/hybridauth-2.1.2/hybridauth/Hybrid/User_Contact.php
+END
+Error.php
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/telamela/!svn/ver/2386/system/branches/development/src/site/components/hybridauth-2.1.2/hybridauth/Hybrid/Error.php
+END
+User_Activity.php
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/telamela/!svn/ver/2386/system/branches/development/src/site/components/hybridauth-2.1.2/hybridauth/Hybrid/User_Activity.php
+END
+Provider_Adapter.php
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/telamela/!svn/ver/2386/system/branches/development/src/site/components/hybridauth-2.1.2/hybridauth/Hybrid/Provider_Adapter.php
+END
+Provider_Model_OAuth1.php
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/telamela/!svn/ver/2386/system/branches/development/src/site/components/hybridauth-2.1.2/hybridauth/Hybrid/Provider_Model_OAuth1.php
+END
+Provider_Model_OAuth2.php
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/telamela/!svn/ver/2386/system/branches/development/src/site/components/hybridauth-2.1.2/hybridauth/Hybrid/Provider_Model_OAuth2.php
+END
+User_Profile.php
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/telamela/!svn/ver/2386/system/branches/development/src/site/components/hybridauth-2.1.2/hybridauth/Hybrid/User_Profile.php
+END
+Auth.php
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/telamela/!svn/ver/2386/system/branches/development/src/site/components/hybridauth-2.1.2/hybridauth/Hybrid/Auth.php
+END
+Storage.php
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/telamela/!svn/ver/2386/system/branches/development/src/site/components/hybridauth-2.1.2/hybridauth/Hybrid/Storage.php
+END
+Provider_Model_OpenID.php
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/telamela/!svn/ver/2386/system/branches/development/src/site/components/hybridauth-2.1.2/hybridauth/Hybrid/Provider_Model_OpenID.php
+END
+Provider_Model.php
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/telamela/!svn/ver/2386/system/branches/development/src/site/components/hybridauth-2.1.2/hybridauth/Hybrid/Provider_Model.php
+END
+User.php
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/telamela/!svn/ver/2386/system/branches/development/src/site/components/hybridauth-2.1.2/hybridauth/Hybrid/User.php
+END
+Logger.php
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/telamela/!svn/ver/2386/system/branches/development/src/site/components/hybridauth-2.1.2/hybridauth/Hybrid/Logger.php
+END
+Endpoint.php
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/telamela/!svn/ver/2386/system/branches/development/src/site/components/hybridauth-2.1.2/hybridauth/Hybrid/Endpoint.php
+END
+index.html
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/telamela/!svn/ver/2386/system/branches/development/src/site/components/hybridauth-2.1.2/hybridauth/Hybrid/index.html
+END

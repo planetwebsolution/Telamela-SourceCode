@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
+ <!-- CSS–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+	
+			<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+				 <script src="js/responsiveslides.min.js"></script>
+  <script>
+    // You can also use "$(window).load(function() {"
+    $(function () {
+      // Slideshow 4
+      $("#slider4").responsiveSlides({
+        auto: true,
+        pager: false,
+        nav: true,
+        speed: 500,
+        namespace: "callbacks",
+        before: function () {
+          $('.events').append("<li>before event fired.</li>");
+        },
+        after: function () {
+          $('.events').append("<li>after event fired.</li>");
+        }
+      });
+
+    });
+  </script>
+		<link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
+	<script src="js/modernizr.js"></script> <!-- Modernizr -->
+	<title>Template 3</title>
+</head>
+<body>
+<div class="header">
+<div class="container">
+<div class="row">
+<div class="three columns logo">SITE LOGO</div>
+<div class="nine columns"><ul class="menu"><li><a href="about_us.html">About us</a></li><li><a href="#">Gurantee</a></li><li><a href="#">Return</a></li><li><a href="#">Policy</a></li><li><a href="#">Shipment</a></li><li><a href="#">Contact us</a></li></ul></div>
+</div>
+</div>
+</div>
+
+
+<div class="color_blue" style="margin-top:0px;"><div class="container">
+<div class="row"><div class="callbacks_container">
+      <ul class="rslides" id="slider4">
+        <li>
+          <img src="images/1.jpg" alt="">
+        
+        </li>
+        <li>
+          <img src="images/2.jpg" alt="">
+         
+        </li>
+        <li>
+          <img src="images/3.jpg" alt="">
+         
+        </li>
+      </ul>
+    </div></div>
+<div class="row"></div>				
+
+</div>
+<div class="container">
+<div class="row">
+<h2>About us</h2>	
+
+<div class="clear"></div>
+<p>Lorem Ipsum Dollar Lorem Ipsum DollarLorem Ipsum DollarLorem Ipsum DollarLorem Ipsum DollarLorem Ipsum Dollar Lorem Ipsum DollarLorem Ipsum DollarLorem Ipsum DollarLorem Ipsum DollarLorem Ipsum Dollar Lorem Ipsum DollarLorem Ipsum DollarLorem Ipsum DollarLorem Ipsum DollarLorem Ipsum Dollar Lorem Ipsum DollarLorem Ipsum DollarLorem Ipsum DollarLorem Ipsum DollarLorem Ipsum Dollar Lorem Ipsum DollarLorem Ipsum DollarLorem Ipsum DollarLorem Ipsum Dollar</p>
+</div>
+</div>
+
+</div>
+
+ <!-- second color -->
+<div class="color_black">
+	<div class="container">
+		<div class="row">
+		<div class="ten columns contact offset-by-one"><h6>Contact us</h6><p>Lorem Ipsum Dollar Lorem Ipsum DollarLorem Ipsum DollarLorem Ipsum DollarLorem Ipsum Dollar</p>
+		<form action="MAILTO:someone@example.com" method="post" enctype="text/plain">
+
+<input type="text" name="name" placeholder="your mail">
+
+<input type="text" name="mail" placeholder="your address">
+<input type="text" name="mail" placeholder="your telephone"><br>
+
+<input type="text" name="comment" placeholder="your message" style="width:356px; height:100px" size="50">
+<input type="submit" value="Send">
+
+</form>
+
+		</div>
+		
+		</div>	
+			
+			</div>
+			
+			</div>
+
+<script src="js/main.js"></script> <!-- Resource jQuery -->
+</body>
+</html>

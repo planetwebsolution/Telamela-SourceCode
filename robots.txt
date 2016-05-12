@@ -1,0 +1,16 @@
+User-Agent: *
+Disallow:
+Disallow: /vendor
+Disallow: /teshtml
+Disallow: /phpmyadmin
+Disallow: /ioncube
+Disallow: /invoices
+Disallow: /controllers
+Disallow: /components
+Disallow: /common
+Disallow: /colorbox
+Disallow: /classes
+Disallow: /beta
+Disallow: /api
+Disallow: /admin
+Disallow: /PHPMailer-master 

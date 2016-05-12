@@ -1,0 +1,9 @@
+@charset "utf-8";
+/* CSS Document */
+
+.left_product_gradient{ float: left;
+margin-top: 0;
+padding: 0 0 0 1px;
+width: 948px;
+background: #000;}
+.parent_top{ margin-top: 10px;padding-left: 20px; color:#000; border-bottom:1px solid #eee;margin-bottom: 10px;}

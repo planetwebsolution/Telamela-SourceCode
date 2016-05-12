@@ -1,0 +1,74 @@
+@charset "utf-8";
+ .comparision_1 .product_bx{
+ width:100%;
+ float:left;
+ border:1PX solid #EEE;
+ 
+ background:#fff;
+ height:154px;
+ vertical-align:middle;
+ }
+ .table-container{
+ width:100%; float:left;
+ }
+ .table-container > table{
+ width:100%;
+ margin-bottom:40px;
+ }
+ .table-container > table tr td{
+height:40px;
+ border:1px solid #ddd;
+ }
+ .table-container > table tr td:first-child{
+ width:133px;
+ }
+ 
+ .table-container > .comparision_1{
+ width:251px;
+ }
+ .table-container > .comparision_1 .highlights{
+ text-align:left;
+ }
+ 
+.comparision_1 .product_bx > a{
+display:block;
+} 
+.comparision_1.smallerComparison{
+margin-top: 69px; border-right:0px;width: 133px;margin-right: 2px;
+}
+.comparision_1 .product_bx img{ max-width:100%; max-height:154px;}
+.clear_cart{background:#e9666a;color:#fff;float:left;padding:9PX 42px 9px;margin-right:10px;font-size:14px;text-transform:uppercase}
+.clear_cart:hover{opacity:.7}
+.table-container td,th{padding:.5em 1em;border:1px solid #e1e1e1;border-right:0}
+.submit{background:#ffb11b;color:#fff;font-family:'Open Sans',sans-serif;font-weight:600;float:right;border:none;cursor:hand;cursor:pointer;padding:9PX 42px 9px;font-size:14px;text-transform:uppercase}
+.table-container td,th:last-child{padding:.5em 1em;border-style:ridge;border-right:1px solid #e1e1e1}
+.table-container .comparision_1 table.width th{
+position:relative;
+}
+.table-container .comparision_1 table.width th a#link{
+width:100%; float:left;
+min-height:37px;
+
+}
+
+.comparision_1  .close_icon{position:absolute;top:-11px;right:-11px;width:18px; height:18px; z-index:3000}
+.close{background:#006feb!important;float:left;color:#fff;padding:9PX 42px 9px;margin-right:10px;font-size:14px;text-transform:uppercase}
+.grey_td{background:#f6f6f6;padding-bottom:30px;line-height:37px}
+.grey_td #link{color:#ff9300}
+.grey_td #link:hover{color:#000}
+.compare_txt{font-size:22px;background:none;border-left:none;border-top:none;color:#006feb;padding-bottom:110px;font:22px/38px "Open Sans",sans-serif}
+.compare_txt tr:hover{background:#FFF!important}
+.product_compare_sec ul li .product_detail p{font-size:12px}
+.height_1{height:55px}
+.height_3{height:125px}
+
+.height_4{height:111px}
+.height_3{height:57px}
+.height_2{height:57px;line-height:25px}
+.height_2 small{text-decoration:line-through}
+.grey_td{padding-bottom:78px}
+.grey_td_blue{padding-bottom:78px}
+.compare_txt{padding-bottom:78px}
+
+
+/* .table-container > .comparision_1 .highlights .height_4{height: 134px !important;} */

@@ -1,0 +1,1 @@
+{"method":"getCategories","search":{"CategoryParentId":"0","pkCategoryId":"11","custom":""},"order":{"CategoryName":"asc","pkCategoryId":"desc","CategoryOrdering":"asc"},"limit":{"offset":"0","rows":"10"}}

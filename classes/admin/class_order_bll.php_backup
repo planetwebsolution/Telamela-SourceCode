@@ -1,0 +1,2136 @@
+<?php
+
+/**
+ *
+ * Class name : Order
+ *
+ * Parent module : None
+ *
+ * Author : Vivek Avasthi
+ *
+ * Last modified by : Arvind Yadav
+ *
+ * Comments : The Order class is used to maintain Order infomation details for several modules.
+ */
+class Order extends Database {
+
+    /**
+     * function __construct
+     *
+     * Constructor of the class, will be called in PHP5
+     *
+     * @access public
+     *
+     */
+    public function __construct() {
+        //$objCore = new Core();
+        //default constructor for this class
+    }
+
+    /**
+     * function orderList
+     *
+     * This function is used to display the order List.
+     *
+     * Database Tables used in this function are : tbl_order_items, tbl_order, tbl_wholesaler
+     *
+     * @access public
+     *
+     * @parameters 2 string
+     *
+     * @return $arrRes
+     *
+     * User instruction: $objOrder->orderList($argWhere = '', $argLimit = '')
+     */
+    function orderList($argWhere = '', $argLimit = '') {
+    	
+        $varWhere = " WHERE 1 " . $argWhere;
+
+        if ($argLimit) {
+            $varLimit = " LIMIT " . $argLimit;
+        }
+
+        $varQuery = "SELECT oi.fkOrderID, oi.SubOrderID, group_concat(oi.ItemName) as Items,concat(o.CustomerFirstName,' ',o.CustomerLastName) as CustomerName,o.OrderDateAdded,sum(oi.ItemTotalPrice) as ItemTotal,oi.Status,oi.DisputedStatus FROM " . TABLE_ORDER_ITEMS . " as oi LEFT JOIN " . TABLE_ORDER . " as o ON oi.fkOrderID = o.pkOrderID LEFT JOIN " . TABLE_WHOLESALER . " as w on w.pkWholesalerID = oi.fkWholesalerID " . $varWhere . " Group BY oi.SubOrderID order by oi.pkOrderItemID DESC " . $varLimit;
+
+        $arrRes = $this->getArrayResult($varQuery);
+        // pre($arrRes);
+        return $arrRes;
+    }
+    
+    function disputedOrderList($argWhere = '', $argLimit = '') {
+    	if ($argLimit && $argWhere === " AND oi.DisputedStatus ='Disputed' ") {
+    		$varLimit = " LIMIT 0" . $argLimit;
+    	} else 
+    		$varLimit = "";
+    	define('TABLE_ORDER_DISPUTED_COMMENT', 'tbl_order_disputed_comments');
+    	//if ($argWhere === " AND oi.DisputedStatus ='Disputed' ") {
+    		
+    		$varWhere = " WHERE 1 " . $argWhere;
+    		
+    		$varQuery = "SELECT oi.fkOrderID, oi.SubOrderID, oi.ItemName as Items,
+    					concat(o.CustomerFirstName,' ',o.CustomerLastName) as CustomerName,
+    					o.OrderDateAdded, sum(oi.ItemTotalPrice) as ItemTotal, w.pkWholesalerID,
+    					oi.Status, oi.DisputedStatus FROM " . TABLE_ORDER_ITEMS . " as oi
+    					LEFT JOIN " . TABLE_ORDER . " as o ON oi.fkOrderID = o.pkOrderID
+    					LEFT JOIN " . TABLE_ORDER_DISPUTED_COMMENT . " as disputed ON oi.fkOrderID = disputed.fkOrderID
+    					LEFT JOIN " . TABLE_WHOLESALER . " as w
+    					on w.pkWholesalerID = oi.fkWholesalerID " . $varWhere . "
+    					Group BY oi.SubOrderID order by oi.pkOrderItemID DESC " . $varLimit;
+    		
+    	/* } else { 
+    		
+    	define('TABLE_ORDER_DISPUTED_COMMENT', 'tbl_order_disputed_comments');
+    	$varWhere = " WHERE 1 " . $argWhere;
+    	
+			
+        
+        $varQuery = "SELECT disputed.pkDisputedID, disputed.fkOrderID, disputed.fkSubOrderID,
+        			concat(o.CustomerFirstName,' ',o.CustomerLastName) as CustomerName,
+        			o.OrderDateAdded, group_concat(oi.ItemName) as Items, oi.SubOrderID,
+        			sum(oi.ItemTotalPrice) as ItemTotal, oi.Status, oi.DisputedStatus,
+        			oi.fkWholesalerID
+					
+					FROM " . TABLE_ORDER_DISPUTED_COMMENT . " as disputed
+					LEFT JOIN " . TABLE_ORDER_ITEMS . " as oi ON disputed.fkOrderID = oi.fkOrderID
+					LEFT JOIN " . TABLE_ORDER . " as o ON disputed.fkOrderID = o.pkOrderID
+					LEFT JOIN " . TABLE_WHOLESALER . " as w on w.pkWholesalerID = oi.fkWholesalerID " . $varWhere . "
+					Group BY disputed.fkSubOrderID
+					order by disputed.pkDisputedID DESC " . $varLimit;
+    	} */
+    	//echo $varQuery; die;
+        $arrRes = $this->getArrayResult($varQuery);
+        /* echo '<pre>';
+        print_r($arrRes);
+        die; */
+        return $arrRes;
+    }
+    
+
+    function disputedOrders () {
+    	$varQuery = "SELECT DISTINCT fkOrderID from tbl_order_disputed_comments where CommentOn = 'Disputed' ";
+    	$arrRes = $this->getArrayResult($varQuery);
+    	return $arrRes;
+    }
+    
+    
+    /**
+     * function CountryList
+     *
+     * This function is used to display the Country List.
+     *
+     * Database Tables used in this function are : tbl_country
+     *
+     * @access public
+     *
+     * @parameters ''
+     *
+     * @return $arrRes
+     *
+     * User instruction: $objOrder->CountryList()
+     */
+    function CountryList() {
+        $arrRes = $this->getArrayResult("SELECT country_id,name FROM " . TABLE_COUNTRY . " Order By name ASC");
+        return $arrRes;
+    }
+
+    /**
+     * function WholesalerList
+     *
+     * This function is used to display the Wholesaler List.
+     *
+     * Database Tables used in this function are : tbl_wholesaler
+     *
+     * @access public
+     *
+     * @parameters 1 string
+     *
+     * @return arrRes
+     *
+     * User instruction: $objOrder->WholesalerList($argWhr)
+     */
+    function WholesalerList($argWhr) {
+        $arrClms = array(
+            'pkWholesalerID',
+            'CompanyName',
+        );
+        $argWhere = "WholesalerStatus = 'active' " . $argWhr;
+        $varOrderBy = ' CompanyName ASC ';
+
+        $varTable = TABLE_WHOLESALER . " as w";
+        $arrRes = $this->select($varTable, $arrClms, $argWhere, $varOrderBy);
+        //pre($arrRes);
+        return $arrRes;
+    }
+
+    /**
+     * function snipatCareer
+     *
+     * This function is used to display the snipat Career List.
+     *
+     * Database Tables used in this function are : tbl_shipping_gateways
+     *
+     * @access public
+     *
+     * @parameters ''
+     *
+     * @return $arrRes
+     *
+     * User instruction: $objOrder->snipatCareer()
+     */
+    function snipatCareer() {
+
+        $var = array('pkShippingGatewaysID', 'ShippingTitle');
+        $varTable = TABLE_SHIPPING_GATEWAYS;
+        $arrRes = $this->select($varTable, $var, '1');
+        //pre($arrRes);
+        return $arrRes;
+    }
+
+    /**
+     * function editOrder
+     *
+     * This function is used to edit the order.
+     *
+     * Database Tables used in this function are : tbl_order_items, tbl_shipping_gateways, tbl_order_option, tbl_order, tbl_country, tbl_order_comments, tbl_customer, tbl_wholesaler, tbl_admin, tbl_order_total
+     *
+     * @access public
+     *
+     * @parameters 2 string
+     *
+     * @return $arrData
+     *
+     * User instruction: $objOrder->editOrder($argID, $varPortalFilter = '')
+     */
+    function editOrder($argID, $varPortalFilter = '') {
+
+        $varID = "SubOrderID ='" . $argID . "' " . $varPortalFilter;
+
+        $arrClms = array('pkOrderItemID', 'fkOrderID', 'SubOrderID', 'ItemType', 'fkItemID', 'ItemName', 'ItemImage', 'fkWholesalerID', 'ShippingTitle', 'fkShippingIDs', 'ItemPrice', 'Quantity', 'ItemSubTotal', 'AttributePrice', 'ShippingPrice', 'DiscountPrice', 'ItemTotalPrice', 'ItemDetails', 'DisputedStatus');
+        //$varTbl = TABLE_ORDER_ITEMS . " LEFT JOIN " . TABLE_WHOLESALER . " as w ON w.pkWholesalerID = fkWholesalerID ";
+        $varTbl = TABLE_ORDER_ITEMS . ' as c LEFT JOIN ' . TABLE_SHIPPING_GATEWAYS . " ON c.fkShippingIDs=pkShippingGatewaysID";
+        $arrData['arrOrderItems'] = $this->select($varTbl, $arrClms, $varID);
+        //pre($arrData['arrOrderItems']);
+        foreach ($arrData['arrOrderItems'] as $k => $v) {
+
+            if ($v['ItemType'] <> 'gift-card') {
+                $jsonDet = json_decode(html_entity_decode($v['ItemDetails']));
+                $varDet = '';
+                foreach ($jsonDet as $jk => $jv) {
+                    $varDet .= $jv->ProductName;
+                    $arrCols = array('AttributeLabel', 'OptionValue');
+                    $argWhr = " fkOrderItemID = '" . $v['pkOrderItemID'] . "' AND fkProductID = '" . $jv->pkProductID . "'";
+                    $arrOpt = $this->select(TABLE_ORDER_OPTION, $arrCols, $argWhr);
+                    $num = count($arrOpt);
+                    if ($num > 0) {
+                        $varDet .= ' (';
+                        $i = 1;
+                        foreach ($arrOpt as $ok => $ov) {
+
+                            $varDet .= $ov['AttributeLabel'] . ': ' . str_replace('@@@', ',', $ov['OptionValue']);
+                            if ($i < $num)
+                                $varDet .=' | ';
+                            $i++;
+                        }
+
+                        $varDet .= ')';
+                        $varDet .= '<br />';
+                    } else {
+                        $varDet = '';
+                    }
+                }
+            } else {
+                $varDet = 'Gift Card';
+            }
+            $arrData['arrOrderItems'][$k]['OptionDet'] = $varDet;
+            $arrData['arrOrderItems'][$k]['Shipments'] = $this->getShipmentDetails($v['pkOrderItemID']);
+        }
+
+        $varID = "pkOrderID ='" . $arrData['arrOrderItems'][0]['fkOrderID'] . "'";
+
+        $arrClms = array(
+            'pkOrderID',
+            'TransactionID',
+            'fkCustomerID',
+            'CustomerFirstName',
+            'CustomerLastName',
+            'CustomerEmail',
+            'CustomerPhone',
+            'BillingFirstName',
+            'BillingFirstName',
+            'BillingLastName',
+            'BillingOrganizationName',
+            'BillingAddressLine1',
+            'BillingAddressLine2',
+            'BillingCountry',
+            'c1.name as BillingCountryName',
+            'BillingPostalCode',
+            'BillingPhone',
+            'ShippingFirstName',
+            'ShippingLastName',
+            'ShippingOrganizationName',
+            'ShippingAddressLine1',
+            'ShippingAddressLine2',
+            'ShippingCountry',
+            'c2.name as ShippingCountryName',
+            'ShippingPostalCode',
+            'ShippingPhone',
+            'OrderStatus',
+            'OrderDateAdded'
+        );
+        $varTable = TABLE_ORDER . " LEFT JOIN " . TABLE_COUNTRY . " as c1 ON BillingCountry =c1.country_id LEFT JOIN " . TABLE_COUNTRY . " as c2 ON BillingCountry =c2.country_id";
+
+        $arrData['arrOrder'] = $this->select($varTable, $arrClms, $varID);
+
+
+        $varID = "fkOrderID ='" . $arrData['arrOrderItems'][0]['fkOrderID'] . "' ";
+        $arrClms = array('pkOrderCommentID', 'CommentedBy', 'CommentedID', 'Comment', 'CommentDateAdded', 'AdminUserName as adminName', 'CompanyName as wholesalerName', 'CustomerFirstName as customerName');
+        $varOrder = " pkOrderCommentID ASC";
+        $varTable = TABLE_ORDER_COMMENTS . " LEFT JOIN " . TABLE_CUSTOMER . " ON CommentedID = pkCustomerID LEFT JOIN " . TABLE_WHOLESALER . " ON CommentedID = pkWholesalerID LEFT JOIN " . TABLE_ADMIN . " ON CommentedID=pkAdminID";
+        $arrData['arrOrderComments'] = $this->select($varTable, $arrClms, $varID, $varOrder);
+
+
+        $arrClms = array('pkOrderTotalID', 'Code', 'Title', 'Amount');
+        $varOrder = " SortOrder ASC";
+        $arrData['arrOrderTotal'] = $this->select(TABLE_ORDER_TOTAL, $arrClms, $varID, $varOrder);
+        $arrData['arrDisputedCommentsHistory'] = $this->disputedCommentsHistory($argID);
+        $arrData['arrCountryList'] = $this->CountryList();
+
+        //pre($arrData);
+        return $arrData;
+    }
+
+    /**
+     * function disputedCommentsHistory
+     *
+     * This function is used to insert disputed comments.
+     *
+     * Database Tables used in this function are : tbl_order_disputed_comments, tbl_customer, tbl_wholesaler, tbl_admin
+     *
+     * @access public
+     *
+     * @parameters 2 string,string
+     *
+     * @return null
+     */
+    function disputedCommentsHistory($soid) {
+        global $objCore;
+        $arrClms = array(
+            'pkDisputedID',
+            'fkOrderID',
+            'fkSubOrderID',
+            'CommentedBy',
+            'CommentedID',
+            'CustomerFirstName as customer',
+            'CompanyName wholesaler',
+            'AdminTitle admin',
+            'CommentOn',
+            'CommentDesc',
+            'AdditionalComments',
+            'CommentDateAdded'
+        );
+        $varWhr = " fkSubOrderID ='" . $soid . "' ";
+        $varOrd = " CommentDateAdded ASC ";
+        $varTable = TABLE_ORDER_DISPUTED_COMMENTS . " LEFT JOIN " . TABLE_CUSTOMER . " ON CommentedID = pkCustomerID LEFT JOIN " . TABLE_WHOLESALER . " ON CommentedID=pkWholesalerID LEFT JOIN " . TABLE_ADMIN . " ON CommentedID=pkAdminID";
+        $arrRes = $this->select($varTable, $arrClms, $varWhr, $varOrd);
+
+        return $arrRes;
+    }
+
+    /**
+     * function disputeFeedback
+     *
+     * This function is used to update order status as disputed.
+     *
+     * Database Tables used in this function are : tbl_order, tbl_order_disputed_comments
+     *
+     * @access public
+     *
+     * @parameters 2 string,string
+     *
+     * @return string $string
+     */
+    function disputeFeedback($arrPost, $id) {
+        global $objGeneral;
+        global $objCore;
+
+        $oid = $arrPost['oid'];
+        $soid = $arrPost['soid'];
+        $arrClms = array('pkOrderID', 'fkCustomerID', 'TransactionID', 'CustomerFirstName', 'CustomerLastName', 'CustomerEmail', 'CustomerPhone');
+
+        $argWhere = "pkOrderID='" . $oid . "' ";
+        $arrOrder = $this->select(TABLE_ORDER, $arrClms, $argWhere);
+
+        if (count($arrOrder) > 0) {
+
+            $arrClms = array(
+                'fkOrderID' => $arrPost['oid'],
+                'fkSubOrderID' => $arrPost['soid'],
+                'CommentedBy' => 'admin',
+                'CommentedID' => $id,
+                'CommentOn' => 'Feedback',
+                'AdditionalComments' => $arrPost['frmFeedback'],
+                'CommentDateAdded' => $objCore->serverDateTime(date(DATE_TIME_FORMAT_DB), DATE_TIME_FORMAT_DB)
+            );
+
+            $arrRow = $this->insert(TABLE_ORDER_DISPUTED_COMMENTS, $arrClms);
+
+            $arrOrder[0]['SubOrderId'] = $soid;
+            $arrOrder[0]['EmailSubject'] = "" . ORDER_DISPUTED_FEEDBACK_BY_COUNTRY_PORTAL . '<br/>' . ORDER_DETAILS_TITLE;
+            $objGeneral->sendDisputedEmail($arrOrder[0], 1);
+        }
+    }
+
+    /**
+     * function getShipmentDetails
+     *
+     * This function is used display get Shipment details.
+     *
+     * Database Tables used in this function are : tbl_shipping_gateways
+     *
+     * @access public
+     *
+     * @parameters 1 string
+     *
+     * @return string $arrRes
+     */
+    function getShipmentDetails($oItemID) {
+        $arrClms = array('pkShipmentID', 'fkShippingCarrierID', 'ShippingType', 'ShippingAlias', 'ShippingTitle', 'TransactionNo', 's.ShippingStatus', 'OrderDate', 'ShippedDate', 'DateAdded');
+        $varTable = TABLE_SHIPMENT . " as s LEFT JOIN " . TABLE_SHIPPING_GATEWAYS . " as sg ON fkShippingCarrierID = sg.pkShippingGatewaysID";
+        $varID = "fkOrderItemID = '" . $oItemID . "'";
+        $arrRes = $this->select($varTable, $arrClms, $varID);
+//pre($arrRes);
+        return $arrRes[0];
+    }
+
+    /**
+     * function updateOrder
+     *
+     * This function is used to update the order.
+     *
+     * Database Tables used in this function are : tbl_order, tbl_order_comments, tbl_order_items, tbl_order_option, tbl_order_total
+     *
+     * @access public
+     *
+     * @parameters 1 string
+     *
+     * @return 1
+     *
+     * User instruction: $objOrder->updateOrder($arrPost)
+     */
+    function updateOrder($arrPost) {
+
+        $varSubOrderID = $_GET['soid'];
+        $varOrderID = $arrPost['oid'];
+
+
+        $varWhr = "pkOrderID = '" . $varOrderID . "'";
+
+        $arrClms = array(
+            'CustomerFirstName' => $arrPost['CustomerFirstName'],
+            'CustomerLastName' => $arrPost['CustomerLastName'],
+            'CustomerEmail' => $arrPost['CustomerEmail'],
+            'CustomerPhone' => $arrPost['CustomerPhone'],
+            'BillingFirstName' => $arrPost['BillingFirstName'],
+            'BillingLastName' => $arrPost['BillingLastName'],
+            'BillingOrganizationName' => $arrPost['BillingOrganizationName'],
+            'BillingAddressLine1' => $arrPost['BillingAddressLine1'],
+            'BillingAddressLine2' => $arrPost['BillingAddressLine2'],
+            'BillingCountry' => $arrPost['BillingCountry'],
+            'BillingPostalCode' => $arrPost['BillingPostalCode'],
+            'BillingPhone' => $arrPost['BillingPhone'],
+            'ShippingFirstName' => ($arrPost['ShippingFirstName']),
+            'ShippingLastName' => $arrPost['ShippingLastName'],
+            'ShippingOrganizationName' => $arrPost['ShippingOrganizationName'],
+            'ShippingAddressLine1' => $arrPost['ShippingAddressLine1'],
+            'ShippingAddressLine2' => $arrPost['ShippingAddressLine2'],
+            'ShippingCountry' => $arrPost['ShippingCountry'],
+            'ShippingPostalCode' => $arrPost['ShippingPostalCode'],
+            'ShippingPhone' => $arrPost['ShippingPhone'],
+            'OrderDateUpdated' => date(DATE_TIME_FORMAT_DB)
+        );
+
+
+        $arrUpdateID = $this->update(TABLE_ORDER, $arrClms, $varWhr);
+        if ($arrPost['frmComment']) {
+            $arrClmsComment = array(
+                'fkOrderID' => $varOrderID,
+                'fkSubOrderID' => $varSubOrderID,
+                'CommentedBy' => 'admin',
+                'CommentedID' => $_SESSION['sessUser'],
+                'Comment' => $arrPost['frmComment'],
+                'CommentDateAdded' => date(DATE_TIME_FORMAT_DB)
+            );
+            $this->insert(TABLE_ORDER_COMMENTS, $arrClmsComment);
+        }
+        foreach ($arrPost['frmIsRemoved'] as $k => $v) {
+            if ($v == 1) {
+                $varWhre = "pkOrderItemID= '" . $k . "'";
+                $this->delete(TABLE_ORDER_ITEMS, $varWhre);
+                $varWhre = "fkOrderItemID= '" . $k . "'";
+                $this->delete(TABLE_ORDER_OPTION, $varWhre);
+            }
+        }
+
+
+        $arrTotal = $this->orderTotal($varOrderID);
+
+
+
+        // for Sub total, shipping and coupon
+        foreach ($arrTotal as $k => $v) {
+            $varTotalWhr = "fkOrderID='" . $varOrderID . "' AND Code = '" . $k . "' ";
+            if ($k == 'coupon') {
+                $v = '-' . $v;
+            }
+            $arrSubtotalCols = array('Amount' => $v);
+            $this->update(TABLE_ORDER_TOTAL, $arrSubtotalCols, $varTotalWhr);
+        }
+
+        // for Redeem Gift card
+        //$varGrantTotalPrice -= $varGiftCartPrice;
+        //$arrGiftCartCols = array('fkOrderID'=>$varOrderID,'Code'=>'gift-card','Title'=>'Gift Card(code)','Amount'=>$varGiftCartPrice,'SortOrder'=>4);
+       
+
+        $varGrantTotalPrice = $arrTotal['sub-total'] + $arrTotal['shipping'] + $arrTotal['coupon'] + $arrTotal['reward-points'] + $arrTotal['gift-card'];
+        $varTotalWhr = "fkOrderID='" . $varOrderID . "' AND Code = 'total' ";
+        $arrTotalCols = array('Amount' => $varGrantTotalPrice);
+        $this->update(TABLE_ORDER_TOTAL, $arrTotalCols, $varTotalWhr);
+
+        $this->orderEmailNotification($varOrderID);
+        return 1;
+    }
+
+    /**
+     * function GetOrderDetails
+     *
+     * This function is used to get the order details.
+     *
+     * Database Tables used in this function are : tbl_order
+     *
+     * @access public
+     *
+     * @parameters 1 string
+     *
+     * @return $arrRes
+     *
+     * User instruction: $objOrder->GetOrderDetails($argOrderID)
+     */
+    function GetOrderDetails($argOrderID) {
+        $arrClms = array('pkOrderID', 'TransactionID', 'CustomerFirstName', 'CustomerLastName', 'CustomerEmail', 'CustomerPhone');
+        $argWhere = "pkOrderID='" . $argOrderID . "' ";
+        $arrRes = $this->select(TABLE_ORDER, $arrClms, $argWhere);
+        //  pre($arrRes);
+        return $arrRes;
+    }
+
+    /**
+     * function GetItemDetails
+     *
+     * This function is used to get the Item details.
+     *
+     * Database Tables used in this function are : tbl_order_items, tbl_order_option
+     *
+     * @access public
+     *
+     * @parameters 1 string
+     *
+     * @return $arrRes
+     *
+     * User instruction: $objOrder->GetItemDetails($argWhere)
+     */
+    function GetItemDetails($argWhere) {
+        $arrClms = array('pkOrderItemID', 'ItemType', 'ItemName', 'Quantity', 'ItemDetails', 'ItemTotalPrice');
+        $arrRes = $this->select(TABLE_ORDER_ITEMS, $arrClms, $argWhere);
+
+        foreach ($arrRes as $k => $v) {
+            if ($v['ItemType'] <> 'gift-card') {
+                $jsonDet = json_decode(html_entity_decode($v['ItemDetails']));
+                $varDet = '';
+                foreach ($jsonDet as $jk => $jv) {
+                    $varDet .= $jv->ProductName;
+                    $arrCols = array('AttributeLabel', 'OptionValue');
+                    $argWhr = " fkOrderItemID = '" . $v['pkOrderItemID'] . "' AND fkProductID = '" . $jv->pkProductID . "'";
+                    $arrOpt = $this->select(TABLE_ORDER_OPTION, $arrCols, $argWhr);
+                    if ($arrOpt) {
+                        $varDet .= ' (';
+                        foreach ($arrOpt as $ok => $ov) {
+                            $varDet .= $ov['AttributeLabel'] . ' # ' . str_replace('@@@', ',', $ov['OptionValue']) . ' ,';
+                        }
+
+                        $varDet .= ')';
+                    }
+                    $varDet .= '<br />';
+                }
+                $arrRes[$k]['OptionDet'] = $varDet;
+            }
+        }
+
+
+        //pre($arrRes);
+        return $arrRes;
+    }
+
+    /**
+     * function GetTotalDetails
+     *
+     * This function is used to get the Total details.
+     *
+     * Database Tables used in this function are : tbl_order_total
+     *
+     * @access public
+     *
+     * @parameters 1 string
+     *
+     * @return $arrRes
+     *
+     * User instruction: $objOrder->GetTotalDetails($argWhere)
+     */
+    function GetTotalDetails($argWhere) {
+        $arrClms = array('Code', 'Title', 'Amount');
+        $varOrder = " SortOrder ASC";
+        $arrRes = $this->select(TABLE_ORDER_TOTAL, $arrClms, $argWhere, $varOrder);
+        // pre($arrRes);
+        return $arrRes;
+    }
+
+    /**
+     * function orderEmailNotification
+     *
+     * This function is used to get the order Email Notifications.
+     *
+     * Database Tables used in this function are : none
+     *
+     * @access public
+     *
+     * @parameters 1 string
+     *
+     * @return $arrRes
+     *
+     * User instruction: $objOrder->orderEmailNotification($varOrderID)
+     */
+    function orderEmailNotification($varOrderID) {
+        $arrOrderDetail = $this->GetOrderDetails($varOrderID);
+
+        $this->SentEmailToCustomer($arrOrderDetail[0]);
+        $this->SentEmailToWholesaler($arrOrderDetail[0]);
+        $this->SentEmailToCountryPortal($arrOrderDetail[0]);
+        $this->SentEmailToSuperAdmin($arrOrderDetail[0]);
+    }
+
+    /**
+     * function GetWholesalerDetails
+     *
+     * This function is used to get Wholesaler Details .
+     *
+     * Database Tables used in this function are : tbl_order_items, tbl_wholesaler
+     *
+     * @access public
+     *
+     * @parameters 1 string
+     *
+     * @return $arrRes
+     *
+     * User instruction: $objOrder->GetWholesalerDetails($argOrderID)
+     */
+    function GetWholesalerDetails($argOrderID) {
+        $query = "SELECT fkWholesalerID,CompanyName, CompanyEmail,CompanyCountry,CompanyRegion FROM " . TABLE_ORDER_ITEMS . " INNER JOIN  " . TABLE_WHOLESALER . " ON fkWholesalerID=pkWholesalerID WHERE fkOrderID = '" . $argOrderID . "' GROUP BY fkWholesalerID";
+        $arrRes = $this->getArrayResult($query);
+        //pre($arrRes);
+        return $arrRes;
+    }
+
+    /**
+     * function adminList
+     *
+     * This function is used to get admin List .
+     *
+     * Database Tables used in this function are : tbl_admin
+     *
+     * @access public
+     *
+     * @parameters 1 string
+     *
+     * @return $arrRes
+     *
+     * User instruction: $objOrder->adminList($argWhr)
+     */
+    function adminList($argWhr) {
+        $arrClms = array(
+            'pkAdminID',
+            'AdminType',
+            'AdminUserName',
+            'AdminEmail',
+            'AdminCountry',
+            'AdminRegion'
+        );
+
+        $varOrderBy = 'AdminUserName ASC ';
+        $arrRes = $this->select(TABLE_ADMIN, $arrClms, $argWhr);
+        //pre($arrRes);
+        return $arrRes;
+    }
+
+    /**
+     * function SentEmailToCustomer
+     *
+     * This function is used to Sent Email To Customer .
+     *
+     * Database Tables used in this function are : none
+     *
+     * @access public
+     *
+     * @parameters 1 string
+     *
+     * @return true
+     *
+     * User instruction: $objOrder->SentEmailToCustomer($arrOrderDetail)
+     */
+    function SentEmailToCustomer($arrOrderDetail) {
+        global $objCore;
+
+        $varWhr = " fkOrderID = '" . $arrOrderDetail['pkOrderID'] . "' ";
+        $arrOrderItems = $this->GetItemDetails($varWhr);
+
+        $varWhr = " fkOrderID = '" . $arrOrderDetail['pkOrderID'] . "' AND Code='total' ";
+        $arrOrderItemTotal = $this->GetTotalDetails($varWhr);
+
+        $varEmailOrderDetails = '<table width="700" cellspacing="0" cellpadding="5" border="0"><tr><td>Your Order details Updated By Admin: </p></td></tr></table>';
+        $varEmailOrderDetails .= '<table width="100%" bgcolor="#F0EBE2"  border="1" cellpadding="8" cellspacing="0">';
+        $varEmailOrderDetails .= '<tr><th>Order ID</th><td>&nbsp;&nbsp;' . $arrOrderDetail['pkOrderID'] . '</td><th>Transaction&nbsp;ID</th><td>&nbsp;&nbsp;' . $arrOrderDetail['TransactionID'] . '</td></tr>';
+        $varEmailOrderDetails .= '<tr><td colspan="4">&nbsp;</td></tr>';
+
+        $varEmailOrderDetails .= '<tr><th>Item Type</th><th>Items</th><th>Quantity</th><th>Price</th></tr>';
+
+        foreach ($arrOrderItems as $k => $v) {
+            $varEmailOrderDetails .= '<tr><td align="center">' . $v['ItemType'] . '</td><td align="center"><b>' . $v['ItemName'] . '</b><br />' . $v['OptionDet'] . '</td><td align="center">' . $v['Quantity'] . '</td><td align="center">$ ' . number_format($v['ItemTotalPrice'], 2, '.', ',') . '</td></tr>';
+        }
+
+        $varEmailOrderDetails .= '<tr bgcolor="#ccc"><th colspan="3" align="right">Grant Total</th><td>&nbsp;&nbsp;$ ' . number_format($arrOrderItemTotal[0]['Amount'], 2, ".", ",") . '</td></tr>';
+
+        $varEmailOrderDetails .='</table>';
+
+
+        $varCustomerName = $arrOrderDetail['CustomerFirstName'] . ' ' . $arrOrderDetail['CustomerLastName'];
+
+        $varCustomerEmail = $arrOrderDetail['CustomerEmail'];
+        $varSubject = 'Order details';
+
+
+        $varFrom = SITE_NAME;
+        $EmailTemplates = $this->SentEmailTemplates();
+        $varKeyword = array('{EMAIL}', '{EMAILDETAILS}');
+
+        $varKeywordValues = array($varCustomerName, $varEmailOrderDetails);
+
+        $varEmailMessage = str_replace($varKeyword, $varKeywordValues, $EmailTemplates);
+
+        // Calling mail function
+        $objCore->sendMail($varCustomerEmail, $varFrom, $varSubject, $varEmailMessage);
+    }
+
+    /**
+     * function SentEmailToCustomer
+     *
+     * This function is used to Sent Email To Wholesaler .
+     *
+     * Database Tables used in this function are : none
+     *
+     * @access public
+     *
+     * @parameters 1 string
+     *
+     * @return true
+     *
+     * User instruction: $objOrder->SentEmailToWholesaler($arrOrderDetail)
+     */
+    function SentEmailToWholesaler($arrOrderDetail) {
+
+        global $objCore;
+
+
+        $varEmailOrderDetails = '<table width="700" cellspacing="0" cellpadding="5" border="0"><tr><td>Order updated By Admin on ' . SITE_NAME . '.Order details : </p></td></tr></table>';
+        $varEmailOrderDetails .= '<table width="100%" bgcolor="#F0EBE2"  border="1" cellpadding="8" cellspacing="0">';
+        $varEmailOrderDetails .= '<tr><th>Order ID</th><td>&nbsp;&nbsp;' . $arrOrderDetail['pkOrderID'] . '</td><th>Transaction&nbsp;ID</th><td>&nbsp;&nbsp;' . $arrOrderDetail['TransactionID'] . '</td></tr>';
+        $varEmailOrderDetails .= '<tr><td colspan="4">&nbsp;</td></tr>';
+
+        $varEmailOrderDetails .= '<tr><th>Item Type</th><th>Items</th><th>Quantity</th><th>Price</th></tr>';
+
+        $arrWholesalerDetails = $this->GetWholesalerDetails($arrOrderDetail['pkOrderID']);
+
+        $EmailTemplates = $this->SentEmailTemplates();
+        $varKeyword = array('{EMAIL}', '{EMAILDETAILS}');
+        $varSubject = 'Order details';
+        $varFrom = SITE_NAME;
+
+        foreach ($arrWholesalerDetails as $k => $v) {
+
+            $varWhre = " fkOrderID = '" . $arrOrderDetail['pkOrderID'] . "' AND fkWholesalerID = '" . $v['fkWholesalerID'] . "'";
+            $arrOrderItems = $this->GetItemDetails($varWhre);
+
+
+            $varEmailOrderDetail = '';
+            $varTotal = 0;
+            foreach ($arrOrderItems as $k2 => $v2) {
+                $varTotal += $v2['ItemTotalPrice'];
+                $varEmailOrderDetail .= '<tr><td align="center">' . $v2['ItemType'] . '</td><td align="center"><b>' . $v2['ItemName'] . '</b><br />' . $v2['OptionDet'] . '</td><td align="center">' . $v2['Quantity'] . '</td><td align="center">$ ' . number_format($v2['ItemTotalPrice'], 2, '.', ',') . '</td></tr>';
+            }
+
+            $varEmailOrderDetailss = $varEmailOrderDetails . $varEmailOrderDetail . '<tr bgcolor="#ccc"><th colspan="3" align="right">Grant Total</th><td>&nbsp;&nbsp;$ ' . number_format($varTotal, 2, ".", ",") . '</td></tr>';
+
+            $varEmailOrderDetailss .='</table>';
+            $varName = $v['CompanyName'];
+            $varEmail = $v['CompanyEmail'];
+
+            $varKeywordValues = array($varName, $varEmailOrderDetailss);
+            $varEmailMessage = str_replace($varKeyword, $varKeywordValues, $EmailTemplates);
+            // Calling mail function
+            $objCore->sendMail($varEmail, $varFrom, $varSubject, $varEmailMessage);
+        }
+    }
+
+    /**
+     * function SentEmailToCountryPortal
+     *
+     * This function is used to Sent Email To Country Portal .
+     *
+     * Database Tables used in this function are : none
+     *
+     * @access public
+     *
+     * @parameters 1 string
+     *
+     * @return true
+     *
+     * User instruction: $objOrder->SentEmailToCountryPortal($arrOrderDetail)
+     */
+    function SentEmailToCountryPortal($arrOrderDetail) {
+
+        global $objCore;
+
+        $varEmailOrderDetails = '<table width="700" cellspacing="0" cellpadding="5" border="0"><tr><td>Order Updated By Admin on ' . SITE_NAME . '.Order details : </p></td></tr></table>';
+        $varEmailOrderDetails .= '<table width="100%" bgcolor="#F0EBE2"  border="1" cellpadding="8" cellspacing="0">';
+        $varEmailOrderDetails .= '<tr><th>Order ID</th><td>&nbsp;&nbsp;' . $arrOrderDetail['pkOrderID'] . '</td><th>Transaction&nbsp;ID</th><td>&nbsp;&nbsp;' . $arrOrderDetail['TransactionID'] . '</td></tr>';
+        $varEmailOrderDetails .= '<tr><td colspan="4">&nbsp;</td></tr>';
+
+        $varEmailOrderDetails .= '<tr><th>Item Type</th><th>Items</th><th>Quantity</th><th>Price</th></tr>';
+
+        $arrWholesalerDetails = $this->GetWholesalerDetails($arrOrderDetail['pkOrderID']);
+
+        $EmailTemplates = $this->SentEmailTemplates();
+        $varKeyword = array('{EMAIL}', '{EMAILDETAILS}');
+        $varSubject = 'Order details';
+        $varFrom = SITE_NAME;
+
+        foreach ($arrWholesalerDetails as $k => $v) {
+
+            $varWhre = " fkOrderID = '" . $arrOrderDetail['pkOrderID'] . "' AND fkWholesalerID = '" . $v['fkWholesalerID'] . "'";
+            $arrOrderItems = $this->GetItemDetails($varWhre);
+
+
+            $varEmailOrderDetail = '';
+            $varTotal = 0;
+            foreach ($arrOrderItems as $k2 => $v2) {
+                $varTotal += $v2['ItemTotalPrice'];
+                $varEmailOrderDetail .= '<tr><td align="center">' . $v2['ItemType'] . '</td><td align="center"><b>' . $v2['ItemName'] . '</b><br />' . $v2['OptionDet'] . '</td><td align="center">' . $v2['Quantity'] . '</td><td align="center">$ ' . number_format($v2['ItemTotalPrice'], 2, '.', ',') . '</td></tr>';
+            }
+
+
+
+            $varWhere = "AdminCountry = '" . $v['CompanyCountry'] . "'";
+
+            $AdminData = $this->adminList($varWhere);
+            $varCtr = 0;
+
+            foreach ($AdminData as $val) {
+
+                if ($val['AdminRegion'] == $v['CompanyRegion']) {
+                    $varEmail = $val['AdminEmail'];
+                    $varName = $val['AdminUserName'];
+                    $varCtr = $varCtr++;
+                } else if ($val['AdminCountry'] == $v['CompanyCountry'] && $varCtr == 0) {
+                    $varEmail = $val['AdminEmail'];
+                    $varName = $val['AdminUserName'];
+                } else {
+
+                    continue;
+                }
+
+                $varEmailOrderDetailss = $varEmailOrderDetails . $varEmailOrderDetail . '<tr bgcolor="#ccc"><th colspan="3" align="right">Grant Total</th><td>&nbsp;&nbsp;$ ' . number_format($varTotal, 2, ".", ",") . '</td></tr>';
+
+                $varEmailOrderDetailss .='</table>';
+
+                $varKeywordValues = array($varName, $varEmailOrderDetailss);
+                $varEmailMessage = str_replace($varKeyword, $varKeywordValues, $EmailTemplates);
+                // Calling mail function
+                $objCore->sendMail($varEmail, $varFrom, $varSubject, $varEmailMessage);
+            }
+        }
+    }
+
+    /**
+     * function SentEmailToSuperAdmin
+     *
+     * This function is used to Sent Email To Super Admin .
+     *
+     * Database Tables used in this function are : none
+     *
+     * @access public
+     *
+     * @parameters 1 string
+     *
+     * @return true
+     *
+     * User instruction: $objOrder->SentEmailToSuperAdmin($arrOrderDetail)
+     */
+    function SentEmailToSuperAdmin($arrOrderDetail) {
+
+        global $objCore;
+
+        $varWhr = " fkOrderID = '" . $arrOrderDetail['pkOrderID'] . "' ";
+        $arrOrderItems = $this->GetItemDetails($varWhr);
+
+        $varWhr = " fkOrderID = '" . $arrOrderDetail['pkOrderID'] . "' AND Code='total' ";
+        $arrOrderItemTotal = $this->GetTotalDetails($varWhr);
+
+        $varEmailOrderDetails = '<table width="700" cellspacing="0" cellpadding="5" border="0"><tr><td>Order updated by Admin on ' . SITE_NAME . '.Order details : </p></td></tr></table>';
+        $varEmailOrderDetails .= '<table width="100%" bgcolor="#F0EBE2"  border="0" cellpadding="8" cellspacing="0">';
+        $varEmailOrderDetails .= '<tr><th>Order ID</th><td>&nbsp;&nbsp;' . $arrOrderDetail['pkOrderID'] . '</td><th>Transaction&nbsp;ID</th><td>&nbsp;&nbsp;' . $arrOrderDetail['TransactionID'] . '</td></tr>';
+        $varEmailOrderDetails .= '<tr><td colspan="4">&nbsp;</td></tr>';
+
+        $varEmailOrderDetails .= '<tr><th>Item Type</th><th>Items</th><th>Quantity</th><th>Price</th></tr>';
+
+        foreach ($arrOrderItems as $k => $v) {
+            $varEmailOrderDetails .= '<tr><td align="center">' . $v['ItemType'] . '</td><td align="center"><b>' . $v['ItemName'] . '</b><br />' . $v['OptionDet'] . '</td><td align="center">' . $v['Quantity'] . '</td><td align="center">$ ' . number_format($v['ItemTotalPrice'], 2, '.', ',') . '</td></tr>';
+        }
+
+        $varEmailOrderDetails .= '<tr bgcolor="#ccc"><th colspan="3" align="right">Grant Total</th><td>&nbsp;&nbsp;$ ' . number_format($arrOrderItemTotal[0]['Amount'], 2, ".", ",") . '</td></tr>';
+
+        $varEmailOrderDetails .='</table>';
+
+        $varWhre = "AdminType = 'super-admin' ";
+        $arrAdminDetails = $this->adminList($varWhre);
+
+        $EmailTemplates = $this->SentEmailTemplates();
+        $varKeyword = array('{EMAIL}', '{EMAILDETAILS}');
+        $varSubject = 'Order details';
+        $varFrom = SITE_NAME;
+        foreach ($arrAdminDetails as $admink => $adminv) {
+
+            $varName = $adminv['AdminUserName'];
+            $varEmail = $adminv['AdminEmail'];
+
+            $varKeywordValues = array($varName, $varEmailOrderDetails);
+            $varEmailMessage = str_replace($varKeyword, $varKeywordValues, $EmailTemplates);
+
+            // Calling mail function
+            $objCore->sendMail($varEmail, $varFrom, $varSubject, $varEmailMessage);
+        }
+    }
+
+    /**
+     * function SentEmailTemplates
+     *
+     * This function is used to Sent Email To Super Admin .
+     *
+     * Database Tables used in this function are : none
+     *
+     * @access public
+     *
+     * @parameters ''
+     *
+     * @return true
+     *
+     * User instruction: $objOrder->SentEmailTemplates()
+     */
+    function SentEmailTemplates() {
+
+        
+        $varEmailTemplate = '<table width="700" cellspacing="0" cellpadding="5" border="0">
+                <tr><td><p><strong>Dear {EMAIL} ,</strong></p></td></tr>
+                <tr><td>{EMAILDETAILS}</td></tr>
+                </table>';
+
+        return $varEmailTemplate;
+        // Calling mail function
+    }
+
+    /**
+     * function orderTotal
+     *
+     * This function is used to display order Total .
+     *
+     * Database Tables used in this function are : tbl_order_items,
+     *
+     * @access public
+     *
+     * @parameters 1 string
+     *
+     * @return $arrRows
+     *
+     * User instruction: $objOrder->orderTotal($argOrderID)
+     */
+    function orderTotal($argOrderID) {
+
+        $arrSubTotal = $this->getArrayResult("SELECT sum(ItemSubTotal+AttributePrice) as TotalPrice FROM " . TABLE_ORDER_ITEMS . " WHERE fkOrderID ='" . $argOrderID . "'");
+        $arrShippingTotal = $this->getArrayResult("SELECT sum(ShippingPrice) as TotalPrice FROM " . TABLE_ORDER_ITEMS . " WHERE fkOrderID ='" . $argOrderID . "'");
+        $arrDiscountTotal = $this->getArrayResult("SELECT sum(DiscountPrice) as TotalPrice FROM " . TABLE_ORDER_ITEMS . " WHERE fkOrderID ='" . $argOrderID . "'");
+
+        $arrRows = array(
+            'sub-total' => $arrSubTotal[0]['TotalPrice'],
+            'shipping' => $arrShippingTotal[0]['TotalPrice'],
+            'coupon' => $arrDiscountTotal[0]['TotalPrice'],
+            'gift-card' => 0,
+            'reward-points' => 0
+        );
+
+        $arrTotal = $this->getArrayResult("SELECT Code,Title,Amount FROM " . TABLE_ORDER_TOTAL . " WHERE fkOrderID ='" . $argOrderID . "' ORDER BY SortOrder ASC");
+
+
+        foreach ($arrTotal as $val) {
+            if ($val['Code'] == 'gift-card' || $val['Code'] == 'reward-points') {
+                $arrRows[$val['Code']] = $val['Amount'];
+            }
+        }
+        //pre($arrRows);
+        return $arrRows;
+    }
+
+    /**
+     * function removeOrder
+     *
+     * This function is used to remove order .
+     *
+     * Database Tables used in this function are : tbl_order_items,
+     *
+     * @access public
+     *
+     * @parameters 2 string
+     *
+     * @return $ctr
+     *
+     * User instruction: $objOrder->removeOrder($argPostIDs, $varPortalFilter)
+     */
+    function removeOrder($argPostIDs, $varPortalFilter) {
+        $ctr = 0;
+
+        if (isset($argPostIDs['deleteType']) && $argPostIDs['deleteType'] == 'sD') {
+
+            $varWhr = " SubOrderID = '" . $argPostIDs['frmID'] . "'";
+            $varWhereSdelete = $varWhr . $varPortalFilter;
+            $arrRes = $this->select(TABLE_ORDER_ITEMS, array('fkOrderID'), $varWhr, "", " 0,1");
+
+            $num = $this->delete(TABLE_ORDER_ITEMS, $varWhereSdelete);
+            if ($num > 0) {
+                $ctr++;
+                $this->removeRelatedOrder($argPostIDs['frmID'], $arrRes[0]['fkOrderID']);
+            }
+        } else {
+            foreach ($argPostIDs['frmID'] as $varDeleteID) {
+                $varWhr = " SubOrderID = '" . $varDeleteID . "'";
+                $varWhereCondition = $varWhr . $varPortalFilter;
+                $arrRes = $this->select(TABLE_ORDER_ITEMS, array('fkOrderID'), $varWhr, "", " 0,1");
+                $num = $this->delete(TABLE_ORDER_ITEMS, $varWhereCondition);
+                if ($num > 0) {
+                    $ctr++;
+                    $this->removeRelatedOrder($varDeleteID, $arrRes[0]['fkOrderID']);
+                }
+            }
+        }
+
+        return $ctr;
+    }
+
+    /**
+     * function removeRelatedOrder
+     *
+     * This function is used to remove related order .
+     *
+     * Database Tables used in this function are : tbl_order_items, tbl_order, tbl_order_comments, tbl_order_total
+     *
+     * @access public
+     *
+     * @parameters 2 string
+     *
+     * @return $ctr
+     *
+     * User instruction: $objOrder->removeOrder($argPostIDs, $varPortalFilter)
+     */
+    function removeRelatedOrder($argSubID, $argOID) {
+
+        $varWhr = "fkOrderID='" . $argOID . "'";
+        $arrRes = $this->select(TABLE_ORDER_ITEMS, array('fkOrderID'), $varWhr, "", " 0,1");
+
+        if (empty($arrRes)) {
+            $varWher = "pkOrderID='" . $argOID . "'";
+            $this->delete(TABLE_ORDER, $varWher);
+            $varWhereCondition = 'fkOrderID = ' . $argOID;
+            $this->delete(TABLE_ORDER_COMMENTS, $varWhereCondition);
+            $this->delete(TABLE_ORDER_ITEMS, $varWhereCondition);
+            $this->delete(TABLE_ORDER_TOTAL, $varWhereCondition);
+        }
+    }
+
+    /**
+     * function updateOrderStatus
+     *
+     * This function is used to upadte order status.
+     *
+     * Database Tables used in this function are : tbl_order_items, tbl_order
+     *
+     * @access public
+     *
+     * @parameters 1 string
+     *
+     * @return true
+     *
+     * User instruction: $objOrder->updateOrderStatus($argPost)
+     */
+    function updateOrderStatus($argPost) {
+
+        $arrRes2 = $this->select(TABLE_ORDER_ITEMS, array('fkOrderID', 'SubOrderID', 'Status'), "SubOrderID = '" . $argPost['soid'] . "' ");
+
+        $arrClmsUpdate = array('Status' => $argPost['status'], 'DisputedStatus' => $argPost['DisputedStatus']);
+        if (isset($argPost['DisputedStatus'])) {
+            if ($argPost['DisputedStatus'] == 'Canceled') {
+                $arrClmsUpdate = array('Status' => 'Canceled');
+            } else {
+                $arrClmsUpdate = array('DisputedStatus' => $argPost['DisputedStatus']);
+            }
+        } else {
+            $arrClmsUpdate = array('Status' => $argPost['status']);
+        }
+
+        $varWhr = "SubOrderID ='" . $argPost['soid'] . "' ";
+        $arrUpdateID = $this->update(TABLE_ORDER_ITEMS, $arrClmsUpdate, $varWhr);
+
+        $varID1 = "fkOrderID = '" . $arrRes1[0]['fkOrderID'] . "' AND Status ='Pending' ";
+        $arrRes1 = $this->select(TABLE_ORDER_ITEMS, array('Status'), $varID1);
+
+        if (count($arrRes1) == 0) {
+            $arrClmsUpdate1 = array('OrderStatus' => $argPost['status'], 'OrderDateUpdated' => date(DATE_TIME_FORMAT_DB));
+            $varWhr1 = "pkOrderID ='" . $arrRes2[0]['fkOrderID'] . "'";
+            $arrUpdateID = $this->update(TABLE_ORDER, $arrClmsUpdate1, $varWhr1);
+        }
+
+        if ($arrRes2[0]['Status'] == 'Disputed' || $arrRes2[0]['Status'] == 'Canceled') {
+            $this->markAsDisputed($arrRes2[0], $argPost['status'], 1);
+        } else if ($argPost['status'] == 'Disputed' || $argPost['status'] == 'Canceled') {
+            $this->markAsDisputed($arrRes2[0], $argPost['status']);
+        }
+    }
+
+    /**
+     * function markAsDisputed
+     *
+     * This function is used to display mark Disputed.
+     *
+     * Database Tables used in this function are : tbl_order, tbl_invoice
+     *
+     * @access public
+     *
+     * @parameters 3 string
+     *
+     * @return true
+     *
+     * User instruction: $objOrder->markAsDisputed($arrOrd, $status,$isRestore = 0)
+     */
+    function markAsDisputed($arrOrd, $status, $isRestore = 0) {
+        global $objGeneral;
+        $arrClms = array('pkOrderID', 'fkCustomerID', 'TransactionID', 'CustomerFirstName', 'CustomerLastName', 'CustomerEmail', 'CustomerPhone');
+
+        $argWhere = "pkOrderID='" . $arrOrd['fkOrderID'] . "' ";
+        $arrOrder = $this->select(TABLE_ORDER, $arrClms, $argWhere);
+
+        if (count($arrOrder) > 0) {
+            $varWhr = "fkSubOrderID ='" . $arrOrd['fkSubOrderID'] . "' AND fkOrderID !='' AND fkSubOrderID !=''";
+            $this->update(TABLE_INVOICE, array('TransactionStatus' => $status), $varWhr);
+
+            //$arrOrder[0]['Status'] = $arrOrd['Status'];
+            $arrOrder[0]['SubOrderId'] = $arrOrd['SubOrderID'];
+            if ($isRestore == 1) {
+                $arrOrder[0]['EmailSubject'] = "Order Restore as " . $status . " By Country Portal. " . ORDER_DETAILS_TITLE;
+            } else {
+                $arrOrder[0]['EmailSubject'] = "Order Status change as " . $status . " By Country Portal. " . ORDER_DETAILS_TITLE;
+            }
+
+            $objGeneral->sendDisputedEmail($arrOrder[0]);
+        }
+    }
+
+    /**
+     * function sendInvoiceToCustomer
+     *
+     * This function is used to send Invoice To Customer.
+     *
+     * Database Tables used in this function are : tbl_invoice
+     *
+     * @access public
+     *
+     * @parameters 2 string
+     *
+     * @return true
+     *
+     * User instruction: $objOrder->sendInvoiceToCustomer($soID, $varPortalFilter)
+     */
+    function sendInvoiceToCustomer($soID, $varPortalFilter) {
+    
+        global $objCore;
+
+        $arrRow = $this->editOrder($soID, $varPortalFilter);
+        $arrOrder = $arrRow['arrOrder'][0];
+        $arrCountryList = $arrRow['arrCountryList'];
+        $arrOrderItem = $arrRow['arrOrderItems'];
+        $arrOrderComment = $arrRow['arrOrderComments'];
+        $arrOrderTotal = $arrRow['arrOrderTotal'];
+        if (count($arrOrder) > 0) {
+
+            $varCustomerName = $arrOrder['CustomerFirstName'] . ' ' . $arrOrder['CustomerLastName'];
+            $varCustomerEmail = $arrOrder['CustomerEmail'];
+
+            $arrCols = array(
+                'fkOrderID' => $arrOrder['pkOrderID'],
+                'fkSubOrderID' => $arrOrderItem[0]['SubOrderID'],
+                'fkWholesalerID' => $arrOrderItem[0]['fkWholesalerID'],
+                'FromUserType' => $_SESSION['sessUserType'],
+                'FromUserID' => $_SESSION['sessUser'],
+                'ToUserType' => 'customer',
+                'ToUserID' => $arrOrder['fkCustomerID'],
+                'CustomerName' => $varCustomerName,
+                'CustomerEmail' => $varCustomerEmail,
+                'Amount' => $varTotal,
+                'AmountPayable' => $varTotal,
+                'AmountDue' => '0.0000',
+                'TransactionStatus' => 'Completed',
+                'InvoiceDetails' => $varEmailOrderDetails,
+                'OrderDateAdded' => $arrOrder['OrderDateAdded'],
+                'InvoiceDateAdded' => $objCore->serverDateTime(date(DATE_TIME_FORMAT_DB), DATE_TIME_FORMAT_DB)
+            );
+
+            $varInvoiceDate = $objCore->serverDateTime($arrCols['InvoiceDateAdded'], DATE_FORMAT_SITE_FRONT);
+            $varInvoiceId = $this->insert(TABLE_INVOICE, $arrCols);
+
+
+            $varEmailOrderDetails = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Customer:Invoice/Statement</title>
+        <link href="' . CSS_PATH . 'invoices.css" rel="stylesheet" />
+    </head>
+    <body>
+        <div class="main-div">
+        <div class="no-print print_button"><span onclick="window.print();">Print</span></div>
+            <div class="rgt-main-div">
+                <table cellspacing="0" cellpadding="0" border="0" width="100%">
+                    <tr>
+                        <td width="50%">
+                            <img src="' . SITE_ROOT_URL . 'common/images/logo-telamela.png" />
+                            <br /><br />
+                            <span class="adr bld f20" id="custName">Telamela</span>
+                            <br/>
+                            <span class="adr" id="custName">United States</span>
+                            <br/>
+                        </td>
+
+                        <td width="50%" class="vtop tc" valign="top">
+                            <span class="c-name">INVOICE</span>
+                        </td>
+                    </tr>
+                    <tr><td colspan="2"><hr /></td></tr>
+
+                </table>
+                <ul>
+                    <li class="adr-lft">
+                        <span class="bill-to bld">Bill To:</span>
+                        <br/>
+                        <span class="adr">' . $varCustomerName . '</span>
+                        <br/>
+                        <span class="adr">' . $arrOrder['BillingAddressLine1'] . '</span>
+                        <br />
+                        <span class="adr">' . $arrOrder['BillingAddressLine2'] . ' ' . $arrOrder['BillingPostalCode'] . '</span>
+                        <br/>
+                        <span class="adr">' . $arrOrder['BillingCountryName'] . '</span>
+                        <br/>
+                    </li>
+                    <li class="adr-rgt">
+                        <table cellspacing="0" cellpadding="0" width="100%" class="bill">
+                            <tr>
+                                <td width="40%" class="lft-txt"><span class="bld">Invoice#</span></td>
+                                <td><span class="span">' . $varInvoiceId . '</span></td>
+                            </tr>
+                            <tr>
+                                <td class="lft-txt">
+                                    <span class="bld">Invoice Date</span>
+                                </td>
+                                <td>
+                                    <span class="span">' . $varInvoiceDate . '</span>
+                                </td>
+                            </tr>
+
+                        </table>
+                    </li>
+                </ul>
+
+                <div style="margin-top:30px;float:left;width:99%;">
+                    <span class="adr">Dear ' . $varCustomerName . ',</span>
+                </div>
+                <div style="clear:both;">
+                </div>
+                <div class="lineItemDIV" style="width: 99%">
+                    <table cellspacing="0" cellpadding="0" border="0" width="100%" class="column">
+                        <tr class="hd">
+                            <td><b>Sub Order Id</b></td>
+                            <td><b>Item Description</b></td>
+                            <td><b>Price</b></td>
+                            <td><b class="bld">Qty</b></td>
+                            <td><b class="bld">Shipping</b></td>
+                            <td><b class="bld">Discount</b></td>
+                            <td><b class="bld">SubTotal</b></td>
+                        </tr>';
+
+            $varSubTotal = 0;
+            $varTotal = 0;
+            foreach ($arrOrderItem as $item) {
+                $varSubTotal = (($item['ItemSubTotal'] + $item['ShippingPrice']) - $item['DiscountPrice']);
+                $varTotal +=$varSubTotal;
+
+                $varEmailOrderDetails .='<tr class="row-item">
+                            <td>' . $item['SubOrderID'] . '</td>
+                            <td>' . '<b>' . $item['ItemName'] . '</b><br/>' . $item['OptionDet'] . '</td>
+                            <td>' . number_format($item['ItemPrice'], 2) . '</td>
+                             <td>' . $item['Quantity'] . '</td>
+                            <td>' . number_format($item['ShippingPrice'], 2) . '</td>
+                            <td>' . number_format($item['DiscountPrice'], 2) . '</td>
+                            <td>' . number_format($varSubTotal, 2) . '</td>
+                        </tr>';
+            }
+           
+
+            /*
+              <!--
+              <tr>
+              <td colspan="2">&nbsp;
+              </td>
+              <td class="sub-tot">
+              Sub Total
+              </td>
+
+              <td class="sub-tot">
+              200.00
+              </td>
+              </tr>-->
+
+             */
+            $varEmailOrderDetails .= '<tr class="tot"><td colspan="5">&nbsp;</td><td class="total">TOTAL</td><td><span class="amount bld">' . ADMIN_CURRENCY_SYMBOL . number_format($varTotal, 2) . '</span></td></tr></table></div></div></div></body></html>';
+
+
+            $varDir = INVOICE_PATH . 'customer/';
+            if (!is_dir($varDir)) {
+                mkdir($varDir, 0777);
+            }
+            $fileName = 'inv_' . $varInvoiceId . '.html';
+            $varFileName = $varDir . $fileName;
+
+
+            $fh = fopen($varFileName, 'w');
+            fwrite($fh, $varEmailOrderDetails);
+            fclose($fh);
+
+
+            $arrCols = array(
+                'Amount' => $varTotal,
+                'AmountPayable' => $varTotal,
+                'AmountDue' => 0.00,
+                'InvoiceFileName' => $fileName
+            );
+            $varInvoiceId = $this->update(TABLE_INVOICE, $arrCols, "pkInvoiceID='" . $varInvoiceId . "'");
+
+
+            $varEmailOrderDetails = $varEmailOrderDetails;
+
+            $varSubject = 'Order invoice details';
+            $varFrom = SITE_NAME;
+            $EmailTemplates = $this->SentEmailTemplates();
+            $varKeyword = array('{EMAIL}', '{EMAILDETAILS}');
+
+            $varKeywordValues = array($varCustomerName, $varEmailOrderDetails);
+
+            $varEmailMessage = str_replace($varKeyword, $varKeywordValues, $EmailTemplates);
+	
+            // Calling mail function
+            $objCore->sendMail($varCustomerEmail, $varFrom, $varSubject, $varEmailMessage);
+
+            return 1;
+        } else {
+            return 0;
+        }
+    }
+
+    /**
+     * function sendInvoiceToCustomer1
+     *
+     * This function is used to send Invoice To Customer.
+     *
+     * Database Tables used in this function are : tbl_invoice
+     *
+     * @access public
+     *
+     * @parameters 2 string
+     *
+     * @return true
+     *
+     * User instruction: $objOrder->sendInvoiceToCustomer($soID, $varPortalFilter)
+     */
+    function sendInvoiceToCustomer1($soID, $varPortalFilter) {
+
+        global $objCore;
+        global $arrProductImageResizes;
+
+        $arrRow = $this->editOrder($soID, $varPortalFilter);
+        $arrOrder = $arrRow['arrOrder'][0];
+        $arrCountryList = $arrRow['arrCountryList'];
+        $arrOrderItem = $arrRow['arrOrderItems'];
+        $arrOrderComment = $arrRow['arrOrderComments'];
+        $arrOrderTotal = $arrRow['arrOrderTotal'];
+        if (count($arrOrder) > 0) {
+
+
+            $varCustomerName = $arrOrder['CustomerFirstName'] . ' ' . $arrOrder['CustomerLastName'];
+            $varCustomerEmail = $arrOrder['CustomerEmail'];
+
+            $arrCols = array(
+                'fkOrderID' => $arrOrder['pkOrderID'],
+                'fkSubOrderID' => $arrOrderItem[0]['SubOrderID'],
+                'fkWholesalerID' => $arrOrderItem[0]['fkWholesalerID'],
+                'FromUserType' => $_SESSION['sessUserType'],
+                'FromUserID' => $_SESSION['sessUser'],
+                'ToUserType' => 'customer',
+                'ToUserID' => $arrOrder['fkCustomerID'],
+                'CustomerName' => $varCustomerName,
+                'CustomerEmail' => $varCustomerEmail,
+                'Amount' => $varTotal,
+                'AmountPayable' => $varTotal,
+                'AmountDue' => '0.0000',
+                'TransactionStatus' => 'Completed',
+                'InvoiceDetails' => $varEmailOrderDetails,
+                'OrderDateAdded' => $arrOrder['OrderDateAdded'],
+                'InvoiceDateAdded' => $objCore->serverDateTime(date(DATE_TIME_FORMAT_DB), DATE_TIME_FORMAT_DB)
+            );
+
+            $varInvoiceDate = $objCore->serverDateTime($arrCols['InvoiceDateAdded'], DATE_FORMAT_SITE_FRONT);
+            $varInvoiceId = $this->insert(TABLE_INVOICE, $arrCols);
+
+
+
+            //echo //$varEmailCSS = '<link href="' . ADMIN_CSS . '" rel="stylesheet" type="text/css" />';
+            $varEmailOrderDetails = '
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+    <link rel="shortcut icon" href="'. IMAGES_URL.'/favicon.ico" />
+        <title>Customer:Invoice || Statement</title>
+        <link href="' . CSS_PATH . 'invoice.css" rel="stylesheet" />
+    </head>
+    <body>{EMAIL_HEAD}
+    <style>
+        		/*---------------------------------common------------------------------------*/
+body{margin:0 15px 0 15px; padding:0; font-family:Arial, Helvetica, sans-serif; font-size:12px;}
+img{border:none}
+
+.lang_select {border:1px solid #CCCCCC; float:left; font-family:Arial,Helvetica,sans-serif; font-size:12px; font-weight:normal; margin:0; width:130px; }
+/*---------------------------------header--------------------------------------*/
+.header{width:100%; margin-left:auto; margin-right:auto;  height:146px; color:#FFCC00;}
+.header_left{width:30%; float:left; height:30px; text-align:right; font-size:11px; color:#56778b; padding-top:40px;}
+.header_left a{font-size:11px; color:#333; text-decoration:underline; float:none}
+.header_left span{float:none; padding:0 10px 0 10px}
+.header_left a:hover{font-size:11px; color:#FFFFFF; text-decoration:underline; background-color:#2d2d2d}
+.logo{width:40%; float:left; height:98px; font-size:30px; font-weight:bold; padding-top:10px;}
+
+.top_links{float:right; width:auto; margin:10px; color:#666666; line-height:18px;}
+.top_links a{color:#032a7a; font-weight:bold; float:left; margin:0px; text-decoration:underline; margin-left:10px;}
+.top_links a img{vertical-align:middle;}
+.top_links a:hover{text-decoration:none;}
+.top_links span{color:#666666; float:left; margin:7px 5px 7px 3px;}
+a.red_link{color:#032a7a;}
+a.red_link:hover{text-decoration:none;}
+
+/*----------------------------------body container-------------------------------*/
+.body_container{margin-left:auto; margin-right:auto; width:100%; margin-top:10px;}
+.container_left{float:left; width:100%;}
+.container_left_title{float:left; width:98%; padding-left:2%; background:url(../images/sub_menu_bottombg.jpg) bottom repeat-x;}
+.container_left_content{float:left; width:96.8%; padding-top:10px; padding-bottom:10px; padding-left:2%; padding-right:1%; background-color:#ffffff; border:1px #a9b1c6 solid; border-top:none;}
+.container_left_content.multiple_prod_container{float:left; width:96.8%; padding-top:10px; padding-bottom:10px; padding-left:2%; padding-right:1%; background-color:#ffffff; border:1px #a9b1c6 solid; border-top:none; overflow:hidden;}
+.container_left_half{ float:left; width:49%;}
+.container_right{float:left; width:27%; padding-left:1%; padding-bottom:20px;}
+.seprator{float:left; width:100%; background:none;}
+
+.left_content{width:100%; border:1px solid #c3c4c6; padding:0px; border-top:none; border-bottom:none; border-right:none; }
+.radio{border:none; width:auto;}
+.left_content img{margin:0 2px 0 2px;}
+.left_content a{color:#032a7a; text-decoration:underline;}
+.left_content .holder2 a, .left_content .holder a{color:#032a7a; text-decoration:underline;padding-left:5px;}
+.left_content a:hover{text-decoration:none;}
+.border_none{border:none;}
+.border_bottom_none{border-right:none;}
+.left_content .heading a{ color:#000;}
+.left_content .heading td{color:#3d3c3c;}
+.dashboard_title{width:100%; color:#000; font-size:13px; font-weight:bold; background-color:#FA990E; padding:5px 4px 5px 5px; margin:5px 0 10px 0; border-bottom:1px #7986a9 solid;}
+
+.dashboard_half_title{width:50%; color:#000; font-size:13px; font-weight:bold; background-color:#FA990E; padding:5px 4px 5px 5px; margin:5px 0 10px 0; border-bottom:1px #7986a9 solid;}
+
+.dashboard_title span{font-size:12px; font-weight:normal;}
+.dashboard_title_small{width:49%; color:#fff; font-size:13px; font-weight:bold; background-color:#d1850e; padding:5px 4px 5px 5px; margin:5px 0 10px 0;}
+.content_title{float:left; padding:0; font-size:13px; font-family:Tahoma; font-weight:bold; width:100%; color:#000;}
+.right_panel{width:100%; background-color:#ffffe5; border:1px #e8e8b9 solid; padding:5px; font-size:12px;}
+
+/*-------------------------help------------------------*/
+.help{float:left; width:99%; background-color:#f1f2d5; padding:1%; font-weight:bold}
+.help_content{float:left; width:99%; background-color:#fff; padding:1%;}
+
+
+span a{color:#FF6633; text-decoration:underline; padding:0 4px;}
+span a:hover{text-decoration:none;}
+
+.heading td{background-color:#dadada; text-align:left; color:#000; padding:4px 0 4px 6px; font-size:12px; font-weight:bold; border-bottom:1px solid #fff}
+.heading th{background-color:#dadada; text-align:center; color:#333333; padding:4px 0 4px 6px; font-size:12px; font-weight:bold; border-bottom:1px solid #fff}
+
+.heading_none td{background-color:#ffc66c; text-align:left; color:#333333; padding:4px 6px 4px 6px; font-size:12px; font-weight:bold;}
+.heading_none a{color:#000000; text-decoration:underline;}
+.heading_none a:hover{color:#000000; text-decoration:none;}
+
+
+.content td {text-align:left;  color:#333; border-right:1px solid #c3c4c6; border-bottom:1px solid #c3c4c6; padding:4px 4px 4px 6px; font-size:12px; }
+
+.content .heading{font-size: 14px; font-weight: bold; background-color:#E9E9E8;}
+.content .heading1{font-size: 14px; font-weight: bold; background-color:#E9E9E8; text-align: center;}
+.color_red{color:#FF0000;}
+.color_green{color:#009900;}
+.content .border_right_none{border-right:none;}
+.content_bg1 td{text-align:left; width:auto; color:#000000; padding:4px 0 4px 6px; font-size:12px; background-color:#fffce5;}
+.content_bg td{text-align:left; width:auto; color:#000000; padding:4px 0 4px 6px; font-size:12px;}
+
+
+
+/*----------------------------------menu------------------------------------*/
+#menu{width:100%; height:30px;  float:left; padding-top:8px; font-family:arial;}
+#menu ul{margin:0 0 0 0; padding:0;}
+#menu li{ float:left; color:#393a3b; font-size:11px; list-style:none; text-transform:capitalize; margin-right:1px;}
+#menu li a{background:#032a7a; color:#fff; font-size:10px; text-decoration:none; margin:0;  padding:5px 4px;  display:block;height:20px; float:left; border:1px solid #032a7a; border-bottom:0; font-weight:bold;}
+#menu li a:hover{background:url(../images/button_over.jpg) top right repeat-x; height:20px; color:#032a7a; font-weight:bold;}
+#menu .current{text-decoration:none; background:url(../images/button_over.jpg) top right repeat-x; height:20px; color:#032a7a; margin:0;  padding:5px 10px 5px 10px; display:block; margin-right:1px; border:1px solid #5a747d; border-bottom:none; font-weight:bold;}
+
+/*----------------------------------submenu------------------------------------*/
+#submenu{width:100%; float:left; padding-top:8px; font-family:Tahoma;}
+#submenu ul{margin:0; padding:0;}
+#submenu li{float:left; color:#393a3b; font-size:11px; list-style:none; text-transform:capitalize; margin-right:1px; border-left:1px solid #a9b1c6; border-right:1px solid #a9b1c6;border-top:1px solid #a9b1c6;}
+#submenu li a{background:url(../images/button_over_new.jpg) top right repeat-x; color:#032a7a; text-decoration:none; margin:0;  padding:5px 10px 5px 10px; display:block; float:left; font-weight:bold;}
+#submenu li a:hover{background:url(../images/button_over_white.jpg) top right repeat-x; color:#032a7a; text-decoration:none; margin:0;  padding:5px 10px 5px 10px; display:block; float:left; font-weight:bold;}
+#submenu li a.current{background:url(../images/button_over_white.jpg) top right repeat-x; color:#032a7a; text-decoration:none; margin:0;  padding:5px 10px 5px 10px; display:block; float:left; font-weight:bold;}
+
+/*----------------------------------menu between parent and sub menu------------------------------*/
+#middlemenu{width:100%; float:left; padding-top:8px; font-family:Tahoma;}
+#middlemenu ul{margin:0 0 0 0; padding:0;}
+#middlemenu li{float:left; color:#393a3b; font-size:11px; list-style:none; text-transform:capitalize; margin-right:1px;}
+#middlemenu li a{background:url(../images/button_over.jpg) top right repeat-x; color:#032a7a; text-decoration:none; margin:0;  padding:5px 10px 5px 10px; display:block; float:left; border:1px solid #a9b1c6; font-weight:bold;}
+#middlemenu li a:hover{color:#a9b1c6;}
+#middlemenu .current{text-decoration:none; background:#fff; color:#a9b1c6; margin:0;  padding:5px 10px 5px 10px; display:block; margin-right:1px; border:1px solid #a9b1c6; }
+
+
+/*--------------------------------form---------------------------------------*/
+form{width:100%; margin:0px; padding:0px; font-weight:normal; font-family:Arial, Helvetica, sans-serif; font-size:12px;}
+form.multiple_prod_add{width:86.6%; margin:0px; padding:0px; font-weight:normal; font-family:Arial, Helvetica, sans-serif; font-size:12px; overflow-x:scroll;}
+form.multiple_prod_add td{vertical-align:top;}
+form.multiple_prod_add .input1, form.multiple_prod_add .input2{margin:2.5px 0px}
+.button{background:#CC0000; color:#fff; font-size:12px; font-weight:bold; width:auto; padding:4px; border:none; margin-right:10px; cursor:pointer}
+.button:hover{background:#575044;}
+
+.button1{background:#ccc; color:#fff; font-size:12px; font-weight:bold; width:auto; padding:4px; border:none; margin-right:10px; cursor:pointer}
+.button1:hover{background:#B8C1E1;}
+
+form fieldset{padding:20px; border:none; margin:0;}
+form input{margin:0; font-family:Arial, Helvetica, sans-serif; font-size:12px;}
+form select{width:130px; margin:0; font-weight:normal; font-family:Arial, Helvetica, sans-serif; font-size:12px; float:left; border:#CCCCCC 1px solid;}
+form textarea{width:130px; margin:0; font-weight:normal; font-family:Arial, Helvetica, sans-serif; font-size:12px; float:left; border:#CCCCCC 1px solid;}
+form label{width:180px; float:left; text-align:right; margin:10px 0 0 30px; font-weight:bold; padding:0; display:block}
+form .auto{width:auto; border:none; float:left;}
+form .ckbox{width:auto; border:none; float:left; margin:0; padding:0}
+br{clear:both}
+small{width:auto; margin:10px 0 0 30px; float:left; font-size:12px;}
+
+.nomargin{margin:10px 0 0 10px;}
+#login_logo{margin-top:0px ; position:relative; width:100%; text-align:left}
+#login_logo_main{margin-top:47px; position:relative; text-align: center;}
+#login{margin:0 auto 0 auto; position:relative; width:500px; text-align:center}
+#login strong{display:block; font-size:18px; color:#666; padding:20px}
+#login form{font-weight:normal;width:465px; font-family:Arial, Helvetica, sans-serif; font-size:12px; background-color:#b5bdda; float:left; border:1px solid #6e7f85; padding:10px; margin:0px;}
+#login form fieldset{ width:432px; margin:0px; border: 1px solid #6e7f85; float:left; padding:15px; background-color:#e4e7f4;}
+#login form legend{font-weight:bold; font-size:14px; color:#666666; margin:0px;}
+#login form input{width:170px; font-family:Arial, Helvetica, sans-serif; font-size:12px; border:1px #CCCCCC solid; margin:10px 0 0 10px; float:left;}
+#login form select{width:202px; font-weight:normal; font-family:Arial, Helvetica, sans-serif; font-size:12px; border:1px #CCCCCC solid; float:left; margin:10px 0 0 0;}
+#login form label{width:150px; float:left; text-align:right;  font-weight:bold; padding:0; display:block;margin:10px 0 0 0;}
+#login form .auto{width:auto; border:none; float:left;}
+#login form .ckbox{width:auto; border:none; float:left; margin:0; padding:0}
+#login br{clear:both}
+#login small{width:250px; font-size:12px; text-align:left; float:left; margin:10px 0 1px 10px;}
+#login img{float:left; margin:10px 0 1px 10px;}
+#login label a{color:#000000; text-decoration:underline; text-align:left; font-weight:normal;}
+#login label a:hover{color:#778a90; text-decoration:none;}
+#login .auto_button{ width:auto; }
+#login .nomargin{}
+
+.container_right form{width:100%; margin:0; padding:0; font-weight:normal; font-family:Arial, Helvetica, sans-serif; font-size:12px;}
+.container_right form fieldset{padding:10px; border:1px solid #6f3e2d; margin:0;}
+.container_right form input{width:50%; margin:10px 0 0 10px;  font-family:Arial, Helvetica, sans-serif; font-size:12px; border:1px #CCCCCC solid; float:left}
+.container_right form select{width:51%; margin:10px 0 0 10px; font-weight:normal; font-family:Arial, Helvetica, sans-serif; font-size:12px; border:1px #CCCCCC solid; float:left}
+.container_right form .select{width:24%; margin:10px 0 0 10px; font-weight:normal; font-family:Arial, Helvetica, sans-serif; font-size:12px; border:1px #CCCCCC solid; float:left}
+.container_right form label{width:35%; float:left; text-align:right; margin:10px 0 0 10px; font-weight:bold; padding:0; display:block}
+.container_right form .auto{width:auto; border:none; float:left;}
+.container_right br{clear:both}
+.container_right form legend{font-weight:bold; padding:0 10px 0 10px;}
+.container_right small{width:auto; margin:10px 0 0 10px; float:left; font-size:12px;}
+.container_right .auto_button{ width:auto}
+.container_right .nomargin{margin:10px 0 0 10px;}
+
+/* error, success and msg table css start here */
+.error{background-image:url(../../admin/images/error.gif); background-position:top left;background-repeat:no-repeat; padding:8px 0 10px 35px; font-weight:normal;  line-height:18px;float:left;font-weight:bold; font-size:12px; color:#FF0000;}
+
+.success{background-image:url(../../admin/images/sucess.gif); background-position:top left; background-repeat:no-repeat; padding:10px 0 10px 40px; font-weight:normal; line-height:18px; font-weight:bold; font-size:13px; color:#366036;}
+
+/* this table contains all error and success messages*/
+.table_msg{padding:8px 0 8px 0;border:#c3c4c6 3px solid; background-color:#f5f6f9;}
+/* error, success and msg table css end here */
+
+.visible_none{
+display:none;
+}
+
+/* a new error class written for small error messages. Like the ones introduced by AJAX. Normal class is too big for that.*/
+.error_small{background-image:url(../../admin/images/error_small.gif); background-position:top left;background-repeat:no-repeat; padding:0 0 0 20px; font-weight:normal;  line-height:18px;float:left;font-weight:bold; font-size:11px; color:#FF0000;}
+
+.error_form{ border:2px solid; border-color:#BC100E #FE9999 #FE9999 #BC100E;}
+
+input{font-size:13px; border:1px #CCCCCC solid;}
+
+/*----------------------------------footer----------------------------------*/
+#footer{ float:left; width:100%; padding:10px 0 20px 0; font-size:11px;}
+.bottom_shadow{background-image:url(../../admin/images/bg_body_bottom.jpg); background-repeat:repeat-x; background-position:top; float:left; width:100%;}
+.bottom_curve{background-image:url(../../admin/images/bg_body_bottom_curve.jpg); background-position:right top; background-repeat:no-repeat; width:99%; padding-left:1%; height:8px;}
+
+a.logout{background:url(../images/logout.png) left bottom no-repeat; padding-left:25px; padding-bottom:3px; padding-top:2px;}
+a.preview{background:url(../images/preview_ico.jpg) left bottom no-repeat; padding-left:20px; padding-bottom:0px; padding-top:2px;}
+a.setting{background:url(../images/setting.png) left bottom no-repeat; padding-left:20px; padding-bottom:0px; padding-top:2px;}
+.last_login{background:url(../images/worldclock.png) left bottom no-repeat; padding-left:25px; padding-bottom:2px; padding-top:2px;}
+
+
+.content .shipping_package{padding: 0;}
+.content .shipping_package td{text-align: center; padding: 0; border-right: 0;}
+.content .shipping_package .shippin_l{border-bottom: 0;}
+.content .shipping_package .shippin_w{border-bottom: 0;}
+.content .shipping_package .shippin_h{border: 0;}
+
+.excelbotton{background:#CC0000; color:#fff; font-size:12px; font-weight:bold; width:auto; padding:4px; border:none; margin-right:10px; cursor:pointer}
+.adv-box{text-align:center}
+.excelbotton:hover{background:#575044;}
+.stars{float:left; width:13px; height:13px; margin-left:4px; background:url(../images/star_review.gif) no-repeat}
+
+#listed_send_approve{padding: 12px; height: 105px; width: 370px;}
+#colorBox_table{width: 370px;}
+
+#listed_reject_approve{padding: 5px 0 0 10px; height: 30px; width: 370px;}
+#listed_send_publish{padding: 12px; height: 105px; width: 370px;}
+#listed_published{padding: 12px; height: 105px; width: 370px;}
+#listed_send_review{padding: 12px; height: 105px; width: 370px;}
+#listed_delete{padding: 12px; height: 105px; width: 370px;}
+
+.table_header_border{
+  border:1px solid #d2d2d2;
+  }
+.admin_left_text{
+  text-align:left;
+  width:50%;
+  font-weight:bold;
+} 
+.admin_left_input{
+    text-align:left;
+    width:50%;
+}
+        		
+@media print {
+.noPrint {
+    display:none;
+  }
+}  
+        		  
+</style>
+
+<div class="dashboard_title" style=" width:99.3%; margin-bottom:0px;">Customer Invoice <span style="float:right;margin-right:10px;"><a href="javascript:void(0)" onclick="window.print();" style="color:black" class="noPrint">Print</a></span></div>
+            <table width="99%" border="0" cellspacing="0" cellpadding="0" style="float:left;" class="left_content">
+                    <tr class="content">
+                        <td width="48%" valign="top" align="left" style="border:none">
+                            <table cellpadding="0" cellspacing="0" border="0" class="left_content table_border">
+                                <tr class="content">
+                                    <td colspan="2" class="heading">Order Details </td>
+                                </tr>
+                                <tr class="content"><td colspan="2">&nbsp;</td></tr>
+                                <tr class="content">
+                                    <td class="admin_left_text">Order ID</td>
+                                    <td class="admin_left_input">' . $arrOrder['pkOrderID'] . '
+                                    </td>
+                                </tr>
+                                <tr class="content">
+                                    <td class="admin_left_text">Order Date</td>
+                                    <td class="admin_left_input">' . $objCore->localDateTime($arrOrder['OrderDateAdded'], DATE_TIME_FORMAT_SITE) . '
+                                    </td>
+                                </tr>
+                                <tr class="content">
+                                    <td class="admin_left_text">Order Status</td>
+                                    <td class="admin_left_input">' . $arrOrder['OrderStatus'] . '</td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td width="2%" style="border:none;">&nbsp;</td>
+                        <td width="48%" valign="top" align="left" style="border:none">
+                            <table cellpadding="0" cellspacing="0" border="0" class="left_content table_border">
+                                <tr class="content">
+                                    <td colspan="2" class="heading">Account Information</td>
+                                </tr>
+                                <tr class="content"><td colspan="2">&nbsp;</td></tr>
+                                <tr class="content">
+                                    <td class="admin_left_text"> Customer Name:</td>
+                                    <td class="admin_left_input">' . $arrOrder['CustomerFirstName'] . ' ' . $arrOrder['CustomerLastName'] . '</td>
+                                </tr>
+                                <tr class="content">
+                                    <td class="admin_left_text"> Email:</td>
+                                    <td class="admin_left_input">' . $arrOrder['CustomerEmail'] . '</td>
+                                </tr>
+                                <tr class="content">
+                                    <td class="admin_left_text">Phone</td>
+                                    <td class="admin_left_input">' . $arrOrder['CustomerPhone'] . '</td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr class="content"><td colspan="3" style="border:none;">&nbsp;</td></tr>
+
+                    <tr class="content">
+                        <td width="48%" valign="top" align="left" style="border:none">
+                            <table cellpadding="0" cellspacing="0" border="0" class="left_content table_border">
+                                <tr class="content">
+                                    <td colspan="2" class="heading">Billing Information</td>
+                                </tr>
+                                <tr class="content"><td colspan="2">&nbsp;</td></tr>
+                                <tr class="content">
+                                    <td class="admin_left_text"> Recipient First Name:</td>
+                                    <td class="admin_left_input">' . $arrOrder['BillingFirstName'] . '</td>
+                                </tr>
+
+                                <tr class="content">
+                                    <td class="admin_left_text"> Recipient Last Name:</td>
+                                    <td class="admin_left_input">' . $arrOrder['BillingLastName'] . '</td>
+                                </tr>
+
+                                <tr class="content">
+                                    <td class="admin_left_text">Organization Name:</td>
+                                    <td class="admin_left_input">' . $arrOrder['BillingOrganizationName'] . '&nbsp;</td>
+                                </tr>
+
+                                <tr class="content">
+                                    <td class="admin_left_text"> Address Line 1:</td>
+                                    <td class="admin_left_input"> ' . $arrOrder['BillingAddressLine1'] . '</td>
+                                </tr>
+
+                                <tr class="content">
+                                    <td class="admin_left_text">Address Line 2</td>
+                                    <td class="admin_left_input">' . $arrOrder['BillingAddressLine2'] . '&nbsp;</td>
+                                </tr>
+
+                                <tr class="content">
+                                    <td class="admin_left_text"> Country</td>
+                                    <td class="admin_left_input">' . $arrOrder['BillingCountryName'] . '</td>
+                                </tr>
+
+                                <tr class="content">
+                                    <td class="admin_left_text"> Post Code or Zip Code:</td>
+                                    <td class="admin_left_input">' . $arrOrder['BillingPostalCode'] . '</td>
+                                </tr>
+                                <tr class="content">
+                                    <td class="admin_left_text"> Phone:</td>
+                                    <td class="admin_left_input">' . $arrOrder['BillingPhone'] . '</td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td width="2%" style="border:none;">&nbsp;</td>
+                        <td width="48%" valign="top" align="left" style="border:none">
+                            <table cellpadding="0" cellspacing="0" border="0" class="left_content table_border">
+                                <tr class="content">
+                                    <td colspan="2" class="heading">Shipping Information</td>
+                                </tr>
+                                <tr class="content"><td colspan="2">&nbsp;</td></tr>
+                                <tr class="content">
+                                    <td class="admin_left_text"> Recipient First Name:</td>
+                                    <td class="admin_left_input">' . $arrOrder['ShippingFirstName'] . '</td>
+                                </tr>
+
+                                <tr class="content">
+                                    <td class="admin_left_text"> Recipient Last Name:</td>
+                                    <td class="admin_left_input">' . $arrOrder['ShippingLastName'] . '</td>
+                                </tr>
+
+                                <tr class="content">
+                                    <td class="admin_left_text">Organization Name:</td>
+                                    <td class="admin_left_input">' . $arrOrder['ShippingOrganizationName'] . '&nbsp;</td>
+                                </tr>
+
+                                <tr class="content">
+                                    <td class="admin_left_text"> Address Line 1:</td>
+                                    <td class="admin_left_input">' . $arrOrder['ShippingAddressLine1'] . '</td>
+                                </tr>
+
+                                <tr class="content">
+                                    <td class="admin_left_text">Address Line 2</td>
+                                    <td class="admin_left_input">' . $arrOrder['ShippingAddressLine2'] . '&nbsp;</td>
+                                </tr>
+
+                                <tr class="content">
+                                    <td class="admin_left_text"> Country</td>
+                                    <td class="admin_left_input">' . $arrOrder['ShippingCountryName'] . '</td>
+                                </tr>
+
+                                <tr class="content">
+                                    <td class="admin_left_text"> Post Code or Zip Code:</td>
+                                    <td class="admin_left_input">' . $arrOrder['ShippingPostalCode'] . '</td>
+                                </tr>
+
+                                <tr class="content">
+                                    <td class="admin_left_text"> Phone:</td>
+                                    <td class="admin_left_input">' . $arrOrder['ShippingPhone'] . '</td>
+                                </tr>                                    </table>
+                        </td>
+                    </tr>
+                    <tr class="content">
+                        <td width="48%" colspan="3" valign="top" align="left" style="border:none">
+                            <table cellpadding="0" cellspacing="0" border="0" class="left_content table_border">
+                                <tr class="content">
+                                    <td class="heading1">Sub Order Id</td>
+                                    <td class="heading1">Items Ordered</td>
+                                    <td class="heading1">Items Image</td>
+                                    <td class="heading1">Price</td>
+                                    <td class="heading1">Qty.</td>
+                                    <td class="heading1">SubTotal</td>
+                                    <td class="heading1">Shipping</td>
+                                    <td class="heading1">Discount</td>
+                                    <td class="heading1">Grand Total</td>
+                                </tr>
+                                ';
+            $varSubTotal = 0;
+            $varShippingSubTotal = 0;
+            $varTotal = 0;
+            foreach ($arrOrderItem as $item) {
+
+                if ($item['ItemType'] == 'product') {
+                    $path = 'products/' . $arrProductImageResizes['default'];
+                } else if ($item['ItemType'] == 'package') {
+                    $path = 'package/' . PACKAGE_IMAGE_RESIZE1;
+                } else {
+                    $path = 'gift_card';
+                }
+
+                $varSrc = $objCore->getImageUrl($item['ItemImage'], $path);
+
+                $varSubTotal += ($item['ItemSubTotal'] + $item['AttributePrice'] - $item['DiscountPrice']);
+                $varShippingSubTotal += $item['ShippingPrice'];
+                $varEmailOrderDetails .='<tr class="content">
+                                        <td style="text-align: center;">' . $item['SubOrderID'] . '</td>
+                                        <td style="text-align: center;">' . '<b>' . $item['ItemName'] . '</b><br/>' . $item['OptionDet'] . '</td>
+                                        <td style="text-align: center;"><img src="' . $varSrc . '" alt="' . $item['ItemName'] . '" style="float:none;" /></td>
+                                        <td style="text-align: center;">' . number_format(($item['ItemPrice'] + ($item['AttributePrice'] / $item['Quantity'])), 2) . '</td>
+                                        <td style="text-align: center;">' . $item['Quantity'] . '</td>
+                                        <td style="text-align: center;">' . number_format(($item['ItemSubTotal'] + $item['AttributePrice']), 2) . '</td>
+                                        <td style="text-align: center;">' . number_format($item['ShippingPrice'], 2) . '</td>
+                                        <td style="text-align: center;">' . number_format($item['DiscountPrice'], 2) . '</td>
+                                        <td style="text-align: center;">' . number_format($item['ItemTotalPrice'], 2) . '</td>
+                                    </tr>';
+            }
+
+            $varTotal = ($varSubTotal + $varShippingSubTotal);
+            $varEmailOrderDetails .='</table>
+                        </td>
+                    </tr>
+                    <tr  class="content"><td colspan="3" style="border:none;">&nbsp;</td></tr>
+                    <tr class="content">
+                        <td width="48%" valign="top" align="left" style="border:none">
+                            <table cellpadding="0" cellspacing="0" border="0" class="left_content table_border">
+                                <tr class="content">
+                                    <td colspan="2" class="heading">Comments History</td>
+                                </tr>
+                                <tr class="content">
+                                    <td colspan="2">';
+
+
+            foreach ($arrOrderComment as $vc) {
+                $varEmailOrderDetails .= '<p>' . $vc['Comment'] . '</p><p align="right"><b> - ' . $vc[$vc['CommentedBy'] . 'Name'] . ' (' . ucwords($vc['CommentedBy']) . ') </b></p>';
+            }
+
+            $varEmailOrderDetails .= '<br />
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td width="2%" style="border:none;">&nbsp;</td>
+                        <td width="48%" valign="top" align="left" style="border:none">
+                            <table cellpadding="0" cellspacing="0" border="0" class="left_content table_border">
+                                <tr class="content"><td colspan="2" class="heading">Order Totals</td></tr>';
+
+            $varDescription = '';
+            foreach ($arrOrderTotal as $vTotal) {
+                if ($vTotal['Code'] == 'gift-cart') {
+                    $varDescription .= 'Paid By ' . $vTotal['Title'] . ': ' . ADMIN_CURRENCY_SYMBOL . number_format($vTotal['Amount'], 2, ".", ",") . '<br />';
+                }
+                if ($vTotal['Code'] == 'coupon') {
+                    $Title2 = $vTotal['Title'];
+                    $varDescription .= ' ' . $vTotal['Title'] . ': ' . ADMIN_CURRENCY_SYMBOL . number_format($vTotal['Amount'], 2, ".", ",");
+                }
+            }
+
+            $varEmailOrderDetails .= '<tr class="content"><td class="admin_left_text">Sub Total</td><td class="admin_left_input">' . ADMIN_CURRENCY_SYMBOL . number_format($varSubTotal, 2, ".", ",") . '</td></tr>
+                                  <tr class="content"><td class="admin_left_text">Shipping Charge</td><td class="admin_left_input">' . ADMIN_CURRENCY_SYMBOL . number_format($varShippingSubTotal, 2, ".", ",") . '</td></tr>
+                                  <tr class="content"><td class="admin_left_text">Total</td><td class="admin_left_input">' . ADMIN_CURRENCY_SYMBOL . number_format($varTotal, 2, ".", ",") . '</td></tr>';
+
+            if ($varDescription) {
+                $varEmailOrderDetails = '<tr class="content"><td class="admin_left_text">Description</td><td class="admin_left_input">' . $varDescription . '</td></tr>';
+            }
+
+            $varEmailOrderDetails .='</table>
+                        </td>
+                    </tr>
+                    <tr  class="content"><td colspan="3" style="border:none;">&nbsp;</td></tr>
+                </table></body></html>';
+
+            //insert invoice in table
+
+            $varFileContent = str_replace('{EMAIL_HEAD}', '', $varEmailOrderDetails);
+
+            $varDir = INVOICE_PATH . 'customer/';
+            if (!is_dir($varDir)) {
+                mkdir($varDir, 0777);
+            }
+            $fileName = 'inv_' . $varInvoiceId . '.html';
+            $varFileName = $varDir . $fileName;
+
+
+            $fh = fopen($varFileName, 'w');
+            fwrite($fh, $varFileContent);
+            fclose($fh);
+            $arrCols = array(
+                'Amount' => $varTotal,
+                'AmountPayable' => $varTotal,
+                'AmountDue' => 0.00,
+                'InvoiceFileName' => $fileName
+            );
+            $varInvoiceId = $this->update(TABLE_INVOICE, $arrCols, "pkInvoiceID='" . $varInvoiceId . "'");
+
+            $varEmailHead = '<table width="100%" cellspacing="0" cellpadding="5" border="0"><tr><td>Here is the summary of your order. You can also find your order details in <a href="' . SITE_ROOT_URL . 'my_orders.php">My Orders</a> when you log into your Telamela account.</td></tr></table>';
+            $varEmailOrderDetails = str_replace('{EMAIL_HEAD}', $varEmailHead, $varEmailOrderDetails);
+
+            $varSubject = 'Telamela : Invoice Details';
+            $varFrom = SITE_NAME;
+            $EmailTemplates = $this->SentEmailTemplates();
+            $varKeyword = array('{EMAIL}', '{EMAILDETAILS}');
+
+            $varKeywordValues = array($varCustomerName, $varEmailOrderDetails);
+
+            $varEmailMessage = str_replace($varKeyword, $varKeywordValues, $EmailTemplates);
+            echo $varEmailMessage;die;	
+            // Calling mail function
+            $objCore->sendMail($varCustomerEmail, $varFrom, $varSubject, $varEmailMessage);
+
+            return 1;
+        } else {
+            return 0;
+        }
+    }
+
+    /**
+     * function addShipment
+     *
+     * This function is used to add Shipment.
+     *
+     * Database Tables used in this function are : tbl_shipment
+     *
+     * @access public
+     *
+     * @parameters 1 string
+     *
+     * @return true
+     *
+     * User instruction: $objOrder->addShipment($arrPost)
+     */
+    function addShipment($arrPost) {
+        global $objCore;
+
+        $rrField = array('fkSubOrderID' => trim(stripcslashes($arrPost['shipment_suborderid'])),
+            'fkShippingCarrierID' => trim(stripcslashes($arrPost['snipat_career'])),
+            'TransactionNo' => trim(stripcslashes($arrPost['tranjection_id'])),
+            'ShippingStatus' => trim(stripcslashes($arrPost['spnipat_status'])),
+            'OrderDate' => date('Y-m-d 00:00:00', strtotime($arrPost['iDateFrom'])),
+            'ShippedDate' => date('Y-m-d 00:00:00', strtotime($arrPost['iDateTo'])),
+            'DateAdded' => 'now()');
+
+        $inser = $this->insert(TABLE_SHIPMENT, $rrField);
+
+        if ($inser) {
+
+            $objCore->setSuccessMsg(SHIPMENT_ADD_SUCCESS);
+            return true;
+        }
+    }
+
+    /**
+     * function shipmentRow
+     *
+     * This function is used to display Shipment.
+     *
+     * Database Tables used in this function are : tbl_shipment, tbl_shipping_gateways
+     *
+     * @access public
+     *
+     * @parameters 1 string
+     *
+     * @return $query
+     *
+     * User instruction: $objOrder->shipmentRow($shippId)
+     */
+    function shipmentRow($shippId) {
+
+        $varArr = array('pkShipmentID', 'fkOrderItemID', 'fkShippingCarrierID', 'TransactionNo', 'ship.ShippingStatus', 'OrderDate', 'ShippedDate', 'pkShippingGatewaysID', 'ShippingTitle');
+
+        $where = "fkOrderItemID='" . trim($shippId) . "'";
+
+        $table = TABLE_SHIPMENT . ' as ship LEFT JOIN ' . TABLE_SHIPPING_GATEWAYS . ' as shipGat on ship.fkShippingCarrierID=shipGat.pkShippingGatewaysID';
+
+        $query = $this->select($table, $varArr, $where);
+
+        return $query;
+    }
+
+    /**
+     * function deleteShipment
+     *
+     * This function is used to delete Shipment.
+     *
+     * Database Tables used in this function are : tbl_shipment
+     *
+     * @access public
+     *
+     * @parameters 1 string
+     *
+     * @return true
+     *
+     * User instruction: $objOrder->deleteShipment($sId)
+     */
+    function deleteShipment($sId) {
+
+        global $objCore;
+
+        $table = TABLE_SHIPMENT;
+        $where = "pkShipmentID='" . trim($sId) . "'";
+        $query = $this->delete($table, $where);
+
+        if ($query) {
+
+            $objCore->setSuccessMsg(SHIPMENT_DELETE_SUCCESS);
+            return true;
+        }
+    }
+
+    /**
+     * function editShipment
+     *
+     * This function is used to update Shipment.
+     *
+     * Database Tables used in this function are : tbl_shipment
+     *
+     * @access public
+     *
+     * @parameters 1 array
+     *
+     * @return string
+     */
+    function updateShipment($arrPost) {
+        //pre($arrPost);
+        global $objCore;
+
+        $arrCols = array(
+            'fkOrderItemID' => $arrPost['frmOrderItemID'],
+            'fkShippingCarrierID' => $arrPost['frmShipmentGatways'],
+            'TransactionNo' => $arrPost['frmTransactionNo'],
+            'ShippingStatus' => $arrPost['frmShippingStatus'],
+            'OrderDate' => $objCore->serverDateTime($arrPost['frmOrderDateAdded'], DATE_TIME_FORMAT_DB),
+            'ShipStartDate' => $objCore->serverDateTime($arrPost['frmDateFrom'], DATE_TIME_FORMAT_DB),
+            'ShippedDate' => $objCore->serverDateTime($arrPost['frmDateTo'], DATE_TIME_FORMAT_DB)
+        );
+
+
+        if ($arrPost['frmShipmentID'] <> '') {
+            $varWhr = "pkShipmentID='" . $arrPost['frmShipmentID'] . "' ";
+            $varNum = $this->update(TABLE_SHIPMENT, $arrCols, $varWhr);
+            if ($varNum > 0) {
+                $objCore->setSuccessMsg(SHIPMENT_UPDATE_SUCCESS);
+            } else {
+                $objCore->setErrorMsg(SHIPMENT_UPDATE_ERROR);
+            }
+        } else {
+            $varNum = $this->insert(TABLE_SHIPMENT, $arrCols);
+            if ($varNum > 0) {
+                $objCore->setSuccessMsg(SHIPMENT_ADD_SUCCESS);
+            } else {
+                $objCore->setErrorMsg(SHIPMENT_ADD_ERROR);
+            }
+        }
+        return true;
+    }
+
+    /**
+     * function editShipment
+     *
+     * This function is used to edit the Shipment.
+     *
+     * Database Tables used in this function are : tbl_shipment
+     *
+     * @access public
+     *
+     * @parameters 1 string
+     *
+     * @return true
+     *
+     * User instruction: $objOrder->editShipment($arrPost)
+     */
+    function editShipment($arrPost) {
+
+        global $objCore;
+
+
+        pre($arrPost);
+
+        $rrField = array('fkSubOrderID' => trim(stripcslashes($arrPost['shipment_suborderid_edit'])),
+            'fkShippingCarrierID' => trim(stripcslashes($arrPost['snipat_career_edit'])),
+            'TransactionNo' => trim(stripcslashes($arrPost['tranjection_id_edit'])),
+            'ShippingStatus' => trim(stripcslashes($arrPost['spnipat_status_edit'])),
+            'OrderDate' => date('Y-m-d 00:00:00', strtotime($arrPost['iDateFrom_edit'])),
+            'ShippedDate' => date('Y-m-d 00:00:00', strtotime($arrPost['iDateTo_edit'])),
+            'DateAdded' => 'now()');
+
+
+        $where = "pkShipmentID='" . trim($arrPost['shipment_id']) . "'";
+
+        $inser = $this->update(TABLE_SHIPMENT, $rrField, $where);
+
+        if ($inser) {
+
+            $objCore->setSuccessMsg(SHIPMENT_UPDATE_SUCCESS);
+            return true;
+        }
+    }
+
+}
+
+?>

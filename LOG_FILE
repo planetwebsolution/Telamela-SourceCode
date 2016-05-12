@@ -1,0 +1,743 @@
+[2013-12-19 19:17 America/Los_Angeles] HTTP request of validation request:POST /cgi-bin/webscr HTTP/1.1
+Host: www.sandbox.paypal.com
+Accept: */*
+Connection: Close
+Content-Length: 2620
+Content-Type: application/x-www-form-urlencoded
+Expect: 100-continue
+
+ for IPN payload: cmd=_notify-validate&item_name10=Behringer+XENYX+302USB+5-Input+Mixer+-+Free+Shipping&first_name=Amlana&mc_shipping=10.00&mc_handling10=0.00&mc_currency=USD&payer_status=verified&payment_fee=15.96&address_status=confirmed&pending_reason=paymentreview&payment_gross=540.11&address_zip=95131&tax10=0.00&address_country_code=US&mc_handling=0.00&num_cart_items=10&txn_type=cart&mc_shipping10=0.00&verify_sign=AiPC9BjkCyDFQXbSkoZcgqH3hpacAh9LAfC.QfRosv8ahK-73bXoxknO&payer_id=42N3KVJCD9D9J&charset=windows-1252&tax1=0.00&receiver_id=QGPEAUAV4QYHA&tax2=0.00&tax3=0.00&tax4=0.00&tax5=0.00&tax6=0.00&mc_handling1=0.00&tax7=0.00&mc_handling2=0.00&tax8=0.00&mc_handling3=0.00&tax9=0.00&mc_handling4=0.00&mc_handling5=0.00&tax=0.00&mc_handling6=0.00&item_name1=TOP+SHOP+Brand+New+women%27s+blush+shoes%21+SIze+39+%288%29&mc_handling7=0.00&item_name2=Boys+Jeans+X2+Size+2+%27Next%27+brand&mc_handling8=0.00&item_name3=Hot%21+New+Baby+Toddler+Kid+Child+Cartoon+Animal+Backpack+Schoolbag+Shoulder+Bag&mc_handling9=0.00&item_name4=New+Unlocked+APPLE+iPhone+4+32GB+Smartphone+Mobile+Phone+Black&payment_type=instant&item_name5=NEW+XMAS+CHRISTMAS+T-SHIRT+-+Glitter+Tree&item_name6=2004+Care+Bears+Funshine+Bear&item_name7=BIGLAND+130W+Vacuum+Food+Saver+Sealer+%2B+Full+Range+Accessories+Camping+Package&item_name8=Sensible+Foods+Crunch+Dried+Fruit+Cherry+Berry+21g&address_street=1+Main+St&item_name9=Theatrical+Trick+Line+Tie+Line+%234+1%2F8%22+Sash+Cord+Rope+600%27+Uncoated&mc_shipping1=0.00&mc_shipping2=5.00&mc_shipping3=0.00&txn_id=5D652387D6896632A&mc_shipping4=0.00&mc_shipping5=0.00&mc_shipping6=0.00&mc_shipping7=5.00&mc_shipping8=0.00&mc_shipping9=0.00&mc_gross_1=79.80&quantity1=1&mc_gross_2=29.15&quantity2=1&item_number1=&protection_eligibility=Ineligible&mc_gross_3=25.16&quantity3=2&item_number2=&mc_gross_4=22.05&quantity4=1&item_number3=&custom=Q3VzdG9tZXJJRC0y&mc_gross_5=22.05&quantity5=1&item_number4=&mc_gross_6=219.45&quantity6=1&item_number5=&mc_gross_7=20.65&quantity7=1&item_number6=&mc_gross_8=19.95&quantity8=1&item_number7=&business=arvind.yadav-facilitator%40mail.vinove.com&mc_gross_9=29.40&quantity9=1&item_number8=&item_number9=&residence_country=US&last_name=Kumar&address_state=CA&quantity10=1&payer_email=arvind.yadav-buyer%40mail.vinove.com&address_city=San+Jose&payment_status=Pending&payment_date=19%3A17%3A41+Dec+19%2C+2013+PST&transaction_subject=Q3VzdG9tZXJJRC0y&receiver_email=arvind.yadav-facilitator%40mail.vinove.com&mc_fee=15.96&notify_version=3.7&item_number10=&address_country=United+States&mc_gross=540.11&test_ipn=1&address_name=Amlana+Kumar&mc_gross_10=72.45&ipn_track_id=ae294eed30491
+[2013-12-19 19:17 America/Los_Angeles] HTTP response of validation request: HTTP/1.1 100 Continue
+
+HTTP/1.1 200 OK
+Date: Fri, 20 Dec 2013 03:17:48 GMT
+Server: Apache
+X-Frame-Options: SAMEORIGIN
+Set-Cookie: c9MWDuvPtT9GIMyPc3jwol1VSlO=BJzAStXl5mLieztdIJLkudhUyszXgmR86WGVlVzMDS8b27l56lFcPyJe0jYHam5gUY4GweqXqLUL7X3ZrtGfbbobHYSFmVxuimGzDLJ951DKxNorhi-MgrFdaU182F7z3FxmiMrkw6HWOZYoJZ4Z0b3oyoC7ce4CwtI17DyuLrruYj3M9Xzj0CVaadGW0vvAxxIIsC9edv86pDOn5aLuSIfIVrfIq5suzDzxwWufQThLX18JLkTC4Oa1TR6r5iJt4bURj9Y5jbdBanRhhkTAE-WW_KkSO8o5CMAyQ-WmmZ3IX2j3BuyM9nNJdIazcnItYQw548G0sN1vbuZd9KvQj4usignq4woajGRvf7jBQwRlG3-QmpKY1a_1LUJYZbD6M6P6zSHL3MBQhBxtcpwtN7ACRXqdkK809IAhw17eHdlRLIn6ASuOYv_t-j0; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: cookie_check=yes; expires=Mon, 18-Dec-2023 03:17:48 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navcmd=_notify-validate; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navlns=0.0; expires=Sun, 20-Dec-2015 03:17:48 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: Apache=10.72.109.11.1387509468594110; path=/; expires=Sun, 13-Dec-43 03:17:48 GMT
+Connection: close
+Set-Cookie: X-PP-SILOVER=name%3DSANDBOX3.WEB.1%26silo_version%3D880%26app%3Dslingshot%26TIME%3D3702960978; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: X-PP-SILOVER=; Expires=Thu, 01 Jan 1970 00:00:01 GMT
+Set-Cookie: Apache=10.72.128.11.1387509468575333; path=/; expires=Sun, 13-Dec-43 03:17:48 GMT
+Vary: Accept-Encoding
+Strict-Transport-Security: max-age=14400
+Transfer-Encoding: chunked
+Content-Type: text/html; charset=UTF-8
+
+VERIFIED
+[2013-12-19 19:17 America/Los_Angeles] Verified IPN: cmd=_notify-validate&item_name10=Behringer+XENYX+302USB+5-Input+Mixer+-+Free+Shipping&first_name=Amlana&mc_shipping=10.00&mc_handling10=0.00&mc_currency=USD&payer_status=verified&payment_fee=15.96&address_status=confirmed&pending_reason=paymentreview&payment_gross=540.11&address_zip=95131&tax10=0.00&address_country_code=US&mc_handling=0.00&num_cart_items=10&txn_type=cart&mc_shipping10=0.00&verify_sign=AiPC9BjkCyDFQXbSkoZcgqH3hpacAh9LAfC.QfRosv8ahK-73bXoxknO&payer_id=42N3KVJCD9D9J&charset=windows-1252&tax1=0.00&receiver_id=QGPEAUAV4QYHA&tax2=0.00&tax3=0.00&tax4=0.00&tax5=0.00&tax6=0.00&mc_handling1=0.00&tax7=0.00&mc_handling2=0.00&tax8=0.00&mc_handling3=0.00&tax9=0.00&mc_handling4=0.00&mc_handling5=0.00&tax=0.00&mc_handling6=0.00&item_name1=TOP+SHOP+Brand+New+women%27s+blush+shoes%21+SIze+39+%288%29&mc_handling7=0.00&item_name2=Boys+Jeans+X2+Size+2+%27Next%27+brand&mc_handling8=0.00&item_name3=Hot%21+New+Baby+Toddler+Kid+Child+Cartoon+Animal+Backpack+Schoolbag+Shoulder+Bag&mc_handling9=0.00&item_name4=New+Unlocked+APPLE+iPhone+4+32GB+Smartphone+Mobile+Phone+Black&payment_type=instant&item_name5=NEW+XMAS+CHRISTMAS+T-SHIRT+-+Glitter+Tree&item_name6=2004+Care+Bears+Funshine+Bear&item_name7=BIGLAND+130W+Vacuum+Food+Saver+Sealer+%2B+Full+Range+Accessories+Camping+Package&item_name8=Sensible+Foods+Crunch+Dried+Fruit+Cherry+Berry+21g&address_street=1+Main+St&item_name9=Theatrical+Trick+Line+Tie+Line+%234+1%2F8%22+Sash+Cord+Rope+600%27+Uncoated&mc_shipping1=0.00&mc_shipping2=5.00&mc_shipping3=0.00&txn_id=5D652387D6896632A&mc_shipping4=0.00&mc_shipping5=0.00&mc_shipping6=0.00&mc_shipping7=5.00&mc_shipping8=0.00&mc_shipping9=0.00&mc_gross_1=79.80&quantity1=1&mc_gross_2=29.15&quantity2=1&item_number1=&protection_eligibility=Ineligible&mc_gross_3=25.16&quantity3=2&item_number2=&mc_gross_4=22.05&quantity4=1&item_number3=&custom=Q3VzdG9tZXJJRC0y&mc_gross_5=22.05&quantity5=1&item_number4=&mc_gross_6=219.45&quantity6=1&item_number5=&mc_gross_7=20.65&quantity7=1&item_number6=&mc_gross_8=19.95&quantity8=1&item_number7=&business=arvind.yadav-facilitator%40mail.vinove.com&mc_gross_9=29.40&quantity9=1&item_number8=&item_number9=&residence_country=US&last_name=Kumar&address_state=CA&quantity10=1&payer_email=arvind.yadav-buyer%40mail.vinove.com&address_city=San+Jose&payment_status=Pending&payment_date=19%3A17%3A41+Dec+19%2C+2013+PST&transaction_subject=Q3VzdG9tZXJJRC0y&receiver_email=arvind.yadav-facilitator%40mail.vinove.com&mc_fee=15.96&notify_version=3.7&item_number10=&address_country=United+States&mc_gross=540.11&test_ipn=1&address_name=Amlana+Kumar&mc_gross_10=72.45&ipn_track_id=ae294eed30491 
+[2013-12-27 06:57 America/Los_Angeles] HTTP request of validation request:POST /cgi-bin/webscr HTTP/1.1
+Host: www.sandbox.paypal.com
+Accept: */*
+Connection: Close
+Content-Length: 1135
+Content-Type: application/x-www-form-urlencoded
+Expect: 100-continue
+
+ for IPN payload: cmd=_notify-validate&mc_gross=94.50&protection_eligibility=Ineligible&address_status=confirmed&item_number1=&payer_id=42N3KVJCD9D9J&tax=0.00&address_street=1+Main+St&payment_date=06%3A57%3A02+Dec+27%2C+2013+PST&payment_status=Pending&charset=windows-1252&address_zip=95131&mc_shipping=0.00&mc_handling=0.00&first_name=Amlana&mc_fee=3.04&address_country_code=US&address_name=Amlana+Kumar&notify_version=3.7&custom=Q3VzdG9tZXJJRC0x&payer_status=verified&business=arvind.yadav-facilitator%40mail.vinove.com&address_country=United+States&num_cart_items=1&mc_handling1=0.00&address_city=San+Jose&verify_sign=AFcWxV21C7fd0v3bYYYRCpSSRl31A7jabEwtTojKMXMDiP6ln0rENzlt&payer_email=arvind.yadav-buyer%40mail.vinove.com&mc_shipping1=0.00&tax1=0.00&txn_id=7WB26316P7557452X&payment_type=instant&last_name=Kumar&address_state=CA&item_name1=PRS&receiver_email=arvind.yadav-facilitator%40mail.vinove.com&payment_fee=3.04&quantity1=1&receiver_id=QGPEAUAV4QYHA&pending_reason=paymentreview&txn_type=cart&mc_gross_1=94.50&mc_currency=USD&residence_country=US&test_ipn=1&transaction_subject=Q3VzdG9tZXJJRC0x&payment_gross=94.50&ipn_track_id=4fd60e7466aa0
+[2013-12-27 06:57 America/Los_Angeles] HTTP response of validation request: HTTP/1.1 100 Continue
+
+HTTP/1.1 200 OK
+Date: Fri, 27 Dec 2013 14:57:07 GMT
+Server: Apache
+X-Frame-Options: SAMEORIGIN
+Set-Cookie: c9MWDuvPtT9GIMyPc3jwol1VSlO=5D1qg0xIuRun3FKodLgiJMR5_ISI1t1Ry4wzw19oX3zvI9Cv3kXlDiAnalc7B1hsylEBNWn3z7VjDOnTmyifkuGZoPCcH3gD_K1XFi5U2sKixxINQqkxvE0mJhifj6eZq_9Y5iWDpYD4Fg-GInachgwysgRFJcqDbCRbHnyR4YDS32HZNaHeX0Hu1yjMyj9kAQSvxnyBhbqmf8zvOu27bWuaZAY2Dw5fCDWe5xALsA_g-rFu-sFkm5Y_gMaR4sqiaxoDWRr0pT_Ma3wDXpcUh2O1npeycxD9vyNBHg9iGh03kDX4yklCv2cUaajCvQnmq-NVAsiWCmYTnu_KQ-P123kb6e8u0yPfpxgck0pzUM-JaIAYx7fNUL8IzU6ejeENLKIc5EALZiA2e-eMiyQ4MbVojGUMrWK0kaQaZi19gN2fOHH1gX2GygQT-XS; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: cookie_check=yes; expires=Mon, 25-Dec-2023 14:57:07 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navcmd=_notify-validate; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navlns=0.0; expires=Sun, 27-Dec-2015 14:57:07 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: Apache=10.72.109.11.1388156227296054; path=/; expires=Sun, 20-Dec-43 14:57:07 GMT
+Connection: close
+Set-Cookie: X-PP-SILOVER=name%3DSANDBOX3.WEB.1%26silo_version%3D880%26app%3Dslingshot%26TIME%3D1133886802; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: X-PP-SILOVER=; Expires=Thu, 01 Jan 1970 00:00:01 GMT
+Set-Cookie: Apache=10.72.128.11.1388156227281776; path=/; expires=Sun, 20-Dec-43 14:57:07 GMT
+Vary: Accept-Encoding
+Strict-Transport-Security: max-age=14400
+Transfer-Encoding: chunked
+Content-Type: text/html; charset=UTF-8
+
+VERIFIED
+[2013-12-27 06:57 America/Los_Angeles] Verified IPN: cmd=_notify-validate&mc_gross=94.50&protection_eligibility=Ineligible&address_status=confirmed&item_number1=&payer_id=42N3KVJCD9D9J&tax=0.00&address_street=1+Main+St&payment_date=06%3A57%3A02+Dec+27%2C+2013+PST&payment_status=Pending&charset=windows-1252&address_zip=95131&mc_shipping=0.00&mc_handling=0.00&first_name=Amlana&mc_fee=3.04&address_country_code=US&address_name=Amlana+Kumar&notify_version=3.7&custom=Q3VzdG9tZXJJRC0x&payer_status=verified&business=arvind.yadav-facilitator%40mail.vinove.com&address_country=United+States&num_cart_items=1&mc_handling1=0.00&address_city=San+Jose&verify_sign=AFcWxV21C7fd0v3bYYYRCpSSRl31A7jabEwtTojKMXMDiP6ln0rENzlt&payer_email=arvind.yadav-buyer%40mail.vinove.com&mc_shipping1=0.00&tax1=0.00&txn_id=7WB26316P7557452X&payment_type=instant&last_name=Kumar&address_state=CA&item_name1=PRS&receiver_email=arvind.yadav-facilitator%40mail.vinove.com&payment_fee=3.04&quantity1=1&receiver_id=QGPEAUAV4QYHA&pending_reason=paymentreview&txn_type=cart&mc_gross_1=94.50&mc_currency=USD&residence_country=US&test_ipn=1&transaction_subject=Q3VzdG9tZXJJRC0x&payment_gross=94.50&ipn_track_id=4fd60e7466aa0 
+[2014-01-05 21:52 America/Los_Angeles] HTTP request of validation request:POST /cgi-bin/webscr HTTP/1.1
+Host: www.sandbox.paypal.com
+Accept: */*
+Connection: Close
+Content-Length: 1135
+Content-Type: application/x-www-form-urlencoded
+Expect: 100-continue
+
+ for IPN payload: cmd=_notify-validate&mc_gross=94.50&protection_eligibility=Ineligible&address_status=confirmed&item_number1=&payer_id=42N3KVJCD9D9J&tax=0.00&address_street=1+Main+St&payment_date=21%3A52%3A29+Jan+05%2C+2014+PST&payment_status=Pending&charset=windows-1252&address_zip=95131&mc_shipping=0.00&mc_handling=0.00&first_name=Amlana&mc_fee=3.04&address_country_code=US&address_name=Amlana+Kumar&notify_version=3.7&custom=Q3VzdG9tZXJJRC0x&payer_status=verified&business=arvind.yadav-facilitator%40mail.vinove.com&address_country=United+States&num_cart_items=1&mc_handling1=0.00&address_city=San+Jose&verify_sign=An5ns1Kso7MWUdW4ErQKJJJ4qi4-At3Ezta4yKByGAaAOHrG5iPyhVIu&payer_email=arvind.yadav-buyer%40mail.vinove.com&mc_shipping1=0.00&tax1=0.00&txn_id=2JN9401024893325M&payment_type=instant&last_name=Kumar&address_state=CA&item_name1=PRS&receiver_email=arvind.yadav-facilitator%40mail.vinove.com&payment_fee=3.04&quantity1=1&receiver_id=QGPEAUAV4QYHA&pending_reason=paymentreview&txn_type=cart&mc_gross_1=94.50&mc_currency=USD&residence_country=US&test_ipn=1&transaction_subject=Q3VzdG9tZXJJRC0x&payment_gross=94.50&ipn_track_id=831009023030d
+[2014-01-05 21:52 America/Los_Angeles] HTTP response of validation request: HTTP/1.1 100 Continue
+
+HTTP/1.1 200 OK
+Date: Mon, 06 Jan 2014 05:52:38 GMT
+Server: Apache
+X-Frame-Options: SAMEORIGIN
+Set-Cookie: c9MWDuvPtT9GIMyPc3jwol1VSlO=zMlxlreqPEb7LkIBPiBGH5JYpGvLFVCBWp4lC1_MBqQCHbP3fVksNJkqxpRoD1r0fJWPBLiL6Tvo_NhHqR7BZdYo0Fe3Kb8zlsE819965dl05vDNQYq8QA6IpIn7NEylb6Iony7MCMlQXfLDzrhTatACdg-vLRMYApeSLrsxxzhFwuVR1gNzVNqIu0IZVjZTntIyJ65tupu8nat_YUwQbkjf7qCv6oX_yvb7gJW210rWWQBK8dprLxYS3-8hAYyjaWuIm1A3isA07BsdSd5vY0oa2HXECwK7Wm2lVQaKRlOKvxKsrB_wJYr8kfstHwey2rTokLdUzgRHJ2tuAGD4tQqbDFvvgjp_Q_BDOPujze2Lhgp7h6KTUgW2niLGnb1-f5YtlkOl-xHlmbhQts_KPCP571ssn1scFrjnEzP8v5B7ymBDFx5Py_EZKgm; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: cookie_check=yes; expires=Thu, 04-Jan-2024 05:52:38 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navcmd=_notify-validate; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navlns=0.0; expires=Wed, 06-Jan-2016 05:52:38 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: Apache=10.72.109.11.1388987558606277; path=/; expires=Wed, 30-Dec-43 05:52:38 GMT
+Connection: close
+Set-Cookie: X-PP-SILOVER=name%3DSANDBOX3.WEB.1%26silo_version%3D880%26app%3Dslingshot%26TIME%3D2789526098; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: X-PP-SILOVER=; Expires=Thu, 01 Jan 1970 00:00:01 GMT
+Set-Cookie: Apache=10.72.128.11.1388987558597429; path=/; expires=Wed, 30-Dec-43 05:52:38 GMT
+Vary: Accept-Encoding
+Strict-Transport-Security: max-age=14400
+Transfer-Encoding: chunked
+Content-Type: text/html; charset=UTF-8
+
+VERIFIED
+[2014-01-05 21:52 America/Los_Angeles] Verified IPN: cmd=_notify-validate&mc_gross=94.50&protection_eligibility=Ineligible&address_status=confirmed&item_number1=&payer_id=42N3KVJCD9D9J&tax=0.00&address_street=1+Main+St&payment_date=21%3A52%3A29+Jan+05%2C+2014+PST&payment_status=Pending&charset=windows-1252&address_zip=95131&mc_shipping=0.00&mc_handling=0.00&first_name=Amlana&mc_fee=3.04&address_country_code=US&address_name=Amlana+Kumar&notify_version=3.7&custom=Q3VzdG9tZXJJRC0x&payer_status=verified&business=arvind.yadav-facilitator%40mail.vinove.com&address_country=United+States&num_cart_items=1&mc_handling1=0.00&address_city=San+Jose&verify_sign=An5ns1Kso7MWUdW4ErQKJJJ4qi4-At3Ezta4yKByGAaAOHrG5iPyhVIu&payer_email=arvind.yadav-buyer%40mail.vinove.com&mc_shipping1=0.00&tax1=0.00&txn_id=2JN9401024893325M&payment_type=instant&last_name=Kumar&address_state=CA&item_name1=PRS&receiver_email=arvind.yadav-facilitator%40mail.vinove.com&payment_fee=3.04&quantity1=1&receiver_id=QGPEAUAV4QYHA&pending_reason=paymentreview&txn_type=cart&mc_gross_1=94.50&mc_currency=USD&residence_country=US&test_ipn=1&transaction_subject=Q3VzdG9tZXJJRC0x&payment_gross=94.50&ipn_track_id=831009023030d 
+[2014-01-06 20:42 America/Los_Angeles] HTTP request of validation request:POST /cgi-bin/webscr HTTP/1.1
+Host: www.sandbox.paypal.com
+Accept: */*
+Connection: Close
+Content-Length: 1197
+Content-Type: application/x-www-form-urlencoded
+Expect: 100-continue
+
+ for IPN payload: cmd=_notify-validate&mc_gross=3.01&protection_eligibility=Ineligible&address_status=confirmed&item_number1=&payer_id=42N3KVJCD9D9J&tax=0.00&address_street=1+Main+St&payment_date=20%3A42%3A09+Jan+06%2C+2014+PST&payment_status=Pending&charset=windows-1252&address_zip=95131&mc_shipping=0.00&mc_handling=2.06&first_name=Amlana&mc_fee=0.39&address_country_code=US&address_name=Amlana+Kumar&notify_version=3.7&custom=Q3VzdG9tZXJJRC0y&payer_status=verified&business=arvind.yadav-facilitator%40mail.vinove.com&address_country=United+States&num_cart_items=1&mc_handling1=0.00&address_city=San+Jose&verify_sign=A74dE6hB3Ane46XSHswldJNSQaQYA9uDt5yNII35ZARt7DQC5da9qRzo&payer_email=arvind.yadav-buyer%40mail.vinove.com&mc_shipping1=0.00&tax1=0.00&txn_id=53134337X2885754F&payment_type=instant&last_name=Kumar&address_state=CA&item_name1=Morden+Bathroom+Free+standing+Bathtub+Acrylic+Bath+Tub+with+Overflow&receiver_email=arvind.yadav-facilitator%40mail.vinove.com&payment_fee=0.39&quantity1=1&receiver_id=QGPEAUAV4QYHA&pending_reason=paymentreview&txn_type=cart&mc_gross_1=0.95&mc_currency=USD&residence_country=US&test_ipn=1&transaction_subject=Q3VzdG9tZXJJRC0y&payment_gross=3.01&ipn_track_id=a1c70defb7b3c
+[2014-01-06 20:42 America/Los_Angeles] HTTP response of validation request: HTTP/1.1 100 Continue
+
+HTTP/1.1 200 OK
+Date: Tue, 07 Jan 2014 04:42:13 GMT
+Server: Apache
+X-Frame-Options: SAMEORIGIN
+Set-Cookie: c9MWDuvPtT9GIMyPc3jwol1VSlO=K0EDopSg2UNlxDYTm5ueKnnavHoTc9Ddr61mOf2v7f3MMQX_rs_4Kzjc5T7C1qf_WCMaCm2TRJ0TfCBLZKeLSuM-5QU0HibkZxIe7Ge-mG75x3gjEuXYuRsZm7D6vlUQJOkWg0-fYWabRh3adbDs232OsTsYDBm1XfUy5y01G5jWbwG_ztfNXaTP8So-HdAbcce3UMhUd1zHTg7T_UtT3V4ynm0RgWLubgxsIgaBHaTYNbW_iPws6UoQP7MV64cGCy-Tk54cs4k7-QcG9SJeliLsmBl73v7MsHc1-Z_nMUpsm0bEBuHFJk5MhPq37Vd426coOBNgNxPEQTT1itwwjm4ZKZT2AcORWHgsMQ30leIxbPN7CsOQZNWRlh5zeyF-pACpYyU0UfpE_zhRtDqfqWuoIxRN2ltNFx51lzCAmF7Dz769CF2GNoDPFQe; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: cookie_check=yes; expires=Fri, 05-Jan-2024 04:42:13 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navcmd=_notify-validate; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navlns=0.0; expires=Thu, 07-Jan-2016 04:42:13 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: Apache=10.72.109.11.1389069733267675; path=/; expires=Thu, 31-Dec-43 04:42:13 GMT
+Connection: close
+Set-Cookie: X-PP-SILOVER=name%3DSANDBOX3.WEB.1%26silo_version%3D880%26app%3Dslingshot%26TIME%3D2777008978; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: X-PP-SILOVER=; Expires=Thu, 01 Jan 1970 00:00:01 GMT
+Set-Cookie: Apache=10.72.128.11.1389069733256578; path=/; expires=Thu, 31-Dec-43 04:42:13 GMT
+Vary: Accept-Encoding
+Strict-Transport-Security: max-age=14400
+Transfer-Encoding: chunked
+Content-Type: text/html; charset=UTF-8
+
+VERIFIED
+[2014-01-06 20:42 America/Los_Angeles] Verified IPN: cmd=_notify-validate&mc_gross=3.01&protection_eligibility=Ineligible&address_status=confirmed&item_number1=&payer_id=42N3KVJCD9D9J&tax=0.00&address_street=1+Main+St&payment_date=20%3A42%3A09+Jan+06%2C+2014+PST&payment_status=Pending&charset=windows-1252&address_zip=95131&mc_shipping=0.00&mc_handling=2.06&first_name=Amlana&mc_fee=0.39&address_country_code=US&address_name=Amlana+Kumar&notify_version=3.7&custom=Q3VzdG9tZXJJRC0y&payer_status=verified&business=arvind.yadav-facilitator%40mail.vinove.com&address_country=United+States&num_cart_items=1&mc_handling1=0.00&address_city=San+Jose&verify_sign=A74dE6hB3Ane46XSHswldJNSQaQYA9uDt5yNII35ZARt7DQC5da9qRzo&payer_email=arvind.yadav-buyer%40mail.vinove.com&mc_shipping1=0.00&tax1=0.00&txn_id=53134337X2885754F&payment_type=instant&last_name=Kumar&address_state=CA&item_name1=Morden+Bathroom+Free+standing+Bathtub+Acrylic+Bath+Tub+with+Overflow&receiver_email=arvind.yadav-facilitator%40mail.vinove.com&payment_fee=0.39&quantity1=1&receiver_id=QGPEAUAV4QYHA&pending_reason=paymentreview&txn_type=cart&mc_gross_1=0.95&mc_currency=USD&residence_country=US&test_ipn=1&transaction_subject=Q3VzdG9tZXJJRC0y&payment_gross=3.01&ipn_track_id=a1c70defb7b3c 
+[2014-01-06 20:59 America/Los_Angeles] HTTP request of validation request:POST /cgi-bin/webscr HTTP/1.1
+Host: www.sandbox.paypal.com
+Accept: */*
+Connection: Close
+Content-Length: 1208
+Content-Type: application/x-www-form-urlencoded
+Expect: 100-continue
+
+ for IPN payload: cmd=_notify-validate&mc_gross=38.85&protection_eligibility=Ineligible&address_status=confirmed&item_number1=&payer_id=42N3KVJCD9D9J&tax=0.00&address_street=1+Main+St&payment_date=20%3A59%3A11+Jan+06%2C+2014+PST&payment_status=Pending&charset=windows-1252&address_zip=95131&mc_shipping=0.00&mc_handling=0.00&first_name=Amlana&mc_fee=1.43&address_country_code=US&address_name=Amlana+Kumar&notify_version=3.7&custom=Q3VzdG9tZXJJRC0y&payer_status=verified&business=arvind.yadav-facilitator%40mail.vinove.com&address_country=United+States&num_cart_items=1&mc_handling1=0.00&address_city=San+Jose&verify_sign=AFcWxV21C7fd0v3bYYYRCpSSRl31Ae5Msfd.NlLJ.G1BILwfVbPU1Hk9&payer_email=arvind.yadav-buyer%40mail.vinove.com&mc_shipping1=0.00&tax1=0.00&txn_id=5EG797786F210514M&payment_type=instant&last_name=Kumar&address_state=CA&item_name1=Classic+Quartz+Crystal+Mans+Steel+Stylish+Black+Date+Style+Leather+Mens+Watch&receiver_email=arvind.yadav-facilitator%40mail.vinove.com&payment_fee=1.43&quantity1=1&receiver_id=QGPEAUAV4QYHA&pending_reason=paymentreview&txn_type=cart&mc_gross_1=38.85&mc_currency=USD&residence_country=US&test_ipn=1&transaction_subject=Q3VzdG9tZXJJRC0y&payment_gross=38.85&ipn_track_id=92e30b64391f
+[2014-01-06 20:59 America/Los_Angeles] HTTP response of validation request: HTTP/1.1 100 Continue
+
+HTTP/1.1 200 OK
+Date: Tue, 07 Jan 2014 04:59:16 GMT
+Server: Apache
+X-Frame-Options: SAMEORIGIN
+Set-Cookie: c9MWDuvPtT9GIMyPc3jwol1VSlO=T1EgcT788OhRAEgXoYT9Hfrs1kHsYfdoBzfNmmk3pSkQVfLkfXaESipfvfhSDlHmA8CW20tAjyIVViSQP7XpsuQWMP21dsNxJudEWbUI7Hzjz-WVASTT2iA3ANg4opDROgpWAkukEcBlrSPxnGNN6Go4-NaKushK7kIldRJsJAUmSxulndxyq-5G5ER4zqx6wJ1oKZRT3Ej5yVzlbEc_yUy7GXr-7n4TYwoISP6sOLsQ9r0aP5cZVKCEduDwsyXbO8yofv6MRCJjOzFUoXNRAk2mC7rpBZTbG8V9q53Y8Brzup8rM--sOij-aJ2UDq-s3oBMpqHQXZ-9dhU_G6p-xuPLBcdvGRcSHQxrMVYr5xUKQHmCWnbgtr5IQdw5u2US44QecWNjKIF7-S6v9-iJX4aFC1yKDqDOhsKcjo2jm3ro7nv9h7epVkSdgkW; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: cookie_check=yes; expires=Fri, 05-Jan-2024 04:59:17 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navcmd=_notify-validate; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navlns=0.0; expires=Thu, 07-Jan-2016 04:59:17 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: Apache=10.72.109.11.1389070756791866; path=/; expires=Thu, 31-Dec-43 04:59:16 GMT
+Connection: close
+Set-Cookie: X-PP-SILOVER=name%3DSANDBOX3.WEB.1%26silo_version%3D880%26app%3Dslingshot%26TIME%3D2760493906; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: X-PP-SILOVER=; Expires=Thu, 01 Jan 1970 00:00:01 GMT
+Set-Cookie: Apache=10.72.128.11.1389070756783955; path=/; expires=Thu, 31-Dec-43 04:59:16 GMT
+Vary: Accept-Encoding
+Strict-Transport-Security: max-age=14400
+Transfer-Encoding: chunked
+Content-Type: text/html; charset=UTF-8
+
+VERIFIED
+[2014-01-06 20:59 America/Los_Angeles] Verified IPN: cmd=_notify-validate&mc_gross=38.85&protection_eligibility=Ineligible&address_status=confirmed&item_number1=&payer_id=42N3KVJCD9D9J&tax=0.00&address_street=1+Main+St&payment_date=20%3A59%3A11+Jan+06%2C+2014+PST&payment_status=Pending&charset=windows-1252&address_zip=95131&mc_shipping=0.00&mc_handling=0.00&first_name=Amlana&mc_fee=1.43&address_country_code=US&address_name=Amlana+Kumar&notify_version=3.7&custom=Q3VzdG9tZXJJRC0y&payer_status=verified&business=arvind.yadav-facilitator%40mail.vinove.com&address_country=United+States&num_cart_items=1&mc_handling1=0.00&address_city=San+Jose&verify_sign=AFcWxV21C7fd0v3bYYYRCpSSRl31Ae5Msfd.NlLJ.G1BILwfVbPU1Hk9&payer_email=arvind.yadav-buyer%40mail.vinove.com&mc_shipping1=0.00&tax1=0.00&txn_id=5EG797786F210514M&payment_type=instant&last_name=Kumar&address_state=CA&item_name1=Classic+Quartz+Crystal+Mans+Steel+Stylish+Black+Date+Style+Leather+Mens+Watch&receiver_email=arvind.yadav-facilitator%40mail.vinove.com&payment_fee=1.43&quantity1=1&receiver_id=QGPEAUAV4QYHA&pending_reason=paymentreview&txn_type=cart&mc_gross_1=38.85&mc_currency=USD&residence_country=US&test_ipn=1&transaction_subject=Q3VzdG9tZXJJRC0y&payment_gross=38.85&ipn_track_id=92e30b64391f 
+[2014-01-07 21:54 America/Los_Angeles] HTTP request of validation request:POST /cgi-bin/webscr HTTP/1.1
+Host: www.sandbox.paypal.com
+Accept: */*
+Connection: Close
+Content-Length: 1160
+Content-Type: application/x-www-form-urlencoded
+Expect: 100-continue
+
+ for IPN payload: cmd=_notify-validate&mc_gross=12.59&protection_eligibility=Ineligible&address_status=confirmed&item_number1=&payer_id=42N3KVJCD9D9J&tax=0.00&address_street=1+Main+St&payment_date=21%3A54%3A52+Jan+07%2C+2014+PST&payment_status=Pending&charset=windows-1252&address_zip=95131&mc_shipping=0.00&mc_handling=0.00&first_name=Amlana&mc_fee=0.67&address_country_code=US&address_name=Amlana+Kumar&notify_version=3.7&custom=Q3VzdG9tZXJJRC0y&payer_status=verified&business=arvind.yadav-facilitator%40mail.vinove.com&address_country=United+States&num_cart_items=1&mc_handling1=0.00&address_city=San+Jose&verify_sign=An5ns1Kso7MWUdW4ErQKJJJ4qi4-AnF5ZlWpCnuAOw4ODHtkvqDakNva&payer_email=arvind.yadav-buyer%40mail.vinove.com&mc_shipping1=0.00&tax1=0.00&txn_id=1JM4729399471152K&payment_type=instant&last_name=Kumar&address_state=CA&item_name1=Personal+Ice+Cream+Maker+Cup&receiver_email=arvind.yadav-facilitator%40mail.vinove.com&payment_fee=0.67&quantity1=1&receiver_id=QGPEAUAV4QYHA&pending_reason=paymentreview&txn_type=cart&mc_gross_1=12.59&mc_currency=USD&residence_country=US&test_ipn=1&transaction_subject=Q3VzdG9tZXJJRC0y&payment_gross=12.59&ipn_track_id=a44d2477727a4
+[2014-01-07 21:54 America/Los_Angeles] HTTP response of validation request: HTTP/1.1 100 Continue
+
+HTTP/1.1 200 OK
+Date: Wed, 08 Jan 2014 05:54:56 GMT
+Server: Apache
+X-Frame-Options: SAMEORIGIN
+Set-Cookie: c9MWDuvPtT9GIMyPc3jwol1VSlO=4-qdvNdmFy9xx6jDNXeFIWy3SZe1b_9H-oINvnPR74soWI4W1R3cQpZ_fpVL0kOBMXwaMo6je9iz4WUXa1L9vIUJOs0zIqI0JaiKEEsmniMWxbRPyK6hOMOrRDysvYrKVYVr_byWAJGEtxCGzSguesFmQ8zhTrvEdyxGQxXwZBdrXcREzFbSb9dKUyqSHUQvVi8dG1AmRPlBZywlqmXg2J8Fkb1vkkapQfO_DScqsSfA2MD6DPpYU7gK3ZQNtbD7lCGq7bxF88m89qA6G1ELv-WJPTW79CnJ5mPXk7hQws8VY1X5XaBCdf_iYjgADUwX1SmNCMUGjqiysj_L6jmz7cNmtM918iKAFBu4-Dh09fxmxf5EeUE-UHKStoJaZbvdyhSmTMdcLQRq-kB4phZRUzsKxvRsVUq4DpKV1xxaRQKGW4RaF72PSuDsqLa; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: cookie_check=yes; expires=Sat, 06-Jan-2024 05:54:56 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navcmd=_notify-validate; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navlns=0.0; expires=Fri, 08-Jan-2016 05:54:56 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: Apache=10.72.109.11.1389160496450768; path=/; expires=Fri, 01-Jan-44 05:54:56 GMT
+Connection: close
+Set-Cookie: X-PP-SILOVER=name%3DSANDBOX3.WEB.1%26silo_version%3D880%26app%3Dslingshot%26TIME%3D820563026; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: X-PP-SILOVER=; Expires=Thu, 01 Jan 1970 00:00:01 GMT
+Set-Cookie: Apache=10.72.128.11.1389160496442117; path=/; expires=Fri, 01-Jan-44 05:54:56 GMT
+Vary: Accept-Encoding
+Strict-Transport-Security: max-age=14400
+Transfer-Encoding: chunked
+Content-Type: text/html; charset=UTF-8
+
+VERIFIED
+[2014-01-07 21:54 America/Los_Angeles] Verified IPN: cmd=_notify-validate&mc_gross=12.59&protection_eligibility=Ineligible&address_status=confirmed&item_number1=&payer_id=42N3KVJCD9D9J&tax=0.00&address_street=1+Main+St&payment_date=21%3A54%3A52+Jan+07%2C+2014+PST&payment_status=Pending&charset=windows-1252&address_zip=95131&mc_shipping=0.00&mc_handling=0.00&first_name=Amlana&mc_fee=0.67&address_country_code=US&address_name=Amlana+Kumar&notify_version=3.7&custom=Q3VzdG9tZXJJRC0y&payer_status=verified&business=arvind.yadav-facilitator%40mail.vinove.com&address_country=United+States&num_cart_items=1&mc_handling1=0.00&address_city=San+Jose&verify_sign=An5ns1Kso7MWUdW4ErQKJJJ4qi4-AnF5ZlWpCnuAOw4ODHtkvqDakNva&payer_email=arvind.yadav-buyer%40mail.vinove.com&mc_shipping1=0.00&tax1=0.00&txn_id=1JM4729399471152K&payment_type=instant&last_name=Kumar&address_state=CA&item_name1=Personal+Ice+Cream+Maker+Cup&receiver_email=arvind.yadav-facilitator%40mail.vinove.com&payment_fee=0.67&quantity1=1&receiver_id=QGPEAUAV4QYHA&pending_reason=paymentreview&txn_type=cart&mc_gross_1=12.59&mc_currency=USD&residence_country=US&test_ipn=1&transaction_subject=Q3VzdG9tZXJJRC0y&payment_gross=12.59&ipn_track_id=a44d2477727a4 
+[2014-01-09 04:41 America/Los_Angeles] HTTP request of validation request:POST /cgi-bin/webscr HTTP/1.1
+Host: www.sandbox.paypal.com
+Accept: */*
+Connection: Close
+Content-Length: 1136
+Content-Type: application/x-www-form-urlencoded
+Expect: 100-continue
+
+ for IPN payload: cmd=_notify-validate&mc_gross=94.50&protection_eligibility=Ineligible&address_status=confirmed&item_number1=&payer_id=42N3KVJCD9D9J&tax=0.00&address_street=1+Main+St&payment_date=04%3A41%3A03+Jan+09%2C+2014+PST&payment_status=Pending&charset=windows-1252&address_zip=95131&mc_shipping=0.00&mc_handling=0.00&first_name=Amlana&mc_fee=3.04&address_country_code=US&address_name=Amlana+Kumar&notify_version=3.7&custom=Q3VzdG9tZXJJRC0x&payer_status=verified&business=arvind.yadav-facilitator%40mail.vinove.com&address_country=United+States&num_cart_items=1&mc_handling1=0.00&address_city=San+Jose&verify_sign=AFcWxV21C7fd0v3bYYYRCpSSRl31A2WllYYkLeKAyA60n4UTTBOX0caa&payer_email=arvind.yadav-buyer%40mail.vinove.com&mc_shipping1=0.00&tax1=0.00&txn_id=8TT67033P7942104D&payment_type=instant&last_name=Kumar&address_state=CA&item_name1=Nike&receiver_email=arvind.yadav-facilitator%40mail.vinove.com&payment_fee=3.04&quantity1=1&receiver_id=QGPEAUAV4QYHA&pending_reason=paymentreview&txn_type=cart&mc_gross_1=94.50&mc_currency=USD&residence_country=US&test_ipn=1&transaction_subject=Q3VzdG9tZXJJRC0x&payment_gross=94.50&ipn_track_id=9f70159be18ae
+[2014-01-09 04:41 America/Los_Angeles] HTTP response of validation request: HTTP/1.1 100 Continue
+
+HTTP/1.1 200 OK
+Date: Thu, 09 Jan 2014 12:41:06 GMT
+Server: Apache
+X-Frame-Options: SAMEORIGIN
+Set-Cookie: c9MWDuvPtT9GIMyPc3jwol1VSlO=yfBNKsSWgS63XhAMIzV_yGGwMQfmrbvVi4WDdshfXPhts_dYt_MMm-RanBYP1f7i611pqer1HwkkluiGVJKDAp9UJiQthwMiu8SkRQddiUIT45zO9w_eCRnHpQWih-Doklly-1TeBF_2PasrDDSS5neR9m4H-DFc1zyyHbXaiW5MkpxzzvpGJ_NP_ncWsZXFmW-Y8nq1eyjdHwMWYUybi_oD9HlOptpZWCS32mOjaFSoTNfBIQNlv5lr1U2UjuSjywgRTDXOQMGKjCkK2ofWws9LZLncYrM_Zkdnt4uN8L6p58bB_IinQkAy5TgcTjXXuX06frBtP5eaSSLC5fAfXsW3rbnlbe_ofIwVpj7Bngjq6tyZdpzqJAwWLxsYdMBTSgLcmEiEuimNbRrYYXNXTHjmva7b6dfX7Lqrl06qUCuPwYBrYLNxGrVizPa; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: cookie_check=yes; expires=Sun, 07-Jan-2024 12:41:06 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navcmd=_notify-validate; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navlns=0.0; expires=Sat, 09-Jan-2016 12:41:06 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: Apache=10.72.109.11.1389271266618759; path=/; expires=Sat, 02-Jan-44 12:41:06 GMT
+Connection: close
+Set-Cookie: X-PP-SILOVER=name%3DSANDBOX3.WEB.1%26silo_version%3D880%26app%3Dslingshot%26TIME%3D3801665106; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: X-PP-SILOVER=; Expires=Thu, 01 Jan 1970 00:00:01 GMT
+Set-Cookie: Apache=10.72.128.11.1389271266610558; path=/; expires=Sat, 02-Jan-44 12:41:06 GMT
+Vary: Accept-Encoding
+Strict-Transport-Security: max-age=14400
+Transfer-Encoding: chunked
+Content-Type: text/html; charset=UTF-8
+
+VERIFIED
+[2014-01-09 04:41 America/Los_Angeles] Verified IPN: cmd=_notify-validate&mc_gross=94.50&protection_eligibility=Ineligible&address_status=confirmed&item_number1=&payer_id=42N3KVJCD9D9J&tax=0.00&address_street=1+Main+St&payment_date=04%3A41%3A03+Jan+09%2C+2014+PST&payment_status=Pending&charset=windows-1252&address_zip=95131&mc_shipping=0.00&mc_handling=0.00&first_name=Amlana&mc_fee=3.04&address_country_code=US&address_name=Amlana+Kumar&notify_version=3.7&custom=Q3VzdG9tZXJJRC0x&payer_status=verified&business=arvind.yadav-facilitator%40mail.vinove.com&address_country=United+States&num_cart_items=1&mc_handling1=0.00&address_city=San+Jose&verify_sign=AFcWxV21C7fd0v3bYYYRCpSSRl31A2WllYYkLeKAyA60n4UTTBOX0caa&payer_email=arvind.yadav-buyer%40mail.vinove.com&mc_shipping1=0.00&tax1=0.00&txn_id=8TT67033P7942104D&payment_type=instant&last_name=Kumar&address_state=CA&item_name1=Nike&receiver_email=arvind.yadav-facilitator%40mail.vinove.com&payment_fee=3.04&quantity1=1&receiver_id=QGPEAUAV4QYHA&pending_reason=paymentreview&txn_type=cart&mc_gross_1=94.50&mc_currency=USD&residence_country=US&test_ipn=1&transaction_subject=Q3VzdG9tZXJJRC0x&payment_gross=94.50&ipn_track_id=9f70159be18ae 
+[2014-01-10 00:13 America/Los_Angeles] HTTP request of validation request:POST /cgi-bin/webscr HTTP/1.1
+Host: www.sandbox.paypal.com
+Accept: */*
+Connection: Close
+Content-Length: 1140
+Content-Type: application/x-www-form-urlencoded
+Expect: 100-continue
+
+ for IPN payload: cmd=_notify-validate&mc_gross=94.50&protection_eligibility=Ineligible&address_status=confirmed&item_number1=&payer_id=42N3KVJCD9D9J&tax=0.00&address_street=1+Main+St&payment_date=00%3A13%3A00+Jan+10%2C+2014+PST&payment_status=Pending&charset=windows-1252&address_zip=95131&mc_shipping=0.00&mc_handling=0.00&first_name=Amlana&mc_fee=3.04&address_country_code=US&address_name=Amlana+Kumar&notify_version=3.7&custom=Q3VzdG9tZXJJRC0x&payer_status=verified&business=arvind.yadav-facilitator%40mail.vinove.com&address_country=United+States&num_cart_items=1&mc_handling1=0.00&address_city=San+Jose&verify_sign=AiPC9BjkCyDFQXbSkoZcgqH3hpacAT9.hS843CAH5Z2KZ.bV2eN4puR.&payer_email=arvind.yadav-buyer%40mail.vinove.com&mc_shipping1=0.00&tax1=0.00&txn_id=1XR38848E75750230&payment_type=instant&last_name=Kumar&address_state=CA&item_name1=Wayfarer&receiver_email=arvind.yadav-facilitator%40mail.vinove.com&payment_fee=3.04&quantity1=1&receiver_id=QGPEAUAV4QYHA&pending_reason=paymentreview&txn_type=cart&mc_gross_1=94.50&mc_currency=USD&residence_country=US&test_ipn=1&transaction_subject=Q3VzdG9tZXJJRC0x&payment_gross=94.50&ipn_track_id=5b8563c66114a
+[2014-01-10 00:13 America/Los_Angeles] HTTP response of validation request: HTTP/1.1 100 Continue
+
+HTTP/1.1 200 OK
+Date: Fri, 10 Jan 2014 08:13:06 GMT
+Server: Apache
+X-Frame-Options: SAMEORIGIN
+Set-Cookie: c9MWDuvPtT9GIMyPc3jwol1VSlO=6mMUN2S4LzvhBg5JMj71rSPVyS38l-DF6idk4di8swxZY2sjQiPTi1N-AmJjDxDiFJMhHVvFIO7AbAOgaUYKNIHyFhJC3A_KcLgQw6iret-xr8QF9tLtF-N_8hYsBqzE6drsKcgmPuZ_sYk12V1CNfX24vey2IZy8Sj4d009nBxPddDLl-l9dl9oKnKX6StXtYiFPGC8UEThmL_NxD8grP0VT6gd2aKTd1lTqyi47roP5C8Adsc6t0THUitljCO5RxXrc_N-dr-p0WtGWimrQRsT7vw9PwSWupT964gLnaADMGl3PmGQJfA7mFApPxsGeXuDJPCTqMaNjPRM9a88iBjHRlaQ9uzWRSh5bZ_UFBXYRNdp4lB8NdiKezoVfOMzSnGohpkePyWh2v9BfCWev-TlpMSxcJ4H2RpfDRP5dsN65uRmQhE0fXk_gqW; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: cookie_check=yes; expires=Mon, 08-Jan-2024 08:13:06 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navcmd=_notify-validate; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navlns=0.0; expires=Sun, 10-Jan-2016 08:13:06 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: Apache=10.72.109.11.1389341586228628; path=/; expires=Sun, 03-Jan-44 08:13:06 GMT
+Connection: close
+Set-Cookie: X-PP-SILOVER=name%3DSANDBOX3.WEB.1%26silo_version%3D880%26app%3Dslingshot%26TIME%3D2460733266; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: X-PP-SILOVER=; Expires=Thu, 01 Jan 1970 00:00:01 GMT
+Set-Cookie: Apache=10.72.128.11.1389341586222620; path=/; expires=Sun, 03-Jan-44 08:13:06 GMT
+Vary: Accept-Encoding
+Strict-Transport-Security: max-age=14400
+Transfer-Encoding: chunked
+Content-Type: text/html; charset=UTF-8
+
+VERIFIED
+[2014-01-10 00:13 America/Los_Angeles] Verified IPN: cmd=_notify-validate&mc_gross=94.50&protection_eligibility=Ineligible&address_status=confirmed&item_number1=&payer_id=42N3KVJCD9D9J&tax=0.00&address_street=1+Main+St&payment_date=00%3A13%3A00+Jan+10%2C+2014+PST&payment_status=Pending&charset=windows-1252&address_zip=95131&mc_shipping=0.00&mc_handling=0.00&first_name=Amlana&mc_fee=3.04&address_country_code=US&address_name=Amlana+Kumar&notify_version=3.7&custom=Q3VzdG9tZXJJRC0x&payer_status=verified&business=arvind.yadav-facilitator%40mail.vinove.com&address_country=United+States&num_cart_items=1&mc_handling1=0.00&address_city=San+Jose&verify_sign=AiPC9BjkCyDFQXbSkoZcgqH3hpacAT9.hS843CAH5Z2KZ.bV2eN4puR.&payer_email=arvind.yadav-buyer%40mail.vinove.com&mc_shipping1=0.00&tax1=0.00&txn_id=1XR38848E75750230&payment_type=instant&last_name=Kumar&address_state=CA&item_name1=Wayfarer&receiver_email=arvind.yadav-facilitator%40mail.vinove.com&payment_fee=3.04&quantity1=1&receiver_id=QGPEAUAV4QYHA&pending_reason=paymentreview&txn_type=cart&mc_gross_1=94.50&mc_currency=USD&residence_country=US&test_ipn=1&transaction_subject=Q3VzdG9tZXJJRC0x&payment_gross=94.50&ipn_track_id=5b8563c66114a 
+[2014-01-10 02:08 America/Los_Angeles] HTTP request of validation request:POST /cgi-bin/webscr HTTP/1.1
+Host: www.sandbox.paypal.com
+Accept: */*
+Connection: Close
+Content-Length: 1169
+Content-Type: application/x-www-form-urlencoded
+Expect: 100-continue
+
+ for IPN payload: cmd=_notify-validate&mc_gross=10.24&protection_eligibility=Ineligible&address_status=confirmed&item_number1=&payer_id=42N3KVJCD9D9J&tax=0.00&address_street=1+Main+St&payment_date=02%3A08%3A10+Jan+10%2C+2014+PST&payment_status=Pending&charset=windows-1252&address_zip=95131&mc_shipping=5.00&mc_handling=0.00&first_name=Amlana&mc_fee=0.60&address_country_code=US&address_name=Amlana+Kumar&notify_version=3.7&custom=Q3VzdG9tZXJJRC05&payer_status=verified&business=arvind.yadav-facilitator%40mail.vinove.com&address_country=United+States&num_cart_items=1&mc_handling1=0.00&address_city=San+Jose&verify_sign=A1dTkRePgLvfmW59KmyCbnx9O9JnAO5UBe78zGdEzHUc9gL0xcyYl3WO&payer_email=arvind.yadav-buyer%40mail.vinove.com&mc_shipping1=5.00&tax1=0.00&txn_id=1HN835884X703204V&payment_type=instant&last_name=Kumar&address_state=CA&item_name1=2pcs+DC+SUPER+HERO+Green+Lantern+3.75&receiver_email=arvind.yadav-facilitator%40mail.vinove.com&payment_fee=0.60&quantity1=1&receiver_id=QGPEAUAV4QYHA&pending_reason=paymentreview&txn_type=cart&mc_gross_1=10.24&mc_currency=USD&residence_country=US&test_ipn=1&transaction_subject=Q3VzdG9tZXJJRC05&payment_gross=10.24&ipn_track_id=e9317168767db
+[2014-01-10 02:08 America/Los_Angeles] HTTP response of validation request: HTTP/1.1 100 Continue
+
+HTTP/1.1 200 OK
+Date: Fri, 10 Jan 2014 10:08:14 GMT
+Server: Apache
+X-Frame-Options: SAMEORIGIN
+Set-Cookie: c9MWDuvPtT9GIMyPc3jwol1VSlO=w5fTTdUN7uxgQ5vOiaJD0FCBX9tCf0SxmSj-WcBnoGkpv0WKjKLSJ9D98Dk6qSKD-HoUo_5F_cUSxlA94xiQiT2GdN1q2SeJsYKR6n0b6uB30JxbeEv8EGB6WwtDkOPVvLwfQhRubvNZP1ZtoNKA4n5buuoT6v3LcOzOKe29wkCVAxLSVPbdpWPSIut70eNLfZajIfUr2if3183FOrj1cx45Hmq_n_l1mrYpHs9I7n56_0GpQn09vWwbVgsso9GJ3JzwNG_4QB_-B-G46ADb7eQEqZ0sBsZB19bbPHhGqRFxei-ovi3EiQM79xSKZZlUTBKd6RL-p8nhJhhcuVBqk4lNCoti_7y-bC1RxTJP-6ge8bgmJ_aN3PAxkkko-HUCb_onMiwZ2AcNFcarx8qZdAA7hlsAXCTdn1EOIOe2N0wysh6qXRDp6YXDFje; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: cookie_check=yes; expires=Mon, 08-Jan-2024 10:08:15 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navcmd=_notify-validate; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navlns=0.0; expires=Sun, 10-Jan-2016 10:08:15 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: Apache=10.72.109.11.1389348494782728; path=/; expires=Sun, 03-Jan-44 10:08:14 GMT
+Connection: close
+Set-Cookie: X-PP-SILOVER=name%3DSANDBOX3.WEB.1%26silo_version%3D880%26app%3Dslingshot%26TIME%3D2395393874; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: X-PP-SILOVER=; Expires=Thu, 01 Jan 1970 00:00:01 GMT
+Set-Cookie: Apache=10.72.128.11.1389348494772685; path=/; expires=Sun, 03-Jan-44 10:08:14 GMT
+Vary: Accept-Encoding
+Strict-Transport-Security: max-age=14400
+Transfer-Encoding: chunked
+Content-Type: text/html; charset=UTF-8
+
+VERIFIED
+[2014-01-10 02:08 America/Los_Angeles] Verified IPN: cmd=_notify-validate&mc_gross=10.24&protection_eligibility=Ineligible&address_status=confirmed&item_number1=&payer_id=42N3KVJCD9D9J&tax=0.00&address_street=1+Main+St&payment_date=02%3A08%3A10+Jan+10%2C+2014+PST&payment_status=Pending&charset=windows-1252&address_zip=95131&mc_shipping=5.00&mc_handling=0.00&first_name=Amlana&mc_fee=0.60&address_country_code=US&address_name=Amlana+Kumar&notify_version=3.7&custom=Q3VzdG9tZXJJRC05&payer_status=verified&business=arvind.yadav-facilitator%40mail.vinove.com&address_country=United+States&num_cart_items=1&mc_handling1=0.00&address_city=San+Jose&verify_sign=A1dTkRePgLvfmW59KmyCbnx9O9JnAO5UBe78zGdEzHUc9gL0xcyYl3WO&payer_email=arvind.yadav-buyer%40mail.vinove.com&mc_shipping1=5.00&tax1=0.00&txn_id=1HN835884X703204V&payment_type=instant&last_name=Kumar&address_state=CA&item_name1=2pcs+DC+SUPER+HERO+Green+Lantern+3.75&receiver_email=arvind.yadav-facilitator%40mail.vinove.com&payment_fee=0.60&quantity1=1&receiver_id=QGPEAUAV4QYHA&pending_reason=paymentreview&txn_type=cart&mc_gross_1=10.24&mc_currency=USD&residence_country=US&test_ipn=1&transaction_subject=Q3VzdG9tZXJJRC05&payment_gross=10.24&ipn_track_id=e9317168767db 
+[2014-01-12 15:31 America/Los_Angeles] HTTP request of validation request:POST /cgi-bin/webscr HTTP/1.1
+Host: www.sandbox.paypal.com
+Accept: */*
+Connection: Close
+Content-Length: 1191
+Content-Type: application/x-www-form-urlencoded
+Expect: 100-continue
+
+ for IPN payload: cmd=_notify-validate&mc_gross=79.80&protection_eligibility=Ineligible&address_status=confirmed&item_number1=&payer_id=42N3KVJCD9D9J&tax=0.00&address_street=1+Main+St&payment_date=15%3A31%3A01+Jan+12%2C+2014+PST&payment_status=Pending&charset=windows-1252&address_zip=95131&mc_shipping=0.00&mc_handling=0.00&first_name=Amlana&mc_fee=2.61&address_country_code=US&address_name=Amlana+Kumar&notify_version=3.7&custom=Q3VzdG9tZXJJRC0y&payer_status=verified&business=arvind.yadav-facilitator%40mail.vinove.com&address_country=United+States&num_cart_items=1&mc_handling1=0.00&address_city=San+Jose&verify_sign=AyauVxxELIgkgAtE5uUwmStJmA90AyxZVKnD0sZPMQIll21vKtcVdBNk&payer_email=arvind.yadav-buyer%40mail.vinove.com&mc_shipping1=0.00&tax1=0.00&txn_id=4E37602928942730M&payment_type=instant&last_name=Kumar&address_state=CA&item_name1=TOP+SHOP+Brand+New+women%27s+blush+shoes%21+SIze+39+%288%29&receiver_email=arvind.yadav-facilitator%40mail.vinove.com&payment_fee=2.61&quantity1=1&receiver_id=QGPEAUAV4QYHA&pending_reason=paymentreview&txn_type=cart&mc_gross_1=79.80&mc_currency=USD&residence_country=US&test_ipn=1&transaction_subject=Q3VzdG9tZXJJRC0y&payment_gross=79.80&ipn_track_id=7dc420a1b9d47
+[2014-01-12 15:31 America/Los_Angeles] HTTP response of validation request: HTTP/1.1 100 Continue
+
+HTTP/1.1 200 OK
+Date: Sun, 12 Jan 2014 23:31:09 GMT
+Server: Apache
+X-Frame-Options: SAMEORIGIN
+Set-Cookie: c9MWDuvPtT9GIMyPc3jwol1VSlO=IttTf48OMwJMhmCiiEM5K8hlYKqOGdenPPAsJf70TLOXd_AA__mWm4Y5F8wyeM42DyniKoMDPwtrzZOgEH5u8fAn18xCaceMQSL8KnK7eGkNjgH5duHKieQb4iFkuy5XEj5Xr1mZoYfb9mdbM7MmDlmBrB4UdRkvmXs6Ov8n4Eb-evn7JVf12-NINrojdPQC0qIJomuRn0BjIHvEbgxjJYBSczWBqcGrqtLn3HR5FnwWVF1-Z605cz80oliKU1HW05wZup48ND8-UssyCBXxhmbeoOosENJMzN2ATCOWqeaZ8pVU3kWeH7vLUDAgrjghW7hkaDwdLeRzGAnE8mlpSGi7hTiG3rkKQerU5eMN5AozmSFQiZc-BqlGCQNLwZB_Hx9BP36t3xtAbYWRIoFS61OBxQMJUZKO156UWj2c3E2cx8HIRIICh5_BFOK; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: cookie_check=yes; expires=Wed, 10-Jan-2024 23:31:10 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navcmd=_notify-validate; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navlns=0.0; expires=Tue, 12-Jan-2016 23:31:10 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: Apache=10.72.109.11.1389569469879189; path=/; expires=Tue, 05-Jan-44 23:31:09 GMT
+Connection: close
+Set-Cookie: X-PP-SILOVER=name%3DSANDBOX3.WEB.1%26silo_version%3D880%26app%3Dslingshot%26TIME%3D3173372754; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: X-PP-SILOVER=; Expires=Thu, 01 Jan 1970 00:00:01 GMT
+Set-Cookie: Apache=10.72.128.11.1389569469870882; path=/; expires=Tue, 05-Jan-44 23:31:09 GMT
+Vary: Accept-Encoding
+Strict-Transport-Security: max-age=14400
+Transfer-Encoding: chunked
+Content-Type: text/html; charset=UTF-8
+
+VERIFIED
+[2014-01-12 15:31 America/Los_Angeles] Verified IPN: cmd=_notify-validate&mc_gross=79.80&protection_eligibility=Ineligible&address_status=confirmed&item_number1=&payer_id=42N3KVJCD9D9J&tax=0.00&address_street=1+Main+St&payment_date=15%3A31%3A01+Jan+12%2C+2014+PST&payment_status=Pending&charset=windows-1252&address_zip=95131&mc_shipping=0.00&mc_handling=0.00&first_name=Amlana&mc_fee=2.61&address_country_code=US&address_name=Amlana+Kumar&notify_version=3.7&custom=Q3VzdG9tZXJJRC0y&payer_status=verified&business=arvind.yadav-facilitator%40mail.vinove.com&address_country=United+States&num_cart_items=1&mc_handling1=0.00&address_city=San+Jose&verify_sign=AyauVxxELIgkgAtE5uUwmStJmA90AyxZVKnD0sZPMQIll21vKtcVdBNk&payer_email=arvind.yadav-buyer%40mail.vinove.com&mc_shipping1=0.00&tax1=0.00&txn_id=4E37602928942730M&payment_type=instant&last_name=Kumar&address_state=CA&item_name1=TOP+SHOP+Brand+New+women%27s+blush+shoes%21+SIze+39+%288%29&receiver_email=arvind.yadav-facilitator%40mail.vinove.com&payment_fee=2.61&quantity1=1&receiver_id=QGPEAUAV4QYHA&pending_reason=paymentreview&txn_type=cart&mc_gross_1=79.80&mc_currency=USD&residence_country=US&test_ipn=1&transaction_subject=Q3VzdG9tZXJJRC0y&payment_gross=79.80&ipn_track_id=7dc420a1b9d47 
+[2014-01-12 15:50 America/Los_Angeles] HTTP request of validation request:POST /cgi-bin/webscr HTTP/1.1
+Host: www.sandbox.paypal.com
+Accept: */*
+Connection: Close
+Content-Length: 1191
+Content-Type: application/x-www-form-urlencoded
+Expect: 100-continue
+
+ for IPN payload: cmd=_notify-validate&mc_gross=79.80&protection_eligibility=Ineligible&address_status=confirmed&item_number1=&payer_id=42N3KVJCD9D9J&tax=0.00&address_street=1+Main+St&payment_date=15%3A50%3A47+Jan+12%2C+2014+PST&payment_status=Pending&charset=windows-1252&address_zip=95131&mc_shipping=0.00&mc_handling=0.00&first_name=Amlana&mc_fee=2.61&address_country_code=US&address_name=Amlana+Kumar&notify_version=3.7&custom=Q3VzdG9tZXJJRC0y&payer_status=verified&business=arvind.yadav-facilitator%40mail.vinove.com&address_country=United+States&num_cart_items=1&mc_handling1=0.00&address_city=San+Jose&verify_sign=ASdpUxE0sIrLwuwb.WxHtrIhVDh9A6mIcW-izHpHzbWJcApafH-DYta2&payer_email=arvind.yadav-buyer%40mail.vinove.com&mc_shipping1=0.00&tax1=0.00&txn_id=3SM77242GG302380U&payment_type=instant&last_name=Kumar&address_state=CA&item_name1=TOP+SHOP+Brand+New+women%27s+blush+shoes%21+SIze+39+%288%29&receiver_email=arvind.yadav-facilitator%40mail.vinove.com&payment_fee=2.61&quantity1=1&receiver_id=QGPEAUAV4QYHA&pending_reason=paymentreview&txn_type=cart&mc_gross_1=79.80&mc_currency=USD&residence_country=US&test_ipn=1&transaction_subject=Q3VzdG9tZXJJRC0y&payment_gross=79.80&ipn_track_id=703e930872a7b
+[2014-01-12 15:50 America/Los_Angeles] HTTP response of validation request: HTTP/1.1 100 Continue
+
+HTTP/1.1 200 OK
+Date: Sun, 12 Jan 2014 23:50:52 GMT
+Server: Apache
+X-Frame-Options: SAMEORIGIN
+Set-Cookie: c9MWDuvPtT9GIMyPc3jwol1VSlO=YFHwrNeaC6w0HPwXbxFp2LWM_nrm_KMADse4-Rt97jg4KFQScjlpQ4Wu2P-mv4REvC3RHGjyucrCJ0deDwYPhKgg0-AYL68eCCDm4FDMdvA2AibvaOJ8CU2OUCPZdLaEIahwbqwLSKdQ_EbffxVXM37MJOpPLiwono9XeA8zCiHyUJ4Zqo9jzmu9JjAJ62wB69yrRZZc-V7qB-JcPJuI_vifslpzuMiPkFrVu0ak1kgu_1qedQ_WNWDFi3Nl25w8GqOZvjkRXXF8fcmRyiLFoge94ty8GX6xyEHiB3LZxJHyUhFjO2qK7oKnbSILT9JY772D9F9ZSF8F8X2Ui230Pj16cd3WrKo-s6ZKD99Re-WkSvIieEnWULUSeUYcXbRRjW8QnTXgRMKsWOTonV0VXpqiNhNCyXC1f47pVonMUgof3U0hZjrcK109OP0; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: cookie_check=yes; expires=Wed, 10-Jan-2024 23:50:53 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navcmd=_notify-validate; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navlns=0.0; expires=Tue, 12-Jan-2016 23:50:53 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: Apache=10.72.109.11.1389570653168654; path=/; expires=Tue, 05-Jan-44 23:50:53 GMT
+Connection: close
+Set-Cookie: X-PP-SILOVER=name%3DSANDBOX3.WEB.1%26silo_version%3D880%26app%3Dslingshot%26TIME%3D1563087698; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: X-PP-SILOVER=; Expires=Thu, 01 Jan 1970 00:00:01 GMT
+Set-Cookie: Apache=10.72.128.11.1389570653158218; path=/; expires=Tue, 05-Jan-44 23:50:52 GMT
+Vary: Accept-Encoding
+Strict-Transport-Security: max-age=14400
+Transfer-Encoding: chunked
+Content-Type: text/html; charset=UTF-8
+
+VERIFIED
+[2014-01-12 15:50 America/Los_Angeles] Verified IPN: cmd=_notify-validate&mc_gross=79.80&protection_eligibility=Ineligible&address_status=confirmed&item_number1=&payer_id=42N3KVJCD9D9J&tax=0.00&address_street=1+Main+St&payment_date=15%3A50%3A47+Jan+12%2C+2014+PST&payment_status=Pending&charset=windows-1252&address_zip=95131&mc_shipping=0.00&mc_handling=0.00&first_name=Amlana&mc_fee=2.61&address_country_code=US&address_name=Amlana+Kumar&notify_version=3.7&custom=Q3VzdG9tZXJJRC0y&payer_status=verified&business=arvind.yadav-facilitator%40mail.vinove.com&address_country=United+States&num_cart_items=1&mc_handling1=0.00&address_city=San+Jose&verify_sign=ASdpUxE0sIrLwuwb.WxHtrIhVDh9A6mIcW-izHpHzbWJcApafH-DYta2&payer_email=arvind.yadav-buyer%40mail.vinove.com&mc_shipping1=0.00&tax1=0.00&txn_id=3SM77242GG302380U&payment_type=instant&last_name=Kumar&address_state=CA&item_name1=TOP+SHOP+Brand+New+women%27s+blush+shoes%21+SIze+39+%288%29&receiver_email=arvind.yadav-facilitator%40mail.vinove.com&payment_fee=2.61&quantity1=1&receiver_id=QGPEAUAV4QYHA&pending_reason=paymentreview&txn_type=cart&mc_gross_1=79.80&mc_currency=USD&residence_country=US&test_ipn=1&transaction_subject=Q3VzdG9tZXJJRC0y&payment_gross=79.80&ipn_track_id=703e930872a7b 
+[2014-01-16 00:57 America/Los_Angeles] HTTP request of validation request:POST /cgi-bin/webscr HTTP/1.1
+Host: www.sandbox.paypal.com
+Accept: */*
+Connection: Close
+Content-Length: 1156
+Content-Type: application/x-www-form-urlencoded
+Expect: 100-continue
+
+ for IPN payload: cmd=_notify-validate&mc_gross=94.50&protection_eligibility=Ineligible&address_status=confirmed&item_number1=&payer_id=42N3KVJCD9D9J&tax=0.00&address_street=1+Main+St&payment_date=00%3A57%3A39+Jan+16%2C+2014+PST&payment_status=Pending&charset=windows-1252&address_zip=95131&mc_shipping=0.00&mc_handling=0.00&first_name=Amlana&mc_fee=3.04&address_country_code=US&address_name=Amlana+Kumar&notify_version=3.7&custom=Q3VzdG9tZXJJRC0xNA%3D%3D&payer_status=verified&business=arvind.yadav-facilitator%40mail.vinove.com&address_country=United+States&num_cart_items=1&mc_handling1=0.00&address_city=San+Jose&verify_sign=AuBSqbaPYvmTGck0YyRuVp72FZEsA52a7rbVF-Cgw8JQAm6ZEQHXiGDW&payer_email=arvind.yadav-buyer%40mail.vinove.com&mc_shipping1=0.00&tax1=0.00&txn_id=2NT60415BV034511F&payment_type=instant&last_name=Kumar&address_state=CA&item_name1=Wayfarer&receiver_email=arvind.yadav-facilitator%40mail.vinove.com&payment_fee=3.04&quantity1=1&receiver_id=QGPEAUAV4QYHA&pending_reason=paymentreview&txn_type=cart&mc_gross_1=94.50&mc_currency=USD&residence_country=US&test_ipn=1&transaction_subject=Q3VzdG9tZXJJRC0xNA%3D%3D&payment_gross=94.50&ipn_track_id=3c0abfea9bd31
+[2014-01-16 00:57 America/Los_Angeles] HTTP response of validation request: HTTP/1.1 100 Continue
+
+HTTP/1.1 200 OK
+Date: Thu, 16 Jan 2014 08:57:42 GMT
+Server: Apache
+X-Frame-Options: SAMEORIGIN
+Set-Cookie: c9MWDuvPtT9GIMyPc3jwol1VSlO=APUa0KPKL7eJ_lp_SSBka0SBF7VQCyCQQ8AgmlmuZ40Ilf00sxrI5kJ05tef0HCXSU8yAbbFS4GB6wgskS1F-sGu_oyOHcSn6D3k5zKfhLJTOkwGg3zOfr5bwwrWWA0htG5PgYiqlcIKKX0RqqmnfHjv8k8RCqW2HAj_YTeIBQoWaiuggEBuUzyXTu9XC3MKPGiw41qbMyQ0B8rZ91lTC4lHzF0lx-l6u8x5R6x0ZLDjAA204Ks57-Xp8EQeNnsDQdV2nyUpdUoMtDjrsKjUKWJjkE4z_2YIrAfbM0uQDtvnBKvBLhb8ne1wxIeUAAiBIuyXQZtSc-93RYtj-gbrY90dVmbeyFxu4tjJVUEhBwrEomOz7yXAFOZtqyk8QxLW9qmrcp-y6wNHayrpKC1ejuXa0y-ZXAA-l25huUF6D8rnO-oBdxcl3yYucvq; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: cookie_check=yes; expires=Sun, 14-Jan-2024 08:57:42 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navcmd=_notify-validate; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navlns=0.0; expires=Sat, 16-Jan-2016 08:57:42 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: Apache=10.72.109.11.1389862662359414; path=/; expires=Sat, 09-Jan-44 08:57:42 GMT
+Connection: close
+Set-Cookie: X-PP-SILOVER=name%3DSANDBOX3.WEB.1%26silo_version%3D880%26app%3Dslingshot%26TIME%3D111138642; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: X-PP-SILOVER=; Expires=Thu, 01 Jan 1970 00:00:01 GMT
+Set-Cookie: Apache=10.72.128.11.1389862662347725; path=/; expires=Sat, 09-Jan-44 08:57:42 GMT
+Vary: Accept-Encoding
+Strict-Transport-Security: max-age=14400
+Transfer-Encoding: chunked
+Content-Type: text/html; charset=UTF-8
+
+VERIFIED
+[2014-01-16 00:57 America/Los_Angeles] Verified IPN: cmd=_notify-validate&mc_gross=94.50&protection_eligibility=Ineligible&address_status=confirmed&item_number1=&payer_id=42N3KVJCD9D9J&tax=0.00&address_street=1+Main+St&payment_date=00%3A57%3A39+Jan+16%2C+2014+PST&payment_status=Pending&charset=windows-1252&address_zip=95131&mc_shipping=0.00&mc_handling=0.00&first_name=Amlana&mc_fee=3.04&address_country_code=US&address_name=Amlana+Kumar&notify_version=3.7&custom=Q3VzdG9tZXJJRC0xNA%3D%3D&payer_status=verified&business=arvind.yadav-facilitator%40mail.vinove.com&address_country=United+States&num_cart_items=1&mc_handling1=0.00&address_city=San+Jose&verify_sign=AuBSqbaPYvmTGck0YyRuVp72FZEsA52a7rbVF-Cgw8JQAm6ZEQHXiGDW&payer_email=arvind.yadav-buyer%40mail.vinove.com&mc_shipping1=0.00&tax1=0.00&txn_id=2NT60415BV034511F&payment_type=instant&last_name=Kumar&address_state=CA&item_name1=Wayfarer&receiver_email=arvind.yadav-facilitator%40mail.vinove.com&payment_fee=3.04&quantity1=1&receiver_id=QGPEAUAV4QYHA&pending_reason=paymentreview&txn_type=cart&mc_gross_1=94.50&mc_currency=USD&residence_country=US&test_ipn=1&transaction_subject=Q3VzdG9tZXJJRC0xNA%3D%3D&payment_gross=94.50&ipn_track_id=3c0abfea9bd31 
+[2014-01-17 01:38 America/Los_Angeles] HTTP request of validation request:POST /cgi-bin/webscr HTTP/1.1
+Host: www.sandbox.paypal.com
+Accept: */*
+Connection: Close
+Content-Length: 1136
+Content-Type: application/x-www-form-urlencoded
+Expect: 100-continue
+
+ for IPN payload: cmd=_notify-validate&mc_gross=94.50&protection_eligibility=Ineligible&address_status=confirmed&item_number1=&payer_id=42N3KVJCD9D9J&tax=0.00&address_street=1+Main+St&payment_date=01%3A38%3A01+Jan+17%2C+2014+PST&payment_status=Pending&charset=windows-1252&address_zip=95131&mc_shipping=0.00&mc_handling=0.00&first_name=Amlana&mc_fee=3.04&address_country_code=US&address_name=Amlana+Kumar&notify_version=3.7&custom=Q3VzdG9tZXJJRC0x&payer_status=verified&business=arvind.yadav-facilitator%40mail.vinove.com&address_country=United+States&num_cart_items=1&mc_handling1=0.00&address_city=San+Jose&verify_sign=AQU0e5vuZCvSg-XJploSa.sGUDlpAmjriul.kIHkjSPd0DG0sT9UiaRw&payer_email=arvind.yadav-buyer%40mail.vinove.com&mc_shipping1=0.00&tax1=0.00&txn_id=74J848541P570442E&payment_type=instant&last_name=Kumar&address_state=CA&item_name1=Nike&receiver_email=arvind.yadav-facilitator%40mail.vinove.com&payment_fee=3.04&quantity1=1&receiver_id=QGPEAUAV4QYHA&pending_reason=paymentreview&txn_type=cart&mc_gross_1=94.50&mc_currency=USD&residence_country=US&test_ipn=1&transaction_subject=Q3VzdG9tZXJJRC0x&payment_gross=94.50&ipn_track_id=66bf76805b8e4
+[2014-01-17 01:38 America/Los_Angeles] HTTP response of validation request: HTTP/1.1 100 Continue
+
+HTTP/1.1 200 OK
+Date: Fri, 17 Jan 2014 09:38:05 GMT
+Server: Apache
+X-Frame-Options: SAMEORIGIN
+Set-Cookie: c9MWDuvPtT9GIMyPc3jwol1VSlO=-d9ikuuAFFrHgn4p-SWp_ZZOs2ZXfAo0dSr8LFqQVuuF9NSQSjLMWY0fWIY_hsP-T-8uP-HPhkxamXpGVufCqBmqYaF8obz2rRgwWbzHFNPdMf24hVTt5ZTpv-arOblx2wsY3VyqScCkXpCTiCO0IKLn_KFH3EG0yop_d0unrcx3PPJ-ZrfiCzzYu-WJJdw0emRd5F2MthD8OpyLCEf1808uGz6HXwmWexULYy4xzPVUhmVyOEfRJ7A_z95ZUdLCLNEoTy9T6I9Kcsxy9t_amHMm3_w0qyfNt1B0JXV0NPZgq7ZFI9wI0xtPB1r-_j1pRrgIcP9RK18qy-_9ZrDBgjJiYnsKxamKUrWHegYOt41BoObI89wsM3D6JuOPHIGTxOnzMotpnh2U3teQbgRH9ZI2yqXrGFAr3sVHjf9vkqU4e4rEM96x0Y8hIY4; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: cookie_check=yes; expires=Mon, 15-Jan-2024 09:38:05 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navcmd=_notify-validate; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navlns=0.0; expires=Sun, 17-Jan-2016 09:38:05 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: Apache=10.72.109.11.1389951485531943; path=/; expires=Sun, 10-Jan-44 09:38:05 GMT
+Connection: close
+Set-Cookie: X-PP-SILOVER=name%3DSANDBOX3.WEB.1%26silo_version%3D880%26app%3Dslingshot%26TIME%3D4261009490; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: X-PP-SILOVER=; Expires=Thu, 01 Jan 1970 00:00:01 GMT
+Set-Cookie: Apache=10.72.128.11.1389951485523779; path=/; expires=Sun, 10-Jan-44 09:38:05 GMT
+Vary: Accept-Encoding
+Strict-Transport-Security: max-age=14400
+Transfer-Encoding: chunked
+Content-Type: text/html; charset=UTF-8
+
+VERIFIED
+[2014-01-17 01:38 America/Los_Angeles] Verified IPN: cmd=_notify-validate&mc_gross=94.50&protection_eligibility=Ineligible&address_status=confirmed&item_number1=&payer_id=42N3KVJCD9D9J&tax=0.00&address_street=1+Main+St&payment_date=01%3A38%3A01+Jan+17%2C+2014+PST&payment_status=Pending&charset=windows-1252&address_zip=95131&mc_shipping=0.00&mc_handling=0.00&first_name=Amlana&mc_fee=3.04&address_country_code=US&address_name=Amlana+Kumar&notify_version=3.7&custom=Q3VzdG9tZXJJRC0x&payer_status=verified&business=arvind.yadav-facilitator%40mail.vinove.com&address_country=United+States&num_cart_items=1&mc_handling1=0.00&address_city=San+Jose&verify_sign=AQU0e5vuZCvSg-XJploSa.sGUDlpAmjriul.kIHkjSPd0DG0sT9UiaRw&payer_email=arvind.yadav-buyer%40mail.vinove.com&mc_shipping1=0.00&tax1=0.00&txn_id=74J848541P570442E&payment_type=instant&last_name=Kumar&address_state=CA&item_name1=Nike&receiver_email=arvind.yadav-facilitator%40mail.vinove.com&payment_fee=3.04&quantity1=1&receiver_id=QGPEAUAV4QYHA&pending_reason=paymentreview&txn_type=cart&mc_gross_1=94.50&mc_currency=USD&residence_country=US&test_ipn=1&transaction_subject=Q3VzdG9tZXJJRC0x&payment_gross=94.50&ipn_track_id=66bf76805b8e4 
+[2014-01-21 21:28 America/Los_Angeles] HTTP request of validation request:POST /cgi-bin/webscr HTTP/1.1
+Host: www.sandbox.paypal.com
+Accept: */*
+Connection: Close
+Content-Length: 1136
+Content-Type: application/x-www-form-urlencoded
+Expect: 100-continue
+
+ for IPN payload: cmd=_notify-validate&mc_gross=94.50&protection_eligibility=Ineligible&address_status=confirmed&item_number1=&payer_id=42N3KVJCD9D9J&tax=0.00&address_street=1+Main+St&payment_date=21%3A28%3A32+Jan+21%2C+2014+PST&payment_status=Pending&charset=windows-1252&address_zip=95131&mc_shipping=0.00&mc_handling=0.00&first_name=Amlana&mc_fee=3.04&address_country_code=US&address_name=Amlana+Kumar&notify_version=3.7&custom=Q3VzdG9tZXJJRC05&payer_status=verified&business=arvind.yadav-facilitator%40mail.vinove.com&address_country=United+States&num_cart_items=1&mc_handling1=0.00&address_city=San+Jose&verify_sign=AFcWxV21C7fd0v3bYYYRCpSSRl31A7.aJ-rTcPqDmsLK91g.JTv3jv3e&payer_email=arvind.yadav-buyer%40mail.vinove.com&mc_shipping1=0.00&tax1=0.00&txn_id=4XJ28571C19242044&payment_type=instant&last_name=Kumar&address_state=CA&item_name1=Nike&receiver_email=arvind.yadav-facilitator%40mail.vinove.com&payment_fee=3.04&quantity1=1&receiver_id=QGPEAUAV4QYHA&pending_reason=paymentreview&txn_type=cart&mc_gross_1=94.50&mc_currency=USD&residence_country=US&test_ipn=1&transaction_subject=Q3VzdG9tZXJJRC05&payment_gross=94.50&ipn_track_id=7d5e95537dcea
+[2014-01-21 21:28 America/Los_Angeles] HTTP response of validation request: HTTP/1.1 100 Continue
+
+HTTP/1.1 200 OK
+Date: Wed, 22 Jan 2014 05:28:37 GMT
+Server: Apache
+X-Frame-Options: SAMEORIGIN
+Set-Cookie: c9MWDuvPtT9GIMyPc3jwol1VSlO=trnafiRSYl1xYTxaFu_Q6ZmuoosvRGmxbFf3APerxHm9D-Jz9EaXWX3lzuiA6QPg5hgZXZNTi9kTaVSTU_z7MYr5ZOyEhdUfMTZVecC_RZub7MQmYacHosiMYzW4nxeE-2AAYZMdjLDFUxaX8r3gFjFkB0ABqAFHY96i5pVof3FD34a48o461Qu52cDiguAx9_UOGMiV4auAQqQyzzn5NxLJ1aqvc1m-FFyhFQ8w8RG3v2Ts8UAxY5EaNSTsQc1HJWAOQ9qHH4m8GzWOcU21JxFZRsQOgxg17Q-8Qbe1O26O5n0FurkFoGo4REhlpR-Dfpp5JMin_WHcs2bW3eqjxq4_JctxvANnamR0DcyJFgwrQI8KfW_Mwwprsn96bGHfwxPDl9Qe2wODl8vu_cM0EqMRTzKh4VfwNG_UsSm5qTQ37v2rsHL83wOzLym; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: cookie_check=yes; expires=Sat, 20-Jan-2024 05:28:38 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navcmd=_notify-validate; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navlns=0.0; expires=Fri, 22-Jan-2016 05:28:38 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: Apache=10.72.109.11.1390368517950426; path=/; expires=Fri, 15-Jan-44 05:28:37 GMT
+Connection: close
+Set-Cookie: X-PP-SILOVER=name%3DSANDBOX3.WEB.1%26silo_version%3D880%26app%3Dslingshot%26TIME%3D89644882; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: X-PP-SILOVER=; Expires=Thu, 01 Jan 1970 00:00:01 GMT
+Set-Cookie: Apache=10.72.128.11.1390368517939901; path=/; expires=Fri, 15-Jan-44 05:28:37 GMT
+Vary: Accept-Encoding
+Strict-Transport-Security: max-age=14400
+Transfer-Encoding: chunked
+Content-Type: text/html; charset=UTF-8
+
+VERIFIED
+[2014-01-21 21:28 America/Los_Angeles] Verified IPN: cmd=_notify-validate&mc_gross=94.50&protection_eligibility=Ineligible&address_status=confirmed&item_number1=&payer_id=42N3KVJCD9D9J&tax=0.00&address_street=1+Main+St&payment_date=21%3A28%3A32+Jan+21%2C+2014+PST&payment_status=Pending&charset=windows-1252&address_zip=95131&mc_shipping=0.00&mc_handling=0.00&first_name=Amlana&mc_fee=3.04&address_country_code=US&address_name=Amlana+Kumar&notify_version=3.7&custom=Q3VzdG9tZXJJRC05&payer_status=verified&business=arvind.yadav-facilitator%40mail.vinove.com&address_country=United+States&num_cart_items=1&mc_handling1=0.00&address_city=San+Jose&verify_sign=AFcWxV21C7fd0v3bYYYRCpSSRl31A7.aJ-rTcPqDmsLK91g.JTv3jv3e&payer_email=arvind.yadav-buyer%40mail.vinove.com&mc_shipping1=0.00&tax1=0.00&txn_id=4XJ28571C19242044&payment_type=instant&last_name=Kumar&address_state=CA&item_name1=Nike&receiver_email=arvind.yadav-facilitator%40mail.vinove.com&payment_fee=3.04&quantity1=1&receiver_id=QGPEAUAV4QYHA&pending_reason=paymentreview&txn_type=cart&mc_gross_1=94.50&mc_currency=USD&residence_country=US&test_ipn=1&transaction_subject=Q3VzdG9tZXJJRC05&payment_gross=94.50&ipn_track_id=7d5e95537dcea 
+[2014-01-23 22:32 America/Los_Angeles] HTTP request of validation request:POST /cgi-bin/webscr HTTP/1.1
+Host: www.sandbox.paypal.com
+Accept: */*
+Connection: Close
+Content-Length: 1140
+Content-Type: application/x-www-form-urlencoded
+Expect: 100-continue
+
+ for IPN payload: cmd=_notify-validate&mc_gross=94.50&protection_eligibility=Ineligible&address_status=confirmed&item_number1=&payer_id=42N3KVJCD9D9J&tax=0.00&address_street=1+Main+St&payment_date=22%3A32%3A30+Jan+23%2C+2014+PST&payment_status=Pending&charset=windows-1252&address_zip=95131&mc_shipping=0.00&mc_handling=0.00&first_name=Amlana&mc_fee=3.04&address_country_code=US&address_name=Amlana+Kumar&notify_version=3.7&custom=Q3VzdG9tZXJJRC0x&payer_status=verified&business=arvind.yadav-facilitator%40mail.vinove.com&address_country=United+States&num_cart_items=1&mc_handling1=0.00&address_city=San+Jose&verify_sign=AFcWxV21C7fd0v3bYYYRCpSSRl31ACpk2O2aaxbz9U3-I-3gaJ8muKfr&payer_email=arvind.yadav-buyer%40mail.vinove.com&mc_shipping1=0.00&tax1=0.00&txn_id=9X6058388N894332P&payment_type=instant&last_name=Kumar&address_state=CA&item_name1=Wayfarer&receiver_email=arvind.yadav-facilitator%40mail.vinove.com&payment_fee=3.04&quantity1=1&receiver_id=QGPEAUAV4QYHA&pending_reason=paymentreview&txn_type=cart&mc_gross_1=94.50&mc_currency=USD&residence_country=US&test_ipn=1&transaction_subject=Q3VzdG9tZXJJRC0x&payment_gross=94.50&ipn_track_id=9fa7f996b44aa
+[2014-01-23 22:32 America/Los_Angeles] HTTP response of validation request: HTTP/1.1 100 Continue
+
+HTTP/1.1 200 OK
+Date: Fri, 24 Jan 2014 06:32:35 GMT
+Server: Apache
+X-Frame-Options: SAMEORIGIN
+Set-Cookie: c9MWDuvPtT9GIMyPc3jwol1VSlO=nO-1_Gr-U7FdP3SYLfFNJDrlt8bTFjz2_mTGzhyeBcyFCiMISr7jpOfBWg82Fx8D69QMIpUdBPTpV6CQk7D4BuZriWcxNW2J_LurYqD6-A5V8Po41MnfWRIQGqHDy1AqrqgDeic4QlF5JAKDNrO5KmyvketUGMVPQKPdIxlvbh8HpDJbZNTAJfaONNMzs-7cMbaI6XG9Th4JZJgsJviPmJtBVn_uG8nki1TTDVwtkiLmrW4qZrKoeR6osxOS2h1vLUlc3ysAXpCUp8AS_qagonm4ELFk37sD6U0zr6S_EalRNCeAwZgM13Z-NueYKJHKF2hxAAsjefUznCz9MMIBPPmQBb7dvrdQA1exnDqbyr-u1H5hlKBlch_1mGu8eURwiIFpKyeg_rroTn40ZsO4SQr6L2NT5U3GiTCTBH2ACYpD0ZpQdEy5wyiUEEe; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: cookie_check=yes; expires=Mon, 22-Jan-2024 06:32:36 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navcmd=_notify-validate; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navlns=0.0; expires=Sun, 24-Jan-2016 06:32:36 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: Apache=10.72.109.11.1390545155672622; path=/; expires=Sun, 17-Jan-44 06:32:35 GMT
+Connection: close
+Set-Cookie: X-PP-SILOVER=name%3DSANDBOX3.WEB.1%26silo_version%3D880%26app%3Dslingshot%26TIME%3D50979410; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: X-PP-SILOVER=; Expires=Thu, 01 Jan 1970 00:00:01 GMT
+Set-Cookie: Apache=10.72.128.11.1390545155662621; path=/; expires=Sun, 17-Jan-44 06:32:35 GMT
+Vary: Accept-Encoding
+Strict-Transport-Security: max-age=14400
+Transfer-Encoding: chunked
+Content-Type: text/html; charset=UTF-8
+
+VERIFIED
+[2014-01-23 22:32 America/Los_Angeles] Verified IPN: cmd=_notify-validate&mc_gross=94.50&protection_eligibility=Ineligible&address_status=confirmed&item_number1=&payer_id=42N3KVJCD9D9J&tax=0.00&address_street=1+Main+St&payment_date=22%3A32%3A30+Jan+23%2C+2014+PST&payment_status=Pending&charset=windows-1252&address_zip=95131&mc_shipping=0.00&mc_handling=0.00&first_name=Amlana&mc_fee=3.04&address_country_code=US&address_name=Amlana+Kumar&notify_version=3.7&custom=Q3VzdG9tZXJJRC0x&payer_status=verified&business=arvind.yadav-facilitator%40mail.vinove.com&address_country=United+States&num_cart_items=1&mc_handling1=0.00&address_city=San+Jose&verify_sign=AFcWxV21C7fd0v3bYYYRCpSSRl31ACpk2O2aaxbz9U3-I-3gaJ8muKfr&payer_email=arvind.yadav-buyer%40mail.vinove.com&mc_shipping1=0.00&tax1=0.00&txn_id=9X6058388N894332P&payment_type=instant&last_name=Kumar&address_state=CA&item_name1=Wayfarer&receiver_email=arvind.yadav-facilitator%40mail.vinove.com&payment_fee=3.04&quantity1=1&receiver_id=QGPEAUAV4QYHA&pending_reason=paymentreview&txn_type=cart&mc_gross_1=94.50&mc_currency=USD&residence_country=US&test_ipn=1&transaction_subject=Q3VzdG9tZXJJRC0x&payment_gross=94.50&ipn_track_id=9fa7f996b44aa 
+[2014-03-06 02:20 America/Los_Angeles] HTTP request of validation request:POST /cgi-bin/webscr HTTP/1.1
+Host: www.sandbox.paypal.com
+Accept: */*
+Connection: Close
+Content-Length: 1155
+Content-Type: application/x-www-form-urlencoded
+Expect: 100-continue
+
+ for IPN payload: cmd=_notify-validate&mc_gross=840.00&protection_eligibility=Ineligible&address_status=confirmed&item_number1=&payer_id=42N3KVJCD9D9J&tax=0.00&address_street=1+Main+St&payment_date=02%3A20%3A13+Mar+06%2C+2014+PST&payment_status=Pending&charset=windows-1252&address_zip=95131&mc_shipping=0.00&mc_handling=0.00&first_name=Amlana&mc_fee=24.66&address_country_code=US&address_name=Amlana+Kumar&notify_version=3.7&custom=Q3VzdG9tZXJJRC0x&payer_status=verified&business=arvind.yadav-facilitator%40mail.vinove.com&address_country=United+States&num_cart_items=1&mc_handling1=0.00&address_city=San+Jose&verify_sign=AiPC9BjkCyDFQXbSkoZcgqH3hpacAy0Ix0FeZVnwWUiIbrxo1thhYiOy&payer_email=arvind.yadav-buyer%40mail.vinove.com&mc_shipping1=0.00&tax1=0.00&txn_id=7NH103780Y893261T&payment_type=instant&last_name=Kumar&address_state=CA&item_name1=JackSon+CB7+Series&receiver_email=arvind.yadav-facilitator%40mail.vinove.com&payment_fee=24.66&quantity1=1&receiver_id=QGPEAUAV4QYHA&pending_reason=paymentreview&txn_type=cart&mc_gross_1=840.00&mc_currency=USD&residence_country=US&test_ipn=1&transaction_subject=Q3VzdG9tZXJJRC0x&payment_gross=840.00&ipn_track_id=ece55e62c6949
+[2014-03-06 02:20 America/Los_Angeles] HTTP response of validation request: HTTP/1.1 100 Continue
+
+HTTP/1.1 200 OK
+Date: Thu, 06 Mar 2014 10:20:23 GMT
+Server: Apache
+X-Frame-Options: SAMEORIGIN
+Set-Cookie: c9MWDuvPtT9GIMyPc3jwol1VSlO=BGHuR8Hsah8wzKqSohpBpFU_lS2UAXAa-S5Lf2ZK1QyKEcgNINiAyCaXRjyQxOGfUNHwhsqRYRVnboi3lzR5w6xq6KV8pfaFx4fDMkfW_hkPxmBByXzIrsacQt617fPVtGt2IafTaHWyoTvWvYKurnAUwsY4DpTglh9OYz8bQAmXj7al2xbdxAZ7XFv3xztM8QZmjnXtSHAFu6TdCkMOq9O-ZMzhUj02wb7gGGbT1n84CtLRI1-tkui3YLZ2cihaBCWYZnSLjzMJR1bZH0OC5ZH3YH79eddlvmFTNEMNzZgYdQ1mGEncDslzmrzvZxKWsDvsBpufy0WfQ_rGq1JgUM76FPg6GgCn2alpL7sE0SrKvyyRmtW0pjNn8L1yBOZzhCincuFv8kiZycAoDI7kx7PGRyLOrX3MRtw_6rGNCKVaf9tV5FS7OyjbBGi; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: cookie_check=yes; expires=Sun, 03-Mar-2024 10:20:23 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navcmd=_notify-validate; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navlns=0.0; expires=Sat, 05-Mar-2016 10:20:23 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: Apache=10.72.109.11.1394101223336360; path=/; expires=Sat, 27-Feb-44 10:20:23 GMT
+Connection: close
+Set-Cookie: X-PP-SILOVER=name%3DSANDBOX3.WEB.1%26silo_version%3D880%26app%3Dslingshot%26TIME%3D3880458323; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: X-PP-SILOVER=; Expires=Thu, 01 Jan 1970 00:00:01 GMT
+Set-Cookie: Apache=10.72.128.11.1394101223323979; path=/; expires=Sat, 27-Feb-44 10:20:23 GMT
+Vary: Accept-Encoding
+Strict-Transport-Security: max-age=14400
+Transfer-Encoding: chunked
+Content-Type: text/html; charset=UTF-8
+
+VERIFIED
+[2014-03-06 02:20 America/Los_Angeles] Verified IPN: cmd=_notify-validate&mc_gross=840.00&protection_eligibility=Ineligible&address_status=confirmed&item_number1=&payer_id=42N3KVJCD9D9J&tax=0.00&address_street=1+Main+St&payment_date=02%3A20%3A13+Mar+06%2C+2014+PST&payment_status=Pending&charset=windows-1252&address_zip=95131&mc_shipping=0.00&mc_handling=0.00&first_name=Amlana&mc_fee=24.66&address_country_code=US&address_name=Amlana+Kumar&notify_version=3.7&custom=Q3VzdG9tZXJJRC0x&payer_status=verified&business=arvind.yadav-facilitator%40mail.vinove.com&address_country=United+States&num_cart_items=1&mc_handling1=0.00&address_city=San+Jose&verify_sign=AiPC9BjkCyDFQXbSkoZcgqH3hpacAy0Ix0FeZVnwWUiIbrxo1thhYiOy&payer_email=arvind.yadav-buyer%40mail.vinove.com&mc_shipping1=0.00&tax1=0.00&txn_id=7NH103780Y893261T&payment_type=instant&last_name=Kumar&address_state=CA&item_name1=JackSon+CB7+Series&receiver_email=arvind.yadav-facilitator%40mail.vinove.com&payment_fee=24.66&quantity1=1&receiver_id=QGPEAUAV4QYHA&pending_reason=paymentreview&txn_type=cart&mc_gross_1=840.00&mc_currency=USD&residence_country=US&test_ipn=1&transaction_subject=Q3VzdG9tZXJJRC0x&payment_gross=840.00&ipn_track_id=ece55e62c6949 
+[2014-03-07 00:23 America/Los_Angeles] HTTP request of validation request:POST /cgi-bin/webscr HTTP/1.1
+Host: www.sandbox.paypal.com
+Accept: */*
+Connection: Close
+Content-Length: 1182
+Content-Type: application/x-www-form-urlencoded
+Expect: 100-continue
+
+ for IPN payload: cmd=_notify-validate&mc_gross=2635.00&protection_eligibility=Ineligible&address_status=confirmed&item_number1=&payer_id=42N3KVJCD9D9J&tax=0.00&address_street=1+Main+St&payment_date=00%3A23%3A11+Mar+07%2C+2014+PST&payment_status=Pending&charset=windows-1252&address_zip=95131&mc_shipping=10.00&mc_handling=0.00&first_name=Amlana&mc_fee=76.72&address_country_code=US&address_name=Amlana+Kumar&notify_version=3.7&custom=Q3VzdG9tZXJJRC0xOA%3D%3D&payer_status=verified&business=arvind.yadav-facilitator%40mail.vinove.com&address_country=United+States&num_cart_items=1&mc_handling1=0.00&address_city=San+Jose&verify_sign=ACiERGBKEbPbcFk8G1pOFM5.2u8dAUH0YuFeKelVXHVHrfCpOqrJFjNP&payer_email=arvind.yadav-buyer%40mail.vinove.com&mc_shipping1=10.00&tax1=0.00&txn_id=6GF32027EA0584647&payment_type=instant&last_name=Kumar&address_state=CA&item_name1=RefLex_+The+Game+Changer&receiver_email=arvind.yadav-facilitator%40mail.vinove.com&payment_fee=76.72&quantity1=1&receiver_id=QGPEAUAV4QYHA&pending_reason=paymentreview&txn_type=cart&mc_gross_1=2635.00&mc_currency=USD&residence_country=US&test_ipn=1&transaction_subject=Q3VzdG9tZXJJRC0xOA%3D%3D&payment_gross=2635.00&ipn_track_id=381758ace0b28
+[2014-03-07 00:23 America/Los_Angeles] HTTP response of validation request: HTTP/1.1 100 Continue
+
+HTTP/1.1 200 OK
+Date: Fri, 07 Mar 2014 08:23:17 GMT
+Server: Apache
+X-Frame-Options: SAMEORIGIN
+Set-Cookie: c9MWDuvPtT9GIMyPc3jwol1VSlO=3S7Nze36hm_tVLolaFjN_ESIXesNCw_1b_Ysgjz_ryYb5tMgYhLpVVa8xqU9KSBaJowSUmEY6PAy1s3rgz94LeuaJwwXOJZXFyOFHJQoeX_kiwW-uQD7X9Nrz0sc9g2G226_ClAbGpco4W6V9EpG2hSq9kN6UFOwbqTsuvH2a9L7oUa6wNAh_jZaXtqlIKs9pSFswgEzWxn_COmbW87pr32KFbGro_OW_XoXu0QPtyJon4NOHKwgLsv8UyyAVgRgUYJQJeXnE2umz6r1zpLSDOtd2a_pInG5lFVoITkBEXtkD_X_p8cD2YYrlyaF_0Wm8v-YOl3mjYZldcGBBGUIIpPZU0wR51qsa4JlUo8a-x4z5208aS-qo0lEXVi0Fy0Cug7IaRFh3rKKsJyKJbfaTp-Dpa6yXi22mGS5RiU0LLFSfAIZ4OIqg0uOvRq; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: cookie_check=yes; expires=Mon, 04-Mar-2024 08:23:18 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navcmd=_notify-validate; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navlns=0.0; expires=Sun, 06-Mar-2016 08:23:18 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: Apache=10.72.109.11.1394180597943221; path=/; expires=Sun, 28-Feb-44 08:23:17 GMT
+Connection: close
+Set-Cookie: X-PP-SILOVER=name%3DSANDBOX3.WEB.1%26silo_version%3D880%26app%3Dslingshot%26TIME%3D4118878547; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: X-PP-SILOVER=; Expires=Thu, 01 Jan 1970 00:00:01 GMT
+Set-Cookie: Apache=10.72.128.11.1394180597930978; path=/; expires=Sun, 28-Feb-44 08:23:17 GMT
+Vary: Accept-Encoding
+Strict-Transport-Security: max-age=14400
+Transfer-Encoding: chunked
+Content-Type: text/html; charset=UTF-8
+
+VERIFIED
+[2014-03-07 00:23 America/Los_Angeles] Verified IPN: cmd=_notify-validate&mc_gross=2635.00&protection_eligibility=Ineligible&address_status=confirmed&item_number1=&payer_id=42N3KVJCD9D9J&tax=0.00&address_street=1+Main+St&payment_date=00%3A23%3A11+Mar+07%2C+2014+PST&payment_status=Pending&charset=windows-1252&address_zip=95131&mc_shipping=10.00&mc_handling=0.00&first_name=Amlana&mc_fee=76.72&address_country_code=US&address_name=Amlana+Kumar&notify_version=3.7&custom=Q3VzdG9tZXJJRC0xOA%3D%3D&payer_status=verified&business=arvind.yadav-facilitator%40mail.vinove.com&address_country=United+States&num_cart_items=1&mc_handling1=0.00&address_city=San+Jose&verify_sign=ACiERGBKEbPbcFk8G1pOFM5.2u8dAUH0YuFeKelVXHVHrfCpOqrJFjNP&payer_email=arvind.yadav-buyer%40mail.vinove.com&mc_shipping1=10.00&tax1=0.00&txn_id=6GF32027EA0584647&payment_type=instant&last_name=Kumar&address_state=CA&item_name1=RefLex_+The+Game+Changer&receiver_email=arvind.yadav-facilitator%40mail.vinove.com&payment_fee=76.72&quantity1=1&receiver_id=QGPEAUAV4QYHA&pending_reason=paymentreview&txn_type=cart&mc_gross_1=2635.00&mc_currency=USD&residence_country=US&test_ipn=1&transaction_subject=Q3VzdG9tZXJJRC0xOA%3D%3D&payment_gross=2635.00&ipn_track_id=381758ace0b28 
+[2014-03-07 02:45 America/Los_Angeles] HTTP request of validation request:POST /cgi-bin/webscr HTTP/1.1
+Host: www.sandbox.paypal.com
+Accept: */*
+Connection: Close
+Content-Length: 1195
+Content-Type: application/x-www-form-urlencoded
+Expect: 100-continue
+
+ for IPN payload: cmd=_notify-validate&mc_gross=4.19&protection_eligibility=Ineligible&address_status=confirmed&item_number1=&payer_id=42N3KVJCD9D9J&tax=0.00&address_street=1+Main+St&payment_date=02%3A45%3A31+Mar+07%2C+2014+PST&payment_status=Pending&charset=windows-1252&address_zip=95131&mc_shipping=0.00&mc_handling=0.00&first_name=Amlana&mc_fee=0.42&address_country_code=US&address_name=Amlana+Kumar&notify_version=3.7&custom=Q3VzdG9tZXJJRC0xOA%3D%3D&payer_status=verified&business=arvind.yadav-facilitator%40mail.vinove.com&address_country=United+States&num_cart_items=1&mc_handling1=0.00&address_city=San+Jose&verify_sign=AXHZF4bUuPdFo4H0Qit3qveVjdnkA7Sd.h4MajiolhbEnW8TtkVbLGwU&payer_email=arvind.yadav-buyer%40mail.vinove.com&mc_shipping1=0.00&tax1=0.00&txn_id=7FW1287791910034R&payment_type=instant&last_name=Kumar&address_state=CA&item_name1=Infant+christmas+Harley+Davidson+outfit+6-9+months&receiver_email=arvind.yadav-facilitator%40mail.vinove.com&payment_fee=0.42&quantity1=1&receiver_id=QGPEAUAV4QYHA&pending_reason=paymentreview&txn_type=cart&mc_gross_1=4.19&mc_currency=USD&residence_country=US&test_ipn=1&transaction_subject=Q3VzdG9tZXJJRC0xOA%3D%3D&payment_gross=4.19&ipn_track_id=70ebfb7b6044d
+[2014-03-07 02:45 America/Los_Angeles] HTTP response of validation request: HTTP/1.1 100 Continue
+
+HTTP/1.1 200 OK
+Date: Fri, 07 Mar 2014 10:45:35 GMT
+Server: Apache
+X-Frame-Options: SAMEORIGIN
+Set-Cookie: c9MWDuvPtT9GIMyPc3jwol1VSlO=X6DqdCGD_loWyMfGbiIIwrrEmTgpVDsJDfw5aKpRzjxd_vGGnJDp_XyLmFPFxyQv0Me7FSxqwpo1jOPuubmmBItB6zNCkFFQ9hlP3ZumvCHRKtbfXnkpYPOg0Q37FAWQK0BTdNX_ieVcuRiHANIT8jOm11AdjnZNFt39IhOiHn6MgMdX2Rj-WCRIrdVq9WMOZHY3Igfl2Vru3W9lqI-Etwsk4qwItkjDqBb1QTj64nISxsl4ac5DsUEgPRpg4Ds9h5hRbzvegBRMHHCLYjz32077dK1bfNWp42DygVHftNROaR4F5BPK2eNHnqfMkJ05ruJOonyEoNUwtbfK7hg7gNSuzsHnc1ti1kMzbfOjXooB7ujHD8otF32xI1f94shIAA76TCaO_NxuAe1RFHzebRr0JBLyJtOq3NwRE2tKBiKAuCU_I2oaM-TVJdO; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: cookie_check=yes; expires=Mon, 04-Mar-2024 10:45:36 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navcmd=_notify-validate; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navlns=0.0; expires=Sun, 06-Mar-2016 10:45:36 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: Apache=10.72.109.11.1394189135936157; path=/; expires=Sun, 28-Feb-44 10:45:35 GMT
+Connection: close
+Set-Cookie: X-PP-SILOVER=name%3DSANDBOX3.WEB.1%26silo_version%3D880%26app%3Dslingshot%26TIME%3D1336088915; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: X-PP-SILOVER=; Expires=Thu, 01 Jan 1970 00:00:01 GMT
+Set-Cookie: Apache=10.72.128.11.1394189135927049; path=/; expires=Sun, 28-Feb-44 10:45:35 GMT
+Vary: Accept-Encoding
+Strict-Transport-Security: max-age=14400
+Transfer-Encoding: chunked
+Content-Type: text/html; charset=UTF-8
+
+VERIFIED
+[2014-03-07 02:45 America/Los_Angeles] Verified IPN: cmd=_notify-validate&mc_gross=4.19&protection_eligibility=Ineligible&address_status=confirmed&item_number1=&payer_id=42N3KVJCD9D9J&tax=0.00&address_street=1+Main+St&payment_date=02%3A45%3A31+Mar+07%2C+2014+PST&payment_status=Pending&charset=windows-1252&address_zip=95131&mc_shipping=0.00&mc_handling=0.00&first_name=Amlana&mc_fee=0.42&address_country_code=US&address_name=Amlana+Kumar&notify_version=3.7&custom=Q3VzdG9tZXJJRC0xOA%3D%3D&payer_status=verified&business=arvind.yadav-facilitator%40mail.vinove.com&address_country=United+States&num_cart_items=1&mc_handling1=0.00&address_city=San+Jose&verify_sign=AXHZF4bUuPdFo4H0Qit3qveVjdnkA7Sd.h4MajiolhbEnW8TtkVbLGwU&payer_email=arvind.yadav-buyer%40mail.vinove.com&mc_shipping1=0.00&tax1=0.00&txn_id=7FW1287791910034R&payment_type=instant&last_name=Kumar&address_state=CA&item_name1=Infant+christmas+Harley+Davidson+outfit+6-9+months&receiver_email=arvind.yadav-facilitator%40mail.vinove.com&payment_fee=0.42&quantity1=1&receiver_id=QGPEAUAV4QYHA&pending_reason=paymentreview&txn_type=cart&mc_gross_1=4.19&mc_currency=USD&residence_country=US&test_ipn=1&transaction_subject=Q3VzdG9tZXJJRC0xOA%3D%3D&payment_gross=4.19&ipn_track_id=70ebfb7b6044d 
+[2014-03-07 02:49 America/Los_Angeles] HTTP request of validation request:POST /cgi-bin/webscr HTTP/1.1
+Host: www.sandbox.paypal.com
+Accept: */*
+Connection: Close
+Content-Length: 1177
+Content-Type: application/x-www-form-urlencoded
+Expect: 100-continue
+
+ for IPN payload: cmd=_notify-validate&mc_gross=6.30&protection_eligibility=Ineligible&address_status=confirmed&item_number1=&payer_id=42N3KVJCD9D9J&tax=0.00&address_street=1+Main+St&payment_date=02%3A49%3A14+Mar+07%2C+2014+PST&payment_status=Pending&charset=windows-1252&address_zip=95131&mc_shipping=0.00&mc_handling=0.00&first_name=Amlana&mc_fee=0.48&address_country_code=US&address_name=Amlana+Kumar&notify_version=3.7&custom=Q3VzdG9tZXJJRC0xOA%3D%3D&payer_status=verified&business=arvind.yadav-facilitator%40mail.vinove.com&address_country=United+States&num_cart_items=1&mc_handling1=0.00&address_city=San+Jose&verify_sign=AFcWxV21C7fd0v3bYYYRCpSSRl31AE1CIorZjiy6c0ivCK4Kah3GVUKR&payer_email=arvind.yadav-buyer%40mail.vinove.com&mc_shipping1=0.00&tax1=0.00&txn_id=4LT44866E9743844X&payment_type=instant&last_name=Kumar&address_state=CA&item_name1=ASSORTED+VALVE+CAP+PACKS+%284%29&receiver_email=arvind.yadav-facilitator%40mail.vinove.com&payment_fee=0.48&quantity1=1&receiver_id=QGPEAUAV4QYHA&pending_reason=paymentreview&txn_type=cart&mc_gross_1=6.30&mc_currency=USD&residence_country=US&test_ipn=1&transaction_subject=Q3VzdG9tZXJJRC0xOA%3D%3D&payment_gross=6.30&ipn_track_id=bb8879d8260d2
+[2014-03-07 02:49 America/Los_Angeles] HTTP response of validation request: HTTP/1.1 100 Continue
+
+HTTP/1.1 200 OK
+Date: Fri, 07 Mar 2014 10:49:22 GMT
+Server: Apache
+X-Frame-Options: SAMEORIGIN
+Set-Cookie: c9MWDuvPtT9GIMyPc3jwol1VSlO=GzpgOfSRM1sj1AJTAYkF1efs1RuQN_XxvP2RZ8ob3jOO0PwsS7HDhoqmX6oZSatZ3SyME957RxZw0MD6kNSrWyoXfp_2JYvAV2vgonBAj43F4iqdObz9PA6k8xkhTek8nAY9cMJ0irKB56Y8O0nuu_aDua6J3lVaS1-2__sSZP4ZG4NdCsYc3-Ig7J3Y62qfL1qXnh-YZVcAEXVndLzBYqmTJLrc1ve2qq-kw7xSwpQvmquzlqVYNSJKQWSAky9fZz2gqU2HyEwO2y3rzr7Z_8Hd4-Lge6CzAzUGAtdlXYajY-bu3OHSmBQZYyHI4xPLHtcSCEQMqUNssxBShfcrUD7GB4c_FpBxspPfmq2R8vhdBx21rj9Lr1cP1BRPADHV2WjPLrrnB65x-iAGkvqW1shmG_YPjTDEHi0_Nt4kqAQ8jBoVDd4MHIkGtHm; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: cookie_check=yes; expires=Mon, 04-Mar-2024 10:49:22 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navcmd=_notify-validate; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navlns=0.0; expires=Sun, 06-Mar-2016 10:49:22 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: Apache=10.72.109.11.1394189362615996; path=/; expires=Sun, 28-Feb-44 10:49:22 GMT
+Connection: close
+Set-Cookie: X-PP-SILOVER=name%3DSANDBOX3.WEB.1%26silo_version%3D880%26app%3Dslingshot%26TIME%3D849615187; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: X-PP-SILOVER=; Expires=Thu, 01 Jan 1970 00:00:01 GMT
+Set-Cookie: Apache=10.72.128.11.1394189362603587; path=/; expires=Sun, 28-Feb-44 10:49:22 GMT
+Vary: Accept-Encoding
+Strict-Transport-Security: max-age=14400
+Transfer-Encoding: chunked
+Content-Type: text/html; charset=UTF-8
+
+VERIFIED
+[2014-03-07 02:49 America/Los_Angeles] Verified IPN: cmd=_notify-validate&mc_gross=6.30&protection_eligibility=Ineligible&address_status=confirmed&item_number1=&payer_id=42N3KVJCD9D9J&tax=0.00&address_street=1+Main+St&payment_date=02%3A49%3A14+Mar+07%2C+2014+PST&payment_status=Pending&charset=windows-1252&address_zip=95131&mc_shipping=0.00&mc_handling=0.00&first_name=Amlana&mc_fee=0.48&address_country_code=US&address_name=Amlana+Kumar&notify_version=3.7&custom=Q3VzdG9tZXJJRC0xOA%3D%3D&payer_status=verified&business=arvind.yadav-facilitator%40mail.vinove.com&address_country=United+States&num_cart_items=1&mc_handling1=0.00&address_city=San+Jose&verify_sign=AFcWxV21C7fd0v3bYYYRCpSSRl31AE1CIorZjiy6c0ivCK4Kah3GVUKR&payer_email=arvind.yadav-buyer%40mail.vinove.com&mc_shipping1=0.00&tax1=0.00&txn_id=4LT44866E9743844X&payment_type=instant&last_name=Kumar&address_state=CA&item_name1=ASSORTED+VALVE+CAP+PACKS+%284%29&receiver_email=arvind.yadav-facilitator%40mail.vinove.com&payment_fee=0.48&quantity1=1&receiver_id=QGPEAUAV4QYHA&pending_reason=paymentreview&txn_type=cart&mc_gross_1=6.30&mc_currency=USD&residence_country=US&test_ipn=1&transaction_subject=Q3VzdG9tZXJJRC0xOA%3D%3D&payment_gross=6.30&ipn_track_id=bb8879d8260d2 
+[2014-03-07 02:56 America/Los_Angeles] HTTP request of validation request:POST /cgi-bin/webscr HTTP/1.1
+Host: www.sandbox.paypal.com
+Accept: */*
+Connection: Close
+Content-Length: 1205
+Content-Type: application/x-www-form-urlencoded
+Expect: 100-continue
+
+ for IPN payload: cmd=_notify-validate&mc_gross=15.11&protection_eligibility=Ineligible&address_status=confirmed&item_number1=&payer_id=42N3KVJCD9D9J&tax=0.00&address_street=1+Main+St&payment_date=02%3A55%3A59+Mar+07%2C+2014+PST&payment_status=Pending&charset=windows-1252&address_zip=95131&mc_shipping=5.00&mc_handling=0.00&first_name=Amlana&mc_fee=0.74&address_country_code=US&address_name=Amlana+Kumar&notify_version=3.7&custom=Q3VzdG9tZXJJRC0xOA%3D%3D&payer_status=verified&business=arvind.yadav-facilitator%40mail.vinove.com&address_country=United+States&num_cart_items=1&mc_handling1=0.00&address_city=San+Jose&verify_sign=A4bDQHSoccDJmym7xsuAcb0pGEOlABsUJ9b8sKQunBQFB7oDTdYqamXM&payer_email=arvind.yadav-buyer%40mail.vinove.com&mc_shipping1=5.00&tax1=0.00&txn_id=51S51303AW5587321&payment_type=instant&last_name=Kumar&address_state=CA&item_name1=Unisex+christmas+elf+outfit%2C+Mothercare%2C+6+-+9+months&receiver_email=arvind.yadav-facilitator%40mail.vinove.com&payment_fee=0.74&quantity1=1&receiver_id=QGPEAUAV4QYHA&pending_reason=paymentreview&txn_type=cart&mc_gross_1=15.11&mc_currency=USD&residence_country=US&test_ipn=1&transaction_subject=Q3VzdG9tZXJJRC0xOA%3D%3D&payment_gross=15.11&ipn_track_id=685ffa4f998ce
+[2014-03-07 02:56 America/Los_Angeles] HTTP response of validation request: HTTP/1.1 100 Continue
+
+HTTP/1.1 200 OK
+Date: Fri, 07 Mar 2014 10:56:05 GMT
+Server: Apache
+X-Frame-Options: SAMEORIGIN
+Set-Cookie: c9MWDuvPtT9GIMyPc3jwol1VSlO=TkioJoKfOYVesz2o7bJA3AmBXZ5S_uTvDIyLznR3oqF7Ahpsj5rtgvraV-ObRcM_HvBzxFQ58E9dOJXKGitlkDrCeBZsgA-XjoGWCa3EJClst0SIG-AxpgyZikhzxQQaC-x3M0WS0ihid_QQYTHiIUXBs9z6fICjFeHWNnCSyfRpw-YjM0jFHdo0knzNAXTHB7282oDXuFOIae31yRBpfbOFwYUEYs5tSwgSbraRi54aWqUcRx2uZ9x2DIQkfNDjjdJIsTVyawdFZK7iqkGc4161fezdCfKnQk34MhPzzAcF0fhzSymhVftAeaBZNvSSI5NjqfM1nozOpZXEexP8DsdLD0qpcaaBjGdkyFsfQbNzQEDAGmNIx6WsrhL5a5T8zhhxcU3CFKeCjMZi4_cqakcShpBQ6x56wejyaz1sKFl0IJiSzmnziwZygHi; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: cookie_check=yes; expires=Mon, 04-Mar-2024 10:56:06 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navcmd=_notify-validate; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navlns=0.0; expires=Sun, 06-Mar-2016 10:56:06 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: Apache=10.72.109.11.1394189766094937; path=/; expires=Sun, 28-Feb-44 10:56:06 GMT
+Connection: close
+Set-Cookie: X-PP-SILOVER=name%3DSANDBOX3.WEB.1%26silo_version%3D880%26app%3Dslingshot%26TIME%3D3332708691; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: X-PP-SILOVER=; Expires=Thu, 01 Jan 1970 00:00:01 GMT
+Set-Cookie: Apache=10.72.128.11.1394189766080462; path=/; expires=Sun, 28-Feb-44 10:56:05 GMT
+Vary: Accept-Encoding
+Strict-Transport-Security: max-age=14400
+Transfer-Encoding: chunked
+Content-Type: text/html; charset=UTF-8
+
+VERIFIED
+[2014-03-07 02:56 America/Los_Angeles] Verified IPN: cmd=_notify-validate&mc_gross=15.11&protection_eligibility=Ineligible&address_status=confirmed&item_number1=&payer_id=42N3KVJCD9D9J&tax=0.00&address_street=1+Main+St&payment_date=02%3A55%3A59+Mar+07%2C+2014+PST&payment_status=Pending&charset=windows-1252&address_zip=95131&mc_shipping=5.00&mc_handling=0.00&first_name=Amlana&mc_fee=0.74&address_country_code=US&address_name=Amlana+Kumar&notify_version=3.7&custom=Q3VzdG9tZXJJRC0xOA%3D%3D&payer_status=verified&business=arvind.yadav-facilitator%40mail.vinove.com&address_country=United+States&num_cart_items=1&mc_handling1=0.00&address_city=San+Jose&verify_sign=A4bDQHSoccDJmym7xsuAcb0pGEOlABsUJ9b8sKQunBQFB7oDTdYqamXM&payer_email=arvind.yadav-buyer%40mail.vinove.com&mc_shipping1=5.00&tax1=0.00&txn_id=51S51303AW5587321&payment_type=instant&last_name=Kumar&address_state=CA&item_name1=Unisex+christmas+elf+outfit%2C+Mothercare%2C+6+-+9+months&receiver_email=arvind.yadav-facilitator%40mail.vinove.com&payment_fee=0.74&quantity1=1&receiver_id=QGPEAUAV4QYHA&pending_reason=paymentreview&txn_type=cart&mc_gross_1=15.11&mc_currency=USD&residence_country=US&test_ipn=1&transaction_subject=Q3VzdG9tZXJJRC0xOA%3D%3D&payment_gross=15.11&ipn_track_id=685ffa4f998ce 
+[2014-03-07 03:46 America/Los_Angeles] HTTP request of validation request:POST /cgi-bin/webscr HTTP/1.1
+Host: www.sandbox.paypal.com
+Accept: */*
+Connection: Close
+Content-Length: 1205
+Content-Type: application/x-www-form-urlencoded
+Expect: 100-continue
+
+ for IPN payload: cmd=_notify-validate&mc_gross=15.11&protection_eligibility=Ineligible&address_status=confirmed&item_number1=&payer_id=42N3KVJCD9D9J&tax=0.00&address_street=1+Main+St&payment_date=03%3A46%3A44+Mar+07%2C+2014+PST&payment_status=Pending&charset=windows-1252&address_zip=95131&mc_shipping=5.00&mc_handling=0.00&first_name=Amlana&mc_fee=0.74&address_country_code=US&address_name=Amlana+Kumar&notify_version=3.7&custom=Q3VzdG9tZXJJRC0xOA%3D%3D&payer_status=verified&business=arvind.yadav-facilitator%40mail.vinove.com&address_country=United+States&num_cart_items=1&mc_handling1=0.00&address_city=San+Jose&verify_sign=AQU0e5vuZCvSg-XJploSa.sGUDlpAC8dOyFsayIWtg2aQ-jNWkMcM6yE&payer_email=arvind.yadav-buyer%40mail.vinove.com&mc_shipping1=5.00&tax1=0.00&txn_id=1U950539FB4657353&payment_type=instant&last_name=Kumar&address_state=CA&item_name1=Unisex+christmas+elf+outfit%2C+Mothercare%2C+6+-+9+months&receiver_email=arvind.yadav-facilitator%40mail.vinove.com&payment_fee=0.74&quantity1=1&receiver_id=QGPEAUAV4QYHA&pending_reason=paymentreview&txn_type=cart&mc_gross_1=15.11&mc_currency=USD&residence_country=US&test_ipn=1&transaction_subject=Q3VzdG9tZXJJRC0xOA%3D%3D&payment_gross=15.11&ipn_track_id=47967c2c71a90
+[2014-03-07 03:46 America/Los_Angeles] HTTP response of validation request: HTTP/1.1 100 Continue
+
+HTTP/1.1 200 OK
+Date: Fri, 07 Mar 2014 11:46:51 GMT
+Server: Apache
+X-Frame-Options: SAMEORIGIN
+Set-Cookie: c9MWDuvPtT9GIMyPc3jwol1VSlO=GFb8sc2KjMbDACvcgX8eJD16wCvxRPKZ8kPz10JPwaOoqqMHVFYBDFmXwdjFRnJmJllYVE-OBCsbppqSQlluPWGQMYHdNiUxXt2epKpy7V3pwwjX3SlUkjZMlYxWXewLcyiOvNbtUiZg5ke8C_jKghU85BJl1er8Z_zZchy4CclYFXo9F6lV4Hme9n-sISGCqYC8D0osQ14jXmwzeBtSipiB12-vMg30cuTu5j9WjO_xWeNX6nTBocryVozNw49byyXRPswAL-VGOjL7R9L4sjthuL0buvBrCMhBFWB28HV2sdcez3N41yTytDDl6cWZDTxBoViYELSdffhL_9GK7f2sdSPzQQG1cy36-buIMMbywxy3ILp6rdZ-otX2ODHuMX4YMu_Q7PmaOkDwMfbi_2oIjD1WKFo4oqD5rY-9hNS7P-as5oFKVmEoiDi; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: cookie_check=yes; expires=Mon, 04-Mar-2024 11:46:52 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navcmd=_notify-validate; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navlns=0.0; expires=Sun, 06-Mar-2016 11:46:52 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: Apache=10.72.109.11.1394192811714399; path=/; expires=Sun, 28-Feb-44 11:46:51 GMT
+Connection: close
+Set-Cookie: X-PP-SILOVER=name%3DSANDBOX3.WEB.1%26silo_version%3D880%26app%3Dslingshot%26TIME%3D2880510291; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: X-PP-SILOVER=; Expires=Thu, 01 Jan 1970 00:00:01 GMT
+Set-Cookie: Apache=10.72.128.11.1394192811703140; path=/; expires=Sun, 28-Feb-44 11:46:51 GMT
+Vary: Accept-Encoding
+Strict-Transport-Security: max-age=14400
+Transfer-Encoding: chunked
+Content-Type: text/html; charset=UTF-8
+
+VERIFIED
+[2014-03-14 00:05 America/Los_Angeles] HTTP request of validation request:POST /cgi-bin/webscr HTTP/1.1
+Host: www.sandbox.paypal.com
+Accept: */*
+Connection: Close
+Content-Length: 1385
+Content-Type: application/x-www-form-urlencoded
+Expect: 100-continue
+
+ for IPN payload: cmd=_notify-validate&mc_gross=1560.38&protection_eligibility=Ineligible&address_status=confirmed&item_number1=&tax=0.00&item_number2=&payer_id=42N3KVJCD9D9J&item_number3=&address_street=1+Main+St&payment_date=00%3A05%3A00+Mar+14%2C+2014+PDT&payment_status=Pending&charset=windows-1252&address_zip=95131&mc_shipping=171.38&mc_handling=0.00&first_name=Amlana&mc_fee=45.55&address_country_code=US&address_name=Amlana+Kumar&notify_version=3.7&custom=Q3VzdG9tZXJJRC01&payer_status=verified&business=arvind.yadav-facilitator%40mail.vinove.com&address_country=United+States&num_cart_items=3&mc_handling1=0.00&mc_handling2=0.00&mc_handling3=0.00&address_city=San+Jose&verify_sign=AFcWxV21C7fd0v3bYYYRCpSSRl31AlK5ICYGcyXwr1rNI7h.RkrxWIz8&payer_email=arvind.yadav-buyer%40mail.vinove.com&mc_shipping1=155.57&mc_shipping2=15.81&mc_shipping3=0.00&tax1=0.00&tax2=0.00&tax3=0.00&txn_id=56V81728PD6643538&payment_type=instant&last_name=Kumar&address_state=CA&item_name1=Nike&receiver_email=arvind.yadav-facilitator%40mail.vinove.com&item_name2=Nike&payment_fee=45.55&item_name3=Jackson+series+%5BPackage%5D&quantity1=1&quantity2=1&receiver_id=QGPEAUAV4QYHA&pending_reason=paymentreview&quantity3=1&txn_type=cart&mc_gross_1=250.07&mc_currency=USD&mc_gross_2=110.31&mc_gross_3=1200.00&residence_country=US&test_ipn=1&transaction_subject=Q3VzdG9tZXJJRC01&payment_gross=1560.38&ipn_track_id=75339b0f7587f
+[2014-03-14 00:05 America/Los_Angeles] HTTP response of validation request: HTTP/1.1 100 Continue
+
+HTTP/1.1 200 OK
+Date: Fri, 14 Mar 2014 07:05:05 GMT
+Server: Apache
+X-Frame-Options: SAMEORIGIN
+Set-Cookie: c9MWDuvPtT9GIMyPc3jwol1VSlO=5jsvUCyOK_XfWEHg3GgrcR6bvzZi4nPtSX8YpWoD50IH62FbFH2QtG4aMbJdpTs1dl34qlBhLptxdgeIuvFqDQCQdo4CJGlsb3mjqb93PVZAm9cCXrYRrDldh8oLHgF8bswfVWZhwB-l4tS82HyWPjdHCIvhUgAENcXQInF0h_z6gD8-x29_BsezgDe-4v4EP8N9AtXdPMJ0kXs_m9LzPYtI6j-ok2-fnPpwJH3dd8vueYHy8kj3cs-ScBfWkl5fdxe5Ra5NLu0uA8cSZFeTfw9pJjrVgeAdC1DQ33UKRG1aaZk1Y_DT7USxOacPptrOHu_hsgJvKBHWsbW6WYKmygxKh3gG8PqrtVt29_98iSchfC2BOnV4snzHrlhcHg7rbIG503bKYa5Cr9FsPgZRI8qys9IO21ac-VxWLWpPIK78DKhGBD1_l13Y4b4; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: cookie_check=yes; expires=Mon, 11-Mar-2024 07:05:06 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navcmd=_notify-validate; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navlns=0.0; expires=Sun, 13-Mar-2016 07:05:06 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: Apache=10.72.109.11.1394780705920492; path=/; expires=Sun, 06-Mar-44 07:05:05 GMT
+Connection: close
+Set-Cookie: X-PP-SILOVER=name%3DSANDBOX3.WEB.1%26silo_version%3D880%26app%3Dslingshot%26TIME%3D564798035; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: X-PP-SILOVER=; Expires=Thu, 01 Jan 1970 00:00:01 GMT
+Set-Cookie: Apache=10.72.128.11.1394780705907211; path=/; expires=Sun, 06-Mar-44 07:05:05 GMT
+Vary: Accept-Encoding
+Strict-Transport-Security: max-age=14400
+Transfer-Encoding: chunked
+Content-Type: text/html; charset=UTF-8
+
+VERIFIED
+[2014-03-14 00:05 America/Los_Angeles] Verified IPN: cmd=_notify-validate&mc_gross=1560.38&protection_eligibility=Ineligible&address_status=confirmed&item_number1=&tax=0.00&item_number2=&payer_id=42N3KVJCD9D9J&item_number3=&address_street=1+Main+St&payment_date=00%3A05%3A00+Mar+14%2C+2014+PDT&payment_status=Pending&charset=windows-1252&address_zip=95131&mc_shipping=171.38&mc_handling=0.00&first_name=Amlana&mc_fee=45.55&address_country_code=US&address_name=Amlana+Kumar&notify_version=3.7&custom=Q3VzdG9tZXJJRC01&payer_status=verified&business=arvind.yadav-facilitator%40mail.vinove.com&address_country=United+States&num_cart_items=3&mc_handling1=0.00&mc_handling2=0.00&mc_handling3=0.00&address_city=San+Jose&verify_sign=AFcWxV21C7fd0v3bYYYRCpSSRl31AlK5ICYGcyXwr1rNI7h.RkrxWIz8&payer_email=arvind.yadav-buyer%40mail.vinove.com&mc_shipping1=155.57&mc_shipping2=15.81&mc_shipping3=0.00&tax1=0.00&tax2=0.00&tax3=0.00&txn_id=56V81728PD6643538&payment_type=instant&last_name=Kumar&address_state=CA&item_name1=Nike&receiver_email=arvind.yadav-facilitator%40mail.vinove.com&item_name2=Nike&payment_fee=45.55&item_name3=Jackson+series+%5BPackage%5D&quantity1=1&quantity2=1&receiver_id=QGPEAUAV4QYHA&pending_reason=paymentreview&quantity3=1&txn_type=cart&mc_gross_1=250.07&mc_currency=USD&mc_gross_2=110.31&mc_gross_3=1200.00&residence_country=US&test_ipn=1&transaction_subject=Q3VzdG9tZXJJRC01&payment_gross=1560.38&ipn_track_id=75339b0f7587f 
+[2014-03-14 01:09 America/Los_Angeles] HTTP request of validation request:POST /cgi-bin/webscr HTTP/1.1
+Host: www.sandbox.paypal.com
+Accept: */*
+Connection: Close
+Content-Length: 1177
+Content-Type: application/x-www-form-urlencoded
+Expect: 100-continue
+
+ for IPN payload: cmd=_notify-validate&mc_gross=229.68&protection_eligibility=Ineligible&address_status=confirmed&item_number1=&payer_id=42N3KVJCD9D9J&tax=0.00&address_street=1+Main+St&payment_date=01%3A09%3A46+Mar+14%2C+2014+PDT&payment_status=Pending&charset=windows-1252&address_zip=95131&mc_shipping=5.00&mc_handling=0.00&first_name=Amlana&mc_fee=6.96&address_country_code=US&address_name=Amlana+Kumar&notify_version=3.7&custom=Q3VzdG9tZXJJRC05&payer_status=verified&business=arvind.yadav-facilitator%40mail.vinove.com&address_country=United+States&num_cart_items=1&mc_handling1=0.00&address_city=San+Jose&verify_sign=AfbHM6N5WPyJa-eKtGWtywZEL-ffA1U9KYZ8eZDp7y1UbHmVilnmkeaI&payer_email=arvind.yadav-buyer%40mail.vinove.com&mc_shipping1=5.00&tax1=0.00&txn_id=56A19231HK886805K&payment_type=instant&last_name=Kumar&address_state=CA&item_name1=Dr.Martens+smooth+leather+8+upboots+8+hole&receiver_email=arvind.yadav-facilitator%40mail.vinove.com&payment_fee=6.96&quantity1=1&receiver_id=QGPEAUAV4QYHA&pending_reason=paymentreview&txn_type=cart&mc_gross_1=229.68&mc_currency=USD&residence_country=US&test_ipn=1&transaction_subject=Q3VzdG9tZXJJRC05&payment_gross=229.68&ipn_track_id=69d1b2d1c6776
+[2014-03-14 01:09 America/Los_Angeles] HTTP response of validation request: HTTP/1.1 100 Continue
+
+HTTP/1.1 200 OK
+Date: Fri, 14 Mar 2014 08:09:49 GMT
+Server: Apache
+X-Frame-Options: SAMEORIGIN
+Set-Cookie: c9MWDuvPtT9GIMyPc3jwol1VSlO=Nzc7L7LfZLfTL3386fBo1P-hAiszpJRtETuhxD3dP9T3B7B8wH55VWGRFOrrk4G5-FEEaPe7XZFff5IBjPU3ePhFNh4qh16X_7qK1ImBgUmoVuisFBsaXghBgtRV7igkqcykYPjV23X8DJ30oOCJq421oh7r9JK-l-7o8xIlhL5Mq2BziE2E7i0i66fjXRKh9bmYnZ5Ln5qwuXtN1eseKrPJKAf3DexDWQUiMWN4JVSJN-EP9KE-PuR89jdzzEqyu-XYJfUluz_W5TpXtQIohcaqL6Kn1Sf28ccaF30NRM0Kwd8cN2E8NEKg83rb4OMYwnShO8d3BKIa9TfLXb2C_6HHOD3ewSNI8Zh3a4vHk7Pzk1WLGULFaP9RZ9oZtOAAdYg8JzEhx4EJe8qvt6b3kTFkPpORkQf-utbgZ-G6aNC0mQV2CWkiyMZdjIS; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: cookie_check=yes; expires=Mon, 11-Mar-2024 08:09:50 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navcmd=_notify-validate; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navlns=0.0; expires=Sun, 13-Mar-2016 08:09:50 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: Apache=10.72.109.11.1394784589921295; path=/; expires=Sun, 06-Mar-44 08:09:49 GMT
+Connection: close
+Set-Cookie: X-PP-SILOVER=name%3DSANDBOX3.WEB.1%26silo_version%3D880%26app%3Dslingshot%26TIME%3D1303978579; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: X-PP-SILOVER=; Expires=Thu, 01 Jan 1970 00:00:01 GMT
+Set-Cookie: Apache=10.72.128.11.1394784589912402; path=/; expires=Sun, 06-Mar-44 08:09:49 GMT
+Vary: Accept-Encoding
+Strict-Transport-Security: max-age=14400
+Transfer-Encoding: chunked
+Content-Type: text/html; charset=UTF-8
+
+VERIFIED
+[2014-03-14 01:09 America/Los_Angeles] Verified IPN: cmd=_notify-validate&mc_gross=229.68&protection_eligibility=Ineligible&address_status=confirmed&item_number1=&payer_id=42N3KVJCD9D9J&tax=0.00&address_street=1+Main+St&payment_date=01%3A09%3A46+Mar+14%2C+2014+PDT&payment_status=Pending&charset=windows-1252&address_zip=95131&mc_shipping=5.00&mc_handling=0.00&first_name=Amlana&mc_fee=6.96&address_country_code=US&address_name=Amlana+Kumar&notify_version=3.7&custom=Q3VzdG9tZXJJRC05&payer_status=verified&business=arvind.yadav-facilitator%40mail.vinove.com&address_country=United+States&num_cart_items=1&mc_handling1=0.00&address_city=San+Jose&verify_sign=AfbHM6N5WPyJa-eKtGWtywZEL-ffA1U9KYZ8eZDp7y1UbHmVilnmkeaI&payer_email=arvind.yadav-buyer%40mail.vinove.com&mc_shipping1=5.00&tax1=0.00&txn_id=56A19231HK886805K&payment_type=instant&last_name=Kumar&address_state=CA&item_name1=Dr.Martens+smooth+leather+8+upboots+8+hole&receiver_email=arvind.yadav-facilitator%40mail.vinove.com&payment_fee=6.96&quantity1=1&receiver_id=QGPEAUAV4QYHA&pending_reason=paymentreview&txn_type=cart&mc_gross_1=229.68&mc_currency=USD&residence_country=US&test_ipn=1&transaction_subject=Q3VzdG9tZXJJRC05&payment_gross=229.68&ipn_track_id=69d1b2d1c6776 
+[2014-04-29 02:19 America/Los_Angeles] HTTP request of validation request:POST /cgi-bin/webscr HTTP/1.1
+Host: www.sandbox.paypal.com
+Accept: */*
+Connection: Close
+Content-Length: 1141
+Content-Type: application/x-www-form-urlencoded
+Expect: 100-continue
+
+ for IPN payload: cmd=_notify-validate&mc_gross=115.00&protection_eligibility=Ineligible&address_status=confirmed&item_number1=&payer_id=42N3KVJCD9D9J&tax=0.00&address_street=1+Main+St&payment_date=02%3A18%3A57+Apr+29%2C+2014+PDT&payment_status=Pending&charset=windows-1252&address_zip=95131&mc_shipping=10.00&mc_handling=0.00&first_name=Amlana&mc_fee=3.64&address_country_code=US&address_name=Amlana+Kumar&notify_version=3.8&custom=Q3VzdG9tZXJJRC05&payer_status=verified&business=arvind.yadav-facilitator%40mail.vinove.com&address_country=United+States&num_cart_items=1&mc_handling1=0.00&address_city=San+Jose&verify_sign=AoAOFNXGNJdaMSDjEEcNEXe-5dIOAGGhtaUnBC19NM8JOe4Ng9UFPeou&payer_email=arvind.yadav-buyer%40mail.vinove.com&mc_shipping1=10.00&tax1=0.00&txn_id=3JL76635U10876737&payment_type=instant&last_name=Kumar&address_state=CA&item_name1=PRS7&receiver_email=arvind.yadav-facilitator%40mail.vinove.com&payment_fee=3.64&quantity1=1&receiver_id=QGPEAUAV4QYHA&pending_reason=paymentreview&txn_type=cart&mc_gross_1=115.00&mc_currency=USD&residence_country=US&test_ipn=1&transaction_subject=Q3VzdG9tZXJJRC05&payment_gross=115.00&ipn_track_id=af084f5648830
+[2014-04-29 02:19 America/Los_Angeles] HTTP response of validation request: HTTP/1.1 100 Continue
+
+HTTP/1.1 200 OK
+Date: Tue, 29 Apr 2014 09:19:05 GMT
+Server: Apache
+X-Frame-Options: SAMEORIGIN
+Set-Cookie: c9MWDuvPtT9GIMyPc3jwol1VSlO=LNREERaMHboqO2vnGJpP0xIYHl8nCf8bGmSxiVVw1sCzOzydeHfR7yWyqCshU4R-HlDayjLmFluaBIs9ZjuTmDpP-ZlT8ud4xRoQMrVP3qp9Iyb0NSKyqk0ImypxNAqdARIZmcHelfkT2uH8Bh7_5NaCIuQElV9e3GpPIm0u9jDesXwuIc_9T7oFrS3pDXK_5Y2M8JvLfQ8H00B5gWerD8D1rfCOaSjhDqMX8m_lu8P7ZWJJr6FB-xJyokTKBMKI-ty6t-aKri8f_hrxp9NF8WPDRt--b9FTt05zwcmNmeIdRqmZ0-xPJazRtui5F4KoJABL4GQaU09QL_Xh0F5gMX2pZklb4uHfIRV0daTL31qIw2n2UWuf-wNYSxc3TU-OJXJUP-SIb0cuVyyTxw-X93jB6oElmihO1KVJaCNx5hpDoATg0dTSvqSNo7G; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: cookie_check=yes; expires=Fri, 26-Apr-2024 09:19:06 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navcmd=_notify-validate; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navlns=0.0; expires=Thu, 28-Apr-2016 09:19:06 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: Apache=10.72.109.11.1398763145716690; path=/; expires=Thu, 21-Apr-44 09:19:05 GMT
+Connection: close
+Set-Cookie: X-PP-SILOVER=name%3DSANDBOX3.WEB.1%26silo_version%3D880%26app%3Dslingshot%26TIME%3D2305711955; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: X-PP-SILOVER=; Expires=Thu, 01 Jan 1970 00:00:01 GMT
+Set-Cookie: Apache=10.72.128.11.1398763145707309; path=/; expires=Thu, 21-Apr-44 09:19:05 GMT
+Vary: Accept-Encoding
+Strict-Transport-Security: max-age=14400
+Transfer-Encoding: chunked
+Content-Type: text/html; charset=UTF-8
+
+VERIFIED
+[2014-04-29 02:19 America/Los_Angeles] Verified IPN: cmd=_notify-validate&mc_gross=115.00&protection_eligibility=Ineligible&address_status=confirmed&item_number1=&payer_id=42N3KVJCD9D9J&tax=0.00&address_street=1+Main+St&payment_date=02%3A18%3A57+Apr+29%2C+2014+PDT&payment_status=Pending&charset=windows-1252&address_zip=95131&mc_shipping=10.00&mc_handling=0.00&first_name=Amlana&mc_fee=3.64&address_country_code=US&address_name=Amlana+Kumar&notify_version=3.8&custom=Q3VzdG9tZXJJRC05&payer_status=verified&business=arvind.yadav-facilitator%40mail.vinove.com&address_country=United+States&num_cart_items=1&mc_handling1=0.00&address_city=San+Jose&verify_sign=AoAOFNXGNJdaMSDjEEcNEXe-5dIOAGGhtaUnBC19NM8JOe4Ng9UFPeou&payer_email=arvind.yadav-buyer%40mail.vinove.com&mc_shipping1=10.00&tax1=0.00&txn_id=3JL76635U10876737&payment_type=instant&last_name=Kumar&address_state=CA&item_name1=PRS7&receiver_email=arvind.yadav-facilitator%40mail.vinove.com&payment_fee=3.64&quantity1=1&receiver_id=QGPEAUAV4QYHA&pending_reason=paymentreview&txn_type=cart&mc_gross_1=115.00&mc_currency=USD&residence_country=US&test_ipn=1&transaction_subject=Q3VzdG9tZXJJRC05&payment_gross=115.00&ipn_track_id=af084f5648830 

@@ -1,0 +1,4 @@
+.proImg img,.box1,.box2,.box3,.box4{border-radius:5px;-webkit-border-radius:5px; -moz-border-radius:5px;-o-border-radius:5px; behavior:url(common/js/PIE.htc);}
+.proImg, .addCart, .proBtn, .qckView{border-radius:5px;-webkit-border-radius:5px; -moz-border-radius:5px;-o-border-radius:5px;position:relative; behavior:url(common/js/PIE.htc);}
+ul.colorTab li a{border-radius:5px 5px 0 0;-webkit-border-radius:5px 5px 0 0; -moz-border-radius:5px 5px 0 0;-o-border-radius:5px 5px 0 0;position:relative; behavior:url(common/js/PIE.htc);}
+.clrTabCon,.clrTab{border-radius:10px 10px 0 0;-webkit-border-radius:10px 10px 0 0; -moz-border-radius:10px 10px 0 0;-o-border-radius:10px 10px 0 0;position:relative; behavior:url(common/js/PIE.htc);}

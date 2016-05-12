@@ -1,0 +1,180 @@
+.ddsubmenustyle, .ddsubmenustyle div{ /*topmost and sub DIVs, respectively*/
+font: normal 13px Verdana;
+margin: 0 0 0 0;
+padding: 0;
+position: absolute;
+left: 0;
+top: 0;
+list-style-type: none;
+background: white;
+border: 1px solid #0462cb;
+border-bottom-width: 0;
+visibility: hidden;
+z-index: 100;
+}
+
+.ddsubmenustyle ul{
+margin: 0;
+padding: 0;
+position: absolute;
+left: 0;
+top: 0;
+list-style-type: none;
+border: 0px none;
+}
+
+.ddsubmenustyle li a{
+display: block;
+width: 170px; /*width of menu (not including side paddings)*/
+color: #fff;
+background-color: #006FEB;
+text-decoration: none;
+padding: 4px 5px;
+border-bottom: 1px solid #0462cb;
+}
+
+* html .ddsubmenustyle li{ /*IE6 CSS hack*/
+display: inline-block;
+width: 170px; /*width of menu (include side paddings of LI A*/
+}
+
+.ddsubmenustyle li a:hover{
+background-color: #398be6;
+color: white;
+}
+
+/* ######### Neutral CSS  ######### */
+
+.downarrowpointer{ /*CSS for "down" arrow image added to top menu items*/
+padding-left: 4px;
+border: 0;
+}
+
+.rightarrowpointer{ /*CSS for "right" arrow image added to drop down menu items*/
+position: absolute;
+padding-top: 3px;
+left: 100px;
+border: 0;
+}
+
+.ddiframeshim{
+position: absolute;
+z-index: 500;
+background: transparent;
+border-width: 0;
+width: 0;
+height: 0;
+display: block;
+}
+
+/*=============================================*/
+.ddsubmenustyleside, .ddsubmenustyleside div{ /*topmost and sub DIVs, respectively*/
+font: normal 13px Verdana;
+margin: 0 0 0 0;
+padding: 0;
+position: absolute;
+left: 0;
+top: 0;
+list-style-type: none;
+background: white;
+border: 1px solid #D1D1D1;
+min-width:170px;
+visibility: hidden;
+z-index: 100;
+}
+
+.ddsubmenustyleside ul{
+margin: 0;
+padding: 0;
+position: absolute;
+left: 0;
+top: 0;
+list-style-type: none;
+border: 0px none;
+padding-left:0 !important;
+}
+
+.ddsubmenustyleside li {
+min-width:170px;
+}
+
+
+.ddsubmenustyleside li a{
+display: block;
+width: 165px; /*width of menu (not including side paddings)*/
+color: #000000;
+background-color: #fff;
+text-decoration: none;
+padding: 5px 0px 9px 5px;
+border-bottom: 1px dashed #5C6167;
+
+}
+
+* html .ddsubmenustyleside li{ /*IE6 CSS hack*/
+display: inline-block;
+width: 160px; /*width of menu (include side paddings of LI A*/
+}
+
+.ddsubmenustyleside li a:hover{
+background-color: #EDEAEA;
+color: #000000;
+}
+
+.markermenu{
+width: 207px; /*width of side bar menu*/
+clear: left;
+position: relative; /*Preserve this for "right" arrow images (added by script) to be positioned correctly*/
+
+}
+
+.markermenu ul{
+list-style-type: none;
+margin: 5px 0;
+padding: 0;
+/*border: 1px solid #9A9A9A;*/
+}
+
+.markermenu ul li a{
+background: url(bulletlist.gif) no-repeat 3px center; /*light gray background*/
+padding-left:20px; font:14px/14px 'OpenSansRegular'; 
+color:#000000;
+display: block;
+width: auto;
+padding: 12px 0 5px 5px;
+
+text-decoration: none;
+border-bottom: 1px dashed #5c6167;
+}
+
+.markermenu ul li.last a{
+/*border-bottom: none !important*/;
+}
+* html .markermenu ul li a{ /*IE6 hack*/
+width: 125px;
+}
+
+.markermenu ul li a:visited, .markermenu ul li a:active{
+color:#000000;
+}
+
+.markermenu ul li a:hover, .markermenu ul li a.selected{
+color:#000000;
+background-color: #EDEAEA;
+}
+
+/* ######### Customized Drop Down ULs CSS (inherits from ddlevelsmenu-base.css) ######### */
+
+.blackwhite li a{
+background: white;
+}
+
+.blackwhite li a:hover{
+background: black;
+color: white;
+}
+.ddsubmenustyleside UL li:hover > a {
+  background-color:#EDEAEA; padding:0 -5px 0 0px;
+}
+.ddsubmenustyle UL li:hover > a {
+  background-color:#398be6;
+}

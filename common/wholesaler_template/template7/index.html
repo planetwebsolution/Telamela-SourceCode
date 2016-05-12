@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	<meta charset="utf-8">
+	<title>Wholesaler Template</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/skeleton.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/demo.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script src="js/responsiveslides.min.js"></script>
+	<script>
+		$(function() {
+			var pull 		= $('#pull');
+				menu 		= $('nav ul');
+				menuHeight	= menu.height();
+
+			$(pull).on('click', function(e) {
+				e.preventDefault();
+				menu.slideToggle();
+			});
+
+			$(window).resize(function(){
+        		var w = $(window).width();
+        		if(w > 320 && menu.is(':hidden')) {
+        			menu.removeAttr('style');
+        		}
+    		});
+		});
+	</script>
+	</head>
+	<body>
+<div class="section bg">
+		<div class="container">
+		<div class="row">
+				<div class="two columns"><img src="images/logo.png" alt=""></div>
+				<div class="ten columns width">
+				<nav class="clearfix">
+						<ul class="clearfix">
+						<li><a href="#">About us</a></li>
+						<li><a href="#">Payment</a></li>
+						<li><a href="#">Shipment</a></li>
+						<li><a href="#">Gurantee</a></li>
+						<li><a href="#">Contact us</a></li>
+						<li><a href="#">Return</a></li>
+						<li><a href="#">Policy</a></li>
+					</ul>
+						<a href="#" id="pull">Menu</a> </nav>
+			</div>
+			</div>
+		<!--  slider  -->
+		<div class="row">
+				<div class="twelve columns">
+				<div class="slider">
+						<div class="row">
+						<div class="eight columns">
+								<div class="callbacks_container">
+								<ul class="rslides" id="slider4">
+										<li> <img src="images/1.jpg" alt=""> </li>
+										<li> <img src="images/2.jpg" alt=""> </li>
+										<li> <img src="images/3.jpg" alt=""> </li>
+									</ul>
+							</div>
+							</div>
+						<div class="four columns">
+								<h1>About us</h1>
+								<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+							</div>
+					</div>
+					</div>
+			</div>
+			</div>
+	</div>
+	</div>
+<div class="section2">
+		<div class="container">
+		<div class="row space">
+		<div class="twelve columns">	<div class=" four columns">
+				<div class="img_box"><img src="images/footwear.jpg" alt=""></div>
+				<div class="detail">
+						<h5>Lorem Ipsum</h5>
+						<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+					</div>
+			</div>
+				<div class=" four columns">
+				<div class="img_box"><img src="images/footwear.jpg" alt=""></div>
+				<div class="detail">
+						<h5>Lorem Ipsum</h5>
+						<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+					</div>
+			</div>
+				<div class=" four columns">
+				<div class="img_box"><img src="images/footwear.jpg" alt=""></div>
+				<div class="detail">
+						<h5>Lorem Ipsum</h5>
+						<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+					</div>
+			</div>
+				<div class=" four columns del_space">
+				<div class="img_box"><img src="images/footwear.jpg" alt=""></div>
+				<div class="detail">
+						<h5>Lorem Ipsum</h5>
+						<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+					</div>
+			</div>
+				<div class=" four columns ">
+				<div class="img_box"><img src="images/footwear.jpg" alt=""></div>
+				<div class="detail">
+						<h5>Lorem Ipsum</h5>
+						<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+					</div>
+			</div>
+				<div class=" four columns">
+				<div class="img_box"><img src="images/footwear.jpg" alt=""></div>
+				<div class="detail">
+						<h5><a href="#">Lorem Ipsum</a></h5>
+						<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+					</div></div>
+			
+			</div>
+			</div>
+	</div>
+	</div>
+
+<!--  footer start  -->
+<div class="footer">
+		<div class="container">
+		<div class="row">
+				<div class="seven columns right_float">
+				<h6>Review</h6>
+				<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+				<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+				<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+			</div>
+				<div class="four columns left_float">
+				<h6>Contact Form</h6>
+				<form class="pure-form pure-form-aligned">
+						<fieldset>
+						<div class="pure-control-group">
+								<input id="name" type="text" placeholder="name">
+							</div>
+						<div class="pure-control-group">
+								<input id="email" type="email" placeholder="Email Address">
+							</div>
+						<div class="pure-control-group">
+								<textarea name="" cols="" rows="" placeholder="message"></textarea>
+							</div>
+						<div class="pure-controls">
+								<button type="submit" class="pure-button pure-button-primary">Send</button>
+							</div>
+					</fieldset>
+					</form>
+			</div>
+			</div>
+	</div>
+	</div>
+<!--  footer end  -->
+</body>
+	<script src="js/responsiveslides.min.js"></script>
+	<script>
+    // You can also use "$(window).load(function() {"
+    $(function () {
+
+     
+
+      // Slideshow 3
+      $("#slider3").responsiveSlides({
+        manualControls: '#slider3-pager',
+        maxwidth: 540
+      });
+
+      // Slideshow 4
+      $("#slider4").responsiveSlides({
+        auto: true,
+        pager: false,
+        nav: true,
+        speed: 500,
+        namespace: "callbacks",
+        before: function () {
+          $('.events').append("<li>before event fired.</li>");
+        },
+        after: function () {
+          $('.events').append("<li>after event fired.</li>");
+        }
+      });
+
+    });
+  </script>
+</html>

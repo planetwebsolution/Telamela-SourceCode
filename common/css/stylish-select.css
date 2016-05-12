@@ -1,0 +1,99 @@
+.stylish-select .SSContainerDivWrapper{margin:0;padding:0;width:115px;position:absolute;top:22px!important;left:0;z-index:2}
+.stylish-select ul.newList{margin:0;padding:0;list-style:none;color:#000;background:#404040;border:1px solid #362223;overflow:auto;max-height:300px!important}
+.stylish-select ul.newList *{margin:0;padding:0}
+.stylish-select ul.newList a{color:#fff;text-decoration:none;display:block;padding:3px 8px}
+.stylish-select .newListSelected{width:59%;color:#000;height:19px;padding:0 15px 0 0;float:left;background:url(../images/drop_down12.png) no-repeat right center;font:12px/19px OpenSansRegular,arial}
+.stylish-select ul.newList li a:focus{-moz-outline-style:none}
+.stylish-select .selectedTxt{width:auto;overflow:visible;height:19px;padding:0 23px 0 10px;cursor:pointer}
+.stylish-select .newListHover{background:#ccc!important;color:#000!important;cursor:default}
+.stylish-select .newListDisabled,.stylish-select .newListItemDisabled,.stylish-select .newListOptionDisabled{opacity:.6;-ms-filter:"alpha(Opacity=60)";filter:alpha(opacity=60)}
+.stylish-select .newListOptionTitle{font-weight:700}
+.stylish-select .newListOptionTitle ul{margin:3px 0 0}
+.stylish-select .newListOptionTitle li{font-weight:400}
+.stylish-select .language .newListSelected{width:70px}
+.stylish-select .header .rightTop .selectedTxt{width: 70px}
+.stylish-select .categories .newListSelected{width:140px;color:#000;height:19px;padding:10px 15px 10px 0;font:12px/19px OpenSansRegular,arial}
+.stylish-select .categories .selectedTxt{width:100px;overflow:hidden;height:19px;padding:0 23px 0 10px}
+.stylish-select .categories .SSContainerDivWrapper{margin:0;padding:0;width:135px;position:absolute;top:34px!important;left:-1px!important;z-index:2}
+.stylish-select .categories ul.newList{background:#faab0e;border-top:0!important;width:133px!important}
+.stylish-select .drop1 .SSContainerDivWrapper{margin:0;padding:0;width:182px;position:absolute;top:40px!important;left:0!important;z-index:2;border:0 none}
+.stylish-select .drop1 ul.newList{margin:0;padding:0;list-style:none;color:#3e3e3e;background:#ccc;border:1px solid #929291!important;float:left;border-top:0;overflow:visible;width:182px!important}
+.stylish-select .drop1 ul.newList *{margin:0;padding:0;background:#fdfbfb;border:0;width:182px!important}
+.stylish-select .drop1 ul.newList a{text-decoration:none;display:block;padding:3px 10px;width:162px!important;font:13px/20px OpenSansRegular,Arial;color:#3f3e3e}
+.stylish-select .drop1 .newListSelected{width:176px;color:#3e3e3e;height:40px;padding:0 0 0 4px;float:left;border:1px solid #929291;background:#fff}
+.stylish-select .drop1 .selectedTxt{width:135px;overflow:hidden;height:40px;padding:0 25px 0 10px;font:13px/38px OpenSansRegular,Arial;color:#3f3e3e}
+.stylish-select .drop3 .SSContainerDivWrapper{margin:0;padding:0;width:172px;position:absolute;top:40px!important;left:0!important;z-index:2;border:0 none}
+.stylish-select .drop3 ul.newList{margin:0;padding:0;list-style:none;color:#3e3e3e;background:#ccc;border:1px solid #929291!important;float:left;border-top:0;overflow:visible;width:170px!important}
+.stylish-select .drop3 ul.newList *{margin:0;padding:0;background:#fdfbfb;border:0;width:170px!important}
+.stylish-select .drop3 ul.newList a{text-decoration:none;display:block;padding:3px 10px;width:150px!important;font:13px/20px OpenSansRegular,Arial;color:#3f3e3e}
+.stylish-select .drop3 .newListSelected{width:168px;color:#3e3e3e;height:40px;padding:0 0 0 4px;float:left;background:url(../images/drop_down3.png) no-repeat 0 0}
+.stylish-select .drop3 .selectedTxt{width:135px;overflow:hidden;height:40px;padding:0 25px 0 10px;font:13px/38px OpenSansRegular,Arial;color:#3f3e3e}
+.stylish-select .drop4 .SSContainerDivWrapper{margin:0;padding:0;width:99%;position:absolute;top:40px!important;left:0!important;z-index:2;border:0 none}
+.stylish-select .drop4 ul.newList{margin:0;padding:0;list-style:none;color:#3e3e3e;background:#ccc;border:1px solid #929291!important;float:left;border-top:0;overflow:visible;width:100% !important}
+.stylish-select .drop4 ul.newList *{margin:0;padding:0;background:#fdfbfb;border:0;width:97% !important}
+.stylish-select .drop4 ul.newList a{text-decoration:none;display:block;padding:3px 10px;width:98% !important;font:13px/20px OpenSansRegular,Arial;color:#3f3e3e}
+.stylish-select .drop4 .newListSelected{width:99%;color:#3e3e3e;height:40px;padding:0 0 0 4px;float:left;
+                                        border: 1px solid #929291;-moz-border-radius:3px;border-radius:3px;
+}
+.stylish-select .drop4 .selectedTxt{width:382px;overflow:hidden;height:40px;padding:0 25px 0 10px;font:13px/38px OpenSansRegular,Arial;color:#3f3e3e}
+.stylish-select .drop5 .SSContainerDivWrapper{margin:0;padding:0;width:79px;position:absolute;top:34px!important;left:0!important;z-index:2;border:0 none}
+.stylish-select .drop5 ul.newList{margin:0;padding:0;list-style:none;color:#3e3e3e;border:1px solid #929291!important;float:left;border-top:0;overflow:visible;width:77px!important}
+.stylish-select .drop5 ul.newList *{margin:0;padding:0;background:#fdfbfb;border:0;width:77px!important}
+.stylish-select .drop5 ul.newList a{text-decoration:none;display:block;padding:3px 10px;width:57px!important;font:13px/20px OpenSansRegular,Arial;color:#3f3e3e}
+.stylish-select .drop5 .newListSelected{width:75px;color:#3e3e3e;height:34px;padding:0 0 0 4px;float:left;background:url(../images/drop_down5.png) no-repeat 0 0}
+.stylish-select .drop5 .selectedTxt{width:44px;overflow:hidden;height:34px;padding:0 25px 0 10px;font:13px/34px OpenSansRegular,Arial;color:#3f3e3e}
+.stylish-select .drop6 .SSContainerDivWrapper{margin:0;padding:0;width:158px;position:absolute;top:30px!important;left:0!important;z-index:2;border:0 none}
+.stylish-select .drop6 ul.newList{margin:0;padding:0;list-style:none;color:#3e3e3e;border:1px solid #929291!important;float:left;border-top:0;overflow:visible;width:156px!important}
+.stylish-select .drop6 ul.newList *{margin:0;padding:0;background:#fdfbfb;border:0;width:156px!important}
+.stylish-select .drop6 ul.newList a{text-decoration:none;display:block;padding:3px 8px;width:140px!important;font:13px/20px OpenSansRegular,Arial;color:#3f3e3e}
+.stylish-select .drop6 .newListSelected{width:158px;color:#3e3e3e;height:30px;padding:0 0 0 4px;float:left;background:url(../images/select-box.png) no-repeat 0 0;text-align:left}
+.stylish-select .drop6 .selectedTxt{width:119px;overflow:hidden;height:30px;padding:0 25px 0 10px;font:13px/29px OpenSansRegular,Arial;color:#3f3e3e}
+.stylish-select .drop7 .SSContainerDivWrapper{margin:0;padding:0;width:78px;position:absolute;top:30px!important;left:0!important;z-index:2;border:0 none}
+.stylish-select .drop7 ul.newList{margin:0;padding:0;list-style:none;color:#3e3e3e;border:1px solid #929291!important;float:left;border-top:0;overflow:visible;width:76px!important}
+.stylish-select .drop7 ul.newList *{margin:0;padding:0;background:#fdfbfb;border:0;width:76px!important}
+.stylish-select .drop7 ul.newList a{text-decoration:none;display:block;padding:3px 8px;width:60px!important;font:13px/20px OpenSansRegular,Arial;color:#3f3e3e}
+.stylish-select .drop7 .newListSelected{width:74px;color:#3e3e3e;height:30px;padding:0 0 0 4px;float:left;background:url(../images/drop_down7.png) no-repeat 0 0}
+.stylish-select .drop7 .selectedTxt{width:41px;overflow:hidden;height:30px;padding:0 25px 0 10px;font:13px/29px OpenSansRegular,Arial;color:#3f3e3e}
+.stylish-select .drop8 .SSContainerDivWrapper{margin:0;padding:0;width:86px;position:absolute;top:30px!important;left:0!important;z-index:2;border:0 none}
+.stylish-select .drop8 ul.newList{margin:0;padding:0;list-style:none;color:#3e3e3e;border:1px solid #929291!important;float:left;border-top:0;overflow:visible;width:85px!important}
+.stylish-select .drop8 ul.newList *{margin:0;padding:0;background:#fdfbfb;border:0;width:84px!important}
+.stylish-select .drop8 ul.newList a{text-decoration:none;display:block;padding:3px 8px;width:68px!important;font:13px/20px OpenSansRegular,Arial;color:#3f3e3e}
+.stylish-select .drop8 .newListSelected{width:82px;color:#3e3e3e;height:40px;padding:0 0 0 4px;float:left;background:url(../images/drop_down8.png) no-repeat 0 0}
+.stylish-select .drop8 .selectedTxt{width:50px;overflow:hidden;height:40px;padding:0 25px 0 10px;font:13px/40px OpenSansRegular,Arial;color:#3f3e3e}
+.stylish-select .drop9 .SSContainerDivWrapper{margin:0;padding:0;width:87px;position:absolute;top:30px!important;left:0!important;z-index:2;border:0 none}
+.stylish-select .drop9 ul.newList{margin:0;padding:0;list-style:none;color:#3e3e3e;border:1px solid #929291!important;float:left;border-top:0;overflow:visible;width:86px!important}
+.stylish-select .drop9 ul.newList *{margin:0;padding:0;background:#fdfbfb;border:0;width:86px!important}
+.stylish-select .drop9 ul.newList a{text-decoration:none;display:block;padding:0 9px 0 12px;width:64px!important;font:13px/32px OpenSansRegular,Arial;color:#3f3e3e;text-align:left}
+.stylish-select .drop9 .newListSelected{width:83px;color:#3e3e3e;height:30px;padding:0 0 0 4px;float:left;background:url(../images/allow-box.png) no-repeat 0 0;cursor:pointer}
+.stylish-select .drop9 .selectedTxt{width:50px;overflow:hidden;height:30px;padding:0 25px 0 0;font:13px/32px OpenSansRegular,Arial;color:#3f3e3e}
+.stylish-select .drop11 .SSContainerDivWrapper{margin:0;padding:0;width:227px;position:absolute;top:30px!important;left:0!important;z-index:2;border:0 none}
+.stylish-select .drop11 ul.newList{margin:0;padding:0;list-style:none;color:#3e3e3e;border:1px solid #929291!important;float:left;border-top:0;overflow:visible;width:227px!important}
+.stylish-select .drop11 ul.newList *{margin:0;padding:0;background:#fdfbfb;border:0;width:225px!important}
+.stylish-select .drop11 ul.newList a{text-decoration:none;display:block;padding:0 9px;width:209px!important;font:13px/30px OpenSansRegular,Arial;color:#3f3e3e}
+.stylish-select .drop11 .newListSelected{width:223px;color:#3e3e3e;height:30px;padding:0 0 0 4px;float:left;background:url(../images/drop_down11.png) no-repeat 0 0;cursor:pointer}
+.stylish-select .drop11 .selectedTxt{width:192px;overflow:hidden;height:30px;padding:0 25px 0 10px;font:13px/30px OpenSansRegular,Arial;color:#3f3e3e}
+.stylish-select .drop12 .SSContainerDivWrapper{margin:0;padding:0;width:95px;position:absolute;top:30px!important;left:0!important;z-index:2;border:0 none}
+.stylish-select .drop12 ul.newList{margin:0;padding:0;list-style:none;color:#3e3e3e;border:1px solid #929291!important;float:left;border-top:0;overflow:visible;width:93px!important}
+.stylish-select .drop12 ul.newList *{margin:0;padding:0;background:#fdfbfb;border:0;width:93px!important}
+.stylish-select .drop12 ul.newList a{text-decoration:none;display:block;padding:0 9px;width:76px!important;font:13px/30px OpenSansRegular,Arial;color:#3f3e3e}
+.stylish-select .drop12 .newListSelected{width:93px;color:#3e3e3e;height:30px;padding:0 0 0 4px;float:left;background:url(../images/drop_down12.png) no-repeat 0 0;cursor:pointer}
+
+.stylish-select .dropdown_2 .SSContainerDivWrapper{margin:0;padding:0;width:100% !important;position:absolute;top:40px!important;left:0!important;z-index:2;border:0 none;height:auto!important}
+
+.stylish-select .dropdown_2 ul.newList{margin:0;padding:0;list-style:none;color:#3e3e3e;background:#ccc;overflow:auto;overflow-x:hidden;border:1px solid #929291!important;float:left;border-top:0;width:99% !important}.stylish-select .dropdown_2 ul.newList *{margin:0;padding:0;background:#fdfbfb;border:0;width:99% !important}.stylish-select .dropdown_2 ul.newList a{text-decoration:none;display:block;padding:5px 10px!important;width:90% !important;font:13px/20px OpenSansRegular,Arial;color:#3f3e3e}.stylish-select .dropdown_2 .newListSelected{width:423px;color:#3e3e3e;height:40px;padding:0 0 0 4px;float:left;background:#fff;border:1px solid #929291}.stylish-select .dropdown_2 .selectedTxt{width:382px;overflow:hidden;height:40px;padding:0 25px 0 10px;font:13px/38px OpenSansRegular,Arial;color:#3f3e3e;background:url(../images/drop_down.jpg) no-repeat right center}.stylish-select .drop12 .selectedTxt{width:60px;overflow:hidden;height:30px;padding:0 25px 0 10px;font:13px/30px OpenSansRegular,Arial;color:#3f3e3e}.stylish-select .dropdown_3 .SSContainerDivWrapper{margin:0;padding:0;width:87px;position:absolute;top:40px!important;left:0!important;z-index:2;border:0 none;overflow-y:scroll;overflow-x:hidden;max-height:198px!important}.stylish-select .dropdown_3 ul.newList{margin:0;padding:0;list-style:none;color:#3e3e3e;background:#ccc;border:1px solid #929291!important;float:left;border-top:0;overflow:visible;width:81px!important}.stylish-select .dropdown_3 ul.newList *{margin:0;padding:0;background:#fdfbfb;border:0;width:55px!important}.stylish-select .dropdown_3 ul.newList a{text-decoration:none;display:block;padding:5px 10px!important;width:50px!important;font:13px/20px OpenSansRegular,Arial;color:#3f3e3e}.stylish-select .dropdown_3 .newListSelected{width:84px;color:#3e3e3e;height:40px;padding:0 0 0 4px;float:left}.stylish-select .dropdown_3 .selectedTxt{width:50px;overflow:hidden;height:40px;padding:0 25px 0 0;font:13px/38px OpenSansRegular,Arial;color:#3f3e3e;background:url(../images/drop_down.jpg) no-repeat right center}.SSContainerDivWrapper ul{width:100%!important}.stylish-select .dropdown_4 .SSContainerDivWrapper{margin:0;padding:0;width:181px;position:absolute;top:40px!important;left:0!important;z-index:2;border:0 none;overflow-y:scroll;overflow-x:hidden;max-height:198px!important}.stylish-select .dropdown_4 ul.newList{margin:0;padding:0;list-style:none;color:#3e3e3e;background:#ccc;border:1px solid #929291!important;float:left;border-top:0;overflow:visible;width:180px!important}.stylish-select .dropdown_4 ul.newList *{margin:0;padding:0;background:#fdfbfb;border:0;width:179px!important}.stylish-select .dropdown_4 ul.newList a{text-decoration:none;display:block;padding:5px 10px!important;width:150px!important;font:13px/20px OpenSansRegular,Arial;color:#3f3e3e}.stylish-select .dropdown_4 .newListSelected{width:178px;color:#3e3e3e;height:40px;padding:0 0 0 4px;float:left;border-radius:3px}.stylish-select .dropdown_4 .selectedTxt{width:122px;overflow:hidden;height:40px;padding:0 25px 0 10px;font:13px/38px OpenSansRegular,Arial;color:#929291;background:url(../images/drop_down.jpg) no-repeat right center}div.customfile1 .customfile1-feedback{color:#929291;border-radius:3px;margin-bottom:5px}small.multi{padding-right:30px;color:#025AB3;font:14px/18px OpenSansRegular,arial;text-align:right;text-decoration:underline}#frmDiscountPrice1,#frmWholesalePrice1{padding-left:10px!important;width:137px!important}
+
+
+.stylish-select .drop13 .SSContainerDivWrapper{margin:0;padding:0;width:100%;position:absolute;top:18px!important;left:0!important;z-index:2;border:0 none}
+.stylish-select .drop13 ul.newList{margin:0;padding:0;list-style:none;color:#3e3e3e;border:1px solid #929291!important;float:left;border-top:0;overflow:visible;width:99%!important}
+.stylish-select .drop13 ul.newList *{margin:0;padding:0;background:#fdfbfb;border:0;width:100%!important}
+.stylish-select .drop13 ul.newList a{text-decoration:none;display:block;padding:0 10% 0 6%;width:84%!important;font:13px/18px OpenSansRegular,Arial;color:#3f3e3e}
+.stylish-select .drop13 .newListSelected{width:100%;color:#3e3e3e;height:18px;padding:0;float:left;background:url(../images1/drop13.png) no-repeat 99% 0!important;cursor:pointer}
+.stylish-select .drop13 .selectedTxt{width:84%;overflow:hidden;height:18px;padding:0 10% 0 6%;font:13px/18px OpenSansRegular,Arial;color:#3f3e3e}
+
+
+
+.stylish-select .sortby_sec .newListSelected{padding: 0 0 0 10px;width: 97%;}
+.stylish-select .sortby_sec .selectedTxt{white-space: nowrap;}
+.stylish-select .sortby_sec .selectedTxt{padding: 0 10px 0 0;text-align:left;}
+.stylish-select .sortby_sec .SSContainerDivWrapper{width:135px;}
+.stylish-select .sortby_sec .SSContainerDivWrapper ul{width:135px!important;}>>>>>>> .r2221

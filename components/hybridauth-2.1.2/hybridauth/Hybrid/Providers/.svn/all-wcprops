@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/telamela/!svn/ver/2386/system/branches/development/src/site/components/hybridauth-2.1.2/hybridauth/Hybrid/Providers
+END
+Facebook.php
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/telamela/!svn/ver/2386/system/branches/development/src/site/components/hybridauth-2.1.2/hybridauth/Hybrid/Providers/Facebook.php
+END
+AOL.php
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/telamela/!svn/ver/2386/system/branches/development/src/site/components/hybridauth-2.1.2/hybridauth/Hybrid/Providers/AOL.php
+END
+Foursquare.php
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn/telamela/!svn/ver/2386/system/branches/development/src/site/components/hybridauth-2.1.2/hybridauth/Hybrid/Providers/Foursquare.php
+END
+Google.php
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/telamela/!svn/ver/2386/system/branches/development/src/site/components/hybridauth-2.1.2/hybridauth/Hybrid/Providers/Google.php
+END
+LinkedIn.php
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/telamela/!svn/ver/2386/system/branches/development/src/site/components/hybridauth-2.1.2/hybridauth/Hybrid/Providers/LinkedIn.php
+END
+OpenID.php
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/telamela/!svn/ver/2386/system/branches/development/src/site/components/hybridauth-2.1.2/hybridauth/Hybrid/Providers/OpenID.php
+END
+Live.php
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/telamela/!svn/ver/2386/system/branches/development/src/site/components/hybridauth-2.1.2/hybridauth/Hybrid/Providers/Live.php
+END
+Yahoo.php
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/telamela/!svn/ver/2386/system/branches/development/src/site/components/hybridauth-2.1.2/hybridauth/Hybrid/Providers/Yahoo.php
+END
+MySpace.php
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/telamela/!svn/ver/2386/system/branches/development/src/site/components/hybridauth-2.1.2/hybridauth/Hybrid/Providers/MySpace.php
+END
+Twitter.php
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/telamela/!svn/ver/2386/system/branches/development/src/site/components/hybridauth-2.1.2/hybridauth/Hybrid/Providers/Twitter.php
+END

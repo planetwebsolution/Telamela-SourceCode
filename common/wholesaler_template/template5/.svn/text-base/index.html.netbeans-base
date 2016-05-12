@@ -1,0 +1,268 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />    
+		<title>Wholesaler template</title>
+		<meta name="author"  />
+		<link href="css/style.css" rel="stylesheet" type="text/css"  />
+		<link href="css/owl.carousel.css" rel="stylesheet" type="text/css" />
+		<link href="css/owl.theme.css" rel="stylesheet" type="text/css" />
+		<link href="css/media.css" rel="stylesheet" type="text/css" />
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'/>
+		<!-- Date: 2014-08-25 -->
+	</head>
+	<body>
+		<div class="outer_container">
+			<div class="header">
+				<a href="#" class="logo"> <img src="images/logo.png" alt="Company Logo"  /> </a>
+			
+			<div class="menu"><h3>Menu</h3></div>
+			<div class="nav">
+				<ul>
+					<li>
+						<a href="#">Home</a>
+					</li>
+					<li>
+						<a href="#">About</a>
+					</li>
+					<li>
+						<a href="#">Service</a>
+					</li>
+					<li>
+						<a href="#">Testimonials</a>
+					</li>
+					<li>
+						<a href="#">Contact Us</a>
+					</li>
+					
+				</ul>
+
+			</div>
+			<div class="slide_section">
+				
+					<div class="slideshow">
+
+						<div id="owl-demo" class="owl-carousel">
+
+							<div class="item"><img src="images/slide1.jpg" alt="pic">
+								
+							</div>
+							
+							<div class="item"><img src="images/slide1.jpg" alt="pic">
+								
+							</div>
+							
+							<div class="item"><img src="images/slide1.jpg" alt="pic">
+								
+							</div>
+						
+							
+							
+							
+
+						</div>
+
+					</div>
+
+			</div>
+			</div>
+			<div class="products_outer">
+				<div class="products_box">
+					
+					<h3 class="main_heading">Featured Products</h3>
+					
+					<div class="my_product mlz">
+						<div class="pro_img">
+							<div class="img_center">
+							<a href="#">	<img src="images/product1.jpg"  /></a>
+							</div>
+						</div>
+						<div class="pro_details">
+							<div class="fleft">
+								<h3><a href="#">Multi Functioning Door Fridge</a></h3>
+								</div>
+							<div class="fright">
+								<p class="price">$100</p>
+								<a href="#" class="buy_now">buy now</a>
+							</div>
+
+						</div>
+					</div>
+					<div class="my_product">
+						<div class="pro_img">
+							<div class="img_center">
+							<a href="#">	<img src="images/product1.jpg"  /></a>
+							</div>
+						</div>
+						<div class="pro_details">
+							<div class="fleft">
+								<h3><a href="#">Multi Functioning Door Fridge</a></h3>
+								</div>
+							<div class="fright">
+								<p class="price">$100</p>
+								<a href="#" class="buy_now">buy now</a>
+							</div>
+
+						</div>
+					</div>
+
+<div class="my_product">
+						<div class="pro_img">
+							<div class="img_center">
+							<a href="#">	<img src="images/product1.jpg"  /></a>
+							</div>
+						</div>
+						<div class="pro_details">
+							<div class="fleft">
+								<h3><a href="#">Multi Functioning Door Fridge</a></h3>
+								</div>
+							<div class="fright">
+								<p class="price">$100</p>
+								<a href="#" class="buy_now">buy now</a>
+							</div>
+
+						</div>
+					</div>
+					
+					<div class="my_product mlz">
+						<div class="pro_img">
+							<div class="img_center">
+							<a href="#">	<img src="images/product1.jpg"  /></a>
+							</div>
+						</div>
+						<div class="pro_details">
+							<div class="fleft">
+								<h3><a href="#">Multi Functioning Door Fridge</a></h3>
+								</div>
+							<div class="fright">
+								<p class="price">$100</p>
+								<a href="#" class="buy_now">buy now</a>
+							</div>
+
+						</div>
+					</div>
+					<div class="my_product">
+						<div class="pro_img">
+							<div class="img_center">
+							<a href="#">	<img src="images/product1.jpg"  /></a>
+							</div>
+						</div>
+						<div class="pro_details">
+							<div class="fleft">
+								<h3><a href="#">Multi Functioning Door Fridge</a></h3>
+								</div>
+							<div class="fright">
+								<p class="price">$100</p>
+								<a href="#" class="buy_now">buy now</a>
+							</div>
+
+						</div>
+					</div>
+
+<div class="my_product">
+						<div class="pro_img">
+							<div class="img_center">
+							<a href="#">	<img src="images/product1.jpg"  /></a>
+							</div>
+						</div>
+						<div class="pro_details">
+							<div class="fleft">
+								<h3><a href="#">Multi Functioning Door Fridge</a></h3>
+								</div>
+							<div class="fright">
+								<p class="price">$100</p>
+								<a href="#" class="buy_now">buy now</a>
+							</div>
+
+						</div>
+					</div>
+					
+										
+														</div>
+
+			</div>
+			<div class="content">
+				<h2 class="heading">Our Profile</h2>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc nibh sapien, lacinia et lobortis in, pulvinar in
+					odio. Cras eget ullamcorper metus. Sed luctus accumsan mi non gravida. Duis ultrices libero nibh, sit amet
+					lobortis urna tristique eu. In vehicula dui in dictum vestibulum. Suspendisse nec tempor tortor. Duis
+					tincidunt lorem vitae tempus pellentesque.
+				</p>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc nibh sapien, lacinia et lobortis in, pulvinar in
+					odio. Cras eget ullamcorper metus. Sed luctus accumsan mi non gravida. Duis ultrices libero nibh, sit amet
+					lobortis urna tristique eu. In vehicula dui in dictum vestibulum. Suspendisse nec tempor tortor. Duis
+					tincidunt lorem vitae tempus pellentesque.
+				</p>
+			</div>
+			<div class="footer">                                     
+				<ul class="footerlinks">
+					<li><a href="#">About Us</a></li>
+					<li><a href="#">Announcements</a></li>
+					<li><a href="#">Media Centre</a></li>
+					<li><a href="#">Register</a></li>
+					<li><a href="#">Wish list</a></li>
+					<li><a href="#">Feedback</a></li>
+					<li><a href="#">Site Map</a></li>
+					<li><a href="#">Policies</a></li>
+					<li><a href="#">Customer Support</a></li>
+				</ul>
+				
+				<p class="copyright">Copyright © 1995-2014 Shirts  Inc. All Rights Reserved.</p>
+				
+				
+
+			</div>
+
+			<div class="clear"></div>
+		</div>
+		
+		<script src="js/jquery-1.9.1.min.js"></script>
+		<script src="js/owl.carousel.js"></script>
+	
+		<!-- Demo -->
+
+		<style>
+			#owl-demo .item img {
+				display: block;
+				width: 100%;
+				height: auto;
+			}
+		</style>
+
+		<script>
+			$(document).ready(function() {
+
+				$("#owl-demo").owlCarousel({
+					autoPlay : 2500,
+					stopOnHover : true,
+					navigation : true,
+					slideSpeed : 300,
+					paginationSpeed : 400,
+					singleItem : true,
+					autoplay : 1000
+
+					// "singleItem:true" is a shortcut for:
+					// items : 1,
+					// itemsDesktop : false,
+					// itemsDesktopSmall : false,
+					// itemsTablet: false,
+					// itemsMobile : false
+
+				});
+			});
+			
+			
+			$(".menu").click(function(){
+				$(".nav").stop().slideToggle(350);
+				
+			});
+		</script>
+
+	</body>
+</html>
+

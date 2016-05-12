@@ -1,0 +1,46 @@
+
+
+ @media only screen and (max-width: 768px){
+.outer_container{
+	width:100%;
+}
+h2.big{
+	top:15%;
+	max-width:80%
+	left:10%;
+	
+}
+.my_product, .mlz{
+	width:100%;
+	float:left;
+	margin-left:0;
+	
+}
+.img_center{
+	width:100%;
+	display:block
+}
+.pro_details .fright{
+	float:right;
+	margin-right:3px;
+}
+
+.nav ul li{
+	width:100%;
+	float:left;
+}
+.menu{
+	display:block;
+}	
+.nav{
+	display: none
+}
+ }
+
+  @media only screen and (max-width: 479px){
+h2.big{
+	font-size: 15px;
+	line-height:25px; 
+}
+
+  } 

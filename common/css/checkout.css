@@ -1,0 +1,18 @@
+@charset "utf-8";
+.add_edit_pakage{background:#fff;float:left;padding:0;width:1133px; margin-bottom:20px;}
+.add_edit_pakage input[type=text]{border:1px solid #d2d2d2;color:#3f3e3e;float:left;font-family:'Open Sans'!important;font-size:14px;line-height:22px;padding:10px;background:#ffff;width:503px}
+.star_icon{position:absolute}
+.quick_title span{color:#3c3c3c;line-height:30px;text-transform:uppercase;font-family:'Open Sans'!important;font-weight:600;font-size:15px;float:left;border-bottom:4px solid #5c5c5c;position:relative;bottom:-2px}
+.billing_sec{float:left;min-height:390px;width:525px;border:1px solid #e3e3e3;background:#fbfbfb;padding:10px}
+.aapplication_form ul{float:left;width:510px}
+.aapplication_form ul li{float:left;width:100%}
+.aapplication_form ul li label{float:left;margin:0;width:100%}
+.aapplication_form ul li label span{font-size:12px;font-style:italic}
+.aapplication_form ul li textarea{height:128px}
+.aapplication_form .left_sec.right{float:right}
+.right1{width:525px;float:right;margin-left:10px;border:1px solid #e3e3e3!important}
+.left_sec label{font-size:14px;font-family:'Open Sans',sans-serif;line-height:37px;color:#666;float:left}
+.billing_sec .check_box{width:99%;margin-top:10px;padding:10px;margin-bottom:10px}
+.add_edit_pakage input[type=password]{border:1px solid #d2d2d2;color:#3f3e3e;float:left;font-family:'Open Sans'!important;font-size:14px;line-height:22px;padding:10px;background:#ffff;width:503px}
+.img_1{width:211px;margin:0 auto}
+.social_login_icons_checkout{float:right;margin-top:-8px;width:366px}

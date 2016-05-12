@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/telamela/!svn/ver/2386/system/branches/development/src/site/components/hybridauth-2.1.2/hybridauth/Hybrid/thirdparty/OAuth
+END
+OAuth.php
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/svn/telamela/!svn/ver/2386/system/branches/development/src/site/components/hybridauth-2.1.2/hybridauth/Hybrid/thirdparty/OAuth/OAuth.php
+END
+OAuth1Client.php
+K 25
+svn:wc:ra_dav:version-url
+V 144
+/svn/telamela/!svn/ver/2386/system/branches/development/src/site/components/hybridauth-2.1.2/hybridauth/Hybrid/thirdparty/OAuth/OAuth1Client.php
+END
+OAuth2Client.php
+K 25
+svn:wc:ra_dav:version-url
+V 144
+/svn/telamela/!svn/ver/2386/system/branches/development/src/site/components/hybridauth-2.1.2/hybridauth/Hybrid/thirdparty/OAuth/OAuth2Client.php
+END

@@ -1,0 +1,34 @@
+fieldset{padding:.6em 0;border:0;border-top:1px dotted #ddd}
+legend{font-size:1.5em;font-weight:700;color:#555;padding:.5em 1em .5em 0;background:#fff}
+input#upload{background:#aaa url(../images/bg-btn.png) bottom repeat-x;padding:.4em 1.2em;border:1px solid #aaa;color:#222;font-size:1.2em;font-weight:700;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;cursor:pointer;margin:2em 0}
+input#upload:hover{background:#eee;color:#111;border-color:#777}
+.customfile1-input{position:absolute;height:42px;top:0!important;cursor:pointer;background:transparent;border:0;opacity:0;-moz-opacity:0;filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);z-index:999; width:100% !important;}
+.customfile1{width:90%;cursor:pointer;overflow:hidden;padding:0 0 10px;position:relative;float:left; max-width:466px;}
+.customfile1-disabled{opacity:.5;filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);cursor:default}
+.customfile1-feedback{float:left;width:298px;border:1px solid #dcdcdc;background:#fff;width:368px;height:18px;padding:10px 5px!important}
+#frmWholesalerUpdate #my_gray_bg .customfile1-button{ height:32px !important; line-height:35px !important}
+.customfile1-feedback-populated{color:#767676;font-style:normal;font-weight:700;line-height:16px;padding:0 0 0 10px;background:url(../images/icon-generic.gif) left 4px no-repeat}
+.customfile1-button{float: left;
+width: 107px;
+height: 34px!important;
+background: #ffb11b;
+line-height: 34px!important;
+display: block;
+text-align: center;
+color: #fff;
+padding: 4px!important;
+right:0;
+position: absolute;
+}
+.customfile1-ext-jpg,.customfile1-ext-gif,.customfile1-ext-png,.customfile1-ext-jpeg,.customfile1-ext-bmp{background-image:url(../images/icon-image.gif)}
+.customfile1-ext-mp3,.customfile1-ext-mp4,.customfile1-ext-mov,.customfile1-ext-swf,.customfile1-ext-wav,.customfile1-ext-m4v{background-image:url(../images/icon-media.gif)}
+.customfile1-ext-zip,.customfile1-ext-tar,.customfile1-ext-sit{background-image:url(../images/icon-zip.gif)}
+.divbox{width:60px;float:left;border:1px solid #e5e5e5;margin:0 20px 10px 0;height:60px;position:relative}
+.divmatterbox{width:100%;float:left;margin:0 0 10px}
+.divmatterbox a{float:left;display:inline-block;padding-right:10px;color:#ff9300}
+.divmatterbox a:hover{color:#000;}
+.divbox img{max-width:50px;max-height:50px}
+.deleteimg{position:absolute;right:-7px;top:-7px}
+.deleteimgright{float:left}
+.ship_left{width:45%;float:left}
+.ship_left.rightship{float:right}

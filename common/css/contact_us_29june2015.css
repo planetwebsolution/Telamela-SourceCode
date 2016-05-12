@@ -1,0 +1,26 @@
+@charset "utf-8";
+.input_star .star_icon{right:31px;position:relative}
+.stylish-select .drop4 .newListSelected{width:455px!important}
+.left_sec{width:58%}
+.stylish-select .drop4 ul.newList{width: 460px!important;
+border: 1px solid #d2d2d2 !important;
+margin-left: -1px;}
+#frmContactUsSubject .selectedTxt{ width:414px !important }
+.stylish-select ul.newList *{line-height:16px!important}
+.newList{border:none!important}
+#frmContactUs .countinue_shopping{background:#006feb;float:left;color:#fff;padding:20PX 88px 20px;margin-right:10px;font-size:14px;text-transform:uppercase;line-height:0;border:none;margin-bottom:30px;cursor:hand;cursor:pointer}
+#frmContactUs .countinue_shopping:hover{opacity:.7}
+.stylish-select .drop4 .selectedTxt{width:405px}
+#frmContactUs .compare_btn_sh{background:#666;margin-bottom:30px;color:#fff;float:left;  width: 220px; height:40px;line-height:0;margin-right:10px;font-size:14px;text-transform:uppercase;border:none;cursor:hand;cursor:pointer}
+.compare_btn_sh:hover{opacity:.7}
+.contact_sec .left_sec li{width:500px;padding:2px 0 8px}
+.stylish-select .drop4 .selectedTxt{background:url(http://www.telamela.com.au/common/images/select2.png) no-repeat 110% 8px!important;height:34px;overflow:hidden;padding:0 23px 0 10px;color:#3f3e3e;font:13px/38px "Open Sans",sans-serif;width:414px!important}
+#frmContactUs .text-input:focus{border:1px solid #F90}
+.SSContainerDivWrapper {  border:1px solid #000}
+#frmContactUs .newListSelected:focus{border:1px solid #F90}
+#frmContactUs input[type=submit]:focus{border:1px solid #F90}
+#frmContactUs .text-input{height:34px;padding:0 23px 0 10px;color:#3f3e3e;border:1px solid #dcdcdc;width:427px!important;font:13px/22px "Open Sans",sans-serif}
+.left_sec{width:580px;float:left}
+.contact_sec .right_sec{width:531px;background:#f2f2f2;padding:13px;border-radius:0}
+.left_sec li label{padding-top:10px;display:block;clear:both}
+#frmContactUs .selectedTxt{ line-height:40px !important}

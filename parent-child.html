@@ -1,0 +1,404 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Tela Mela</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>	
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" type="text/css" href="common/css/layout.css"/>         
+        <link rel="stylesheet" type="text/css" href="common/css/fonts.css"/>
+        <link rel="stylesheet" type="text/css" href="common/css/stylish-select.css"/>		
+        <link rel="stylesheet" type="text/css" href="common/css/css3.css"/>        		
+        <link rel="stylesheet" type="text/css" href="common/css/mialn.css"/>
+        <link rel="stylesheet" type="text/css" href="common/css/style_responsive.css"/>
+        <script type="text/javascript" src="common/js/jquery-1.9.0.min.js"></script>
+        <script type="text/javascript" src="common/js/stylish-select.js"></script>
+        <script type="text/javascript" src="common/js/bxsliderjs.js"></script> 
+        <script type="text/javascript" src="common/js/jQueryRotate.js"></script>
+        <script type="text/javascript" src="common/js/checkboxradiojs.js"></script>
+        <script type="text/javascript" src="common/js/custom.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $(".offPriceText").rotate(330);
+                $('.slider_inner').bxSlider({  
+                    auto:true
+                });
+                $('.drop_down1').sSelect();
+            });
+        </script>
+    </head>
+    <body>
+        <div id="navBar">
+            <div class="topBar">
+                <div class="layout">
+                    <div class="navBlock">
+                        <div class="navRight">
+                            <div class="myCart">
+                                <span class="cart">My Cart</span>
+                                <span class="cartValue">999</span>
+                            </div>
+                            <ul class="topMenu">
+                                <li class="link1"><a href="#">Send a Gift Card</a></li>
+                                <li class="link2"><a href="#">Subscribe</a></li>
+                                <li class="link3"><a href="#">Customer Support</a></li> 
+                                <li class="link4"><a href="#">My Account</a></li> 
+                            </ul>
+                            <div class="newBlock">
+                                <small>What’s New</small>
+                            </div>
+                        </div>
+                        <ul class="loginBlock">
+                            <li class="signIn"><a href="#">Sign In</a></li>
+                            <li class="signUp"><a href="#">Sign Up</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="layout">
+            <div class="header">
+                <div class="headerRight">
+                    <div class="rightTop">
+                        <ul class="social">
+                            <li><a href="#"><img src="common/images/icon1.gif" alt="" /></a></li>
+                            <li><a href="#"><img src="common/images/icon2.gif" alt="" /></a></li>
+                            <li><a href="#"><img src="common/images/icon3.gif" alt="" /></a></li>
+                        </ul> 
+                        <div class="Currency">
+                            <select class="my-dropdown">
+                                <option>Currency</option>
+                                <option>1</option>
+                                <option>2</option>                                            
+                            </select>
+                        </div>							
+                        <div class="language">
+                            <select class="my-dropdown">
+                                <option>Language</option>
+                                <option>1</option>
+                                <option>2</option>                                            
+                            </select>
+                        </div>                            
+                    </div> 
+                    <div class="rightBottom">
+                        <form action="" method="get">
+                            <div class="searchBlock">
+                                <div class="categories">
+                                    <select class="my-dropdown">
+                                        <option>All Categories</option>
+                                        <option>Categories 1</option>
+                                        <option>Categories 2</option>                                            
+                                    </select>
+                                </div>
+
+                                <input type="text" value="Search for a brand, product or a specific item" onfocus="if(this.value=='Search for a brand, product or a specific item')this.value=''" onblur="if(this.value=='')this.value='Search for a brand, product or a specific item'"/>
+                                <input type="submit" value=""/>
+
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <a class="logo" title="logo" href="#"><img src="common/images/logo.png" alt="logo" /></a>
+                <div class="navSection">
+                    <ul class="menu">
+                        <li class="home"><a href="#"><img src="common/images/home_icon.png" alt="" /></a></li>
+                        <li><a href="#">Jeans Appreasel</a></li>
+                        <li><a href="#">Automotive </a></li>
+                        <li><a href="#">Fragrances</a></li>
+                        <li><a href="#">Test2</a></li>
+                        <li><a href="#">Women's</a></li>
+                        <li><a href="#">Men's</a></li>
+                        <li><a href="#">Kids</a></li>
+                        <li><a href="#">Electronics</a></li>
+                        <li><a href="#">Sports</a></li>
+                        <li class="last"><a href="#" class="setting"></a></li>
+                    </ul>
+                </div>
+            </div>				
+        </div>
+        <div class="layout">
+            <div class="parent_child_sec">
+                <ul class="parent_top">
+                    <li class="first"><a href="#">Men’s</a></li>
+                    <li><a href="#">Men's Shoes </a></li>
+                    <li>Men's Athletic</li>
+                </ul>
+                <div class="parent_child_left">
+                    <h3>Brand</h3>
+                    <div class="parent_search_outer">
+                        <div class="parent_search">
+                            <input type="text" value=""/>
+                            <input type="button" value="Go"/>
+                        </div>
+                    </div>
+                    <ul class="parent_check">
+                        <li><input type="checkbox" class="styled"/><label>Aesop</label></li>
+                        <li><input type="checkbox" class="styled"/><label>Bag Sac</label></li>
+                        <li><input type="checkbox" class="styled"/><label>Benefit</label></li>
+                        <li><input type="checkbox" class="styled"/><label>Biotherm</label></li>
+                        <li><input type="checkbox" class="styled"/><label>Bobbi Brown</label></li>
+                        <li><input type="checkbox" class="styled"/><label>Burt's Bees</label></li>
+                    </ul>
+                    <h3>US Shoes Size</h3>
+                    <ul class="parent_check">
+                        <li><input type="checkbox" class="styled"/><label>7</label></li>
+                        <li><input type="checkbox" class="styled"/><label>7.5</label></li>
+                        <li><input type="checkbox" class="styled"/><label>8</label></li>
+                        <li><input type="checkbox" class="styled"/><label>8.5</label></li>
+                        <li><input type="checkbox" class="styled"/><label>9</label></li>
+                        <li><input type="checkbox" class="styled"/><label>9.5</label></li>
+                    </ul>
+                    <h3>Color</h3>
+                    <div class="parent_search_outer">
+                        <div class="parent_search">
+                            <input type="text" value=""/>
+                            <input type="button" value="Go"/>
+                        </div>
+                    </div>
+                    <ul class="parent_check">
+                        <li><input type="checkbox" class="styled"/><label>White (3)</label></li>
+                        <li><input type="checkbox" class="styled"/><label>Grey (3)</label></li>
+                        <li><input type="checkbox" class="styled"/><label>Blue (3)</label></li>
+                        <li><input type="checkbox" class="styled"/><label>Navy (3)</label></li>
+                        <li><input type="checkbox" class="styled"/><label>Dark Grey (3)</label></li>
+                        <li><input type="checkbox" class="styled"/><label>Green (3)</label></li>
+                    </ul>
+                    <h3>Price</h3>
+                    <div class="parent_search_outer">
+                        <div class="parent_search drop13">
+                            <select class="drop_down1">
+                                <option>All</option>
+                                <option>All</option>
+                                <option>All</option>
+                                <option>All</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="price_range">
+                        <label>Enter a Price range</label>
+                        <input type="text" value=""/>
+                        <small></small>
+                        <input type="text" value=""/>
+                        <input type="button" value="Go"/>
+                    </div>
+                </div>
+                <div class="parent_child_mid">
+                    <ul class="datail_block">
+                        <li>
+                            <div class="thumbdetail_outer">
+                                <div class="thumb_outer">
+                                    <div class="thumb_img"><img src="common/images1/thumb_img.png" alt=""/></div></div>
+                                <div class="detail_bot"><p>Stainless Steel Plain Silver Jesus Cross Crucifix Pendant 1 J7</p>
+                                    <strong>$48.30</strong></div>
+                                <div class="offer"><div class="offPriceText"><span>30% off</span></div></div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="thumbdetail_outer">
+                                <div class="thumb_outer">
+                                    <div class="thumb_img"><img src="common/images1/thumb_img1.png" alt=""/></div></div>
+                                <div class="detail_bot"><p>Stainless Steel Plain Silver Jesus Cross Crucifix Pendant 1 J7</p>
+                                    <strong>$48.30</strong></div>
+                                <div class="offer green"><div class="offPriceText"><span>Hot Price</span></div></div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="thumbdetail_outer">
+                                <div class="thumb_outer">
+                                    <div class="thumb_img"><img src="common/images1/thumb_img2.png" alt=""/></div></div>
+                                <div class="detail_bot"><p>Stainless Steel Plain Silver Jesus Cross Crucifix Pendant 1 J7</p>
+                                    <strong>$48.30</strong></div>
+                                <div class="offer"><div class="offPriceText"><span>30% off</span></div></div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="thumbdetail_outer">
+                                <div class="thumb_outer">
+                                    <div class="thumb_img"><img src="common/images1/thumb_img.png" alt=""/></div></div>
+                                <div class="detail_bot"><p>Stainless Steel Plain Silver Jesus Cross Crucifix Pendant 1 J7</p>
+                                    <strong>$48.30</strong></div>
+                                <div class="offer"><div class="offPriceText"><span>30% off</span></div></div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="thumbdetail_outer">
+                                <div class="thumb_outer">
+                                    <div class="thumb_img"><img src="common/images1/thumb_img1.png" alt=""/></div></div>
+                                <div class="detail_bot"><p>Stainless Steel Plain Silver Jesus Cross Crucifix Pendant 1 J7</p>
+                                    <strong>$48.30</strong></div>
+                                <div class="offer green"><div class="offPriceText"><span>Hot Price</span></div></div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="thumbdetail_outer">
+                                <div class="thumb_outer">
+                                    <div class="thumb_img"><img src="common/images1/thumb_img2.png" alt=""/></div></div>
+                                <div class="detail_bot"><p>Stainless Steel Plain Silver Jesus Cross Crucifix Pendant 1 J7</p>
+                                    <strong>$48.30</strong></div>
+                                <div class="offer"><div class="offPriceText"><span>30% off</span></div></div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="thumbdetail_outer">
+                                <div class="thumb_outer">
+                                    <div class="thumb_img"><img src="common/images1/thumb_img.png" alt=""/></div></div>
+                                <div class="detail_bot"><p>Stainless Steel Plain Silver Jesus Cross Crucifix Pendant 1 J7</p>
+                                    <strong>$48.30</strong></div>
+                                <div class="offer"><div class="offPriceText"><span>30% off</span></div></div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="thumbdetail_outer">
+                                <div class="thumb_outer">
+                                    <div class="thumb_img"><img src="common/images1/thumb_img1.png" alt=""/></div></div>
+                                <div class="detail_bot"><p>Stainless Steel Plain Silver Jesus Cross Crucifix Pendant 1 J7</p>
+                                    <strong>$48.30</strong></div>
+                                <div class="offer green"><div class="offPriceText"><span>Hot Price</span></div></div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="thumbdetail_outer">
+                                <div class="thumb_outer">
+                                    <div class="thumb_img"><img src="common/images1/thumb_img2.png" alt=""/></div></div>
+                                <div class="detail_bot"><p>Stainless Steel Plain Silver Jesus Cross Crucifix Pendant 1 J7</p>
+                                    <strong>$48.30</strong></div>
+                                <div class="offer"><div class="offPriceText"><span>30% off</span></div></div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="thumbdetail_outer">
+                                <div class="thumb_outer">
+                                    <div class="thumb_img"><img src="common/images1/thumb_img.png" alt=""/></div></div>
+                                <div class="detail_bot"><p>Stainless Steel Plain Silver Jesus Cross Crucifix Pendant 1 J7</p>
+                                    <strong>$48.30</strong></div>
+                                <div class="offer"><div class="offPriceText"><span>30% off</span></div></div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="thumbdetail_outer">
+                                <div class="thumb_outer">
+                                    <div class="thumb_img"><img src="common/images1/thumb_img1.png" alt=""/></div></div>
+                                <div class="detail_bot"><p>Stainless Steel Plain Silver Jesus Cross Crucifix Pendant 1 J7</p>
+                                    <strong>$48.30</strong></div>
+                                <div class="offer green"><div class="offPriceText"><span>Hot Price</span></div></div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="thumbdetail_outer">
+                                <div class="thumb_outer">
+                                    <div class="thumb_img"><img src="common/images1/thumb_img2.png" alt=""/></div></div>
+                                <div class="detail_bot"><p>Stainless Steel Plain Silver Jesus Cross Crucifix Pendant 1 J7</p>
+                                    <strong>$48.30</strong></div>
+                                <div class="offer"><div class="offPriceText"><span>30% off</span></div></div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="thumbdetail_outer">
+                                <div class="thumb_outer">
+                                    <div class="thumb_img"><img src="common/images1/thumb_img.png" alt=""/></div></div>
+                                <div class="detail_bot"><p>Stainless Steel Plain Silver Jesus Cross Crucifix Pendant 1 J7</p>
+                                    <strong>$48.30</strong></div>
+                                <div class="offer"><div class="offPriceText"><span>30% off</span></div></div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="thumbdetail_outer">
+                                <div class="thumb_outer">
+                                    <div class="thumb_img"><img src="common/images1/thumb_img1.png" alt=""/></div></div>
+                                <div class="detail_bot"><p>Stainless Steel Plain Silver Jesus Cross Crucifix Pendant 1 J7</p>
+                                    <strong>$48.30</strong></div>
+                                <div class="offer green"><div class="offPriceText"><span>Hot Price</span></div></div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="thumbdetail_outer">
+                                <div class="thumb_outer">
+                                    <div class="thumb_img"><img src="common/images1/thumb_img2.png" alt=""/></div></div>
+                                <div class="detail_bot"><p>Stainless Steel Plain Silver Jesus Cross Crucifix Pendant 1 J7</p>
+                                    <strong>$48.30</strong></div>
+                                <div class="offer"><div class="offPriceText"><span>30% off</span></div></div>
+                            </div>
+                        </li>   
+                    </ul>
+                </div>
+                <div class="parent_child_right">
+                    <div class="cart_sec">
+                        <h3>My Cart</h3>
+                        <div class="cart_bottm">
+                            <p>You have 4 items <br/>in your cart</p>
+                            <span><a href="#">&#187;view cart </a></span>
+                        </div>
+
+                    </div>
+                    <div class="cat_img"><img src="common/images1/cat_img1.png" alt=""/></div>
+                    <div class="cat_img"><img src="common/images1/cat_img1.png" alt=""/></div>
+                </div>
+            </div>
+        </div>
+        <div id="outerFooter">
+            <div class="layout">
+                <div class="footerRight">
+                    <a class="logo" title="logo" href="#"><img src="common/images/footer-logo.png" alt="" /></a>
+                    <ul class="footSocial">
+                        <li><a href="#"><img src="common/images/t_icon.png" alt="" /></a></li>
+                        <li><a href="#"><img src="common/images/f_icon.png" alt="" /></a></li>
+                        <li><a href="#"><img src="common/images/g_icon.png" alt="" /></a></li>
+                        <li><a href="#"><img src="common/images/r_icon.png" alt="" /></a></li> 
+                    </ul>
+                    <span class="follow"></span>
+                </div>
+                <div class="footerLeft">
+                    <h3>Categories</h3>
+                    <div class="footerLink">
+                        <div class="linkBlock">
+                            <ul>
+                                <li><a href="#">Mens</a></li>
+                                <li><a href="#">Womens</a></li>
+                                <li><a href="#">Baby</a></li>                                
+                            </ul>
+                        </div>
+                        <div class="linkBlock b2">
+                            <ul>                                
+                                <li><a href="#">Kids</a></li>
+                                <li><a href="#">Toys</a></li>
+                                <li><a href="#">Home &#38; Travel</a></li>                                
+                            </ul>
+                        </div>
+                        <div class="linkBlock b3">
+                            <ul>                               
+                                <li><a href="#">Health &#38; Fitness</a></li>
+                                <li><a href="#">Lorem Ipsum</a></li>
+                                <li><a href="#">Automotive</a></li>
+                            </ul>
+                        </div>
+                        <div class="linkBlock b4">
+                            <ul>                               
+                                <li><a href="#">Sports</a></li>
+                                <li><a href="#">Electronics</a></li>
+                                <li class="moreLink"><a href="#">More</a></li>
+                            </ul>
+                        </div>                        
+                    </div>
+                    <ul class="footLink">
+                        <li class="first"><a href="#">About us</a></li>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Terms &#38; Conditions</a></li>
+                        <li class="last"><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div id="subscribe">
+            <div class="layout">
+                <div class="newsletter">
+                    <p>&#169; 2013 telamela. All Rights Reserved.</p>
+                    <small class="nwLtr">Newsletter <span>Subscription</span></small>
+                    <form action="" method="get">
+                        <input type="text" value=" Enter your email address" onfocus="if(this.value==' Enter your email address')this.value=''" onblur="if(this.value=='')this.value=' Enter your email address'"/>
+                        <input type="submit" value="Subscribe"/>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html> 

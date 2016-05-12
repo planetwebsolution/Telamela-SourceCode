@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/telamela/!svn/ver/2615/system/branches/development/src/site/api/json/request
+END
+get_child_categories.json
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/telamela/!svn/ver/2615/system/branches/development/src/site/api/json/request/get_child_categories.json
+END
+get_all_categories.json
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/telamela/!svn/ver/2615/system/branches/development/src/site/api/json/request/get_all_categories.json
+END
+get_parent_categories.json
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/telamela/!svn/ver/2615/system/branches/development/src/site/api/json/request/get_parent_categories.json
+END
+get_products.json
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/telamela/!svn/ver/2615/system/branches/development/src/site/api/json/request/get_products.json
+END
+get_categories.json
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/telamela/!svn/ver/2615/system/branches/development/src/site/api/json/request/get_categories.json
+END
+get_categoryByID.json
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/telamela/!svn/ver/2615/system/branches/development/src/site/api/json/request/get_categoryByID.json
+END

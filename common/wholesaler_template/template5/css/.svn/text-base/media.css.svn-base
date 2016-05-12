@@ -1,0 +1,54 @@
+
+
+ @media only screen and (max-width: 768px){
+.outer_container{
+	width:100%;
+}
+a.logo{
+width:100%;
+float:left;
+position:static;
+}
+
+.my_product, .mlz{
+	width:100%;
+	float:left;
+	margin-left:0;
+	
+}
+.img_center{
+	width:100%;
+	display:block
+}
+.pro_details .fright{
+	float:right;
+	margin-right:3px;
+}
+
+.nav ul li{
+	width:100%;
+	float:left;
+}
+.menu{
+	display:block;
+	background-color:#1b1b1b;
+	width:100%;
+	float:left;
+	color:#fff;
+	text-align:left;
+}	
+.nav{
+	display: none
+}
+.nav ul li a{
+text-align:left;
+}
+ }
+
+  @media only screen and (max-width: 479px){
+h2.big{
+	font-size: 15px;
+	line-height:25px; 
+}
+
+  } 

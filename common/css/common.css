@@ -1,0 +1,14 @@
+#cartValue{background-color: orange; padding:5px 8px;float: right;font-size: 11px; text-align: center;}
+#cartValue strong{font-size: 16px; display: block;font-weight:bold;font-size: 20px;}
+.mycart_txt{float:left; margin-top: 11px; padding-left: 38px;}
+.cart {
+    background: url("../images/cart-top.png") no-repeat scroll 9px 8px #565656;
+    color: #fff;
+    float: left;
+    font: 700 13px/15px  "Open Sans",sans-serif;
+    padding: 4px 10px 4px 10px;
+    text-align: left;
+    width: 160px; height:40px;
+
+}
+.newCartCountColor{background-color: orange;}

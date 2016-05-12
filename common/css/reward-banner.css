@@ -1,0 +1,44 @@
+.reward-banner{float:left;width:100%;}
+.reward-banner img{max-width:100%;height:auto;margin:20px 0 45px 0;}
+.reward-section{float:left;width:100%;padding:60px 0;position:relative;}
+.reward-section ul.rewards-points{margin:0;padding:0;}
+.reward-section ul.rewards-points li{font:400 28px 'Open sans';background:url(../images/star-reward.png) no-repeat left center;padding:0 0 0 35px;margin:15px 0;color:#362223;}
+.earn-para{color:#444;font:400 14px/24px 'Open sans';float:left;width:50%;margin:80px 0 0 0;}
+.graph-img{position:absolute;bottom:30px;right:50px;}
+.reward-checkout{background:#f2f2f2;float:left;width:100%;margin:20px 0 60px 0;}
+.reward-checkout .reward-inner{padding:20px 28px;float:left;}
+.reward-inner h3{color:#000;font-family:'Open Sans'; font-size:18px; font-weight:600; text-transform:uppercase}
+.reward-inner h3 span.hdClr{color:#343434;font:400 22px 'hand_of_seanregular',arial;}
+.reward-inner p.checkout-para{color:#444;font:400 14px/24px 'Open sans';float:left;width:100%;margin:5px 0 40px 0;}
+.reward-inner .reward-calc{float:left;width:99.8%;background:#fff;position: relative;behavior: url(common/js/PIE.htc);padding:18px 0;}
+.reward-inner .left-point-rew{float:left;width:38%;}
+.reward-inner .left-point-rew h3{font:600 22px 'Open sans';color:#333;padding:0 0 0 23px;float:left;}
+.reward-inner .left-point-rew p{font:300 14px/30px 'Open sans';color:#333;padding:0 0 0 23px;float:left;margin:0 0 30px 0;}
+.reward-inner .left-point-rew span{padding:0 0 0 23px;float:left;}
+.reward-inner .left-point-rew span.tag{padding:0;text-align:center;display:inline-block;width:100%;font:600 14px 'Open sans';color:#454545;}
+.reward-inner .mid-point-rew{float:left;width:37%;text-align:center;color:#333;}
+.reward-inner .mid-point-rew span{display:block;text-align:left;margin:8px 0;}
+.reward-inner .mid-point-rew span label{font:400 18px 'Open sans';margin:0 0 0 30px;float:left;min-width:140px;}
+.reward-inner .mid-point-rew span strong{font:600 18px 'Open sans';}
+.reward-inner .mid-point-rew span .ttl{color:#e43137;}
+.reward-inner .right-point-rew{float:left;width:25%;text-align:center;}
+.reward-inner .right-point-rew span img{float:none;padding:20px 0 0 0;}
+.reward-inner .right-point-rew h3{color:#454545;font:600 30px 'Open sans';}
+.slider_box{display: block;padding: 8px;position: relative;}
+.slider_box img{float: none}
+.slider_box .bx-controls-direction{display: none}
+.slider_box .bx-pager {bottom: 14px;float: left;position: absolute;text-align: center;width: 100%;z-index: 9999;}
+.slider_box .bx-pager .bx-pager-item {display: inline-block; height: 19px; margin: 0 3px;width: 20px;}
+.slider_box .bx-pager .bx-pager-link {background: url("../images1/dot.png") no-repeat scroll 0 0 transparent;display: block;height: 16px;text-indent: -10000px; width: 17px;}
+.slider_box .bx-pager .bx-pager-link.active{background-position: 0 bottom}
+
+.shop_icon1 {
+    border-bottom: 1px solid #f3f3f3;
+    border-top: 1px solid #f3f3f3;
+    color: #3c3c3c;
+    font-family: "Open Sans",sans-serif;
+    font-size: 18px;
+    line-height: 50px;
+    margin-top: 10px;
+    text-transform: uppercase;
+}

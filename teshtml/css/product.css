@@ -1,0 +1,214 @@
+.productDetails{
+width:100%; float:left;
+
+}
+.productMain{
+width:100%; float:left;
+margin-bottom:10px;
+}
+.productImageBox{
+width:43.5%; float:left;
+margin-right:1.5%;
+border:1px solid #e5e5e5;
+padding:10px;
+
+}
+.aboutProduct{
+width:55%; float:right;
+
+}
+.ImageLarge{
+width:78%; float:right;
+}
+.imgThumbnails{
+width:21.5%; float:left;
+}
+.thumbsUl{
+width:100%; float:left;
+padding:20px 8px;
+list-style:none;
+}
+.thumbsUl > li{
+width:100%; float:left;
+margin-bottom:15px;
+display:inline-block;
+}
+.thumbsUl > li a{
+display:block;
+}
+.productHeading{
+width:100%; float:left;
+border-bottom:1px solid #e5e5e5;
+margin-bottom:10px;
+}
+.productHeading h1{
+    border-bottom: 4px solid #5c5c5c;
+    bottom: -2px;
+    color: #3c3c3c;
+    float: left;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 30px;
+    position: relative;
+    text-transform: uppercase;
+	margin:0;
+}
+.ratingReviewBox{
+width:100%; float:left;
+font-size:12px;
+line-height:20px;
+margin-bottom:10px;
+padding-top:4px;
+}
+.ratingReviewBox .ratingLeft{
+width:65%; float:left;
+color:#8c8c8c;
+}
+.ratingReviewBox .reviewRight{
+width:34%; float:left;
+text-align:right;
+}
+.ratingReviewBox .reviewRight a{
+    color: #ee9912;
+	display:inlne-block;
+	padding:0 10px;
+    font-size: 12px;
+    line-height: 24px;
+}
+.ratingReviewBox .reviewRight a:hover{
+color:#000;
+}
+.ratingReviewBox .ornage_text.reviews{
+	color: #2282ee;
+    font-size:14px;
+	font-weight:700;
+	padding:0 2px;
+}
+
+.inner_rating.avg_rating{
+width:100px;
+float:left;
+min-height:20px;
+background: url('http://www.telamela.com.au/common/images/star_ratting.png') no-repeat 0px -90px;
+}
+.ratingCount{
+width:120px;
+float:left;
+padding-left:15px;
+font-size:12px;
+line-height:23px;
+color:#8c8c8c;
+}
+.reviewCount{
+width:100px; 
+float:left;
+border-left:1px solid #e5e5e5;
+padding-left:15px;
+}
+.checkProductShipping {
+    border-top: 1px solid #eee;
+	border-bottom: 1px solid #eee;
+    float: left;
+    padding: 12px 0;
+    width: 100%;
+}
+
+.productShippingImage {
+    background: url("../images/location.png") no-repeat scroll 0 3px transparent;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 13px;
+    padding-bottom: 8px;
+    padding-left: 30px;
+}
+.checkShipping{
+width:100%; float:left;
+}
+.productShipping {
+    float: left;
+    width: 88%;
+	padding-right:10px;
+}
+.productShippingButton {
+    float: right;
+    width: 12%;
+}
+.dropContainerShipping{
+width:59%; float:left;
+margin-right:2%;
+}
+
+.productShipping input#checkShippingByPincode {
+    background: none repeat scroll 0 0 #ffffff;
+    border: 1px solid #d2d2d2;
+    display: block;
+    float: left;
+    padding: 12px 10px;
+    width: 39%;
+	font-size:13px;
+	height:44px;
+}
+.productShippingButton input#checkShippingAvilable {
+    background: none repeat scroll 0 0 #ff9300;
+    border-radius: 0;
+    border-width: 0;
+    color: #fff;
+    cursor: pointer;
+	font-size:13px;
+	height:44px;
+    padding: 12px 0;
+	width:100%; text-align:center;
+    text-transform: uppercase;
+}
+#productShippingCountry{
+width:100%;
+}
+.dropContainerShipping .chosen-single{
+height:44px;
+line-height:44px;
+font-size:13px;
+color:#8c8c8c;
+border:1px solid #d2d2d2;
+}
+div.price_details{
+width:100%; float:left;
+font-size:18px;
+font-weight:600 !important;
+line-height:44px;
+padding:5px 0;
+border-bottom:1px solid #eee;
+}
+div.price_details .save_amt{
+width:40%; float:right;
+}
+div.price_details  small{
+display:inline-block;
+padding:0 9px ;
+font-size:18px;
+text-decoration:line-through;
+}
+div.price_details  strong{
+font-size:20px;
+padding:0 9px;
+color:#e43137;
+}
+div.price_details .save_amt span{
+color:#006feb;
+}
+.selectProduct{
+width:100%; float:left;
+}
+.selectProductUl{
+width:100%; float:left;
+padding-left:0;
+}
+.selectProductUl >li{
+width:100%; float:left;
+list-style:none;
+padding:7px 0;
+}
+.selectProductUl >li .productLabel{
+width:30%; float:left;
+}
+.selectProductUl >li .labelValue{
+width:70%; float:left;
+}

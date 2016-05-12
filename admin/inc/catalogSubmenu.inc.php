@@ -1,0 +1,6 @@
+<ul>
+    <li><a <?php if($varFileName=='category_manage_uil.php' || $varFileName=='catalog_manage_uil.php' || $varFileName=='category_add_uil.php'){echo 'class="current"';}else{echo 'href="category_manage_uil.php"';}?>>Manage Categories</a></li>
+    <li><a <?php if($varFileName=='attribute_manage_uil.php' || $varFileName=='attribute_add_uil.php' || $varFileName=='attribute_edit_uil.php'){echo 'class="current"';}else{echo 'href="attribute_manage_uil.php"';}?>>Manage Attributes</a></li>
+    <li><a <?php if($varFileName=='product_manage_uil.php' || $varFileName=='product_add_uil.php' || $varFileName=='product_edit_uil.php' || $varFileName=='product_view_uil.php' || $varFileName == 'product_add_multiple_uil.php'){echo 'class="current"';}else{echo 'href="product_manage_uil.php"';}?>>Manage Products</a></li>
+    <li><a <?php if($varFileName=='package_manage_uil.php' || $varFileName=='package_add_uil.php' || $varFileName=='package_edit_uil.php'){echo 'class="current"';}else{echo 'href="package_manage_uil.php"';}?>>Manage Packages</a></li>
+</ul>

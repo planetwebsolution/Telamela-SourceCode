@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/svn/telamela/!svn/ver/2386/system/branches/development/src/site/components/hybridauth-2.1.2/examples/signin_signup/application/views/users
+END
+profile.html
+K 25
+svn:wc:ra_dav:version-url
+V 152
+/svn/telamela/!svn/ver/2386/system/branches/development/src/site/components/hybridauth-2.1.2/examples/signin_signup/application/views/users/profile.html
+END
+complete_registration.html
+K 25
+svn:wc:ra_dav:version-url
+V 166
+/svn/telamela/!svn/ver/2386/system/branches/development/src/site/components/hybridauth-2.1.2/examples/signin_signup/application/views/users/complete_registration.html
+END
+register.html
+K 25
+svn:wc:ra_dav:version-url
+V 153
+/svn/telamela/!svn/ver/2386/system/branches/development/src/site/components/hybridauth-2.1.2/examples/signin_signup/application/views/users/register.html
+END
+login.html
+K 25
+svn:wc:ra_dav:version-url
+V 150
+/svn/telamela/!svn/ver/2386/system/branches/development/src/site/components/hybridauth-2.1.2/examples/signin_signup/application/views/users/login.html
+END

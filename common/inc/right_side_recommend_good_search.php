@@ -1,0 +1,126 @@
+<div  id="ajaxAddToCompare">
+   <div class="comapre_products">
+      <h5>Compare <span>Products</span></h5>
+      <?php if (count($objPage->arrData['arrCompareDetails']) > 0) { ?>
+      <ul>
+         <?php
+            foreach ($objPage->arrData['arrCompareDetails'] as $valCompare) {
+                $varSrc = $objCore->getImageUrl($valCompare[0]['ImageName'], 'products/' . $arrProductImageResizes['default']);
+                ?>
+         <li>
+            <div class="bottom_border">
+               <div class="image"><img src="<?php echo $varSrc; ?>" width="40" alt="<?php echo $valCompare[0]['ProductName'] ?>" /></div>
+               <div class="details">
+                  <a href="<?php echo $objCore->getUrl('product.php', array('id' => $valCompare[0]['pkProductID'], 'name' => $valCompare[0]['ProductName'], 'refNo' => $valCompare[0]['ProductRefNo'])); ?>"><?php echo ucfirst($valCompare[0]['ProductName']); ?></a>                        
+                  <h5>
+                     <?php
+                        $varPrice = ($valCompare[0]['DiscountFinalPrice'] > 0) ? $valCompare[0]['DiscountFinalPrice'] : $valCompare[0]['FinalPrice'];
+                        echo $objCore->getPrice($varPrice);
+                        ?>
+                  </h5>
+               </div>
+               <div class="delete"><a href="#" onclick="RemoveProductFromCompare(<?php echo $valCompare[0]['pkProductID']; ?>);"><img src="<?php echo IMAGE_FRONT_PATH_URL; ?>close.png" alt="" border="0"  /></a></div>
+            </div>
+         </li>
+         <?php
+            }
+            ?>
+      </ul>
+      <a href="<?php echo $objCore->getUrl('product_comparison.php'); ?>" class="checkout_button">Compare</a>
+      <?php } ?>
+   </div>
+</div>
+<div class="right_login">
+   <h3><?php echo SEARCH_GOOD . "  " .'<span class="store_txt">'.STORE.'<span>'; ?></h3>
+   <form action="<?php echo $objCore->getUrl('category.php'); ?>" method="post" name="frmGoodsSearch" onsubmit="return goodsSearchSubmit();" >
+      <ul class="store_sec">
+         <li id="goodsMsg" class="red" style="display:none;">Please enter your search criteria</li>
+         <li> <label><?php echo KEYWORDS; ?></label><input type="text" value=""  name="searchKey" id="frmKey"/></li>
+         <li class="outer_price">
+            <div class="price">
+               <label><?php echo PRICE; ?></label>
+               <input type="text" value="" class="input_1" name="frmPriceFrom" id="frmPriceFrom" placeholder="$"><span>to</span><input type="text" value="" name="frmPriceTo" id="frmPriceTo" placeholder="$" />
+               <input type="submit" value="Search"/>
+               <input type="hidden" name="frmSearch" id="frmSearch" value="<?php echo SEND; ?>" />
+            </div>
+         </li>
+      </ul>
+   </form>
+</div>
+<div class="recomened_blog">
+   <div id="ajaxAddToRecommend">
+      <?php
+         if (!empty($objPage->arrData['arrRecommendedDetails'])) {
+             ?>
+      <?php
+         foreach ($objPage->arrData['arrRecommendedDetails'] as $valRecommended) { 
+             $varSrc = $objCore->getImageUrl($valRecommended['ImgName'], 'products/' . $arrProductImageResizes['default']);
+             ?>
+      <span class="recomend_image">
+      <a href="<?php echo $objCore->getUrl('product.php', array('id' => $valRecommended['pkProductID'], 'name' => $valRecommended['ProductName'], 'refNo' => $valRecommended['ProductRefNo'])); ?>">
+      <img src="<?php echo $varSrc; ?>" alt="<?php echo $valRecommended['ProductName']; ?>"/>
+      </a>
+      </span>
+      <p class="text_1">
+         <?php echo $valRecommended['ProductName']; ?>
+         <!-- <a href="<?php echo $objCore->getUrl('product.php', array('id' => $valRecommended['pkProductID'], 'name' => $valRecommended['ProductName'], 'refNo' => $valRecommended['ProductRefNo'])); ?>"><?php echo ucfirst($valRecommended['ProductName']); ?></a>-->
+      </p>
+      <span class="amount"><?php echo $objCore->getPrice($valRecommended['FinalPrice']); ?></span>
+      <!--
+         <small>Recomended by <?php echo $valRecommended['numRecommend']; ?> people</small>
+         -->
+      <?php
+         }
+         }
+         ?>
+   </div>
+   <img class="hot_recomend" src="<?php echo IMAGE_FRONT_PATH_URL; ?>hot_recommend.png" alt=""/>
+</div>
+<?php
+   /*
+     <div class="gradient2 gradient3">
+     <div class="comapre_products">
+     <h5>Hot <br/> <span>Recommended</span></h5>
+     <ul id="ajaxAddToRecommend">
+     <?php
+      if (!empty($objPage->arrData['arrRecommendedDetails'])) {
+      ?>
+<?php
+   foreach ($objPage->arrData['arrRecommendedDetails'] as $valRecommended) {
+   if ($valRecommended['ImgName'] <> '') {
+   $varSrc = UPLOADED_FILES_URL . 'images/products/70x70/' . $valRecommended['ImgName'];
+   } else {
+   $varSrc = UPLOADED_FILES_URL . 'images/products/70x70/no-image.jpeg';
+   }
+   ?>
+<li>
+   <div class="bottom_border">
+      <div class="image"><img src="<?php echo $varSrc; ?>" width="40" height="38" alt="" /></div>
+      <div class="details">
+         <a href="<?php echo $objCore->getUrl('product.php', array('id' => $valRecommended['pkProductID'], 'name' => $valRecommended['ProductName'], 'refNo' => $valRecommended['ProductRefNo'])); ?>"><?php echo ucfirst($valRecommended['ProductName']); ?></a>
+         <h5><?php echo $objCore->getPrice($valRecommended['FinalPrice']); ?></h5>
+         <small>Recomended by <?php echo $valRecommended['numRecommend']; ?> people</small>
+      </div>
+   </div>
+</li>
+<?php
+   }
+   }
+   ?>
+</ul>
+<span class="mark_icon"><img src="<?php echo IMAGE_FRONT_PATH_URL; ?>mark-icon.png" alt=""/></span>
+</div>
+</div>
+-->
+* */
+?>
+<!-- <a href="#" class="view1">View All</a>-->
+<div class="ad" style="overflow: auto;">
+   <?php
+      if ($objPage->arrData['arrAdsDetails'][0]['AdType'] == 'link') {
+          ?>
+   <a href="<?php echo $objPage->arrData['arrAdsDetails'][0]['AdUrl'] ?>" target="_blank"><img src="<?php echo UPLOADED_FILES_URL; ?>images/ads/189x207/<?php echo $objPage->arrData['arrAdsDetails'][0]['ImageName'] ?>" alt="<?php echo $objPage->arrData['arrAdsDetails'][0]['Title'] ?>" width="189" height="207" border="0" title="<?php echo $objPage->arrData['arrAdsDetails'][0]['Title'] ?>"  /></a>
+   <?php } else { ?>
+   <?php echo html_entity_decode(stripslashes($objPage->arrData['arrAdsDetails'][0]['HtmlCode'])); ?>
+   <?php } ?>
+</div>
