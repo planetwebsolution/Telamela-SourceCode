@@ -69,8 +69,8 @@ define('FILENAME_LOGICTIC_Portal_CTRL', 'logistic_portal_ctrl.php');
 define('FILENAME_ZONE_ADD_CTRL', 'zone_add_ctrl.php');
 define('FILENAME_ZONE_PRICE_CTRL', 'zone_price_ctrl.php');
 define('FILENAME_SHIP_PRICE_CTRL', 'ship_price_ctrl.php');
-define('FILENAME_ZONE_CTRL', 'zone_ctrl.php');
-define('FILENAME_ZONE_PRICE_ADMIN_CTRL', 'zone_price_admin_ctrl.php');
+define('FILENAME_ZONE_CTRL', 'zone_ctrl1.php');
+define('FILENAME_ZONE_PRICE_ADMIN_CTRL', 'zone_price_admin_ctrl1.php');
 define('FILENAME_LOGISTICPORTAL_ORDER_CTRL', 'logistic_order_ctrl.php');
 define('FILENAME_LOGISTICPORTAL_INVOICE_CTRL', 'logistic_invoice_ctrl.php');
 
